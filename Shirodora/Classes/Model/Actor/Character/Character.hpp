@@ -104,6 +104,12 @@ public :
      */
     virtual bool collisionAt(CCharacter*) = 0 ;
     
+    /**
+     *  @desc   CCharacter と衝突した時の処理
+     *  @param  CCharacter
+     */
+    virtual void hit(CCharacter*) = 0 ;
+    
 protected :
     //=========================================================================
     // メンバ変数
@@ -116,6 +122,10 @@ protected :
     CBody *m_pCollisionBody {NULL} ;
     // アニメーションデータ群
     std::vector<CAnimation*> *m_pAnimations {NULL} ;
+    //
+    //std::vector<CAction*> *m_pActions {NULL} ;
+    //
+    //CStatus *m_pStatus {NULL} ;
     
 };
 
