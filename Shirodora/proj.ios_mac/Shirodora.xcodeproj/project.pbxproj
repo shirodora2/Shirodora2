@@ -24,10 +24,10 @@
 		4F71A8D01D36961C004FD96B /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8CD1D36961C004FD96B /* BattleScene.cpp */; };
 		4F71A8DC1D369DD2004FD96B /* Launcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8D41D369DD2004FD96B /* Launcher.cpp */; };
 		4F71A8DD1D369DD2004FD96B /* Launcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8D41D369DD2004FD96B /* Launcher.cpp */; };
-		4F71A8DE1D369DD2004FD96B /* LaunchScheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8D71D369DD2004FD96B /* LaunchScheduler.cpp */; };
-		4F71A8DF1D369DD2004FD96B /* LaunchScheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8D71D369DD2004FD96B /* LaunchScheduler.cpp */; };
 		4F71A8E01D369DD2004FD96B /* LaunchTrigger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8DA1D369DD2004FD96B /* LaunchTrigger.cpp */; };
 		4F71A8E11D369DD2004FD96B /* LaunchTrigger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8DA1D369DD2004FD96B /* LaunchTrigger.cpp */; };
+		4F71A8F21D36A90A004FD96B /* LauncherManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8F01D36A90A004FD96B /* LauncherManager.cpp */; };
+		4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8F01D36A90A004FD96B /* LauncherManager.cpp */; };
 		4F9C5B681D30AEC60070E0DC /* gameMainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C5B601D30AEC60070E0DC /* gameMainBG.png */; };
 		4F9C5B691D30AEC60070E0DC /* gameMainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C5B601D30AEC60070E0DC /* gameMainBG.png */; };
 		4F9C5B6A1D30AEC60070E0DC /* Bone.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C5B631D30AEC60070E0DC /* Bone.png */; };
@@ -165,11 +165,11 @@
 		4F71A8CE1D36961C004FD96B /* BattleScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BattleScene.hpp; sourceTree = "<group>"; };
 		4F71A8D41D369DD2004FD96B /* Launcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Launcher.cpp; sourceTree = "<group>"; };
 		4F71A8D51D369DD2004FD96B /* Launcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Launcher.hpp; sourceTree = "<group>"; };
-		4F71A8D71D369DD2004FD96B /* LaunchScheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LaunchScheduler.cpp; sourceTree = "<group>"; };
-		4F71A8D81D369DD2004FD96B /* LaunchScheduler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LaunchScheduler.hpp; sourceTree = "<group>"; };
 		4F71A8DA1D369DD2004FD96B /* LaunchTrigger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LaunchTrigger.cpp; sourceTree = "<group>"; };
 		4F71A8DB1D369DD2004FD96B /* LaunchTrigger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LaunchTrigger.hpp; sourceTree = "<group>"; };
 		4F71A8EB1D369FE9004FD96B /* Factory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Factory.hpp; sourceTree = "<group>"; };
+		4F71A8F01D36A90A004FD96B /* LauncherManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LauncherManager.cpp; sourceTree = "<group>"; };
+		4F71A8F11D36A90A004FD96B /* LauncherManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LauncherManager.hpp; sourceTree = "<group>"; };
 		4F9C5B601D30AEC60070E0DC /* gameMainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameMainBG.png; sourceTree = "<group>"; };
 		4F9C5B631D30AEC60070E0DC /* Bone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bone.png; sourceTree = "<group>"; };
 		4F9C5B641D30AEC60070E0DC /* BoneFramework1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoneFramework1.png; sourceTree = "<group>"; };
@@ -427,9 +427,9 @@
 			isa = PBXGroup;
 			children = (
 				4F71A8D21D369DD2004FD96B /* LaunchData */,
-				4F71A8D31D369DD2004FD96B /* Launcher */,
-				4F71A8D61D369DD2004FD96B /* LaunchScheduler */,
 				4F71A8D91D369DD2004FD96B /* LaunchTrigger */,
+				4F71A8D31D369DD2004FD96B /* Launcher */,
+				4F71A8EF1D36A90A004FD96B /* LauncherManager */,
 			);
 			path = Launcher;
 			sourceTree = "<group>";
@@ -448,15 +448,6 @@
 				4F71A8D51D369DD2004FD96B /* Launcher.hpp */,
 			);
 			path = Launcher;
-			sourceTree = "<group>";
-		};
-		4F71A8D61D369DD2004FD96B /* LaunchScheduler */ = {
-			isa = PBXGroup;
-			children = (
-				4F71A8D71D369DD2004FD96B /* LaunchScheduler.cpp */,
-				4F71A8D81D369DD2004FD96B /* LaunchScheduler.hpp */,
-			);
-			path = LaunchScheduler;
 			sourceTree = "<group>";
 		};
 		4F71A8D91D369DD2004FD96B /* LaunchTrigger */ = {
@@ -527,6 +518,15 @@
 			children = (
 			);
 			path = FactoryManager;
+			sourceTree = "<group>";
+		};
+		4F71A8EF1D36A90A004FD96B /* LauncherManager */ = {
+			isa = PBXGroup;
+			children = (
+				4F71A8F01D36A90A004FD96B /* LauncherManager.cpp */,
+				4F71A8F11D36A90A004FD96B /* LauncherManager.hpp */,
+			);
+			path = LauncherManager;
 			sourceTree = "<group>";
 		};
 		4F9C5B5B1D30AEC60070E0DC /* Image */ = {
@@ -1115,6 +1115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F9C5BAF1D30AEEE0070E0DC /* AppDelegate.cpp in Sources */,
+				4F71A8F21D36A90A004FD96B /* LauncherManager.cpp in Sources */,
 				4F9C5BB11D30AEEE0070E0DC /* InputAndMouseLayer.cpp in Sources */,
 				4F9C5BB51D30AEEE0070E0DC /* MouseLayer.cpp in Sources */,
 				4F71A8CF1D36961C004FD96B /* BattleScene.cpp in Sources */,
@@ -1130,7 +1131,6 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				4F9C5BB91D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				4F9C5BDA1D30BF7E0070E0DC /* Move.cpp in Sources */,
-				4F71A8DE1D369DD2004FD96B /* LaunchScheduler.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				4F9C5BB71D30AEEE0070E0DC /* Battle_MainLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
@@ -1164,9 +1164,9 @@
 				4F9C5BBC1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
 				4F71A8E11D369DD2004FD96B /* LaunchTrigger.cpp in Sources */,
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
+				4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				4F71A8DD1D369DD2004FD96B /* Launcher.cpp in Sources */,
-				4F71A8DF1D369DD2004FD96B /* LaunchScheduler.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

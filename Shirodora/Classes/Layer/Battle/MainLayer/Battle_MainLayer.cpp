@@ -76,5 +76,6 @@ bool CBattele_MainLayer::init(){
  *  @param  微小時間
  */
 void CBattele_MainLayer::update(float deltaTime){
+    // カーソルスプライトをマウスマネージャーを使って位置設定させる
     this->m_pCursor->setPosition(mouse.getCurrentCursorPosition()) ;
 }
