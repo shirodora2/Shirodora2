@@ -1,13 +1,13 @@
 //
-//  SingletonTemplate.h
+//  SingletonTemplate.hpp
 //
 //
 //  Created by Ryoutarou Onimura on 2016/05/12.
 //
 //
 
-#ifndef SingletonTemplate_h
-#define SingletonTemplate_h
+#ifndef SingletonTemplate_hpp
+#define SingletonTemplate_hpp
 
 //=========================================================================
 // SingletonTemplate
@@ -73,4 +73,4 @@ private:
 template <typename Ty>
 Ty* CSingletonTemplate<Ty>::m_pInstance = NULL ;
 
-#endif /* SingletonTemplate_h */
+#endif /* SingletonTemplate_hpp */

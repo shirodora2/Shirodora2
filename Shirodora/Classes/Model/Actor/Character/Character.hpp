@@ -11,8 +11,6 @@
 
 #include <stdio.h>
 
-#ifdef  OK
-
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
@@ -58,12 +56,6 @@ public :
     inline void setSprite(cocos2d::Sprite *pSprite){this->m_pSprite = pSprite ; this->addChild(this->m_pSprite) ;}
     
     /**
-     *  @desc   実体データ設定
-     *  @param  CBody*
-     */
-    inline void setCollisionBody(CBody *pCollisionBody){this->m_pCollisionBody = pCollisionBody ;}
-    
-    /**
      *  @desc   アニメーションデータ群設定
      *  @param  std::vector<CAnimation*>*
      */
@@ -85,12 +77,6 @@ public :
     inline cocos2d::Sprite *getSprite(){return this->m_pSprite ;}
     
     /**
-     *  @desc   実体データ取得
-     *  @return CBody*
-     */
-    inline CBody *getCollisionBody(){return this->m_pCollisionBody ;}
-    
-    /**
      *  @desc   アニメーションデータ群取得
      *  @return std::vector<CAnimation*>*
      */
@@ -98,17 +84,11 @@ public :
     
     //=========================================================================
     // メンバ関数
-    //=========================================================================
+    //=========================================================================    
     /**
-     *  @desc   CCharacter１体との衝突判定
+     *  @desc   イベントコールバック
      */
-    virtual bool collisionAt(CCharacter*) = 0 ;
-    
-    /**
-     *  @desc   CCharacter と衝突した時の処理
-     *  @param  CCharacter
-     */
-    virtual void hit(CCharacter*) = 0 ;
+    virtual void eventCallBack() = 0 ;
     
 protected :
     //=========================================================================
@@ -118,17 +98,11 @@ protected :
     CMove *m_pMove {NULL} ;
     // 画像データ
     cocos2d::Sprite *m_pSprite {NULL} ;
-    // 実体データ
-    CBody *m_pCollisionBody {NULL} ;
     // アニメーションデータ群
     std::vector<CAnimation*> *m_pAnimations {NULL} ;
-    //
-    //std::vector<CAction*> *m_pActions {NULL} ;
-    //
-    //CStatus *m_pStatus {NULL} ;
+    // ステータス
+    // CStatus *m_pStatus {NULL} ;
     
 };
-
-#endif  // OK
 
 #endif /* Character_hpp */

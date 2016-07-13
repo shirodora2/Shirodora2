@@ -1,26 +1,27 @@
 //
-//  MouseLayer.hpp
-//  BarrageGame
+//  GameMainLayer.hpp
+//  Shirodora
 //
-//  Created by Ryoutarou Onimura on 2016/06/25.
+//  Created by Ryoutarou Onimura on 2016/07/03.
 //
 //
 
-#ifndef MouseLayer_hpp
-#define MouseLayer_hpp
+#ifndef GameMainLayer_hpp
+#define GameMainLayer_hpp
 
 #include <stdio.h>
 
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
+#include "InputAndMouseLayer.hpp"
 
 //=========================================================================
 //
-// マウスレイヤークラス
+// Battele_MainLayer
 //
 //=========================================================================
-class CMouseLayer : public cocos2d::Layer {
+class CBattele_MainLayer : public CInputAndMouseLayer {
 public :
     //=========================================================================
     // コンストラクタ/デストラクタ
@@ -28,12 +29,12 @@ public :
     /**
      *  @desc   constructor
      */
-    CMouseLayer() ;
+    CBattele_MainLayer() ;
     
     /**
      *  @desc   destructor
      */
-    virtual ~CMouseLayer() override ;
+    virtual ~CBattele_MainLayer() ;
     
     //=========================================================================
     // init
@@ -44,38 +45,32 @@ public :
     virtual bool init() override ;
     
     //=========================================================================
+    // set
+    //=========================================================================
+    
+    //=========================================================================
+    // get
+    //=========================================================================
+    
+    //=========================================================================
     // メンバ関数
     //=========================================================================
     /**
-     *  @desc   マウスクリック時の処理
-     *  @param  マウスイベント
-     */
-    void mouseClicked(cocos2d::EventMouse *pEvent) ;
-    
-    /**
-     *  @desc   マウスドロップ時の処理
-     *  @param  マウスイベント
-     */
-    void mouseDroped(cocos2d::EventMouse *pEvent) ;
-    
-    /**
-     *  @desc   マウス移動時の処理
-     *  @param  マウスイベント
-     */
-    void mouseMoved(cocos2d::EventMouse *pEvent) ;
-    
-    /**
-     *  @desc   マウススクロール時の処理
-     *  @param  マウスイベント
-     */
-    void mouseScrolled(cocos2d::EventMouse *pEvent) ;
-    
-    /**
      *  @desc   update
-     *  @param  deltaTime
+     *  @param  微小時間
      */
     virtual void update(float deltaTime) override ;
     
+    //=========================================================================
+    // メンバ変数
+    //=========================================================================
+    // !!!:テスト用マウスカーソルスプライト
+    cocos2d::Sprite *m_pCursor {NULL} ;
+    
+    // TODO:多分画面スクロール時にいる気がする
+    // カメラ座標
+    cocos2d::Vec2 m_cameraPosition ;
+    
 };
 
-#endif /* MouseLayer_hpp */
+#endif /* GameMainLayer_hpp */

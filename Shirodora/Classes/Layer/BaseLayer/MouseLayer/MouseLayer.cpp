@@ -11,11 +11,11 @@
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "Manager.hpp"
+#include "MouseManager.hpp"
 
 //=========================================================================
 //
-// インプット&マウスレイヤークラス
+// マウスレイヤークラス
 //
 //=========================================================================
 //=========================================================================
@@ -42,18 +42,18 @@ bool CMouseLayer::init(){
     if(cocos2d::Layer::init() == false) return false ;
     
     // マウスイベントリスナーを生成
-    this->m_pEventListenerMouse = cocos2d::EventListenerMouse::create() ;
+    cocos2d::EventListenerMouse *pEventListener = cocos2d::EventListenerMouse::create() ;
     // マウスイベントリスナーにマウスクリック時の処理を登録
-    this->m_pEventListenerMouse->onMouseDown = CC_CALLBACK_1(CMouseLayer::mouseClicked, this) ;
+    pEventListener->onMouseDown = CC_CALLBACK_1(CMouseLayer::mouseClicked, this) ;
     // マウスイベントリスナーにマウスドロップ時の処理を登録
-    this->m_pEventListenerMouse->onMouseUp = CC_CALLBACK_1(CMouseLayer::mouseDroped, this) ;
+    pEventListener->onMouseUp = CC_CALLBACK_1(CMouseLayer::mouseDroped, this) ;
     // マウスイベントリスナーにマウス移動時の処理を登録
-    this->m_pEventListenerMouse->onMouseMove = CC_CALLBACK_1(CMouseLayer::mouseMoved, this) ;
+    pEventListener->onMouseMove = CC_CALLBACK_1(CMouseLayer::mouseMoved, this) ;
     // マウスイベントリスナーにマウススクロール時の処理を登録
-    this->m_pEventListenerMouse->onMouseScroll = CC_CALLBACK_1(CMouseLayer::mouseScrolled, this) ;
+    pEventListener->onMouseScroll = CC_CALLBACK_1(CMouseLayer::mouseScrolled, this) ;
     
-    // マウスイベントリスナーをイベントディスパッチャーに登録
-    this->_eventDispatcher->addEventListenerWithSceneGraphPriority(this->m_pEventListenerMouse, this) ;
+    // マウスイベントリスナーをイベンtのディスパッチャーに登録
+    this->_eventDispatcher->addEventListenerWithSceneGraphPriority(pEventListener, this) ;
     
     return true ;
 }

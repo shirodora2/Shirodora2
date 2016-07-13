@@ -1,12 +1,12 @@
 //
-//  GameMainScene.cpp
+//  BattleScene.cpp
 //  Shirodora
 //
-//  Created by Ryoutarou Onimura on 2016/07/03.
+//  Created by Ryoutarou Onimura on 2016/07/14.
 //
 //
 
-#include "GameMainScene.hpp"
+#include "BattleScene.hpp"
 
 //=========================================================================
 // 追加のインクルードはここから
@@ -15,7 +15,7 @@
 
 //=========================================================================
 //
-// GameMainScene
+// BattleScene
 //
 //=========================================================================
 //=========================================================================
@@ -24,12 +24,12 @@
 /**
  *  @desc   constructor
  */
-CGameMainScene::CGameMainScene(){}
+CBattleScene::CBattleScene(){}
 
 /**
  *  @desc   destructor
  */
-CGameMainScene::~CGameMainScene(){
+CBattleScene::~CBattleScene(){
     
 }
 
@@ -39,13 +39,15 @@ CGameMainScene::~CGameMainScene(){
 /**
  *  @desc   init
  */
-bool CGameMainScene::init(){
+bool CBattleScene::init(){
     if(cocos2d::Scene::init() == false) return false ;
     
     // メインレイヤーの生成と取り付け
-    this->m_pMainLayer = CCREATE_FUNC::create<CGameMainLayer>() ;
+    this->m_pMainLayer = CCREATE_FUNC::create<CBattele_MainLayer>() ;
     this->addChild(this->m_pMainLayer) ;
     
+    // スケジューラーに登録
+    this->scheduleUpdate() ;
     
     return true ;
 }
@@ -67,6 +69,6 @@ bool CGameMainScene::init(){
  *  @desc   update
  *  @param  微小時間
  */
-void CGameMainScene::update(float deltaTime){
+void CBattleScene::update(float deltaTime){
     
 }
