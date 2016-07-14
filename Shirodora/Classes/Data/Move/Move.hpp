@@ -184,7 +184,6 @@ public :
      */
     inline void addPosition(const cocos2d::Vec2 &vector){this->m_position += vector ;}
     
-    // !!!:使わない可能性あり
     /**
      *  @desc   addDirection
      *  @param  direction

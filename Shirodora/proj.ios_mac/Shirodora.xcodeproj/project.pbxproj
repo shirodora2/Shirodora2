@@ -20,6 +20,10 @@
 		46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7719C43A67006E1F66 /* CloseSelected.png */; };
 		46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
 		46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
+		4F70F3501D37D4C500603081 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F34E1D37D4C500603081 /* King.cpp */; };
+		4F70F3511D37D4C500603081 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F34E1D37D4C500603081 /* King.cpp */; };
+		4F70F3541D37D86A00603081 /* Summon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F3521D37D86A00603081 /* Summon.cpp */; };
+		4F70F3551D37D86A00603081 /* Summon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F3521D37D86A00603081 /* Summon.cpp */; };
 		4F71A8CF1D36961C004FD96B /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8CD1D36961C004FD96B /* BattleScene.cpp */; };
 		4F71A8D01D36961C004FD96B /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8CD1D36961C004FD96B /* BattleScene.cpp */; };
 		4F71A8DC1D369DD2004FD96B /* Launcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8D41D369DD2004FD96B /* Launcher.cpp */; };
@@ -161,6 +165,10 @@
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
+		4F70F34E1D37D4C500603081 /* King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
+		4F70F34F1D37D4C500603081 /* King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = King.hpp; sourceTree = "<group>"; };
+		4F70F3521D37D86A00603081 /* Summon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Summon.cpp; sourceTree = "<group>"; };
+		4F70F3531D37D86A00603081 /* Summon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Summon.hpp; sourceTree = "<group>"; };
 		4F71A8CD1D36961C004FD96B /* BattleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattleScene.cpp; sourceTree = "<group>"; };
 		4F71A8CE1D36961C004FD96B /* BattleScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BattleScene.hpp; sourceTree = "<group>"; };
 		4F71A8D41D369DD2004FD96B /* Launcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Launcher.cpp; sourceTree = "<group>"; };
@@ -412,6 +420,24 @@
 			);
 			name = Classes;
 			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		4F70F34C1D37D4AB00603081 /* King */ = {
+			isa = PBXGroup;
+			children = (
+				4F70F34E1D37D4C500603081 /* King.cpp */,
+				4F70F34F1D37D4C500603081 /* King.hpp */,
+			);
+			path = King;
+			sourceTree = "<group>";
+		};
+		4F70F34D1D37D4AB00603081 /* Summon */ = {
+			isa = PBXGroup;
+			children = (
+				4F70F3521D37D86A00603081 /* Summon.cpp */,
+				4F70F3531D37D86A00603081 /* Summon.hpp */,
+			);
+			path = Summon;
 			sourceTree = "<group>";
 		};
 		4F71A8C41D3695FA004FD96B /* Battle */ = {
@@ -809,6 +835,8 @@
 			children = (
 				4F9C5B9E1D30AEEE0070E0DC /* Character.cpp */,
 				4F9C5B9F1D30AEEE0070E0DC /* Character.hpp */,
+				4F70F34C1D37D4AB00603081 /* King */,
+				4F70F34D1D37D4AB00603081 /* Summon */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -1128,7 +1156,9 @@
 				4F71A8DC1D369DD2004FD96B /* Launcher.cpp in Sources */,
 				4F9C5BB31D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
 				4F9C5BE41D30BFC70070E0DC /* Line.cpp in Sources */,
+				4F70F3501D37D4C500603081 /* King.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				4F70F3541D37D86A00603081 /* Summon.cpp in Sources */,
 				4F9C5BB91D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				4F9C5BDA1D30BF7E0070E0DC /* Move.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
@@ -1163,6 +1193,8 @@
 				4F9C5BCD1D30BF670070E0DC /* Animation.cpp in Sources */,
 				4F9C5BBC1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
 				4F71A8E11D369DD2004FD96B /* LaunchTrigger.cpp in Sources */,
+				4F70F3551D37D86A00603081 /* Summon.cpp in Sources */,
+				4F70F3511D37D4C500603081 /* King.cpp in Sources */,
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
