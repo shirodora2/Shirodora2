@@ -44,6 +44,12 @@ public :
     // set
     //=========================================================================
     /**
+     *  @desc   プレイヤーNo設定
+     *  @param  プレイヤーNo
+     */
+    inline void setPlayerNo(int no){this->m_playerNo = no ;}
+    
+    /**
      *  @desc   位置データ設定
      *  @param  CMove*
      */
@@ -61,9 +67,21 @@ public :
      */
     inline void setAnimations(std::vector<CAnimation*> *pAnimations){this->m_pAnimations = pAnimations ;}
     
+    /**
+     *  @desc   タグ設定
+     *  @param  タグ番号
+     */
+    inline void setTag(int tag){this->m_tag = tag ;}
+    
     //=========================================================================
     // get
     //=========================================================================
+    /**
+     *  @desc   プレイヤーNo取得
+     *  @return プレイヤーNo
+     */
+    inline int getPlayerNo(){return this->m_playerNo ;}
+    
     /**
      *  @desc   位置データ取得
      *  @return CMove*
@@ -81,6 +99,12 @@ public :
      *  @return std::vector<CAnimation*>*
      */
     inline std::vector<CAnimation*> *getAnimations(){return this->m_pAnimations ;}
+    
+    /**
+     *  @desc   タグ設定
+     *  @param  タグ番号
+     */
+    inline int getTag(){return this->m_tag ;}
     
     //=========================================================================
     // メンバ関数
@@ -107,6 +131,8 @@ protected :
     //=========================================================================
     // メンバ変数
     //=========================================================================
+    // プレイヤーNo
+    int m_playerNo ;
     // 位置データ
     CMove *m_pMove {NULL} ;
     // 画像データ
@@ -115,6 +141,8 @@ protected :
     std::vector<CAnimation*> *m_pAnimations {NULL} ;
     // ステータス
     // CStatus *m_pStatus {NULL} ;
+    // タグ
+    int m_tag = 0 ;
     
 };
 

@@ -24,10 +24,23 @@ class CCharacter ;
 //=========================================================================
 //
 // CharacterAggregate
+// 条件指定して走査したいなら iteratorを自分で作ってくれ
 //
 //=========================================================================
 class CCharacterAggregate : public CSingletonTemplate<CCharacterAggregate> {
 public :
+    //=========================================================================
+    // set
+    //=========================================================================
+    /**
+     *  @desc   集合体の設定
+     *  @param  std::vector<CCharacter*>*
+     */
+    inline void setAggregate(std::vector<CCharacter*> *pAggre){
+        if(this->m_pAggregate != NULL) return ;
+        this->m_pAggregate = pAggre ;
+    }
+    
     //=========================================================================
     // get
     //=========================================================================
@@ -43,6 +56,13 @@ public :
     inline CCharacter *getAt(int index){return (*this->m_pAggregate)[index] ;}
     
     /**
+     *  @desc   タグを特定してキャラクター１体を取得
+     *  @param  タグ
+     *  @return CCharacter
+     */
+    CCharacter *getTag(int tag) ;
+    
+    /**
      *  @desc   集合体の取得
      */
     inline std::vector<CCharacter*> *getAggregate(){return this->m_pAggregate ;}
@@ -50,16 +70,6 @@ public :
     //=========================================================================
     // メンバ関数
     //=========================================================================
-    /**
-     *  @desc   clear
-     */
-    void clear() ;
-    
-    /**
-     *  @desc   update
-     */
-    void update() ;
-    
     /**
      *  @desc   集合体への追加
      */

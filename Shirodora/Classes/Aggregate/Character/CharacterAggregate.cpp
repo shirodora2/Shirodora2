@@ -22,33 +22,19 @@
 // メンバ関数
 //=========================================================================
 /**
- *  @desc   clear
- */
-void CCharacterAggregate::clear(){
-    this->m_pAggregate->erase(this->m_pAggregate->begin(), this->m_pAggregate->end()) ;
-}
-
-/**
- *  @desc   update
- */
-void CCharacterAggregate::update(){
-    std::vector<CCharacter*>::iterator itr = this->m_pAggregate->begin() ;
-    while(itr != this->m_pAggregate->end()){
-        if((*itr)->isActive() == false){
-            (*itr)->removeFromParent() ;
-            this->m_pAggregate->erase(itr) ;
-        }
-        else{
-            ++itr ;
-        }
-    }
-}
-
-/**
  *  @desc   集合体への追加
  */
 void CCharacterAggregate::add(CCharacter *pChara){
     this->m_pAggregate->push_back(pChara) ;
+}
+
+CCharacter *CCharacterAggregate::CCharacterAggregate::getTag(int tag){
+    for(CCharacter* pChara : (*this->m_pAggregate)){
+        if(pChara->getTag() == tag){
+            return pChara ;
+        }
+    }
+    return NULL ;
 }
 
 //=========================================================================
