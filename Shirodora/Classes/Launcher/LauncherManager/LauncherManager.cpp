@@ -27,7 +27,6 @@
 void CLauncherManager::setLauncher(LAUNCHER_TYPE type, cocos2d::Layer *pLayer){
     switch(type){
         case LAUNCHER_TYPE::NONE :
-            //if(this->m_p/**/Launcher == NULL) this->m_p/**/Launcher = new CLauncher</**/>(pLayer) ;
             break;
             
         default:
@@ -49,7 +48,7 @@ void CLauncherManager::clear(){
  *  @desc   update
  */
 void CLauncherManager::update(){
-    //this->m_p/**/Launcher->update() ;
+    
 }
 
 //=========================================================================
