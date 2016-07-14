@@ -24,6 +24,8 @@
 		4F70F3511D37D4C500603081 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F34E1D37D4C500603081 /* King.cpp */; };
 		4F70F3541D37D86A00603081 /* Summon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F3521D37D86A00603081 /* Summon.cpp */; };
 		4F70F3551D37D86A00603081 /* Summon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F3521D37D86A00603081 /* Summon.cpp */; };
+		4F70F35A1D37E28500603081 /* CharacterAggregate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F3581D37E28500603081 /* CharacterAggregate.cpp */; };
+		4F70F35B1D37E28500603081 /* CharacterAggregate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F3581D37E28500603081 /* CharacterAggregate.cpp */; };
 		4F71A8CF1D36961C004FD96B /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8CD1D36961C004FD96B /* BattleScene.cpp */; };
 		4F71A8D01D36961C004FD96B /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8CD1D36961C004FD96B /* BattleScene.cpp */; };
 		4F71A8DC1D369DD2004FD96B /* Launcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8D41D369DD2004FD96B /* Launcher.cpp */; };
@@ -169,6 +171,8 @@
 		4F70F34F1D37D4C500603081 /* King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = King.hpp; sourceTree = "<group>"; };
 		4F70F3521D37D86A00603081 /* Summon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Summon.cpp; sourceTree = "<group>"; };
 		4F70F3531D37D86A00603081 /* Summon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Summon.hpp; sourceTree = "<group>"; };
+		4F70F3581D37E28500603081 /* CharacterAggregate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterAggregate.cpp; sourceTree = "<group>"; };
+		4F70F3591D37E28500603081 /* CharacterAggregate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterAggregate.hpp; sourceTree = "<group>"; };
 		4F71A8CD1D36961C004FD96B /* BattleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattleScene.cpp; sourceTree = "<group>"; };
 		4F71A8CE1D36961C004FD96B /* BattleScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BattleScene.hpp; sourceTree = "<group>"; };
 		4F71A8D41D369DD2004FD96B /* Launcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Launcher.cpp; sourceTree = "<group>"; };
@@ -440,6 +444,15 @@
 			path = Summon;
 			sourceTree = "<group>";
 		};
+		4F70F3571D37E27800603081 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				4F70F3581D37E28500603081 /* CharacterAggregate.cpp */,
+				4F70F3591D37E28500603081 /* CharacterAggregate.hpp */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
 		4F71A8C41D3695FA004FD96B /* Battle */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +501,7 @@
 		4F71A8E21D369DDC004FD96B /* Aggregate */ = {
 			isa = PBXGroup;
 			children = (
+				4F70F3571D37E27800603081 /* Character */,
 			);
 			path = Aggregate;
 			sourceTree = "<group>";
@@ -1167,6 +1181,7 @@
 				4F9C5BCC1D30BF670070E0DC /* Animation.cpp in Sources */,
 				4F9C5BD41D30BF750070E0DC /* Body.cpp in Sources */,
 				4F9C5BE61D30BFC70070E0DC /* Simplex.cpp in Sources */,
+				4F70F35A1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
 				4F9C5BBB1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1198,6 +1213,7 @@
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				4F70F35B1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
 				4F71A8DD1D369DD2004FD96B /* Launcher.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
