@@ -10,7 +10,6 @@
 #define Action_hpp
 
 #include <stdio.h>
-#include "Move.hpp"
 
 //前方宣言
 class CCharacter ;

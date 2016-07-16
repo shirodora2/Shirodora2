@@ -6,8 +6,7 @@
 //
 //
 
-#include "MoveAction.hpp"
-#include "Character.hpp"
+#include "Shirodora.hpp"
 //========================================
 //CMoveActionクラスの関数
 //========================================

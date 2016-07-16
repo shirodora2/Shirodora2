@@ -26,9 +26,7 @@
 
 
 //*************** Lib ***************************
-#include "Line.hpp"
 #include "Shape.hpp"
-#include "Simplex.hpp"
 #include "InputManager.hpp"
 #include "MouseManager.hpp"
 #include "SingletonTemplate.hpp"

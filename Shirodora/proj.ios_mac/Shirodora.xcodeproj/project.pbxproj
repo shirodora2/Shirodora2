@@ -66,8 +66,6 @@
 		4F71A8D01D36961C004FD96B /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8CD1D36961C004FD96B /* BattleScene.cpp */; };
 		4F71A8DC1D369DD2004FD96B /* Launcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8D41D369DD2004FD96B /* Launcher.cpp */; };
 		4F71A8DD1D369DD2004FD96B /* Launcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8D41D369DD2004FD96B /* Launcher.cpp */; };
-		4F71A8E01D369DD2004FD96B /* LaunchTrigger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8DA1D369DD2004FD96B /* LaunchTrigger.cpp */; };
-		4F71A8E11D369DD2004FD96B /* LaunchTrigger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8DA1D369DD2004FD96B /* LaunchTrigger.cpp */; };
 		4F71A8F21D36A90A004FD96B /* LauncherManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8F01D36A90A004FD96B /* LauncherManager.cpp */; };
 		4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8F01D36A90A004FD96B /* LauncherManager.cpp */; };
 		4F9C5B681D30AEC60070E0DC /* gameMainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C5B601D30AEC60070E0DC /* gameMainBG.png */; };
@@ -232,6 +230,10 @@
 		4F5C01171D3A162100DA968F /* AttackAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AttackAction.hpp; sourceTree = "<group>"; };
 		4F5C01191D3A162100DA968F /* MoveAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MoveAction.cpp; sourceTree = "<group>"; };
 		4F5C011A1D3A162100DA968F /* MoveAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MoveAction.hpp; sourceTree = "<group>"; };
+		4F5C012D1D3A396900DA968F /* Shirodora.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shirodora.hpp; sourceTree = "<group>"; };
+		4F5C012E1D3A3CAA00DA968F /* Factory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Factory.hpp; sourceTree = "<group>"; };
+		4F5C012F1D3A3CB700DA968F /* Manager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Manager.hpp; sourceTree = "<group>"; };
+		4F5C01301D3A3CC200DA968F /* Scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
 		4F70F34E1D37D4C500603081 /* King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
 		4F70F34F1D37D4C500603081 /* King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = King.hpp; sourceTree = "<group>"; };
 		4F70F3521D37D86A00603081 /* Summon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Summon.cpp; sourceTree = "<group>"; };
@@ -242,9 +244,7 @@
 		4F71A8CE1D36961C004FD96B /* BattleScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BattleScene.hpp; sourceTree = "<group>"; };
 		4F71A8D41D369DD2004FD96B /* Launcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Launcher.cpp; sourceTree = "<group>"; };
 		4F71A8D51D369DD2004FD96B /* Launcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Launcher.hpp; sourceTree = "<group>"; };
-		4F71A8DA1D369DD2004FD96B /* LaunchTrigger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LaunchTrigger.cpp; sourceTree = "<group>"; };
 		4F71A8DB1D369DD2004FD96B /* LaunchTrigger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LaunchTrigger.hpp; sourceTree = "<group>"; };
-		4F71A8EB1D369FE9004FD96B /* Factory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Factory.hpp; sourceTree = "<group>"; };
 		4F71A8F01D36A90A004FD96B /* LauncherManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LauncherManager.cpp; sourceTree = "<group>"; };
 		4F71A8F11D36A90A004FD96B /* LauncherManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LauncherManager.hpp; sourceTree = "<group>"; };
 		4F9C5B601D30AEC60070E0DC /* gameMainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameMainBG.png; sourceTree = "<group>"; };
@@ -268,7 +268,6 @@
 		4F9C5B941D30AEEE0070E0DC /* MouseManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MouseManager.cpp; sourceTree = "<group>"; };
 		4F9C5B951D30AEEE0070E0DC /* MouseManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MouseManager.hpp; sourceTree = "<group>"; };
 		4F9C5B971D30AEEE0070E0DC /* SingletonTemplate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SingletonTemplate.hpp; sourceTree = "<group>"; };
-		4F9C5B981D30AEEE0070E0DC /* Manager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Manager.hpp; sourceTree = "<group>"; };
 		4F9C5B9B1D30AEEE0070E0DC /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
 		4F9C5B9C1D30AEEE0070E0DC /* Actor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Actor.hpp; sourceTree = "<group>"; };
 		4F9C5B9E1D30AEEE0070E0DC /* Character.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Character.cpp; sourceTree = "<group>"; };
@@ -277,7 +276,6 @@
 		4F9C5BA21D30AEEE0070E0DC /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		4F9C5BA41D30AEEE0070E0DC /* Pawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pawn.cpp; sourceTree = "<group>"; };
 		4F9C5BA51D30AEEE0070E0DC /* Pawn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pawn.hpp; sourceTree = "<group>"; };
-		4F9C5BAC1D30AEEE0070E0DC /* Scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
 		4F9C5BCA1D30BF670070E0DC /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
 		4F9C5BCB1D30BF670070E0DC /* Animation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animation.hpp; sourceTree = "<group>"; };
 		4F9C5BCF1D30BF750070E0DC /* Body.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Body.cpp; sourceTree = "<group>"; };
@@ -504,11 +502,9 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4F5C012D1D3A396900DA968F /* Shirodora.hpp */,
 				4F19FB161D3A093500C93DAA /* Factory */,
 				4F9C5B721D30AEEE0070E0DC /* Constants.hpp */,
-				4F9C5B981D30AEEE0070E0DC /* Manager.hpp */,
-				4F71A8EB1D369FE9004FD96B /* Factory.hpp */,
-				4F9C5BAC1D30AEEE0070E0DC /* Scene.hpp */,
 				4F9C5B7A1D30AEEE0070E0DC /* Delegate */,
 				4F9C5B8E1D30AEEE0070E0DC /* Lib */,
 				4F9C5B731D30AEEE0070E0DC /* Data */,
@@ -526,6 +522,7 @@
 		4F19FB161D3A093500C93DAA /* Factory */ = {
 			isa = PBXGroup;
 			children = (
+				4F5C012E1D3A3CAA00DA968F /* Factory.hpp */,
 				4F19FB171D3A093500C93DAA /* Summon */,
 			);
 			path = Factory;
@@ -662,7 +659,6 @@
 		4F71A8D91D369DD2004FD96B /* LaunchTrigger */ = {
 			isa = PBXGroup;
 			children = (
-				4F71A8DA1D369DD2004FD96B /* LaunchTrigger.cpp */,
 				4F71A8DB1D369DD2004FD96B /* LaunchTrigger.hpp */,
 			);
 			path = LaunchTrigger;
@@ -879,6 +875,7 @@
 		4F9C5B8F1D30AEEE0070E0DC /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				4F5C012F1D3A3CB700DA968F /* Manager.hpp */,
 				4F9C5B901D30AEEE0070E0DC /* InputManager */,
 				4F9C5B931D30AEEE0070E0DC /* MouseManager */,
 			);
@@ -963,6 +960,7 @@
 		4F9C5BA61D30AEEE0070E0DC /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				4F5C01301D3A3CC200DA968F /* Scene.hpp */,
 				4F71A8C41D3695FA004FD96B /* Battle */,
 				4F9C5BAA1D30AEEE0070E0DC /* Select */,
 				4F9C5BAB1D30AEEE0070E0DC /* Title */,
@@ -1286,7 +1284,6 @@
 				4F5C011D1D3A162100DA968F /* AttackAction.cpp in Sources */,
 				4F19FB221D3A093500C93DAA /* SummonFactoryManager.cpp in Sources */,
 				4F9C5BBD1D30AEEE0070E0DC /* Actor.cpp in Sources */,
-				4F71A8E01D369DD2004FD96B /* LaunchTrigger.cpp in Sources */,
 				DB5153461D39D6A1005E73E7 /* Status.cpp in Sources */,
 				4F5C011B1D3A162100DA968F /* Action.cpp in Sources */,
 				4F71A8DC1D369DD2004FD96B /* Launcher.cpp in Sources */,
@@ -1337,7 +1334,6 @@
 				4F9C5BCD1D30BF670070E0DC /* Animation.cpp in Sources */,
 				4F5C01201D3A162100DA968F /* MoveAction.cpp in Sources */,
 				4F9C5BBC1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
-				4F71A8E11D369DD2004FD96B /* LaunchTrigger.cpp in Sources */,
 				4F70F3551D37D86A00603081 /* Summon.cpp in Sources */,
 				4F70F3511D37D4C500603081 /* King.cpp in Sources */,
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
