@@ -1,8 +1,8 @@
 //
 //  CollisionData.hpp
-//  BarrageGame
+//  Experiment
 //
-//  Created by Ryoutarou Onimura on 2016/06/15.
+//  Created by Ryoutarou Onimura on 2016/07/09.
 //
 //
 
@@ -14,9 +14,15 @@
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "Body.hpp"
-#include "Move.hpp"
-#include "Shape.hpp"
+//#include "Shapes.hpp"
+#include "Line.hpp"
+#include "Simplex.hpp"
+
+//=========================================================================
+// 前方宣言
+//=========================================================================
+class CMove ;
+class CBody ;
 
 //=========================================================================
 //
@@ -30,21 +36,16 @@ public :
     //=========================================================================
     /**
      *  @desc   constructor
+     *  @tips   位置座標(0.0f, 0.0f)の点として生成される
      */
     CCollisionData() ;
     
     /**
-     *  @desc   constructor
-     *  @param  位置座標
+     *  @desc   constructer
+     *  @param  CMove*
+     *  @param  CBody*
      */
-    CCollisionData(const cocos2d::Vec2 &position) ;
-    
-    /**
-     *  @desc   constructor
-     *  @param  位置座標
-     *  @param  頂点座標群
-     */
-    CCollisionData(const cocos2d::Vec2 &position, const std::vector<cocos2d::Vec2> &apexs) ;
+    CCollisionData(CMove *pMove, CBody *pBody) ;
     
     /**
      *  @desc   copy constructor
@@ -58,63 +59,95 @@ public :
     virtual ~CCollisionData() ;
     
     //=========================================================================
+    // 定数
+    //=========================================================================
+    // while内で不具合が起こった時の保険用変数
+    const int MAX_COUNT = 20 ;
+    
+    //=========================================================================
     // set
     //=========================================================================
     /**
-     *  @desc   set
-     *  @param  位置座標
-     *  @param  頂点座標群
-     */
-    void set(const cocos2d::Vec2 &position, const std::vector<cocos2d::Vec2> &apexs) ;
-    
-    /**
-     *  @desc   set
-     *  @param  CCollisionData
-     */
-    void set(const CCollisionData &data) ;
-    
-    /**
-     *  @desc   setPosition
+     *  @desc   位置座標設定
      *  @param  位置座標
      */
-    void setPosition(const cocos2d::Vec2 &position) ;
+    inline void setPosition(const cocos2d::Vec2 &position){this->m_position = position ;}
     
     /**
-     *  @desc   setApexs
+     *  @desc   角度設定
+     *  @param  回転角度 ディグリー角
+     */
+    inline void setAngle(float angle){this->m_angle = angle ;}
+    
+    /**
+     *  @desc   頂点座標群設定
      *  @param  頂点座標群
      */
     void setApexs(const std::vector<cocos2d::Vec2> &apexs) ;
     
     /**
-     *  @desc   setThick
+     *  @desc   太さ設定
      *  @param  太さ(円の半径)
      */
-    void setThick(float thick) ;
+    inline void setRadius(float radius){this->m_radius = radius ;}
+    
+    /**
+     *  @desc   set
+     *  @param  CCollisionData
+     */
+    inline void set(const CCollisionData &data){
+        this->m_position = data.getPosition() ;
+        this->setApexs(*data.getApexs()) ;
+        this->m_radius = data.getRadius() ;
+        this->m_angle = data.getAngle() ;
+    }
     
     //=========================================================================
     // get
     //=========================================================================
     /**
-     *  @desc   getPosition
+     *  @desc   位置座標取得
      *  @return 位置座標
      */
-    cocos2d::Vec2 getPosition() const ;
+    inline cocos2d::Vec2 getPosition() const {return this->m_position ;}
     
     /**
-     *  @desc   getApexs
+     *  @desc   角度取得
+     *  @return 角度 ディグリー角
+     */
+    inline float getAngle() const {return this->m_angle ;}
+    
+    /**
+     *  @desc   頂点座標群取得
      *  @return 頂点座標群
      */
-    std::vector<cocos2d::Vec2> &getApexs() const ;
+    inline std::vector<cocos2d::Vec2> *getApexs() const {return this->m_pApexs ;}
     
     /**
-     *  @desc   getThick
+     *  @desc   太さ取得
      *  @return 太さ
      */
-    float getThick() const ;
+    inline float getRadius() const {return this->m_radius ;}
     
     //=========================================================================
     // メンバ関数
     //=========================================================================
+    /**
+     *  @desc   座標回転
+     */
+    inline void rotateApexs(){
+        if(this->m_angle == 0.0f) return ;
+        
+        // ディグリー角をラジアン角に変換
+        float radian = -M_PI * (this->m_angle / 180.0f) ;
+        
+        std::vector<cocos2d::Vec2>::iterator itr = this->m_pApexs->begin() ;
+        while(itr != this->m_pApexs->end()){
+            (*itr).rotate(cocos2d::Vec2::ZERO, radian) ;
+            itr++ ;
+        }
+    }
+    
     //=========================================================================
     // 衝突関数
     //=========================================================================
@@ -122,7 +155,7 @@ public :
      *  @desc   衝突判定
      *  @param  衝突データ
      */
-    bool collisionDecision(const CCollisionData &data) const ;
+    bool collisionDecision(CCollisionData data) ;
     
 private :
     //=========================================================================
@@ -163,10 +196,12 @@ private :
     //=========================================================================
     // 位置座標
     cocos2d::Vec2 m_position ;
+    // 角度 ディグリー角
+    float m_angle = 0.0f ;
     // 頂点座標群
     std::vector<cocos2d::Vec2> *m_pApexs {NULL} ;
     // 太さ(円などに使用)
-    float m_thick = 0.0f ;
+    float m_radius = 0.0f ;
     
 };
 

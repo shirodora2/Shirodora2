@@ -1,8 +1,8 @@
 //
 //  CollisionData.cpp
-//  BarrageGame
+//  Experiment
 //
-//  Created by Ryoutarou Onimura on 2016/06/15.
+//  Created by Ryoutarou Onimura on 2016/07/09.
 //
 //
 
@@ -11,6 +11,8 @@
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
+#include "Move.hpp"
+#include "Body.hpp"
 
 //=========================================================================
 //
@@ -20,25 +22,21 @@
 /**
  *  @desc   constructor
  */
-CCollisionData::CCollisionData() : m_position(0.0f, 0.0f){}
-
-/**
- *  @desc   constructor
- *  @param  位置座標
- */
-CCollisionData::CCollisionData(const cocos2d::Vec2 &position){
-    this->setPosition(position) ;
+CCollisionData::CCollisionData() : m_position(0.0f, 0.0f){
+    this->m_pApexs = new std::vector<cocos2d::Vec2>() ;
 }
 
 /**
- *  @desc   constructor
- *  @param  自身の位置座標
- *  @param  自身の頂点座標群
- *  @param  対象の位置座標
- *  @param  対象の頂点座標群
+ *  @desc   constructer
+ *  @param  CMove*
+ *  @param  CBody*
  */
-CCollisionData::CCollisionData(const cocos2d::Vec2 &position, const std::vector<cocos2d::Vec2> &apexs){
-    this->set(position, apexs) ;
+CCollisionData::CCollisionData(CMove *pMove, CBody *pBody){
+    this->m_pApexs = new std::vector<cocos2d::Vec2>() ;
+    this->setPosition(pMove->getPosition()) ;
+    this->setAngle(pMove->getAngle()) ;
+    this->setApexs(*pBody->getApexs()) ;
+    this->setRadius(pBody->getRadius()) ;
 }
 
 /**
@@ -46,6 +44,7 @@ CCollisionData::CCollisionData(const cocos2d::Vec2 &position, const std::vector<
  *  @param  CCollisionData
  */
 CCollisionData::CCollisionData(const CCollisionData &data){
+    this->m_pApexs = new std::vector<cocos2d::Vec2>() ;
     this->set(data) ;
 }
 
@@ -63,82 +62,15 @@ CCollisionData::~CCollisionData(){
 // set
 //=========================================================================
 /**
- *  @desc   set
- *  @param  自身の位置座標
- *  @param  自身の頂点座標群
- *  @param  対象の位置座標
- *  @param  対象の頂点座標群
- */
-void CCollisionData::set(const cocos2d::Vec2 &position, const std::vector<cocos2d::Vec2> &apexs){
-    this->setPosition(position) ;
-    this->setApexs(apexs) ;
-}
-
-/**
- *  @desc   setCollisionData
- *  @param  CCollisionData
- */
-void CCollisionData::set(const CCollisionData &data){
-    this->m_position = data.getPosition() ;
-    this->setApexs(data.getApexs()) ;
-}
-
-/**
- *  @desc   setPosition
- *  @param  自身の位置座標
- */
-void CCollisionData::setPosition(const cocos2d::Vec2 &position){
-    this->m_position = position ;
-}
-
-/**
  *  @desc   setApexs
  *  @param  自身の位置座標
  */
 void CCollisionData::setApexs(const std::vector<cocos2d::Vec2> &apexs){
-    if(this->m_pApexs != NULL){
-        delete this->m_pApexs ;
-        this->m_pApexs = NULL ;
-    }
-    this->m_pApexs = new std::vector<cocos2d::Vec2>() ;
+    if(apexs.empty() == true) return ;
+    this->m_pApexs->erase(this->m_pApexs->begin(), this->m_pApexs->end()) ;
     for(cocos2d::Vec2 apex : apexs){
         this->m_pApexs->push_back(apex) ;
     }
-}
-
-/**
- *  @desc   setThick
- *  @param  太さ(円の半径)
- */
-void CCollisionData::setThick(float thick){
-    this->m_thick = thick ;
-}
-
-//=========================================================================
-// get
-//=========================================================================
-/**
- *  @desc   getPosition
- *  @return 位置座標
- */
-cocos2d::Vec2 CCollisionData::getPosition() const {
-    return this->m_position ;
-}
-
-/**
- *  @desc   getApexs
- *  @return 頂点座標群
- */
-std::vector<cocos2d::Vec2> &CCollisionData::getApexs() const {
-    return *this->m_pApexs ;
-}
-
-/**
- *  @desc   getThick
- *  @return 太さ
- */
-float CCollisionData::getThick() const {
-    return this->m_thick ;
 }
 
 //=========================================================================
@@ -151,10 +83,17 @@ float CCollisionData::getThick() const {
  *  @desc   衝突判定
  *  @param  衝突データ
  */
-bool CCollisionData::collisionDecision(const CCollisionData &data) const {
-    if(this->m_pApexs == NULL && data.m_pApexs == NULL){
-        return this->m_position == data.m_position ;
+bool CCollisionData::collisionDecision(CCollisionData data){
+    // 回転角度を反映
+    this->rotateApexs() ;
+    data.rotateApexs() ;
+    // 頂点が登録されているかを調べる
+    if(this->m_pApexs->empty() == true && data.m_pApexs->empty() == true){
+        // 点と点、もしくは円と円の衝突
+        float distance = this->m_position.getDistance(data.m_position) ;
+        if(distance <= this->m_radius + data.m_radius) return true ;
     }
+    
     return this->GJKAlgorithm(data) ;
 }
 
@@ -172,7 +111,7 @@ bool CCollisionData::GJKAlgorithm(CCollisionData data) const {
     
     // 自身を原点とした座標系に移動させる
     data.m_position += direction ;
-    if(data.m_pApexs != NULL){
+    if(data.m_pApexs->empty() == false){
         std::vector<cocos2d::Vec2>::iterator itr = data.m_pApexs->begin() ;
         while(itr != data.m_pApexs->end()){
             (*itr) += direction ;
@@ -189,16 +128,15 @@ bool CCollisionData::GJKAlgorithm(CCollisionData data) const {
     // 次の支点を決定するための方向ベクトル
     direction.negate() ;
     
-    // !!!: while内で不具合が起こった時の保険用変数
+    // while内で不具合が起こった時の保険用カウンター
     // こいつが一定値を超えたら強制的に抜けださせる
-    const int MAX_COUNT = 20 ;
     int count = 0 ;
     
     // 原点に最も近い単体を探し出す
     //多くても頂点の数分回せば見つかるようになっている
     while(true){
         // !!!: 無限ループを防ぐための保険
-        if(count >= MAX_COUNT){
+        if(count >= this->MAX_COUNT){
             // こいつが表示されると何かしら問題があるよ
             printf("無限ループに陥りそうだったので強制終了させました\n") ;
             return false ;
@@ -236,7 +174,14 @@ bool CCollisionData::GJKAlgorithm(CCollisionData data) const {
 cocos2d::Vec2 CCollisionData::getSupportMappingFulcrum(const CCollisionData &data, const cocos2d::Vec2 &direction) const {
     // 自身と対象におけるサポート写像支点を求める
     cocos2d::Vec2 myPoint = this->getFarthestApexInDirection(cocos2d::Vec2::ZERO, this->m_pApexs, -direction) ;
+    if(this->m_radius != 0.0f){
+        myPoint += -direction.getNormalized() * this->m_radius ;
+    }
+    
     cocos2d::Vec2 objPoint = this->getFarthestApexInDirection(data.m_position, data.m_pApexs, direction) ;
+    if(data.getRadius() != 0.0f){
+        objPoint += direction.getNormalized() * data.getRadius() ;
+    }
     
     // ミンコフスキー差座標を求める
     cocos2d::Vec2 minkowskiDifferencePoint = objPoint - myPoint ;
@@ -252,7 +197,7 @@ cocos2d::Vec2 CCollisionData::getSupportMappingFulcrum(const CCollisionData &dat
  */
 cocos2d::Vec2 CCollisionData::getFarthestApexInDirection(const cocos2d::Vec2 &position, const std::vector<cocos2d::Vec2> *pApexs, const cocos2d::Vec2 &direction) const {
     // 頂点座標群がなければ位置座標を返す
-    if(pApexs == NULL) return position ;
+    if(pApexs->empty() == true) return position ;
     
     // 誤差を抑えるために方向ベクトルを正規化する
     cocos2d::Vec2 vec = direction.getNormalized() ;
