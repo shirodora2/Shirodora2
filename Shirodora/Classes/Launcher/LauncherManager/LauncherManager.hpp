@@ -16,6 +16,7 @@
 //=========================================================================
 #include "SingletonTemplate.hpp"
 #include "LauncherTemplate.hpp"
+#include "SummonLauncher.hpp"
 
 //=========================================================================
 // 前方宣言
@@ -26,6 +27,7 @@
 //=========================================================================
 enum class LAUNCHER_TYPE {
     NONE        = -1,
+    SUMMON,
     MAX
 };
 
@@ -56,7 +58,7 @@ public :
      *  @desc   をトリガーに取り付け
      *  @param
      */
-    //inline void setTrigger(CLaunchTrigger</**/> *pTrigger){this->m_p/**/Launcher->add(pTrigger) ;}
+    inline void setTrigger(CTriggerTemplate<CSummon> *pTrigger){this->m_pSummonLauncher->add(pTrigger) ;}
     
     //=========================================================================
     // メンバ関数
@@ -95,6 +97,8 @@ private :
     //=========================================================================
     // メンバ変数
     //=========================================================================
+    // 召喚ランチャー
+    CSummonLauncher *m_pSummonLauncher {NULL} ;
     
 };
 

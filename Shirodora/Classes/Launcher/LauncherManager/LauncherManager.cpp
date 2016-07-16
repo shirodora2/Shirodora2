@@ -26,7 +26,8 @@
  */
 void CLauncherManager::setLauncher(LAUNCHER_TYPE type, cocos2d::Layer *pLayer){
     switch(type){
-        case LAUNCHER_TYPE::NONE :
+        case LAUNCHER_TYPE::SUMMON :
+            if(this->m_pSummonLauncher == NULL) this->m_pSummonLauncher = new CSummonLauncher(pLayer) ;
             break;
             
         default:
@@ -42,13 +43,18 @@ void CLauncherManager::setLauncher(LAUNCHER_TYPE type, cocos2d::Layer *pLayer){
  */
 void CLauncherManager::clear(){
     // 設置した砲台を解放して初期化する
+    if(this->m_pSummonLauncher != NULL){
+        delete this->m_pSummonLauncher ;
+        this->m_pSummonLauncher = NULL ;
+    }
 }
 
 /**
  *  @desc   update
  */
 void CLauncherManager::update(){
-    
+    // 発射台の更新処理
+    this->m_pSummonLauncher->update() ;
 }
 
 //=========================================================================
@@ -69,4 +75,9 @@ CLauncherManager::CLauncherManager(const CLauncherManager &mgr){/*処理なし*/
  */
 CLauncherManager::~CLauncherManager(){
     // 設置した砲台を解放する
+    // 設置した砲台を解放して初期化する
+    if(this->m_pSummonLauncher != NULL){
+        delete this->m_pSummonLauncher ;
+        this->m_pSummonLauncher = NULL ;
+    }
 }

@@ -42,7 +42,7 @@ void CSummon_Test::setMove(CSummon *pSummon , const cocos2d::Vec2 &position){
  *  @param  CSummon*
  */
 void CSummon_Test::setSprite(CSummon *pSummon){
-    //pSummon->getSprite()->setTexture("") ;
+    pSummon->getSprite()->setTexture("TestMoveSprite.png") ;
 }
 
 /**

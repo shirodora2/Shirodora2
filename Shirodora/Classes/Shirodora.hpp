@@ -24,14 +24,6 @@
 #include "SummonFactoryManager.hpp"
 #include "SummonTypes.hpp"
 
-
-//*************** Lib ***************************
-#include "Shape.hpp"
-#include "InputManager.hpp"
-#include "MouseManager.hpp"
-#include "SingletonTemplate.hpp"
-
-
 //*************** Data **************************
 //---- Action ----------------
 #include "Action.hpp"
@@ -66,8 +58,14 @@
 
 
 //*************** Launcher **********************
+//- - - - - - - - - Trigger - - - - - - - - - - -
 #include "TriggerTemplate.hpp"
-#include "Launcher.hpp"
+#include "SummonTriggers.hpp"
+
+//- - - - - - - - - Launcher - - - - - - - - - - -
+#include "LauncherTemplate.hpp"
+#include "SummonLauncher.hpp"
+
 #include "LauncherManager.hpp"
 
 
@@ -78,7 +76,11 @@
 #include "UI_Layer.hpp"
 #include "Battle_MainLayer.hpp"
 
-
+//*************** Lib ***************************
+#include "Shape.hpp"
+#include "InputManager.hpp"
+#include "MouseManager.hpp"
+#include "SingletonTemplate.hpp"
 
 
 
