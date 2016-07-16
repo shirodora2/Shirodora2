@@ -455,12 +455,11 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4F19FAFD1D39F10400C93DAA /* NetWork */,
-				4F19FAEC1D39EB2500C93DAA /* Factory */,
 				4F9C5B721D30AEEE0070E0DC /* Constants.hpp */,
 				4F9C5B981D30AEEE0070E0DC /* Manager.hpp */,
 				4F71A8EB1D369FE9004FD96B /* Factory.hpp */,
 				4F9C5BAC1D30AEEE0070E0DC /* Scene.hpp */,
+				4F19FAEC1D39EB2500C93DAA /* Factory */,
 				4F9C5B7A1D30AEEE0070E0DC /* Delegate */,
 				4F9C5B8E1D30AEEE0070E0DC /* Lib */,
 				4F9C5B731D30AEEE0070E0DC /* Data */,
@@ -469,7 +468,7 @@
 				4F71A8D11D369DD2004FD96B /* Launcher */,
 				4F9C5B7E1D30AEEE0070E0DC /* Layer */,
 				4F9C5BA61D30AEEE0070E0DC /* Scene */,
-				4F9C5BAD1D30AEEE0070E0DC /* UI */,
+				4F19FAFD1D39F10400C93DAA /* NetWork */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -913,21 +912,6 @@
 			children = (
 			);
 			path = Title;
-			sourceTree = "<group>";
-		};
-		4F9C5BAD1D30AEEE0070E0DC /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				4F9C5BAE1D30AEEE0070E0DC /* GameMain */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		4F9C5BAE1D30AEEE0070E0DC /* GameMain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GameMain;
 			sourceTree = "<group>";
 		};
 		4F9C5BCE1D30BF750070E0DC /* Body */ = {
