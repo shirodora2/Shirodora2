@@ -49,7 +49,8 @@ bool CBattleScene::init(){
     this->addChild(this->m_pMainLayer) ;
     
     // UIレイヤー
-    //this->m_pUILayer =
+    this->m_pUILayer = CUI_Layer::create();
+    addChild(m_pUILayer);
     
     // スケジューラーに登録
     this->scheduleUpdate() ;

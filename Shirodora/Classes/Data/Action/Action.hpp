@@ -10,7 +10,6 @@
 #define Action_hpp
 
 #include <stdio.h>
-#include "Move.hpp"
 
 //前方宣言
 class CCharacter ;
@@ -27,11 +26,7 @@ public:
      */
     virtual void update(CCharacter* pChara) = 0 ;
     //アクションを停止
-    virtual void stop() = 0;
-    virtual void stop(CCharacter* pChara){} ;
-    
-    //アクションを開始させるかどうかのフラグ　true...開始
-    bool m_isStartAction = false ;
+    virtual void stop() = 0 ;
 };
 
 #endif /* Action_hpp */

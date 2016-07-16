@@ -15,8 +15,7 @@
 // 追加のインクルードはここから
 //=========================================================================
 #include "Character.hpp"
-
-class CBody ;
+#include "Body.hpp"
 
 enum class SUMMON_STATE {
     NONE        = -1,

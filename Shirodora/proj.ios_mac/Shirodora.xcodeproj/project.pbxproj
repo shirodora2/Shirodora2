@@ -13,6 +13,26 @@
 		17EC442B1D39D67400DD4EAB /* TimeLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17EC44241D39D67400DD4EAB /* TimeLabel.cpp */; };
 		17EC442C1D39D67400DD4EAB /* UI_Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17EC44261D39D67400DD4EAB /* UI_Layer.cpp */; };
 		17EC442D1D39D67400DD4EAB /* UI_Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17EC44261D39D67400DD4EAB /* UI_Layer.cpp */; };
+		17EC44531D39EC5B00DD4EAB /* CharacterFrame_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC44491D39EC5B00DD4EAB /* CharacterFrame_Green.png */; };
+		17EC44541D39EC5B00DD4EAB /* CharacterFrame_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC44491D39EC5B00DD4EAB /* CharacterFrame_Green.png */; };
+		17EC44551D39EC5B00DD4EAB /* CharacterFrame_Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC444A1D39EC5B00DD4EAB /* CharacterFrame_Red.png */; };
+		17EC44561D39EC5B00DD4EAB /* CharacterFrame_Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC444A1D39EC5B00DD4EAB /* CharacterFrame_Red.png */; };
+		17EC44571D39EC5B00DD4EAB /* EnemyLife_Frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC444B1D39EC5B00DD4EAB /* EnemyLife_Frame.png */; };
+		17EC44581D39EC5B00DD4EAB /* EnemyLife_Frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC444B1D39EC5B00DD4EAB /* EnemyLife_Frame.png */; };
+		17EC44591D39EC5B00DD4EAB /* EnemyLife_Gage.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC444C1D39EC5B00DD4EAB /* EnemyLife_Gage.png */; };
+		17EC445A1D39EC5B00DD4EAB /* EnemyLife_Gage.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC444C1D39EC5B00DD4EAB /* EnemyLife_Gage.png */; };
+		17EC445B1D39EC5B00DD4EAB /* PlayerLife_Frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC444D1D39EC5B00DD4EAB /* PlayerLife_Frame.png */; };
+		17EC445C1D39EC5B00DD4EAB /* PlayerLife_Frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC444D1D39EC5B00DD4EAB /* PlayerLife_Frame.png */; };
+		17EC445D1D39EC5B00DD4EAB /* PlayerLife_Gage.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC444E1D39EC5B00DD4EAB /* PlayerLife_Gage.png */; };
+		17EC445E1D39EC5B00DD4EAB /* PlayerLife_Gage.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC444E1D39EC5B00DD4EAB /* PlayerLife_Gage.png */; };
+		17EC445F1D39EC5B00DD4EAB /* Summon_Frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC444F1D39EC5B00DD4EAB /* Summon_Frame.png */; };
+		17EC44601D39EC5B00DD4EAB /* Summon_Frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC444F1D39EC5B00DD4EAB /* Summon_Frame.png */; };
+		17EC44611D39EC5B00DD4EAB /* Summon_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC44501D39EC5B00DD4EAB /* Summon_Icon.png */; };
+		17EC44621D39EC5B00DD4EAB /* Summon_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC44501D39EC5B00DD4EAB /* Summon_Icon.png */; };
+		17EC44631D39EC5B00DD4EAB /* Summon_SmallFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC44511D39EC5B00DD4EAB /* Summon_SmallFrame.png */; };
+		17EC44641D39EC5B00DD4EAB /* Summon_SmallFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC44511D39EC5B00DD4EAB /* Summon_SmallFrame.png */; };
+		17EC44651D39EC5B00DD4EAB /* Summon_SmallIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC44521D39EC5B00DD4EAB /* Summon_SmallIcon.png */; };
+		17EC44661D39EC5B00DD4EAB /* Summon_SmallIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC44521D39EC5B00DD4EAB /* Summon_SmallIcon.png */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -30,10 +50,6 @@
 		4F19FAF41D39EB7600C93DAA /* SummonFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FAF11D39EB7600C93DAA /* SummonFactoryManager.cpp */; };
 		4F19FAF71D39EB8600C93DAA /* SummonCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FAF51D39EB8600C93DAA /* SummonCreateFactory.cpp */; };
 		4F19FAF81D39EB8600C93DAA /* SummonCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FAF51D39EB8600C93DAA /* SummonCreateFactory.cpp */; };
-		4F19FB001D39F10400C93DAA /* client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FAFE1D39F10400C93DAA /* client.cpp */; };
-		4F19FB011D39F10400C93DAA /* client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FAFE1D39F10400C93DAA /* client.cpp */; };
-		4F19FB021D39F10400C93DAA /* Server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FAFF1D39F10400C93DAA /* Server.cpp */; };
-		4F19FB031D39F10400C93DAA /* Server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FAFF1D39F10400C93DAA /* Server.cpp */; };
 		4F70F3501D37D4C500603081 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F34E1D37D4C500603081 /* King.cpp */; };
 		4F70F3511D37D4C500603081 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F34E1D37D4C500603081 /* King.cpp */; };
 		4F70F3541D37D86A00603081 /* Summon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F3521D37D86A00603081 /* Summon.cpp */; };
@@ -139,10 +155,6 @@
 		DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153441D39D6A1005E73E7 /* Status.cpp */; };
 		DB51534B1D39DDC3005E73E7 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153491D39DDC3005E73E7 /* Action.cpp */; };
 		DB51534C1D39DDC3005E73E7 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153491D39DDC3005E73E7 /* Action.cpp */; };
-		DB5153531D39E66F005E73E7 /* MoveAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153511D39E66F005E73E7 /* MoveAction.cpp */; };
-		DB5153541D39E66F005E73E7 /* MoveAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153511D39E66F005E73E7 /* MoveAction.cpp */; };
-		DB5153571D39E67E005E73E7 /* AttackAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153551D39E67E005E73E7 /* AttackAction.cpp */; };
-		DB5153581D39E67E005E73E7 /* AttackAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153551D39E67E005E73E7 /* AttackAction.cpp */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 /* End PBXBuildFile section */
@@ -185,6 +197,16 @@
 		17EC44251D39D67400DD4EAB /* TimeLabel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TimeLabel.hpp; sourceTree = "<group>"; };
 		17EC44261D39D67400DD4EAB /* UI_Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UI_Layer.cpp; sourceTree = "<group>"; };
 		17EC44271D39D67400DD4EAB /* UI_Layer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UI_Layer.hpp; sourceTree = "<group>"; };
+		17EC44491D39EC5B00DD4EAB /* CharacterFrame_Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CharacterFrame_Green.png; path = UI_Image/CharacterFrame_Green.png; sourceTree = "<group>"; };
+		17EC444A1D39EC5B00DD4EAB /* CharacterFrame_Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CharacterFrame_Red.png; path = UI_Image/CharacterFrame_Red.png; sourceTree = "<group>"; };
+		17EC444B1D39EC5B00DD4EAB /* EnemyLife_Frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EnemyLife_Frame.png; path = UI_Image/EnemyLife_Frame.png; sourceTree = "<group>"; };
+		17EC444C1D39EC5B00DD4EAB /* EnemyLife_Gage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EnemyLife_Gage.png; path = UI_Image/EnemyLife_Gage.png; sourceTree = "<group>"; };
+		17EC444D1D39EC5B00DD4EAB /* PlayerLife_Frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlayerLife_Frame.png; path = UI_Image/PlayerLife_Frame.png; sourceTree = "<group>"; };
+		17EC444E1D39EC5B00DD4EAB /* PlayerLife_Gage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlayerLife_Gage.png; path = UI_Image/PlayerLife_Gage.png; sourceTree = "<group>"; };
+		17EC444F1D39EC5B00DD4EAB /* Summon_Frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Summon_Frame.png; path = UI_Image/Summon_Frame.png; sourceTree = "<group>"; };
+		17EC44501D39EC5B00DD4EAB /* Summon_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Summon_Icon.png; path = UI_Image/Summon_Icon.png; sourceTree = "<group>"; };
+		17EC44511D39EC5B00DD4EAB /* Summon_SmallFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Summon_SmallFrame.png; path = UI_Image/Summon_SmallFrame.png; sourceTree = "<group>"; };
+		17EC44521D39EC5B00DD4EAB /* Summon_SmallIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Summon_SmallIcon.png; path = UI_Image/Summon_SmallIcon.png; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -200,8 +222,6 @@
 		4F19FAF51D39EB8600C93DAA /* SummonCreateFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonCreateFactory.cpp; sourceTree = "<group>"; };
 		4F19FAF61D39EB8600C93DAA /* SummonCreateFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonCreateFactory.hpp; sourceTree = "<group>"; };
 		4F19FAFA1D39EB9300C93DAA /* SummonTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTypes.hpp; sourceTree = "<group>"; };
-		4F19FAFE1D39F10400C93DAA /* client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = client.cpp; sourceTree = "<group>"; };
-		4F19FAFF1D39F10400C93DAA /* Server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Server.cpp; sourceTree = "<group>"; };
 		4F70F34E1D37D4C500603081 /* King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
 		4F70F34F1D37D4C500603081 /* King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = King.hpp; sourceTree = "<group>"; };
 		4F70F3521D37D86A00603081 /* Summon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Summon.cpp; sourceTree = "<group>"; };
@@ -309,10 +329,6 @@
 		DB5153451D39D6A1005E73E7 /* Status.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Status.hpp; sourceTree = "<group>"; };
 		DB5153491D39DDC3005E73E7 /* Action.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Action.cpp; sourceTree = "<group>"; };
 		DB51534A1D39DDC3005E73E7 /* Action.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Action.hpp; sourceTree = "<group>"; };
-		DB5153511D39E66F005E73E7 /* MoveAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MoveAction.cpp; sourceTree = "<group>"; };
-		DB5153521D39E66F005E73E7 /* MoveAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MoveAction.hpp; sourceTree = "<group>"; };
-		DB5153551D39E67E005E73E7 /* AttackAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttackAction.cpp; sourceTree = "<group>"; };
-		DB5153561D39E67E005E73E7 /* AttackAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AttackAction.hpp; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -386,6 +402,23 @@
 				17EC44271D39D67400DD4EAB /* UI_Layer.hpp */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		17EC44481D39EC4100DD4EAB /* UI_Image */ = {
+			isa = PBXGroup;
+			children = (
+				17EC44491D39EC5B00DD4EAB /* CharacterFrame_Green.png */,
+				17EC444A1D39EC5B00DD4EAB /* CharacterFrame_Red.png */,
+				17EC444B1D39EC5B00DD4EAB /* EnemyLife_Frame.png */,
+				17EC444C1D39EC5B00DD4EAB /* EnemyLife_Gage.png */,
+				17EC444D1D39EC5B00DD4EAB /* PlayerLife_Frame.png */,
+				17EC444E1D39EC5B00DD4EAB /* PlayerLife_Gage.png */,
+				17EC444F1D39EC5B00DD4EAB /* Summon_Frame.png */,
+				17EC44501D39EC5B00DD4EAB /* Summon_Icon.png */,
+				17EC44511D39EC5B00DD4EAB /* Summon_SmallFrame.png */,
+				17EC44521D39EC5B00DD4EAB /* Summon_SmallIcon.png */,
+			);
+			name = UI_Image;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -463,11 +496,11 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4F19FAEC1D39EB2500C93DAA /* Factory */,
 				4F9C5B721D30AEEE0070E0DC /* Constants.hpp */,
 				4F9C5B981D30AEEE0070E0DC /* Manager.hpp */,
 				4F71A8EB1D369FE9004FD96B /* Factory.hpp */,
 				4F9C5BAC1D30AEEE0070E0DC /* Scene.hpp */,
-				4F19FAEC1D39EB2500C93DAA /* Factory */,
 				4F9C5B7A1D30AEEE0070E0DC /* Delegate */,
 				4F9C5B8E1D30AEEE0070E0DC /* Lib */,
 				4F9C5B731D30AEEE0070E0DC /* Data */,
@@ -476,14 +509,7 @@
 				4F71A8D11D369DD2004FD96B /* Launcher */,
 				4F9C5B7E1D30AEEE0070E0DC /* Layer */,
 				4F9C5BA61D30AEEE0070E0DC /* Scene */,
-<<<<<<< Updated upstream
-				4F19FAFD1D39F10400C93DAA /* NetWork */,
-=======
-<<<<<<< HEAD
-=======
-				4F19FAFD1D39F10400C93DAA /* NetWork */,
->>>>>>> origin/master
->>>>>>> Stashed changes
+				4F9C5BAD1D30AEEE0070E0DC /* UI */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -531,15 +557,6 @@
 				4F19FAFA1D39EB9300C93DAA /* SummonTypes.hpp */,
 			);
 			path = Types;
-			sourceTree = "<group>";
-		};
-		4F19FAFD1D39F10400C93DAA /* NetWork */ = {
-			isa = PBXGroup;
-			children = (
-				4F19FAFE1D39F10400C93DAA /* client.cpp */,
-				4F19FAFF1D39F10400C93DAA /* Server.cpp */,
-			);
-			path = NetWork;
 			sourceTree = "<group>";
 		};
 		4F70F34C1D37D4AB00603081 /* King */ = {
@@ -634,6 +651,7 @@
 		4F9C5B5B1D30AEC60070E0DC /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				17EC44481D39EC4100DD4EAB /* UI_Image */,
 				4F9C5B5C1D30AEC60070E0DC /* BackGround */,
 				4F9C5B5D1D30AEC60070E0DC /* Character */,
 				4F9C5B5E1D30AEC60070E0DC /* TestImage */,
@@ -929,6 +947,21 @@
 			path = Title;
 			sourceTree = "<group>";
 		};
+		4F9C5BAD1D30AEEE0070E0DC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4F9C5BAE1D30AEEE0070E0DC /* GameMain */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4F9C5BAE1D30AEEE0070E0DC /* GameMain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameMain;
+			sourceTree = "<group>";
+		};
 		4F9C5BCE1D30BF750070E0DC /* Body */ = {
 			isa = PBXGroup;
 			children = (
@@ -1034,30 +1067,10 @@
 		DB5153481D39DDB4005E73E7 /* Action */ = {
 			isa = PBXGroup;
 			children = (
-				DB51534F1D39E657005E73E7 /* AttackAction */,
-				DB5153501D39E657005E73E7 /* MoveAction */,
 				DB5153491D39DDC3005E73E7 /* Action.cpp */,
 				DB51534A1D39DDC3005E73E7 /* Action.hpp */,
 			);
 			path = Action;
-			sourceTree = "<group>";
-		};
-		DB51534F1D39E657005E73E7 /* AttackAction */ = {
-			isa = PBXGroup;
-			children = (
-				DB5153551D39E67E005E73E7 /* AttackAction.cpp */,
-				DB5153561D39E67E005E73E7 /* AttackAction.hpp */,
-			);
-			path = AttackAction;
-			sourceTree = "<group>";
-		};
-		DB5153501D39E657005E73E7 /* MoveAction */ = {
-			isa = PBXGroup;
-			children = (
-				DB5153511D39E66F005E73E7 /* MoveAction.cpp */,
-				DB5153521D39E66F005E73E7 /* MoveAction.hpp */,
-			);
-			path = MoveAction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1164,25 +1177,35 @@
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				4F9C5B6E1D30AEC60070E0DC /* BoneFramework2.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				17EC44611D39EC5B00DD4EAB /* Summon_Icon.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				4F9C5B681D30AEC60070E0DC /* gameMainBG.png in Resources */,
+				17EC44651D39EC5B00DD4EAB /* Summon_SmallIcon.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				4F9C5B6A1D30AEC60070E0DC /* Bone.png in Resources */,
+				17EC44631D39EC5B00DD4EAB /* Summon_SmallFrame.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				17EC445B1D39EC5B00DD4EAB /* PlayerLife_Frame.png in Resources */,
 				4F9C5B701D30AEC60070E0DC /* BoneGloss.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
+				17EC44571D39EC5B00DD4EAB /* EnemyLife_Frame.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				17EC44551D39EC5B00DD4EAB /* CharacterFrame_Red.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				17EC44591D39EC5B00DD4EAB /* EnemyLife_Gage.png in Resources */,
+				17EC445D1D39EC5B00DD4EAB /* PlayerLife_Gage.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
+				17EC44531D39EC5B00DD4EAB /* CharacterFrame_Green.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				17EC445F1D39EC5B00DD4EAB /* Summon_Frame.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1190,17 +1213,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17EC44581D39EC5B00DD4EAB /* EnemyLife_Frame.png in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				4F9C5B691D30AEC60070E0DC /* gameMainBG.png in Resources */,
 				4F9C5B711D30AEC60070E0DC /* BoneGloss.png in Resources */,
+				17EC44601D39EC5B00DD4EAB /* Summon_Frame.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
+				17EC44641D39EC5B00DD4EAB /* Summon_SmallFrame.png in Resources */,
+				17EC44561D39EC5B00DD4EAB /* CharacterFrame_Red.png in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
+				17EC445E1D39EC5B00DD4EAB /* PlayerLife_Gage.png in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				4F9C5B6B1D30AEC60070E0DC /* Bone.png in Resources */,
 				4F9C5B6D1D30AEC60070E0DC /* BoneFramework1.png in Resources */,
+				17EC44621D39EC5B00DD4EAB /* Summon_Icon.png in Resources */,
 				4F9C5B6F1D30AEC60070E0DC /* BoneFramework2.png in Resources */,
+				17EC445A1D39EC5B00DD4EAB /* EnemyLife_Gage.png in Resources */,
+				17EC44661D39EC5B00DD4EAB /* Summon_SmallIcon.png in Resources */,
+				17EC445C1D39EC5B00DD4EAB /* PlayerLife_Frame.png in Resources */,
+				17EC44541D39EC5B00DD4EAB /* CharacterFrame_Green.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1224,7 +1257,6 @@
 				17EC44281D39D67400DD4EAB /* CastleHpBar.cpp in Sources */,
 				4F9C5BBD1D30AEEE0070E0DC /* Actor.cpp in Sources */,
 				4F71A8E01D369DD2004FD96B /* LaunchTrigger.cpp in Sources */,
-				DB5153571D39E67E005E73E7 /* AttackAction.cpp in Sources */,
 				DB5153461D39D6A1005E73E7 /* Status.cpp in Sources */,
 				4F71A8DC1D369DD2004FD96B /* Launcher.cpp in Sources */,
 				4F9C5BB31D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
@@ -1234,19 +1266,8 @@
 				4F70F3541D37D86A00603081 /* Summon.cpp in Sources */,
 				4F9C5BB91D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				4F9C5BDA1D30BF7E0070E0DC /* Move.cpp in Sources */,
-				4F19FB021D39F10400C93DAA /* Server.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
-<<<<<<< Updated upstream
 				4F19FAF71D39EB8600C93DAA /* SummonCreateFactory.cpp in Sources */,
-				4F19FB001D39F10400C93DAA /* client.cpp in Sources */,
-=======
-<<<<<<< HEAD
-				DB5153531D39E66F005E73E7 /* MoveAction.cpp in Sources */,
-=======
-				4F19FAF71D39EB8600C93DAA /* SummonCreateFactory.cpp in Sources */,
-				4F19FB001D39F10400C93DAA /* client.cpp in Sources */,
->>>>>>> origin/master
->>>>>>> Stashed changes
 				4F9C5BB71D30AEEE0070E0DC /* Battle_MainLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				4F19FAF31D39EB7600C93DAA /* SummonFactoryManager.cpp in Sources */,
@@ -1268,7 +1289,6 @@
 				17EC44291D39D67400DD4EAB /* CastleHpBar.cpp in Sources */,
 				4F9C5BE71D30BFC70070E0DC /* Simplex.cpp in Sources */,
 				4F9C5BB41D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
-				4F19FB031D39F10400C93DAA /* Server.cpp in Sources */,
 				4F9C5BC21D30AEEE0070E0DC /* Object.cpp in Sources */,
 				4F9C5BC41D30AEEE0070E0DC /* Pawn.cpp in Sources */,
 				4F9C5BB61D30AEEE0070E0DC /* MouseLayer.cpp in Sources */,
@@ -1289,14 +1309,11 @@
 				4F71A8E11D369DD2004FD96B /* LaunchTrigger.cpp in Sources */,
 				4F70F3551D37D86A00603081 /* Summon.cpp in Sources */,
 				4F70F3511D37D4C500603081 /* King.cpp in Sources */,
-				DB5153581D39E67E005E73E7 /* AttackAction.cpp in Sources */,
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */,
 				4F19FAF41D39EB7600C93DAA /* SummonFactoryManager.cpp in Sources */,
 				4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */,
-				DB5153541D39E66F005E73E7 /* MoveAction.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				4F19FB011D39F10400C93DAA /* client.cpp in Sources */,
 				4F70F35B1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
 				DB51534C1D39DDC3005E73E7 /* Action.cpp in Sources */,
 				4F71A8DD1D369DD2004FD96B /* Launcher.cpp in Sources */,

@@ -15,11 +15,9 @@
 // 追加のインクルードはここから
 //=========================================================================
 #include "Actor.hpp"
-
-class CAction ;
-class CMove ;
-class CAnimation ;
-class CStatusOfObject ;
+#include "Animation.hpp"
+#include "Body.hpp"
+#include "Move.hpp"
 
 //=========================================================================
 //
@@ -142,7 +140,7 @@ protected :
     // アニメーションデータ群
     std::vector<CAnimation*> *m_pAnimations {NULL} ;
     // ステータス
-    CStatusOfObject *m_pStatus {NULL} ;
+    // CStatus *m_pStatus {NULL} ;
     // タグ
     int m_tag = 0 ;
     

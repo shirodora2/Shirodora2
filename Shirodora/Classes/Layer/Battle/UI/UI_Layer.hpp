@@ -12,7 +12,8 @@
 #include "cocos2d.h"
 
 class CTimeLable;
-class CCastleHpBar;
+class CCastleHpPlayerBar;
+class CCastleHpEnemyBar;
 
 enum class CZoderUI : int{
     Time = 0,
@@ -26,7 +27,8 @@ private:
     //制限時間
     CTimeLable* m_pTimeLabel = NULL;
     //城の耐久値
-    CCastleHpBar* m_pCastleHpBar = NULL;
+    CCastleHpPlayerBar* m_pCastleHpPlayerBar = NULL;
+    CCastleHpEnemyBar* m_pCastleHpEnemyBar = NULL;
 public:
     CUI_Layer();
     ~CUI_Layer();

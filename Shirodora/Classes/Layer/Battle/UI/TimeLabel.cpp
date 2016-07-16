@@ -26,9 +26,12 @@ bool CTimeLable::init(){
     //色
     setColor(Color3B::RED);
     setString(std::to_string(m_time));
+    
+    scheduleUpdate();
     return true;
 }
 
 void CTimeLable::update(float _dt){
+    m_time++;
     setString(std::to_string(m_time));
 }

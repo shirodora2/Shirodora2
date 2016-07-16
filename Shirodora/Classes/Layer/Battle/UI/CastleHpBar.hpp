@@ -11,12 +11,14 @@
 
 #include "cocos2d.h"
 
-class CCastleHpBar : public cocos2d::ProgressTimer{
+class CCastleHpPlayerBar : public cocos2d::Sprite{
 private:
-    float m_Hp = 0;
+    float m_MaxHp = 760;
+    float m_Hp = 760;
+    cocos2d::ProgressTimer* m_pHpGage = NULL;
 public:
-    CCastleHpBar();
-    ~CCastleHpBar();
+    CCastleHpPlayerBar();
+    ~CCastleHpPlayerBar();
     
     bool init() override;
     
@@ -25,7 +27,37 @@ public:
     void setCastleHp(float _hp){this->m_Hp = _hp;}
     float getCastleHp(){return this->m_Hp;}
     
-    CREATE_FUNC(CCastleHpBar);
+    //プログレスタイマークリエイト
+    void progresTimerCreate();
+    //値の反映
+    void applyFunc();
+    
+    CREATE_FUNC(CCastleHpPlayerBar)
 };
+
+class CCastleHpEnemyBar : public cocos2d::Sprite{
+private:
+    float m_MaxHp = 760;
+    float m_Hp = 760;
+    cocos2d::ProgressTimer* m_pHpGage = NULL;
+public:
+    CCastleHpEnemyBar();
+    ~CCastleHpEnemyBar();
+    
+    bool init() override;
+    
+    void update(float _dt) override;
+    
+    void setCastleHp(float _hp){this->m_Hp = _hp;}
+    float getCastleHp(){return this->m_Hp;}
+    
+    //プログレスタイマークリエイト
+    void progresTimerCreate();
+    //値の反映
+    void applyFunc();
+    
+    CREATE_FUNC(CCastleHpEnemyBar)
+};
+
 
 #endif /* CastleHpBar_hpp */

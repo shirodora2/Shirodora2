@@ -12,11 +12,6 @@
 // 追加のインクルードはここから
 //=========================================================================
 #include "Manager.hpp"
-#include "Character.hpp"
-#include "Move.hpp"
-#include "Body.hpp"
-#include "Animation.hpp"
-#include "Status.hpp"
 
 //=========================================================================
 //

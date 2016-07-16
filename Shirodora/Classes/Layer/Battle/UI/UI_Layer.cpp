@@ -28,7 +28,16 @@ bool CUI_Layer::init(){
     addChild(m_pTimeLabel,(int)CZoderUI::Time);
     
     //城の耐久値のバー
-    m_pCastleHpBar = CCastleHpBar::create();
+    m_pCastleHpPlayerBar = CCastleHpPlayerBar::create();
+    m_pCastleHpPlayerBar->setPosition(Director::getInstance()->getWinSize().width * 0.2f,
+                                Director::getInstance()->getWinSize().height * 0.9f);
+    addChild(m_pCastleHpPlayerBar,(int)CZoderUI::Bar);
+    
+    m_pCastleHpEnemyBar = CCastleHpEnemyBar::create();
+    m_pCastleHpEnemyBar->setPosition(Director::getInstance()->getWinSize().width * 0.8f,
+                                      Director::getInstance()->getWinSize().height * 0.9f);
+    addChild(m_pCastleHpEnemyBar,(int)CZoderUI::Bar);
+
     
     scheduleUpdate();
     return true;
