@@ -78,12 +78,6 @@
 #include "UI_Layer.hpp"
 #include "Battle_MainLayer.hpp"
 
-//---- BaseLayer -------------
-#include "InputAndMouseLayer.hpp"
-#include "InputLayer.hpp"
-#include "MouseLayer.hpp"
-
-
 
 
 

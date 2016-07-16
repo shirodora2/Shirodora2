@@ -20,25 +20,7 @@
 /**
  *  @desc   constructor
  */
-CMove::CMove() : m_position(0.0f, 0.0f), m_direction(0.0f, 0.0f){
-    
-}
-
-/**
- *  @desc   constructor
- */
-CMove::CMove(const cocos2d::Vec2 &position,
-             const cocos2d::Vec2 &direction,
-             float velocity,
-             float accele,
-             float angle,
-             float rotateVel){
-    this->setPosition(position) ;
-    this->setVelocity(velocity) ;
-    this->setAccele(accele) ;
-    this->setAngle(angle) ;
-    this->setRotateVel(rotateVel) ;
-}
+CMove::CMove(){}
 
 /**
  *  @desc   copy constructor

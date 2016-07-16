@@ -6,19 +6,11 @@
 //
 //
 
-#include "SummonCreateFactory.hpp"
-
-//=========================================================================
-// 前方宣言
-//=========================================================================
-#include "Constants.hpp"
-#include "Summon.hpp"
-#include "Move.hpp"
-#include "Body.hpp"
+#include "Shirodora.hpp"
 
 //=========================================================================
 //
-// EnemyUnitCreateFactory
+// SummonCreateFactory
 //
 //=========================================================================
 //=========================================================================
@@ -33,45 +25,49 @@ CSummonCreateFactory::~CSummonCreateFactory(){}
 // メンバ関数
 //=========================================================================
 /**
- *  @desc   カーソル生成
+ *  @desc   召喚生成
  *  @param  生成位置
  */
 CSummon *CSummonCreateFactory::create(const cocos2d::Vec2 &position){
     // カーソルの型を用意
-    CSummon *pUnit {NULL} ;
+    CSummon *pSummon {NULL} ;
     // メンバ変数を生成したカーソルを受け取る
-    pUnit = this->create() ;
+    pSummon = this->create() ;
     
     // メンバ変数の設定
-    this->setMove(pUnit, position) ;
-    this->setSprite(pUnit) ;
-    this->setStatus(pUnit) ;
-    this->setCollisionBody(pUnit) ;
-    this->setAnimation(pUnit) ;
-    this->setAction(pUnit) ;
+    this->setMove(pSummon, position) ;
+    this->setSprite(pSummon) ;
+    this->setStatus(pSummon) ;
+    this->setCollisionBody(pSummon) ;
+    this->setAttackBody(pSummon) ;
+    this->setAnimation(pSummon) ;
+    this->setAction(pSummon) ;
+    this->setTag(pSummon) ;
+    this->setTag(pSummon) ;
     
     // 設定したデータを反映させる
-    pUnit->apply() ;
+    pSummon->apply() ;
     
-    return  pUnit ;
+    return  pSummon ;
 }
 
 /**
- *  @desc   カーソル生成とメンバ変数取り付け
+ *  @desc   召喚生成とメンバ変数取り付け
  */
 CSummon *CSummonCreateFactory::create(){
-    // カーソルの型を用意
-    CSummon *pUnit {NULL} ;
-    // カーソル生成
-    pUnit = CCREATE_FUNC::create<CSummon>() ;
+    // 召喚の型を用意
+    CSummon *pSummon {NULL} ;
+    // 召喚生成
+    pSummon = CCREATE_FUNC::create<CSummon>() ;
     
     // メンバ変数の生成
-    pUnit->setMove(new CMove()) ;
-    pUnit->setSprite(cocos2d::Sprite::create()) ;
-    //pUnit->setStatus(new CUnitStatus()) ;
-    pUnit->setCollisionBody(new CBody()) ;
-    pUnit->setAnimations(new std::vector<CAnimation*>()) ;
-    //pUnit->setActions(new std::vector<CAction<CEnemyUnit>*>()) ;
+    pSummon->setMove(new CMove()) ;
+    pSummon->setSprite(cocos2d::Sprite::create()) ;
+    pSummon->setStatus(new CStatusOfObject()) ;
+    pSummon->setCollisionBody(new CBody()) ;
+    pSummon->setAttackBody(new CBody()) ;
+    pSummon->setAnimations(new std::vector<CAnimation*>()) ;
+    pSummon->setActions(new std::vector<CAction*>()) ;
     
-    return pUnit ;
+    return pSummon ;
 }

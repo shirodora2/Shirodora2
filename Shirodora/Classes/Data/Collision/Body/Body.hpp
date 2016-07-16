@@ -16,10 +16,6 @@
 //=========================================================================
 
 //=========================================================================
-// 関数やマクロ定義はここから
-//=========================================================================
-
-//=========================================================================
 //
 // Body
 //
@@ -31,28 +27,9 @@ public :
     //=========================================================================
     /**
      *  @desc   constructor
+     *  @tips   頂点数0の原点のみの点として生成
      */
     CBody() ;
-    
-    /**
-     *  @desc   constructor
-     */
-    CBody(const cocos2d::Vec2 &center) ;
-    
-    /**
-     *  @desc   constructor
-     */
-    CBody(const std::vector<cocos2d::Vec2> &apexs, const cocos2d::Vec2 &center = cocos2d::Vec2(0.0f, 0.0f)) ;
-    
-    /**
-     *  @desc   constructor
-     */
-    CBody(int apexSize, const cocos2d::Vec2 apexs[], const cocos2d::Vec2 &center = cocos2d::Vec2(0.0f, 0.0f)) ;
-    
-    /**
-     *  @desc   copy constructor
-     */
-    CBody(const CBody &body) ;
     
     /**
      *  @desc   destructor
@@ -66,34 +43,34 @@ public :
      *  @desc   中心座標設定
      *  @param  中心座標
      */
-    void set(const cocos2d::Vec2 &center) ;
+    inline void setCenterPosition(const cocos2d::Vec2 &center){
+        this->m_centerPosition = center ;
+    }
     
     /**
      *  @desc   座標設定
-     *  @param  頂点座標群
-     *  @param  中心座標
+     *  @param  頂点座標群 std::vector
      */
-    void set(const std::vector<cocos2d::Vec2> &apexs, const cocos2d::Vec2 &center = cocos2d::Vec2(0.0f, 0.0f)) ;
+    void setApexs(const std::vector<cocos2d::Vec2> &apexs) ;
     
     /**
      *  @desc   座標設定
      *  @param  頂点数
      *  @param  頂点座標配列
-     *  @param  中心座標
      */
-    void set(int apexSize, const cocos2d::Vec2 apexs[], const cocos2d::Vec2 &center = cocos2d::Vec2(0.0f, 0.0f)) ;
-    
-    /**
-     *  @desc   座標設定
-     *  @param  CBody
-     */
-    void set(const CBody &body) ;
+    void setApexs(int apexSize, const cocos2d::Vec2 apexs[]) ;
     
     /**
      *  @desc   太さ設定
      *  @param  太さ
      */
     inline void setRadius(float radius){this->m_radius = radius ;}
+    
+    /**
+     *  @desc   座標設定
+     *  @param  CBody
+     */
+    void set(const CBody &body) ;
     
     //=========================================================================
     // get
@@ -102,33 +79,32 @@ public :
      *  @desc   頂点数取得
      *  @return 頂点数
      */
-    int getApexSize() const ;
+    inline int getApexSize() const {return this->m_pApexs->size() ;}
     
     /**
      *  @desc   頂点座標群取得
-     *  @return const std::vector<cocos2d::Vec2>*
+     *  @return std::vector<cocos2d::Vec2>*
      */
-    const std::vector<cocos2d::Vec2>* getApexs() const ;
+    inline std::vector<cocos2d::Vec2> *getApexs() const {return this->m_pApexs ;}
     
     /**
      *  @desc   頂点座標取得
      *  @param  添字番号
-     *  @return array
-     *  @tips   受け値は const float* apex ;
+     *  @return 座標
      */
-    cocos2d::Vec2 getApexAt(int index) const ;
+    inline cocos2d::Vec2 getApexAt(int index) const {return (*this->m_pApexs)[index] ;}
     
     /**
      *  @desc   中心座標取得
      *  @return cocos2d::Vec2
      */
-    cocos2d::Vec2 getCenter() const ;
+    inline cocos2d::Vec2 getCenterPosition() const {return this->m_centerPosition ;}
     
     /**
      *  @desc   太さ取得
      *  @param  太さ
      */
-    inline float getRadius(){return this->m_radius ;}
+    inline float getRadius() const {return this->m_radius ;}
     
     //=========================================================================
     // メンバ関数
@@ -140,12 +116,6 @@ public :
     void move(const cocos2d::Vec2 &vector) ;
     
     /**
-     *  @desc   座標回転
-     *  @param  回転角度
-     */
-    void rotate(float angle, const cocos2d::Vec2 &point = cocos2d::Vec2::ZERO) ;
-    
-    /**
      *  @desc   指定された向きで最も遠くにある頂点座標を返す
      *  @param  方向ベクトル
      *  @return 最も遠い頂点座標
@@ -153,16 +123,6 @@ public :
     cocos2d::Vec2 getFarthestPointInDirection(const cocos2d::Vec2 &direction) const ;
     
 private :
-    //=========================================================================
-    // init
-    //=========================================================================
-    /**
-     *  @desc   init
-     *  @param  頂点座標群
-     *  @param  中心座標
-     */
-    void init() ;
-    
     //=========================================================================
     // メンバ関数
     //=========================================================================
@@ -178,7 +138,7 @@ private :
     // 頂点座標群
     std::vector<cocos2d::Vec2> *m_pApexs {NULL} ;
     // 中心座標
-    cocos2d::Vec2 m_center ;
+    cocos2d::Vec2 m_centerPosition ;
     // 太さ
     float m_radius = 0.0f ;
 };

@@ -31,49 +31,49 @@ enum class SUMMON_TYPE {
 
 //=========================================================================
 //
-// EnemyUnitFactoryManager
+// SummonFactoryManager
 //
 //=========================================================================
-class CEnemyUnitFactoryManager : public CSingletonTemplate<CEnemyUnitFactoryManager> {
+class CSummonFactoryManager : public CSingletonTemplate<CSummonFactoryManager> {
     public :
     //=========================================================================
     // メンバ変数
     //=========================================================================
     /**
-     *  @desc   敵ユニット生成
-     *  @param  ENEMY_UNIT_TYPE
+     *  @desc   召喚生成
+     *  @param  SUMMON_TYPE
      *  @param  生成位置 x
      *  @param  生成位置 y
      */
     CSummon *create(SUMMON_TYPE type, float x, float y) ;
     
-    private :
+private :
     //=========================================================================
     // コンストラクタ/デストラクタ
     //=========================================================================
-    friend class CSingletonTemplate<CEnemyUnitFactoryManager> ;
+    friend class CSingletonTemplate<CSummonFactoryManager> ;
     
     /**
      *  @desc   constructor
      */
-    CEnemyUnitFactoryManager() ;
+    CSummonFactoryManager() ;
     
     /**
      *  @desc   copy constructor
      */
-    CEnemyUnitFactoryManager(const CEnemyUnitFactoryManager &mgr) ;
+    CSummonFactoryManager(const CSummonFactoryManager &mgr) ;
     
     /**
      *  @desc   destructor
      */
-    ~CEnemyUnitFactoryManager() ;
+    ~CSummonFactoryManager() ;
     
     //=========================================================================
     // set
     //=========================================================================
     /**
      *  @desc   工場設定
-     *  @param  ENEMY_UNIT_TYPE
+     *  @param  SUMMON_TYPE
      */
     void setFactory(SUMMON_TYPE type) ;
     
@@ -82,8 +82,8 @@ class CEnemyUnitFactoryManager : public CSingletonTemplate<CEnemyUnitFactoryMana
     //=========================================================================
     /**
      *  @desc   工場取得
-     *  @param  ENEMY_UNIT_TYPE
-     *  @return CEnemyUnitCreateFactory*
+     *  @param  SUMMON_TYPE
+     *  @return CSummonCreateFactory*
      */
     CSummonCreateFactory *getFactory(SUMMON_TYPE type) ;
     

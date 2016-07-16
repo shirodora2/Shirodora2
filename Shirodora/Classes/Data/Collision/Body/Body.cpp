@@ -17,47 +17,15 @@
 // コンストラクタ/デストラクタ
 //=========================================================================
 /**
- *  @desc   コンストラクタ
+ *  @desc   constructor
  *  @tips   頂点数0の原点のみの点として生成
  */
-CBody::CBody() : m_center(0.0f, 0.0f){}
-
-/**
- *  @desc   コンストラクタ
- *  @param  中心座標
- */
-CBody::CBody(const cocos2d::Vec2 &center){
-    this->set(center) ;
+CBody::CBody() : m_centerPosition(0.0f, 0.0f){
+    this->m_pApexs = new std::vector<cocos2d::Vec2>() ;
 }
 
 /**
- *  @desc   コンストラクタ
- *  @param  頂点座標群
- *  @param  中心座標
- */
-CBody::CBody(const std::vector<cocos2d::Vec2> &apexs, const cocos2d::Vec2 &center){
-    this->set(apexs, center) ;
-}
-
-/**
- *  @desc   コンストラクタ
- *  @param  頂点数
- *  @param  頂点座標配列
- *  @param  中心座標
- */
-CBody::CBody(int apexSize, const cocos2d::Vec2 apexs[], const cocos2d::Vec2 &center){
-    this->set(apexSize, apexs, center) ;
-}
-
-/**
- *  @desc   コピーコンストラクタ
- */
-CBody::CBody(const CBody &body){
-    this->set(body) ;
-}
-
-/**
- *  @desc   デストラクタ
+ *  @desc   destructor
  */
 CBody::~CBody(){
     if(this->m_pApexs != NULL){
@@ -70,38 +38,28 @@ CBody::~CBody(){
 // set
 //=========================================================================
 /**
- *  @desc   中心座標設定
- *  @param  中心座標
- */
-void CBody::set(const cocos2d::Vec2 &center){
-    this->m_center = center ;
-}
-
-/**
  *  @desc   座標設定
- *  @param  頂点座標群
- *  @param  中心座標
+ *  @param  頂点座標群 std::vector
  */
-void CBody::set(const std::vector<cocos2d::Vec2> &apexs, const cocos2d::Vec2 &center){
-    this->init() ;
+void CBody::setApexs(const std::vector<cocos2d::Vec2> &apexs){
+    if(apexs.empty() == true) return ;
+    this->m_pApexs->erase(this->m_pApexs->begin(), this->m_pApexs->end()) ;
     for(cocos2d::Vec2 apex : apexs){
         this->addApex(apex) ;
     }
-    this->set(center) ;
 }
 
 /**
  *  @desc   座標設定
  *  @param  頂点数
  *  @param  頂点座標配列
- *  @param  中心座標
  */
-void CBody::set(int apexSize, const cocos2d::Vec2 apexs[], const cocos2d::Vec2 &center){
-    this->init() ;
+void CBody::setApexs(int apexSize, const cocos2d::Vec2 apexs[]){
+    if(apexSize == 0) return ;
+    this->m_pApexs->erase(this->m_pApexs->begin(), this->m_pApexs->end()) ;
     for(int i = 0 ; i < apexSize ; ++i){
         this->addApex(apexs[i]) ;
     }
-    this->set(center) ;
 }
 
 /**
@@ -109,42 +67,10 @@ void CBody::set(int apexSize, const cocos2d::Vec2 apexs[], const cocos2d::Vec2 &
  *  @param  CBody
  */
 void CBody::set(const CBody &body){
-    if(body.getApexs() == NULL){
-        this->set(body.getCenter()) ;
-        return ;
-    }else{
-        this->set(*body.getApexs(), body.getCenter()) ;
-    }
+    this->m_centerPosition = body.getCenterPosition() ;
+    this->setApexs(*body.getApexs()) ;
+    this->m_radius = body.getRadius() ;
 }
-
-//=========================================================================
-// get
-//=========================================================================
-/**
- *  @desc   頂点数取得
- *  @return 頂点数
- */
-int CBody::getApexSize() const {return this->m_pApexs->size() ;}
-
-/**
- *  @desc   頂点座標群取得
- *  @return const std::vector<cocos2d::Vec2>*
- */
-const std::vector<cocos2d::Vec2>* CBody::getApexs() const {return this->m_pApexs ;}
-
-/**
- *  @desc   頂点座標取得
- *  @param  添字番号
- *  @return array
- *  @tips   受け値は const float* apex ;
- */
-cocos2d::Vec2 CBody::getApexAt(int index) const {return (*this->m_pApexs)[index] ;}
-
-/**
- *  @desc   中心座標取得
- *  @return cocos2d::Vec2
- */
-cocos2d::Vec2 CBody::getCenter() const {return this->m_center ;}
 
 //=========================================================================
 // メンバ関数
@@ -161,18 +87,7 @@ void CBody::move(const cocos2d::Vec2 &vector){
         *itr += vector ;
         ++itr ;
     }
-    this->m_center += vector ;
-}
-
-/**
- *  @desc   座標回転
- *  @param  回転角度
- */
-void CBody::rotate(float angle, const cocos2d::Vec2 &point){
-    if(angle == 0.0f) return ;
-    for(cocos2d::Vec2 apex : (*this->m_pApexs)){
-        apex.rotate(point, angle) ;
-    }
+    this->m_centerPosition += vector ;
 }
 
 /**
@@ -182,7 +97,7 @@ void CBody::rotate(float angle, const cocos2d::Vec2 &point){
  */
 cocos2d::Vec2 CBody::getFarthestPointInDirection(const cocos2d::Vec2 &direction) const {
     // 中心点のみであればその点を返す
-    if(this->m_pApexs == NULL) return this->m_center ;
+    if(this->m_pApexs == NULL) return this->m_centerPosition ;
     
     // 誤差を抑えるために方向ベクトルを正規化する
     cocos2d::Vec2 vec = direction.getNormalized() ;
@@ -198,22 +113,6 @@ cocos2d::Vec2 CBody::getFarthestPointInDirection(const cocos2d::Vec2 &direction)
 }
 
 //=========================================================================
-// init
-//=========================================================================
-/**
- *  @desc
- *  @param  頂点座標群
- *  @param  中心座標
- */
-void CBody::init(){
-    this->m_center = cocos2d::Vec2(0.0f, 0.0f) ;
-    if(this->m_pApexs != NULL){
-        delete this->m_pApexs ;
-        this->m_pApexs = NULL ;
-    }
-}
-
-//=========================================================================
 // メンバ関数
 //=========================================================================
 /**
@@ -221,8 +120,6 @@ void CBody::init(){
  *  @param  頂点座標
  */
 void CBody::addApex(const cocos2d::Vec2 &apex){
-    if(this->m_pApexs == NULL){
-        this->m_pApexs = new std::vector<cocos2d::Vec2>() ;
-    }
-    this->m_pApexs->push_back(cocos2d::Vec2(apex)) ;
+    if(this->m_pApexs == NULL) this->m_pApexs = new std::vector<cocos2d::Vec2>() ;
+    this->m_pApexs->push_back(apex) ;
 }

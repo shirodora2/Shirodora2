@@ -10,6 +10,7 @@
 
 #include "SummonCreateFactory.hpp"
 #include "Summon.hpp"
+#include "SummonTypes.hpp"
 
 //=========================================================================
 //
@@ -20,12 +21,12 @@
 // メンバ変数
 //=========================================================================
 /**
- *  @desc   敵ユニット生成
- *  @param  ENEMY_UNIT_TYPE
+ *  @desc   召喚生成
+ *  @param  SUMMON_TYPE
  *  @param  生成位置 x
  *  @param  生成位置 y
  */
-CSummon *CEnemyUnitFactoryManager::create(SUMMON_TYPE type, float x, float y){
+CSummon *CSummonFactoryManager::create(SUMMON_TYPE type, float x, float y){
     // 敵ユニットの型を用意
     CSummon *pUnit {NULL} ;
     // 敵ユニットを生成
@@ -45,19 +46,19 @@ CSummon *CEnemyUnitFactoryManager::create(SUMMON_TYPE type, float x, float y){
 /**
  *  @desc   constructor
  */
-CEnemyUnitFactoryManager::CEnemyUnitFactoryManager(){
+CSummonFactoryManager::CSummonFactoryManager(){
     this->m_pFactories = new std::map<SUMMON_TYPE, CSummonCreateFactory*>() ;
 }
 
 /**
  *  @desc   copy constructor
  */
-CEnemyUnitFactoryManager::CEnemyUnitFactoryManager(const CEnemyUnitFactoryManager &mgr){/*処理なし*/}
+CSummonFactoryManager::CSummonFactoryManager(const CSummonFactoryManager &mgr){/*処理なし*/}
 
 /**
  *  @desc   destructor
  */
-CEnemyUnitFactoryManager::~CEnemyUnitFactoryManager(){
+CSummonFactoryManager::~CSummonFactoryManager(){
     std::map<SUMMON_TYPE, CSummonCreateFactory*>::iterator itr = this->m_pFactories->begin() ;
     while(itr != this->m_pFactories->end()){
         if(itr->second != NULL){
@@ -77,14 +78,14 @@ CEnemyUnitFactoryManager::~CEnemyUnitFactoryManager(){
 //=========================================================================
 /**
  *  @desc   工場設定
- *  @param  ENEMY_UNIT_TYPE
+ *  @param  SUMMON_TYPE
  *  @tips   工場追加はここへ
  */
-void CEnemyUnitFactoryManager::setFactory(SUMMON_TYPE type){
+void CSummonFactoryManager::setFactory(SUMMON_TYPE type){
     CSummonCreateFactory *pFactory {NULL} ;
     switch(type){
         case SUMMON_TYPE::TEST :
-            //pFactory = new CEnemyUnit_Test() ;
+            pFactory = new CSummon_Test() ;
             break;
             
         default:
@@ -98,10 +99,10 @@ void CEnemyUnitFactoryManager::setFactory(SUMMON_TYPE type){
 //=========================================================================
 /**
  *  @desc   工場取得
- *  @param  ENEMY_UNIT_TYPE
- *  @return CBarrageCreateFactoryTemplate*
+ *  @param  SUMMON_TYPE
+ *  @return CSummonCreateFactory*
  */
-CSummonCreateFactory *CEnemyUnitFactoryManager::getFactory(SUMMON_TYPE type){
+CSummonCreateFactory *CSummonFactoryManager::getFactory(SUMMON_TYPE type){
     std::map<SUMMON_TYPE, CSummonCreateFactory*>::iterator itr = this->m_pFactories->begin() ;
     while(itr != this->m_pFactories->end()){
         if(itr->first == type){

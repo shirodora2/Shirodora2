@@ -1,100 +1,91 @@
 //
-//  SummonCreateFactory.hpp
+//  Summon_Test.hpp
 //  Shirodora
 //
 //  Created by Ryoutarou Onimura on 2016/07/16.
 //
 //
 
-#ifndef SummonCreateFactory_hpp
-#define SummonCreateFactory_hpp
+#ifndef Summon_Test_hpp
+#define Summon_Test_hpp
 
 //=========================================================================
-// 前方宣言
+// 追加のインクルードはここから
 //=========================================================================
-class CSummon ;
+#include "SummonCreateFactory.hpp"
 
 //=========================================================================
 //
 // SummonCreateFactory
 //
 //=========================================================================
-class CSummonCreateFactory {
+class CSummon_Test : public CSummonCreateFactory {
 public :
     //=========================================================================
     // コンストラクタ/デストラクタ
     //=========================================================================
     /**
+     *  @desc   constructor
+     */
+    CSummon_Test() ;
+    
+    /**
      *  @desc   destructor
      */
-    virtual ~CSummonCreateFactory() ;
-    
-    //=========================================================================
-    // メンバ関数
-    //=========================================================================
-    /**
-     *  @desc   召喚生成
-     *  @param  生成位置
-     */
-    CSummon *create(const cocos2d::Vec2 &position) ;
+    virtual ~CSummon_Test() ;
     
 private :
     //=========================================================================
     // メンバ関数
     //=========================================================================
     /**
-     *  @desc   召喚生成とメンバ変数取り付け
-     */
-    CSummon *create() ;
-    
-    /**
      *  @desc   位置データ設定
      *  @param  CSummon*
      */
-    virtual void setMove(CSummon* , const cocos2d::Vec2 &position) = 0 ;
+    virtual void setMove(CSummon *pSummon , const cocos2d::Vec2 &position) override ;
     
     /**
      *  @desc   画像データ設定
      *  @param  CSummon*
      */
-    virtual void setSprite(CSummon*) = 0 ;
+    virtual void setSprite(CSummon *pSummon) override ;
     
     /**
      *  @desc   ステータス設定
      *  @param  CSummon*
      */
-    virtual void setStatus(CSummon*) = 0 ;
+    virtual void setStatus(CSummon *pSummon) override ;
     
     /**
      *  @desc   実体データ設定
      *  @param  CSummon*
      */
-    virtual void setCollisionBody(CSummon*) = 0 ;
+    virtual void setCollisionBody(CSummon *pSummon) override ;
     
     /**
      *  @desc   攻撃範囲データ設定
      *  @param  CSummon*
      */
-    virtual void setAttackBody(CSummon*) = 0 ;
+    virtual void setAttackBody(CSummon *pSummon) override ;
     
     /**
      *  @desc   アニメーションデータ設定
      *  @param  CSummon*
      */
-    virtual void setAnimation(CSummon*) = 0 ;
+    virtual void setAnimation(CSummon *pSummon) override ;
     
     /**
      *  @desc   アクションデータ設定
      *  @param  CSummon*
      */
-    virtual void setAction(CSummon*) = 0 ;
+    virtual void setAction(CSummon *pSummon) override ;
     
     /**
      *  @desc   タグ設定
      *  @param  タグNo
      */
-    virtual void setTag(CSummon*) = 0 ;
+    virtual void setTag(CSummon *pSummon) override ;
     
 };
 
-#endif /* SummonCreateFactory_hpp */
+#endif /* Summon_Test_hpp */

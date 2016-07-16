@@ -31,16 +31,6 @@ public :
     CMove() ;
     
     /**
-     *  @desc   constructor
-     */
-    CMove(const cocos2d::Vec2 &position,
-          const cocos2d::Vec2 &direction = cocos2d::Vec2::ZERO,
-          float velocity = 0.0f,
-          float accele = 0.0f,
-          float angle = 0.0f,
-          float rotateVel = 0.0f) ;
-    
-    /**
      *  @desc   copy constructor
      */
     CMove(const CMove &move) ;
@@ -57,66 +47,50 @@ public :
      *  @desc   位置座標設定
      *  @param  位置座標
      */
-    inline void setPosition(const cocos2d::Vec2 &position){
-        this->m_position = position ;
-    }
+    inline void setPosition(const cocos2d::Vec2 &position){this->m_position = position ;}
     
     /**
      *  @desc   進行方向設定
      *  @param  進行方向
      *  @tips   正規化される
      */
-    inline void setDirection(const cocos2d::Vec2 &direction){
-        this->m_direction = direction.getNormalized() ;
-    }
+    inline void setDirection(const cocos2d::Vec2 &direction){this->m_direction = direction.getNormalized() ;}
     
     /**
      *  @desc   速度設定
      *  @param  速度
      */
-    inline void setVelocity(float velocity){
-        this->m_velocity = velocity ;
-    }
+    inline void setVelocity(float velocity){this->m_velocity = velocity ;}
     
     /**
      *  @desc   加速度設定
      *  @param  加速度
      */
-    inline void setAccele(float accele){
-        this->m_accele = accele ;
-    }
+    inline void setAccele(float accele){this->m_accele = accele ;}
     
     /**
      *  @desc   角度設定
      *  @param  角度
      */
-    inline void setAngle(float angle){
-        this->m_angle = angle ;
-    }
+    inline void setAngle(float angle){this->m_angle = angle ;}
     
     /**
      *  @desc   角速度設定
      *  @param  角速度
      */
-    inline void setRotateVel(float rotateVel){
-        this->m_rotateVel = rotateVel ;
-    }
+    inline void setRotateVel(float rotateVel){this->m_rotateVel = rotateVel ;}
     
     /**
      *  @desc   摩擦係数設定
      *  @param  摩擦係数
      */
-    inline void setFriction(float friction){
-        this->m_friction = friction ;
-    }
+    inline void setFriction(float friction){this->m_friction = friction ;}
     
     /**
      *  @desc   最大速度設定
      *  @param  最大速度
      */
-    inline void setMaxSpeed(float maxSpeed){
-        this->m_maxSpeed = maxSpeed ;
-    }
+    inline void setMaxSpeed(float maxSpeed){this->m_maxSpeed = maxSpeed ;}
     
     /**
      *  @desc   set
@@ -185,14 +159,14 @@ public :
     inline void addPosition(const cocos2d::Vec2 &vector){this->m_position += vector ;}
     
     /**
-     *  @desc   addDirection
+     *  @desc   進行方向加算
      *  @param  direction
      */
     inline void addDirection(const cocos2d::Vec2 &direction){this->m_direction = (this->m_direction + direction).getNormalized() ;}
     
     // !!!:使わない可能性あり
     /**
-     *  @desc   addAccele
+     *  @desc   加速度加算
      *  @param  accele
      */
     inline void addAccele(float accele){this->m_accele += accele ;}

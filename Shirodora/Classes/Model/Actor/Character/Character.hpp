@@ -72,6 +72,12 @@ public :
     inline void setAttackBody(CBody *pBody){this->m_pAttackBody = pBody ;}
     
     /**
+     *  @desc   攻撃範囲位置座標設定
+     *  @param  攻撃範囲位置座標
+     */
+    inline void setAttackPosition(const cocos2d::Vec2 &position){this->m_attackPosition = position ;}
+    
+    /**
      *  @desc   実体データ設定
      *  @param  CBody*
      */
@@ -121,6 +127,12 @@ public :
      *  @param  CBody*
      */
     inline CBody *getAttackBody(){return this->m_pAttackBody ;}
+    
+    /**
+     *  @desc   攻撃範囲位置座標設定
+     *  @return 攻撃範囲位置座標
+     */
+    inline cocos2d::Vec2 getAttackPosition(){return this->m_attackPosition ;}
     
     /**
      *  @desc   実体データ取得
@@ -181,6 +193,8 @@ protected :
     CBody *m_pCollisionBody {NULL} ;
     // 攻撃範囲データ
     CBody *m_pAttackBody {NULL} ;
+    // 攻撃範囲位置データ
+    cocos2d::Vec2 m_attackPosition = cocos2d::Vec2::ZERO ;
     // アニメーションデータ群
     std::vector<CAnimation*> *m_pAnimations {NULL} ;
     // アクションデータ群
