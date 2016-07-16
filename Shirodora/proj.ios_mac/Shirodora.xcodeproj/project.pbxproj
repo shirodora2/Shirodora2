@@ -46,10 +46,6 @@
 		46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7719C43A67006E1F66 /* CloseSelected.png */; };
 		46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
 		46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
-		4F19FB201D3A093500C93DAA /* SummonCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FB191D3A093500C93DAA /* SummonCreateFactory.cpp */; };
-		4F19FB211D3A093500C93DAA /* SummonCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FB191D3A093500C93DAA /* SummonCreateFactory.cpp */; };
-		4F19FB221D3A093500C93DAA /* SummonFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FB1C1D3A093500C93DAA /* SummonFactoryManager.cpp */; };
-		4F19FB231D3A093500C93DAA /* SummonFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FB1C1D3A093500C93DAA /* SummonFactoryManager.cpp */; };
 		4F5C011B1D3A162100DA968F /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C01131D3A162100DA968F /* Action.cpp */; };
 		4F5C011C1D3A162100DA968F /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C01131D3A162100DA968F /* Action.cpp */; };
 		4F5C011D1D3A162100DA968F /* AttackAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C01161D3A162100DA968F /* AttackAction.cpp */; };
@@ -70,6 +66,12 @@
 		4F75D0671D3A730A002744C9 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D05B1D3A730A002744C9 /* King.cpp */; };
 		4F75D0681D3A730A002744C9 /* Summon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D05E1D3A730A002744C9 /* Summon.cpp */; };
 		4F75D0691D3A730A002744C9 /* Summon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D05E1D3A730A002744C9 /* Summon.cpp */; };
+		4F75D0A51D3A8B62002744C9 /* SummonCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D09B1D3A8B62002744C9 /* SummonCreateFactory.cpp */; };
+		4F75D0A61D3A8B62002744C9 /* SummonCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D09B1D3A8B62002744C9 /* SummonCreateFactory.cpp */; };
+		4F75D0A71D3A8B62002744C9 /* SummonFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D09E1D3A8B62002744C9 /* SummonFactoryManager.cpp */; };
+		4F75D0A81D3A8B62002744C9 /* SummonFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D09E1D3A8B62002744C9 /* SummonFactoryManager.cpp */; };
+		4F75D0A91D3A8B62002744C9 /* Summon_Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D0A31D3A8B62002744C9 /* Summon_Test.cpp */; };
+		4F75D0AA1D3A8B62002744C9 /* Summon_Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D0A31D3A8B62002744C9 /* Summon_Test.cpp */; };
 		4F9C5B681D30AEC60070E0DC /* gameMainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C5B601D30AEC60070E0DC /* gameMainBG.png */; };
 		4F9C5B691D30AEC60070E0DC /* gameMainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C5B601D30AEC60070E0DC /* gameMainBG.png */; };
 		4F9C5B6A1D30AEC60070E0DC /* Bone.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C5B631D30AEC60070E0DC /* Bone.png */; };
@@ -213,11 +215,6 @@
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
-		4F19FB191D3A093500C93DAA /* SummonCreateFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonCreateFactory.cpp; sourceTree = "<group>"; };
-		4F19FB1A1D3A093500C93DAA /* SummonCreateFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonCreateFactory.hpp; sourceTree = "<group>"; };
-		4F19FB1C1D3A093500C93DAA /* SummonFactoryManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonFactoryManager.cpp; sourceTree = "<group>"; };
-		4F19FB1D1D3A093500C93DAA /* SummonFactoryManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonFactoryManager.hpp; sourceTree = "<group>"; };
-		4F19FB1F1D3A093500C93DAA /* SummonTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTypes.hpp; sourceTree = "<group>"; };
 		4F5C01131D3A162100DA968F /* Action.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Action.cpp; sourceTree = "<group>"; };
 		4F5C01141D3A162100DA968F /* Action.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Action.hpp; sourceTree = "<group>"; };
 		4F5C01161D3A162100DA968F /* AttackAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttackAction.cpp; sourceTree = "<group>"; };
@@ -246,6 +243,13 @@
 		4F75D05F1D3A730A002744C9 /* Summon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Summon.hpp; sourceTree = "<group>"; };
 		4F75D0611D3A730A002744C9 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		4F75D0631D3A730A002744C9 /* Pawn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pawn.hpp; sourceTree = "<group>"; };
+		4F75D09B1D3A8B62002744C9 /* SummonCreateFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonCreateFactory.cpp; sourceTree = "<group>"; };
+		4F75D09C1D3A8B62002744C9 /* SummonCreateFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonCreateFactory.hpp; sourceTree = "<group>"; };
+		4F75D09E1D3A8B62002744C9 /* SummonFactoryManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonFactoryManager.cpp; sourceTree = "<group>"; };
+		4F75D09F1D3A8B62002744C9 /* SummonFactoryManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonFactoryManager.hpp; sourceTree = "<group>"; };
+		4F75D0A11D3A8B62002744C9 /* SummonTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTypes.hpp; sourceTree = "<group>"; };
+		4F75D0A31D3A8B62002744C9 /* Summon_Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Summon_Test.cpp; sourceTree = "<group>"; };
+		4F75D0A41D3A8B62002744C9 /* Summon_Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Summon_Test.hpp; sourceTree = "<group>"; };
 		4F9C5B601D30AEC60070E0DC /* gameMainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameMainBG.png; sourceTree = "<group>"; };
 		4F9C5B631D30AEC60070E0DC /* Bone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bone.png; sourceTree = "<group>"; };
 		4F9C5B641D30AEC60070E0DC /* BoneFramework1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoneFramework1.png; sourceTree = "<group>"; };
@@ -513,45 +517,9 @@
 			isa = PBXGroup;
 			children = (
 				4F5C012E1D3A3CAA00DA968F /* Factory.hpp */,
-				4F19FB171D3A093500C93DAA /* Summon */,
+				4F75D0991D3A8B62002744C9 /* Summon */,
 			);
 			path = Factory;
-			sourceTree = "<group>";
-		};
-		4F19FB171D3A093500C93DAA /* Summon */ = {
-			isa = PBXGroup;
-			children = (
-				4F19FB181D3A093500C93DAA /* CreateFactory */,
-				4F19FB1B1D3A093500C93DAA /* FactoryManager */,
-				4F19FB1E1D3A093500C93DAA /* Types */,
-			);
-			path = Summon;
-			sourceTree = "<group>";
-		};
-		4F19FB181D3A093500C93DAA /* CreateFactory */ = {
-			isa = PBXGroup;
-			children = (
-				4F19FB191D3A093500C93DAA /* SummonCreateFactory.cpp */,
-				4F19FB1A1D3A093500C93DAA /* SummonCreateFactory.hpp */,
-			);
-			path = CreateFactory;
-			sourceTree = "<group>";
-		};
-		4F19FB1B1D3A093500C93DAA /* FactoryManager */ = {
-			isa = PBXGroup;
-			children = (
-				4F19FB1C1D3A093500C93DAA /* SummonFactoryManager.cpp */,
-				4F19FB1D1D3A093500C93DAA /* SummonFactoryManager.hpp */,
-			);
-			path = FactoryManager;
-			sourceTree = "<group>";
-		};
-		4F19FB1E1D3A093500C93DAA /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				4F19FB1F1D3A093500C93DAA /* SummonTypes.hpp */,
-			);
-			path = Types;
 			sourceTree = "<group>";
 		};
 		4F5C01121D3A162100DA968F /* Action */ = {
@@ -705,6 +673,52 @@
 				4F75D0631D3A730A002744C9 /* Pawn.hpp */,
 			);
 			path = Pawn;
+			sourceTree = "<group>";
+		};
+		4F75D0991D3A8B62002744C9 /* Summon */ = {
+			isa = PBXGroup;
+			children = (
+				4F75D09A1D3A8B62002744C9 /* CreateFactory */,
+				4F75D09D1D3A8B62002744C9 /* FactoryManager */,
+				4F75D0A01D3A8B62002744C9 /* Types */,
+			);
+			path = Summon;
+			sourceTree = "<group>";
+		};
+		4F75D09A1D3A8B62002744C9 /* CreateFactory */ = {
+			isa = PBXGroup;
+			children = (
+				4F75D09B1D3A8B62002744C9 /* SummonCreateFactory.cpp */,
+				4F75D09C1D3A8B62002744C9 /* SummonCreateFactory.hpp */,
+			);
+			path = CreateFactory;
+			sourceTree = "<group>";
+		};
+		4F75D09D1D3A8B62002744C9 /* FactoryManager */ = {
+			isa = PBXGroup;
+			children = (
+				4F75D09E1D3A8B62002744C9 /* SummonFactoryManager.cpp */,
+				4F75D09F1D3A8B62002744C9 /* SummonFactoryManager.hpp */,
+			);
+			path = FactoryManager;
+			sourceTree = "<group>";
+		};
+		4F75D0A01D3A8B62002744C9 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				4F75D0A11D3A8B62002744C9 /* SummonTypes.hpp */,
+				4F75D0A21D3A8B62002744C9 /* Test */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		4F75D0A21D3A8B62002744C9 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				4F75D0A31D3A8B62002744C9 /* Summon_Test.cpp */,
+				4F75D0A41D3A8B62002744C9 /* Summon_Test.hpp */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		4F9C5B5B1D30AEC60070E0DC /* Image */ = {
@@ -1248,11 +1262,11 @@
 				4F75D0641D3A730A002744C9 /* Character.cpp in Sources */,
 				4F9C5BB51D30AEEE0070E0DC /* MouseLayer.cpp in Sources */,
 				4F71A8CF1D36961C004FD96B /* BattleScene.cpp in Sources */,
+				4F75D0A91D3A8B62002744C9 /* Summon_Test.cpp in Sources */,
 				4F9C5BD61D30BF750070E0DC /* CollisionData.cpp in Sources */,
 				17EC442A1D39D67400DD4EAB /* TimeLabel.cpp in Sources */,
 				17EC44281D39D67400DD4EAB /* CastleHpBar.cpp in Sources */,
 				4F5C011D1D3A162100DA968F /* AttackAction.cpp in Sources */,
-				4F19FB221D3A093500C93DAA /* SummonFactoryManager.cpp in Sources */,
 				DB5153461D39D6A1005E73E7 /* Status.cpp in Sources */,
 				4F5C011B1D3A162100DA968F /* Action.cpp in Sources */,
 				4F71A8DC1D369DD2004FD96B /* Launcher.cpp in Sources */,
@@ -1260,7 +1274,6 @@
 				4F9C5BB31D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
 				4F9C5BE41D30BFC70070E0DC /* Line.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
-				4F19FB201D3A093500C93DAA /* SummonCreateFactory.cpp in Sources */,
 				4F9C5BB91D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				4F9C5BDA1D30BF7E0070E0DC /* Move.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
@@ -1268,8 +1281,10 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				4F9C5BCC1D30BF670070E0DC /* Animation.cpp in Sources */,
 				17EC442C1D39D67400DD4EAB /* UI_Layer.cpp in Sources */,
+				4F75D0A51D3A8B62002744C9 /* SummonCreateFactory.cpp in Sources */,
 				4F75D0681D3A730A002744C9 /* Summon.cpp in Sources */,
 				4F9C5BD41D30BF750070E0DC /* Body.cpp in Sources */,
+				4F75D0A71D3A8B62002744C9 /* SummonFactoryManager.cpp in Sources */,
 				4F5C011F1D3A162100DA968F /* MoveAction.cpp in Sources */,
 				4F9C5BE61D30BFC70070E0DC /* Simplex.cpp in Sources */,
 				4F70F35A1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
@@ -1294,7 +1309,9 @@
 				4F9C5BB01D30AEEE0070E0DC /* AppDelegate.cpp in Sources */,
 				4F9C5BE51D30BFC70070E0DC /* Line.cpp in Sources */,
 				4F9C5BD71D30BF750070E0DC /* CollisionData.cpp in Sources */,
+				4F75D0A81D3A8B62002744C9 /* SummonFactoryManager.cpp in Sources */,
 				4F9C5BB21D30AEEE0070E0DC /* InputAndMouseLayer.cpp in Sources */,
+				4F75D0A61D3A8B62002744C9 /* SummonCreateFactory.cpp in Sources */,
 				17EC442D1D39D67400DD4EAB /* UI_Layer.cpp in Sources */,
 				17EC442B1D39D67400DD4EAB /* TimeLabel.cpp in Sources */,
 				4F9C5BD51D30BF750070E0DC /* Body.cpp in Sources */,
@@ -1302,15 +1319,14 @@
 				4F5C01201D3A162100DA968F /* MoveAction.cpp in Sources */,
 				4F9C5BBC1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
-				4F19FB211D3A093500C93DAA /* SummonCreateFactory.cpp in Sources */,
 				4F5C011C1D3A162100DA968F /* Action.cpp in Sources */,
 				DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */,
 				4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */,
 				4F75D0651D3A730A002744C9 /* Character.cpp in Sources */,
-				4F19FB231D3A093500C93DAA /* SummonFactoryManager.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				4F70F35B1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
 				4F71A8DD1D369DD2004FD96B /* Launcher.cpp in Sources */,
+				4F75D0AA1D3A8B62002744C9 /* Summon_Test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
