@@ -26,9 +26,10 @@ CSummonCreateFactory::~CSummonCreateFactory(){}
 //=========================================================================
 /**
  *  @desc   召喚生成
+ *  @desc   タグ
  *  @param  生成位置
  */
-CSummon *CSummonCreateFactory::create(const cocos2d::Vec2 &position){
+CSummon *CSummonCreateFactory::create(int tag, const cocos2d::Vec2 &position){
     // カーソルの型を用意
     CSummon *pSummon {NULL} ;
     // メンバ変数を生成したカーソルを受け取る
@@ -42,8 +43,7 @@ CSummon *CSummonCreateFactory::create(const cocos2d::Vec2 &position){
     this->setAttackBody(pSummon) ;
     this->setAnimation(pSummon) ;
     this->setAction(pSummon) ;
-    this->setTag(pSummon) ;
-    this->setTag(pSummon) ;
+    this->setTag(pSummon, tag) ;
     
     // 設定したデータを反映させる
     pSummon->apply() ;

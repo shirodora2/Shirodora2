@@ -107,6 +107,6 @@ void CSummon_Test::setAction(CSummon *pSummon){
  *  @desc   タグ設定
  *  @param  タグNo
  */
-void CSummon_Test::setTag(CSummon *pSummon){
-    pSummon->setTag(1000) ;
+void CSummon_Test::setTag(CSummon *pSummon, int tag){
+    pSummon->setTag(tag) ;
 }

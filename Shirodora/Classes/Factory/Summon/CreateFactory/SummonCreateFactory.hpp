@@ -34,9 +34,10 @@ public :
     //=========================================================================
     /**
      *  @desc   召喚生成
+     *  @param  タグ
      *  @param  生成位置
      */
-    CSummon *create(const cocos2d::Vec2 &position) ;
+    CSummon *create(int tag, const cocos2d::Vec2 &position) ;
     
 private :
     //=========================================================================
@@ -93,7 +94,7 @@ private :
      *  @desc   タグ設定
      *  @param  タグNo
      */
-    virtual void setTag(CSummon*) = 0 ;
+    virtual void setTag(CSummon*, int tag) = 0 ;
     
 };
 

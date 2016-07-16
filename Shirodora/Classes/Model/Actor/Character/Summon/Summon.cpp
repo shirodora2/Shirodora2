@@ -65,7 +65,9 @@ void CSummon::update(float deltaTime){
  *  @desc   アクション処理
  */
 void CSummon::action(){
-    
+    for(CAction *pAction : (*this->m_pActions)){
+        pAction->update(this) ;
+    }
 }
 
 /**
@@ -86,7 +88,7 @@ void CSummon::animation(){
  *  @desc   衝突判定処理
  */
 void CSummon::collision(){
-    
+    std::vector<CCharacter*> *pCharacters = CCharacterAggregate::getInstance()->getAggregate() ;
 }
 
 /**

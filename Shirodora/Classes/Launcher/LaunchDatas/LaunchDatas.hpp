@@ -19,11 +19,13 @@ enum class SUMMON_TYPE ;
 //=========================================================================
 struct SSummonLaunchData {
     SSummonLaunchData() ;
-    SSummonLaunchData(SUMMON_TYPE type , float posX, float posY){
+    SSummonLaunchData(int tag, SUMMON_TYPE type , float posX, float posY){
+        this->m_tag = tag ;
         this->m_type = type ;
         this->m_posX = posX ;
         this->m_posY = posY ;
     }
+    int m_tag ;
     SUMMON_TYPE m_type ;
     float m_posX ;
     float m_posY ;

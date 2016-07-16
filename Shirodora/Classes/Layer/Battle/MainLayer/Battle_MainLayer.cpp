@@ -61,7 +61,7 @@ bool CBattele_MainLayer::init(){
     CLauncherManager::getInstance()->setLauncher(LAUNCHER_TYPE::SUMMON, this) ;
     
     // 発射トリガーを発射台にとりつけ
-    SSummonLaunchData launchData(SUMMON_TYPE::TEST, WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
+    SSummonLaunchData launchData(1000, SUMMON_TYPE::TEST, WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
     CLauncherManager::getInstance()->setTrigger(new CSummonTrigger_Normal(launchData)) ;
     
     

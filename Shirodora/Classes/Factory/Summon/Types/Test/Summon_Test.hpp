@@ -84,7 +84,7 @@ private :
      *  @desc   タグ設定
      *  @param  タグNo
      */
-    virtual void setTag(CSummon *pSummon) override ;
+    virtual void setTag(CSummon *pSummon, int tag) override ;
     
 };
 

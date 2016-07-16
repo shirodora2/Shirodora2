@@ -22,15 +22,16 @@
 //=========================================================================
 /**
  *  @desc   召喚生成
+ *  @param  タグ
  *  @param  SUMMON_TYPE
  *  @param  生成位置 x
  *  @param  生成位置 y
  */
-CSummon *CSummonFactoryManager::create(SUMMON_TYPE type, float x, float y){
+CSummon *CSummonFactoryManager::create(int tag, SUMMON_TYPE type, float x, float y){
     // 敵ユニットの型を用意
     CSummon *pUnit {NULL} ;
     // 敵ユニットを生成
-    pUnit = this->getFactory(type)->create(cocos2d::Vec2(x, y)) ;
+    pUnit = this->getFactory(type)->create(tag, cocos2d::Vec2(x, y)) ;
     
     // デコレーターを使う際にはここで装飾
     

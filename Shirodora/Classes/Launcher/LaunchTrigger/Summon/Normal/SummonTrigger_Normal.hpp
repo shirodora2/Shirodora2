@@ -48,9 +48,10 @@ public :
      *  preturn 出撃させるもの
      */
     CSummon *launch(){
-        CSummon *pSummon = CSummonFactoryManager::getInstance()->create(this->m_launchData.m_type,
-                                                                           this->m_launchData.m_posX,
-                                                                           this->m_launchData.m_posY
+        CSummon *pSummon = CSummonFactoryManager::getInstance()->create(this->m_launchData.m_tag ,
+                                                                        this->m_launchData.m_type,
+                                                                        this->m_launchData.m_posX,
+                                                                        this->m_launchData.m_posY
                                                                         ) ;
         
         this->m_isLaunched = true ;

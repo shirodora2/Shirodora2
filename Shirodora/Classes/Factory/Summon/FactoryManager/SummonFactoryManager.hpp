@@ -41,11 +41,12 @@ class CSummonFactoryManager : public CSingletonTemplate<CSummonFactoryManager> {
     //=========================================================================
     /**
      *  @desc   召喚生成
+     *  @param  タグ
      *  @param  SUMMON_TYPE
      *  @param  生成位置 x
      *  @param  生成位置 y
      */
-    CSummon *create(SUMMON_TYPE type, float x, float y) ;
+    CSummon *create(int tag, SUMMON_TYPE type, float x, float y) ;
     
 private :
     //=========================================================================
