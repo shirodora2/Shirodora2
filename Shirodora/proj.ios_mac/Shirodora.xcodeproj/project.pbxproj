@@ -123,6 +123,8 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		DB5153461D39D6A1005E73E7 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153441D39D6A1005E73E7 /* Status.cpp */; };
 		DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153441D39D6A1005E73E7 /* Status.cpp */; };
+		DB51534B1D39DDC3005E73E7 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153491D39DDC3005E73E7 /* Action.cpp */; };
+		DB51534C1D39DDC3005E73E7 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153491D39DDC3005E73E7 /* Action.cpp */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 /* End PBXBuildFile section */
@@ -274,6 +276,8 @@
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		DB5153441D39D6A1005E73E7 /* Status.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Status.cpp; sourceTree = "<group>"; };
 		DB5153451D39D6A1005E73E7 /* Status.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Status.hpp; sourceTree = "<group>"; };
+		DB5153491D39DDC3005E73E7 /* Action.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Action.cpp; sourceTree = "<group>"; };
+		DB51534A1D39DDC3005E73E7 /* Action.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Action.hpp; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -644,20 +648,13 @@
 		4F9C5B731D30AEEE0070E0DC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DB5153481D39DDB4005E73E7 /* Action */,
 				DB5153431D39D693005E73E7 /* Status */,
-				4F9C5B741D30AEEE0070E0DC /* Action */,
 				4F9C5B751D30AEEE0070E0DC /* Animation */,
 				4F9C5B771D30AEEE0070E0DC /* Collision */,
 				4F9C5B781D30AEEE0070E0DC /* Move */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		4F9C5B741D30AEEE0070E0DC /* Action */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Action;
 			sourceTree = "<group>";
 		};
 		4F9C5B751D30AEEE0070E0DC /* Animation */ = {
@@ -1011,6 +1008,15 @@
 			path = Status;
 			sourceTree = "<group>";
 		};
+		DB5153481D39DDB4005E73E7 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				DB5153491D39DDC3005E73E7 /* Action.cpp */,
+				DB51534A1D39DDC3005E73E7 /* Action.hpp */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1185,6 +1191,7 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				4F9C5BB71D30AEEE0070E0DC /* Battle_MainLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				DB51534B1D39DDC3005E73E7 /* Action.cpp in Sources */,
 				4F9C5BCC1D30BF670070E0DC /* Animation.cpp in Sources */,
 				4F9C5BD41D30BF750070E0DC /* Body.cpp in Sources */,
 				4F9C5BE61D30BFC70070E0DC /* Simplex.cpp in Sources */,
@@ -1222,6 +1229,7 @@
 				4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				4F70F35B1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
+				DB51534C1D39DDC3005E73E7 /* Action.cpp in Sources */,
 				4F71A8DD1D369DD2004FD96B /* Launcher.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

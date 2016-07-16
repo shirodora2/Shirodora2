@@ -17,7 +17,7 @@ enum class TYPE : int{
     
 //縦のタイプ（自分）
 //横のタイプ（相手）
-//NONE		//FIRE	//WATER	//PLANT
+                                    //NONE		//FIRE      //WATER         //PLANT
 static float typeArray[4][4] = {	{1.0f, 		1.0f, 		1.0f, 			1.0f},		//NONE
                                     {1.0f, 		1.0f, 		1.5f, 			0.5f},		//FIRE
                                     {1.0f, 		0.5f, 		1.0f, 			1.5f},		//WATER
