@@ -1,13 +1,13 @@
 //
-//  Launcher.hpp
+//  LauncherTemplate.hpp
 //  BarrageGame
 //
 //  Created by Ryoutarou Onimura on 2016/07/13.
 //
 //
 
-#ifndef Launcher_hpp
-#define Launcher_hpp
+#ifndef LauncherTemplate_hpp
+#define LauncherTemplate_hpp
 
 #include <stdio.h>
 
@@ -76,4 +76,4 @@ protected :
     
 };
 
-#endif /* Launcher_hpp */
+#endif /* LauncherTemplate_hpp */
