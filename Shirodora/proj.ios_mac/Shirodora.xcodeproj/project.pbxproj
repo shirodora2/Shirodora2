@@ -121,6 +121,8 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		DB5153461D39D6A1005E73E7 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153441D39D6A1005E73E7 /* Status.cpp */; };
+		DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153441D39D6A1005E73E7 /* Status.cpp */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 /* End PBXBuildFile section */
@@ -270,6 +272,8 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		DB5153441D39D6A1005E73E7 /* Status.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Status.cpp; sourceTree = "<group>"; };
+		DB5153451D39D6A1005E73E7 /* Status.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Status.hpp; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -640,11 +644,11 @@
 		4F9C5B731D30AEEE0070E0DC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DB5153431D39D693005E73E7 /* Status */,
 				4F9C5B741D30AEEE0070E0DC /* Action */,
 				4F9C5B751D30AEEE0070E0DC /* Animation */,
 				4F9C5B771D30AEEE0070E0DC /* Collision */,
 				4F9C5B781D30AEEE0070E0DC /* Move */,
-				4F9C5B791D30AEEE0070E0DC /* Status */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -681,13 +685,6 @@
 				4F9C5BD91D30BF7E0070E0DC /* Move.hpp */,
 			);
 			path = Move;
-			sourceTree = "<group>";
-		};
-		4F9C5B791D30AEEE0070E0DC /* Status */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Status;
 			sourceTree = "<group>";
 		};
 		4F9C5B7A1D30AEEE0070E0DC /* Delegate */ = {
@@ -1005,6 +1002,15 @@
 			path = ios;
 			sourceTree = SOURCE_ROOT;
 		};
+		DB5153431D39D693005E73E7 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				DB5153441D39D6A1005E73E7 /* Status.cpp */,
+				DB5153451D39D6A1005E73E7 /* Status.hpp */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1167,6 +1173,7 @@
 				4F9C5BC11D30AEEE0070E0DC /* Object.cpp in Sources */,
 				4F9C5BBD1D30AEEE0070E0DC /* Actor.cpp in Sources */,
 				4F71A8E01D369DD2004FD96B /* LaunchTrigger.cpp in Sources */,
+				DB5153461D39D6A1005E73E7 /* Status.cpp in Sources */,
 				4F71A8DC1D369DD2004FD96B /* Launcher.cpp in Sources */,
 				4F9C5BB31D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
 				4F9C5BE41D30BFC70070E0DC /* Line.cpp in Sources */,
@@ -1211,6 +1218,7 @@
 				4F70F3551D37D86A00603081 /* Summon.cpp in Sources */,
 				4F70F3511D37D4C500603081 /* King.cpp in Sources */,
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
+				DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */,
 				4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				4F70F35B1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
