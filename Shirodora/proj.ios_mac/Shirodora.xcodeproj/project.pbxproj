@@ -46,10 +46,10 @@
 		46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7719C43A67006E1F66 /* CloseSelected.png */; };
 		46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
 		46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
-		4F19FAF31D39EB7600C93DAA /* SummonFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FAF11D39EB7600C93DAA /* SummonFactoryManager.cpp */; };
-		4F19FAF41D39EB7600C93DAA /* SummonFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FAF11D39EB7600C93DAA /* SummonFactoryManager.cpp */; };
-		4F19FAF71D39EB8600C93DAA /* SummonCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FAF51D39EB8600C93DAA /* SummonCreateFactory.cpp */; };
-		4F19FAF81D39EB8600C93DAA /* SummonCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FAF51D39EB8600C93DAA /* SummonCreateFactory.cpp */; };
+		4F19FB201D3A093500C93DAA /* SummonCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FB191D3A093500C93DAA /* SummonCreateFactory.cpp */; };
+		4F19FB211D3A093500C93DAA /* SummonCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FB191D3A093500C93DAA /* SummonCreateFactory.cpp */; };
+		4F19FB221D3A093500C93DAA /* SummonFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FB1C1D3A093500C93DAA /* SummonFactoryManager.cpp */; };
+		4F19FB231D3A093500C93DAA /* SummonFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F19FB1C1D3A093500C93DAA /* SummonFactoryManager.cpp */; };
 		4F70F3501D37D4C500603081 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F34E1D37D4C500603081 /* King.cpp */; };
 		4F70F3511D37D4C500603081 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F34E1D37D4C500603081 /* King.cpp */; };
 		4F70F3541D37D86A00603081 /* Summon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F3521D37D86A00603081 /* Summon.cpp */; };
@@ -217,11 +217,11 @@
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
-		4F19FAF11D39EB7600C93DAA /* SummonFactoryManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonFactoryManager.cpp; sourceTree = "<group>"; };
-		4F19FAF21D39EB7600C93DAA /* SummonFactoryManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonFactoryManager.hpp; sourceTree = "<group>"; };
-		4F19FAF51D39EB8600C93DAA /* SummonCreateFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonCreateFactory.cpp; sourceTree = "<group>"; };
-		4F19FAF61D39EB8600C93DAA /* SummonCreateFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonCreateFactory.hpp; sourceTree = "<group>"; };
-		4F19FAFA1D39EB9300C93DAA /* SummonTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTypes.hpp; sourceTree = "<group>"; };
+		4F19FB191D3A093500C93DAA /* SummonCreateFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonCreateFactory.cpp; sourceTree = "<group>"; };
+		4F19FB1A1D3A093500C93DAA /* SummonCreateFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonCreateFactory.hpp; sourceTree = "<group>"; };
+		4F19FB1C1D3A093500C93DAA /* SummonFactoryManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonFactoryManager.cpp; sourceTree = "<group>"; };
+		4F19FB1D1D3A093500C93DAA /* SummonFactoryManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonFactoryManager.hpp; sourceTree = "<group>"; };
+		4F19FB1F1D3A093500C93DAA /* SummonTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTypes.hpp; sourceTree = "<group>"; };
 		4F70F34E1D37D4C500603081 /* King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
 		4F70F34F1D37D4C500603081 /* King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = King.hpp; sourceTree = "<group>"; };
 		4F70F3521D37D86A00603081 /* Summon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Summon.cpp; sourceTree = "<group>"; };
@@ -496,7 +496,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4F19FAEC1D39EB2500C93DAA /* Factory */,
+				4F19FB161D3A093500C93DAA /* Factory */,
 				4F9C5B721D30AEEE0070E0DC /* Constants.hpp */,
 				4F9C5B981D30AEEE0070E0DC /* Manager.hpp */,
 				4F71A8EB1D369FE9004FD96B /* Factory.hpp */,
@@ -515,46 +515,46 @@
 			path = ../Classes;
 			sourceTree = "<group>";
 		};
-		4F19FAEC1D39EB2500C93DAA /* Factory */ = {
+		4F19FB161D3A093500C93DAA /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				4F19FAED1D39EB2500C93DAA /* Summon */,
+				4F19FB171D3A093500C93DAA /* Summon */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
 		};
-		4F19FAED1D39EB2500C93DAA /* Summon */ = {
+		4F19FB171D3A093500C93DAA /* Summon */ = {
 			isa = PBXGroup;
 			children = (
-				4F19FAEE1D39EB2500C93DAA /* CreateFactory */,
-				4F19FAEF1D39EB2500C93DAA /* FactoryManager */,
-				4F19FAF01D39EB2500C93DAA /* Types */,
+				4F19FB181D3A093500C93DAA /* CreateFactory */,
+				4F19FB1B1D3A093500C93DAA /* FactoryManager */,
+				4F19FB1E1D3A093500C93DAA /* Types */,
 			);
 			path = Summon;
 			sourceTree = "<group>";
 		};
-		4F19FAEE1D39EB2500C93DAA /* CreateFactory */ = {
+		4F19FB181D3A093500C93DAA /* CreateFactory */ = {
 			isa = PBXGroup;
 			children = (
-				4F19FAF51D39EB8600C93DAA /* SummonCreateFactory.cpp */,
-				4F19FAF61D39EB8600C93DAA /* SummonCreateFactory.hpp */,
+				4F19FB191D3A093500C93DAA /* SummonCreateFactory.cpp */,
+				4F19FB1A1D3A093500C93DAA /* SummonCreateFactory.hpp */,
 			);
 			path = CreateFactory;
 			sourceTree = "<group>";
 		};
-		4F19FAEF1D39EB2500C93DAA /* FactoryManager */ = {
+		4F19FB1B1D3A093500C93DAA /* FactoryManager */ = {
 			isa = PBXGroup;
 			children = (
-				4F19FAF11D39EB7600C93DAA /* SummonFactoryManager.cpp */,
-				4F19FAF21D39EB7600C93DAA /* SummonFactoryManager.hpp */,
+				4F19FB1C1D3A093500C93DAA /* SummonFactoryManager.cpp */,
+				4F19FB1D1D3A093500C93DAA /* SummonFactoryManager.hpp */,
 			);
 			path = FactoryManager;
 			sourceTree = "<group>";
 		};
-		4F19FAF01D39EB2500C93DAA /* Types */ = {
+		4F19FB1E1D3A093500C93DAA /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				4F19FAFA1D39EB9300C93DAA /* SummonTypes.hpp */,
+				4F19FB1F1D3A093500C93DAA /* SummonTypes.hpp */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -1255,6 +1255,7 @@
 				4F9C5BC11D30AEEE0070E0DC /* Object.cpp in Sources */,
 				17EC442A1D39D67400DD4EAB /* TimeLabel.cpp in Sources */,
 				17EC44281D39D67400DD4EAB /* CastleHpBar.cpp in Sources */,
+				4F19FB221D3A093500C93DAA /* SummonFactoryManager.cpp in Sources */,
 				4F9C5BBD1D30AEEE0070E0DC /* Actor.cpp in Sources */,
 				4F71A8E01D369DD2004FD96B /* LaunchTrigger.cpp in Sources */,
 				DB5153461D39D6A1005E73E7 /* Status.cpp in Sources */,
@@ -1263,14 +1264,13 @@
 				4F9C5BE41D30BFC70070E0DC /* Line.cpp in Sources */,
 				4F70F3501D37D4C500603081 /* King.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				4F19FB201D3A093500C93DAA /* SummonCreateFactory.cpp in Sources */,
 				4F70F3541D37D86A00603081 /* Summon.cpp in Sources */,
 				4F9C5BB91D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				4F9C5BDA1D30BF7E0070E0DC /* Move.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
-				4F19FAF71D39EB8600C93DAA /* SummonCreateFactory.cpp in Sources */,
 				4F9C5BB71D30AEEE0070E0DC /* Battle_MainLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				4F19FAF31D39EB7600C93DAA /* SummonFactoryManager.cpp in Sources */,
 				DB51534B1D39DDC3005E73E7 /* Action.cpp in Sources */,
 				4F9C5BCC1D30BF670070E0DC /* Animation.cpp in Sources */,
 				17EC442C1D39D67400DD4EAB /* UI_Layer.cpp in Sources */,
@@ -1304,15 +1304,15 @@
 				17EC442B1D39D67400DD4EAB /* TimeLabel.cpp in Sources */,
 				4F9C5BD51D30BF750070E0DC /* Body.cpp in Sources */,
 				4F9C5BCD1D30BF670070E0DC /* Animation.cpp in Sources */,
-				4F19FAF81D39EB8600C93DAA /* SummonCreateFactory.cpp in Sources */,
 				4F9C5BBC1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
 				4F71A8E11D369DD2004FD96B /* LaunchTrigger.cpp in Sources */,
 				4F70F3551D37D86A00603081 /* Summon.cpp in Sources */,
 				4F70F3511D37D4C500603081 /* King.cpp in Sources */,
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
+				4F19FB211D3A093500C93DAA /* SummonCreateFactory.cpp in Sources */,
 				DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */,
-				4F19FAF41D39EB7600C93DAA /* SummonFactoryManager.cpp in Sources */,
 				4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */,
+				4F19FB231D3A093500C93DAA /* SummonFactoryManager.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				4F70F35B1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
 				DB51534C1D39DDC3005E73E7 /* Action.cpp in Sources */,
