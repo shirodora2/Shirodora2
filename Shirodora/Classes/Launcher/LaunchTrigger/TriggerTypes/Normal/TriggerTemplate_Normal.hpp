@@ -1,30 +1,29 @@
 //
-//  LaunchTrigger.hpp
+//  TriggerTemplate_Normal.hpp
 //  BarrageGame
 //
-//  Created by Ryoutarou Onimura on 2016/07/13.
+//  Created by Ryoutarou Onimura on 2016/07/14.
 //
 //
 
-#ifndef LaunchTrigger_hpp
-#define LaunchTrigger_hpp
+#ifndef TriggerTemplate_Normal_hpp
+#define TriggerTemplate_Normal_hpp
 
 #include <stdio.h>
 
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-class CPawn ;
+#include "TriggerTemplate.hpp"
 
 //=========================================================================
 //
-// LaunchTrigger
-// 各種トリガークラスの基礎
-// template には発射するものの型を入れる
+// CTriggerTemplate_Normal
+// 即時発射型トリガー
 //
 //=========================================================================
 template<typename Ty = CPawn>
-class CLaunchTrigger {
+class CTriggerTemplate_Normal : public CTriggerTemplate<Ty> {
 public :
     //=========================================================================
     // コンストラクタ/デストラクタ
@@ -32,36 +31,23 @@ public :
     /**
      *  @desc   destructor
      */
-    virtual ~CLaunchTrigger(){}
+    virtual ~CTriggerTemplate_Normal(){}
     
     //=========================================================================
     // メンバ関数
     //=========================================================================
     /**
-     *  @desc   発射したかどうか
-     *  @return true...発射した false...発射してない
-     */
-    inline virtual bool isLaunched(){return this->m_isLaunched ; }
-    
-    /**
      *  @desc   設定されているトリガーが発動できるかどうか
-     *  @param  true...できる false...できない
+     *  @return true...できる false...できない
+     *  @tips   取り付けられたら即発射するタイプ
      */
-    virtual bool isReady() = 0 ;
-    
-    /**
-     *  @desc   トリガーの発射
-     *  preturn 出撃させるもの
-     */
-    virtual Ty *launch() = 0 ;
+    virtual bool isReady() override {return true ;}
     
 protected :
     //=========================================================================
     // メンバ変数
     //=========================================================================
-    // 発射したかどうか
-    bool m_isLaunched = false ;
     
 };
 
-#endif /* LaunchTrigger_hpp */
+#endif /* TriggerTemplate_Normal_hpp */

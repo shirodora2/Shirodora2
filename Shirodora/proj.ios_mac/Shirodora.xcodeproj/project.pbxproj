@@ -231,7 +231,6 @@
 		4F71A8CE1D36961C004FD96B /* BattleScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BattleScene.hpp; sourceTree = "<group>"; };
 		4F71A8D41D369DD2004FD96B /* Launcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Launcher.cpp; sourceTree = "<group>"; };
 		4F71A8D51D369DD2004FD96B /* Launcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Launcher.hpp; sourceTree = "<group>"; };
-		4F71A8DB1D369DD2004FD96B /* LaunchTrigger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LaunchTrigger.hpp; sourceTree = "<group>"; };
 		4F71A8F01D36A90A004FD96B /* LauncherManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LauncherManager.cpp; sourceTree = "<group>"; };
 		4F71A8F11D36A90A004FD96B /* LauncherManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LauncherManager.hpp; sourceTree = "<group>"; };
 		4F75D0561D3A730A002744C9 /* Actor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Actor.hpp; sourceTree = "<group>"; };
@@ -250,6 +249,11 @@
 		4F75D0A11D3A8B62002744C9 /* SummonTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTypes.hpp; sourceTree = "<group>"; };
 		4F75D0A31D3A8B62002744C9 /* Summon_Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Summon_Test.cpp; sourceTree = "<group>"; };
 		4F75D0A41D3A8B62002744C9 /* Summon_Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Summon_Test.hpp; sourceTree = "<group>"; };
+		4F75D0AF1D3A8CF0002744C9 /* LaunchDatas.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LaunchDatas.hpp; sourceTree = "<group>"; };
+		4F75D0B31D3A8D65002744C9 /* SummonTrigger_Normal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTrigger_Normal.hpp; sourceTree = "<group>"; };
+		4F75D0B41D3A8D65002744C9 /* SummonTriggers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTriggers.hpp; sourceTree = "<group>"; };
+		4F75D0B51D3A8D65002744C9 /* TriggerTemplate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TriggerTemplate.hpp; sourceTree = "<group>"; };
+		4F75D0B81D3A8D65002744C9 /* TriggerTemplate_Normal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TriggerTemplate_Normal.hpp; sourceTree = "<group>"; };
 		4F9C5B601D30AEC60070E0DC /* gameMainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameMainBG.png; sourceTree = "<group>"; };
 		4F9C5B631D30AEC60070E0DC /* Bone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bone.png; sourceTree = "<group>"; };
 		4F9C5B641D30AEC60070E0DC /* BoneFramework1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoneFramework1.png; sourceTree = "<group>"; };
@@ -572,19 +576,12 @@
 		4F71A8D11D369DD2004FD96B /* Launcher */ = {
 			isa = PBXGroup;
 			children = (
-				4F71A8D21D369DD2004FD96B /* LaunchData */,
-				4F71A8D91D369DD2004FD96B /* LaunchTrigger */,
+				4F75D0B01D3A8D65002744C9 /* LaunchTrigger */,
+				4F75D0AE1D3A8CF0002744C9 /* LaunchDatas */,
 				4F71A8D31D369DD2004FD96B /* Launcher */,
 				4F71A8EF1D36A90A004FD96B /* LauncherManager */,
 			);
 			path = Launcher;
-			sourceTree = "<group>";
-		};
-		4F71A8D21D369DD2004FD96B /* LaunchData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LaunchData;
 			sourceTree = "<group>";
 		};
 		4F71A8D31D369DD2004FD96B /* Launcher */ = {
@@ -594,14 +591,6 @@
 				4F71A8D51D369DD2004FD96B /* Launcher.hpp */,
 			);
 			path = Launcher;
-			sourceTree = "<group>";
-		};
-		4F71A8D91D369DD2004FD96B /* LaunchTrigger */ = {
-			isa = PBXGroup;
-			children = (
-				4F71A8DB1D369DD2004FD96B /* LaunchTrigger.hpp */,
-			);
-			path = LaunchTrigger;
 			sourceTree = "<group>";
 		};
 		4F71A8E21D369DDC004FD96B /* Aggregate */ = {
@@ -719,6 +708,57 @@
 				4F75D0A41D3A8B62002744C9 /* Summon_Test.hpp */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		4F75D0AE1D3A8CF0002744C9 /* LaunchDatas */ = {
+			isa = PBXGroup;
+			children = (
+				4F75D0AF1D3A8CF0002744C9 /* LaunchDatas.hpp */,
+			);
+			path = LaunchDatas;
+			sourceTree = "<group>";
+		};
+		4F75D0B01D3A8D65002744C9 /* LaunchTrigger */ = {
+			isa = PBXGroup;
+			children = (
+				4F75D0B51D3A8D65002744C9 /* TriggerTemplate.hpp */,
+				4F75D0B11D3A8D65002744C9 /* Summon */,
+				4F75D0B61D3A8D65002744C9 /* TriggerTypes */,
+			);
+			path = LaunchTrigger;
+			sourceTree = "<group>";
+		};
+		4F75D0B11D3A8D65002744C9 /* Summon */ = {
+			isa = PBXGroup;
+			children = (
+				4F75D0B41D3A8D65002744C9 /* SummonTriggers.hpp */,
+				4F75D0B21D3A8D65002744C9 /* Normal */,
+			);
+			path = Summon;
+			sourceTree = "<group>";
+		};
+		4F75D0B21D3A8D65002744C9 /* Normal */ = {
+			isa = PBXGroup;
+			children = (
+				4F75D0B31D3A8D65002744C9 /* SummonTrigger_Normal.hpp */,
+			);
+			path = Normal;
+			sourceTree = "<group>";
+		};
+		4F75D0B61D3A8D65002744C9 /* TriggerTypes */ = {
+			isa = PBXGroup;
+			children = (
+				4F75D0B71D3A8D65002744C9 /* Normal */,
+			);
+			path = TriggerTypes;
+			sourceTree = "<group>";
+		};
+		4F75D0B71D3A8D65002744C9 /* Normal */ = {
+			isa = PBXGroup;
+			children = (
+				4F75D0B81D3A8D65002744C9 /* TriggerTemplate_Normal.hpp */,
+			);
+			path = Normal;
 			sourceTree = "<group>";
 		};
 		4F9C5B5B1D30AEC60070E0DC /* Image */ = {

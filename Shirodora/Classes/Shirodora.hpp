@@ -66,7 +66,7 @@
 
 
 //*************** Launcher **********************
-#include "LaunchTrigger.hpp"
+#include "TriggerTemplate.hpp"
 #include "Launcher.hpp"
 #include "LauncherManager.hpp"
 

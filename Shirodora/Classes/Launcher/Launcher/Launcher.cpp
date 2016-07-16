@@ -11,7 +11,7 @@
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "LaunchTrigger.hpp"
+#include "TriggerTemplate.hpp"
 
 //=========================================================================
 //
@@ -27,7 +27,7 @@
 template<typename Ty>
 CLauncher<Ty>::CLauncher(cocos2d::Layer *pLayer) : m_pLayer(pLayer){
     // スケジューラーを生成する
-    this->m_pLaunchSchedule = new std::vector<CLaunchTrigger<Ty>*>() ;
+    this->m_pLaunchSchedule = new std::vector<CTriggerTemplate<Ty>*>() ;
 }
 
 /**
@@ -36,7 +36,7 @@ CLauncher<Ty>::CLauncher(cocos2d::Layer *pLayer) : m_pLayer(pLayer){
 template<typename Ty>
 CLauncher<Ty>::~CLauncher(){
     // イテレーターを回してスケジューラーに残っているトリガーを解放
-    typename std::vector<CLaunchTrigger<Ty>*>::iterator itr = this->m_pLaunchSchedule->begin() ;
+    typename std::vector<CTriggerTemplate<Ty>*>::iterator itr = this->m_pLaunchSchedule->begin() ;
     while(itr != this->m_pLaunchSchedule->end()){
         if(*itr != NULL){
             delete *itr ;
@@ -69,7 +69,7 @@ void CLauncher<Ty>::update(){
  */
 template<typename Ty>
 void  CLauncher<Ty>::erase(){
-    typename std::vector<CLaunchTrigger<Ty>*>::iterator itr = this->m_pLaunchSchedule->begin() ;
+    typename std::vector<CTriggerTemplate<Ty>*>::iterator itr = this->m_pLaunchSchedule->begin() ;
     while(itr != this->m_pLaunchSchedule->end()){
         if((*itr)->isLaunched() == true){
             delete *itr ;

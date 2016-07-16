@@ -1,79 +1,67 @@
 //
-//  Launcher.hpp
+//  TriggerTemplate.hpp
 //  BarrageGame
 //
 //  Created by Ryoutarou Onimura on 2016/07/13.
 //
 //
 
-#ifndef Launcher_hpp
-#define Launcher_hpp
+#ifndef LaunchTrigger_hpp
+#define LaunchTrigger_hpp
 
 #include <stdio.h>
 
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "TriggerTemplate.hpp"
+class CPawn ;
 
 //=========================================================================
 //
-// Launcher
-// 発射するものごとにランチャーをここから派生させて作るのじゃ
+// LaunchTrigger
+// 各種トリガークラスの基礎
+// template には発射するものの型を入れる
 //
 //=========================================================================
 template<typename Ty = CPawn>
-class CLauncher {
+class CTriggerTemplate {
 public :
     //=========================================================================
     // コンストラクタ/デストラクタ
     //=========================================================================
     /**
-     *  @desc   constructor
-     */
-    CLauncher(cocos2d::Layer *pLayer) ;
-    
-    /**
      *  @desc   destructor
      */
-    virtual ~CLauncher() ;
+    virtual ~CTriggerTemplate(){}
     
     //=========================================================================
     // メンバ関数
     //=========================================================================
     /**
-     *  @desc   出撃トリガーを出撃スケジュールに追加する
-     *  @param  出撃トリガー
+     *  @desc   発射したかどうか
+     *  @return true...発射した false...発射してない
      */
-    inline void add(CTriggerTemplate<Ty> *pTrigger){this->m_pLaunchSchedule->push_back(pTrigger) ;}
+    inline virtual bool isLaunched(){return this->m_isLaunched ; }
     
     /**
-     *  @desc   update
+     *  @desc   設定されているトリガーが発動できるかどうか
+     *  @param  true...できる false...できない
      */
-    void update() ;
+    virtual bool isReady() = 0 ;
+    
+    /**
+     *  @desc   トリガーの発射
+     *  preturn 出撃させるもの
+     */
+    virtual Ty *launch() = 0 ;
     
 protected :
     //=========================================================================
-    // メンバ関数
-    //=========================================================================
-    /**
-     *  @desc   発射し終わったものをスケジュールから取り外す
-     */
-    void erase() ;
-    
-    /**
-     *  @desc   発射
-     */
-    virtual void launch() = 0 ;
-    
-    //=========================================================================
     // メンバ変数
     //=========================================================================
-    // 出撃スケジュール
-    std::vector<CTriggerTemplate<Ty>*> *m_pLaunchSchedule {NULL} ;
-    // 取り付けレイヤー
-    cocos2d::Layer *m_pLayer {NULL} ;
+    // 発射したかどうか
+    bool m_isLaunched = false ;
     
 };
 
-#endif /* Launcher_hpp */
+#endif /* LaunchTrigger_hpp */

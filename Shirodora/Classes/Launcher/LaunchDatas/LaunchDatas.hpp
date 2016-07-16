@@ -9,6 +9,24 @@
 #ifndef LaunchDatas_hpp
 #define LaunchDatas_hpp
 
-#include <stdio.h>
+//=========================================================================
+// 前方宣言
+//=========================================================================
+enum class SUMMON_TYPE ;
+
+//=========================================================================
+// 召喚ランチデータ
+//=========================================================================
+struct SSummonLaunchData {
+    SSummonLaunchData() ;
+    SSummonLaunchData(SUMMON_TYPE type , float posX, float posY){
+        this->m_type = type ;
+        this->m_posX = posX ;
+        this->m_posY = posY ;
+    }
+    SUMMON_TYPE m_type ;
+    float m_posX ;
+    float m_posY ;
+};
 
 #endif /* LaunchDatas_hpp */
