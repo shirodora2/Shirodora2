@@ -43,9 +43,7 @@ CCharacter *CCharacterAggregate::CCharacterAggregate::getTag(int tag){
 /**
  *  @desc   constructor
  */
-CCharacterAggregate::CCharacterAggregate(){
-    this->m_pAggregate = new std::vector<CCharacter*>() ;
-}
+CCharacterAggregate::CCharacterAggregate(){}
 
 /**
  *  @desc   copy constructor
@@ -55,17 +53,4 @@ CCharacterAggregate::CCharacterAggregate(const CCharacterAggregate &aggre){}
 /**
  *  @desc   destructor
  */
-CCharacterAggregate::~CCharacterAggregate(){
-    std::vector<CCharacter*>::iterator itr = this->m_pAggregate->begin() ;
-    while(itr != this->m_pAggregate->end()){
-        if(*itr != NULL){
-            delete *itr ;
-            *itr = NULL ;
-        }
-        ++itr ;
-    }
-    if(this->m_pAggregate != NULL){
-        delete this->m_pAggregate ;
-        this->m_pAggregate = NULL ;
-    }
-}
+CCharacterAggregate::~CCharacterAggregate(){}

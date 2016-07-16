@@ -29,6 +29,8 @@ CBattele_MainLayer::~CBattele_MainLayer(){
         delete this->m_pCharacters ;
         this->m_pCharacters = NULL ;
     }
+    // 発射台のクリア
+    CLauncherManager::getInstance()->clear() ;
 }
 
 //=========================================================================
@@ -51,11 +53,17 @@ bool CBattele_MainLayer::init(){
     this->m_pCursor->setPosition(WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
     this->addChild(this->m_pCursor) ;
     
-    //
+    // キャラクター集合体を生成してキャラクター集合へ取り付け
     this->m_pCharacters = new std::vector<CCharacter*>() ;
     CCharacterAggregate::getInstance()->setAggregate(this->m_pCharacters) ;
     
-    //CLauncherManager::
+    // 召喚発射台を設置
+    CLauncherManager::getInstance()->setLauncher(LAUNCHER_TYPE::SUMMON, this) ;
+    
+    // 発射トリガーを発射台にとりつけ
+    SSummonLaunchData launchData(SUMMON_TYPE::TEST, WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
+    CLauncherManager::getInstance()->setTrigger(new CSummonTrigger_Normal(launchData)) ;
+    
     
     // スケジューラーに登録
     this->scheduleUpdate() ;
@@ -81,6 +89,12 @@ bool CBattele_MainLayer::init(){
 void CBattele_MainLayer::update(float deltaTime){
     // カーソルスプライトをマウスマネージャーを使って位置設定させる
     this->m_pCursor->setPosition(mouse.getCurrentCursorPosition()) ;
+    
+    // 発射台更新
+    CLauncherManager::getInstance()->update() ;
+    
+    // 死んだキャラクターの取り外し
+    this->checkAndRemove(this->m_pCharacters) ;
 }
 
 /**

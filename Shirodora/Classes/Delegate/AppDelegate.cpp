@@ -3,10 +3,14 @@
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
+#include "Scene.hpp"
+
 #include "Constants.hpp"
 #include "Manager.hpp"
 #include "Factory.hpp"
-#include "Scene.hpp"
+#include "CharacterAggregate.hpp"
+#include "LauncherManager.hpp"
+
 
 USING_NS_CC;
 
@@ -16,8 +20,19 @@ AppDelegate::AppDelegate() {
 
 AppDelegate::~AppDelegate() 
 {
+    //============================ Manager ===================================
     CMouseManager::destroyInstance() ;
     CInputManager::destroyInstance() ;
+    
+    //============================ Factory ===================================
+    CSummonFactoryManager::destroyInstance() ;
+    
+    //========================= Aggregate ==================================
+    CCharacterAggregate::destroyInstance() ;
+    
+    //============================ LauncherManager ============================
+    CLauncherManager::destroyInstance() ;
+    
 }
 
 //if you want a different context,just modify the value of glContextAttrs
