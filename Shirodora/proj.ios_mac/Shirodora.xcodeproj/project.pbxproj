@@ -139,6 +139,10 @@
 		DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153441D39D6A1005E73E7 /* Status.cpp */; };
 		DB51534B1D39DDC3005E73E7 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153491D39DDC3005E73E7 /* Action.cpp */; };
 		DB51534C1D39DDC3005E73E7 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153491D39DDC3005E73E7 /* Action.cpp */; };
+		DB5153531D39E66F005E73E7 /* MoveAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153511D39E66F005E73E7 /* MoveAction.cpp */; };
+		DB5153541D39E66F005E73E7 /* MoveAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153511D39E66F005E73E7 /* MoveAction.cpp */; };
+		DB5153571D39E67E005E73E7 /* AttackAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153551D39E67E005E73E7 /* AttackAction.cpp */; };
+		DB5153581D39E67E005E73E7 /* AttackAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153551D39E67E005E73E7 /* AttackAction.cpp */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 /* End PBXBuildFile section */
@@ -305,6 +309,10 @@
 		DB5153451D39D6A1005E73E7 /* Status.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Status.hpp; sourceTree = "<group>"; };
 		DB5153491D39DDC3005E73E7 /* Action.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Action.cpp; sourceTree = "<group>"; };
 		DB51534A1D39DDC3005E73E7 /* Action.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Action.hpp; sourceTree = "<group>"; };
+		DB5153511D39E66F005E73E7 /* MoveAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MoveAction.cpp; sourceTree = "<group>"; };
+		DB5153521D39E66F005E73E7 /* MoveAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MoveAction.hpp; sourceTree = "<group>"; };
+		DB5153551D39E67E005E73E7 /* AttackAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttackAction.cpp; sourceTree = "<group>"; };
+		DB5153561D39E67E005E73E7 /* AttackAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AttackAction.hpp; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -468,7 +476,14 @@
 				4F71A8D11D369DD2004FD96B /* Launcher */,
 				4F9C5B7E1D30AEEE0070E0DC /* Layer */,
 				4F9C5BA61D30AEEE0070E0DC /* Scene */,
+<<<<<<< Updated upstream
 				4F19FAFD1D39F10400C93DAA /* NetWork */,
+=======
+<<<<<<< HEAD
+=======
+				4F19FAFD1D39F10400C93DAA /* NetWork */,
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 			);
 			name = Classes;
 			path = ../Classes;
@@ -1019,10 +1034,30 @@
 		DB5153481D39DDB4005E73E7 /* Action */ = {
 			isa = PBXGroup;
 			children = (
+				DB51534F1D39E657005E73E7 /* AttackAction */,
+				DB5153501D39E657005E73E7 /* MoveAction */,
 				DB5153491D39DDC3005E73E7 /* Action.cpp */,
 				DB51534A1D39DDC3005E73E7 /* Action.hpp */,
 			);
 			path = Action;
+			sourceTree = "<group>";
+		};
+		DB51534F1D39E657005E73E7 /* AttackAction */ = {
+			isa = PBXGroup;
+			children = (
+				DB5153551D39E67E005E73E7 /* AttackAction.cpp */,
+				DB5153561D39E67E005E73E7 /* AttackAction.hpp */,
+			);
+			path = AttackAction;
+			sourceTree = "<group>";
+		};
+		DB5153501D39E657005E73E7 /* MoveAction */ = {
+			isa = PBXGroup;
+			children = (
+				DB5153511D39E66F005E73E7 /* MoveAction.cpp */,
+				DB5153521D39E66F005E73E7 /* MoveAction.hpp */,
+			);
+			path = MoveAction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1189,6 +1224,7 @@
 				17EC44281D39D67400DD4EAB /* CastleHpBar.cpp in Sources */,
 				4F9C5BBD1D30AEEE0070E0DC /* Actor.cpp in Sources */,
 				4F71A8E01D369DD2004FD96B /* LaunchTrigger.cpp in Sources */,
+				DB5153571D39E67E005E73E7 /* AttackAction.cpp in Sources */,
 				DB5153461D39D6A1005E73E7 /* Status.cpp in Sources */,
 				4F71A8DC1D369DD2004FD96B /* Launcher.cpp in Sources */,
 				4F9C5BB31D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
@@ -1200,8 +1236,17 @@
 				4F9C5BDA1D30BF7E0070E0DC /* Move.cpp in Sources */,
 				4F19FB021D39F10400C93DAA /* Server.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+<<<<<<< Updated upstream
 				4F19FAF71D39EB8600C93DAA /* SummonCreateFactory.cpp in Sources */,
 				4F19FB001D39F10400C93DAA /* client.cpp in Sources */,
+=======
+<<<<<<< HEAD
+				DB5153531D39E66F005E73E7 /* MoveAction.cpp in Sources */,
+=======
+				4F19FAF71D39EB8600C93DAA /* SummonCreateFactory.cpp in Sources */,
+				4F19FB001D39F10400C93DAA /* client.cpp in Sources */,
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 				4F9C5BB71D30AEEE0070E0DC /* Battle_MainLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				4F19FAF31D39EB7600C93DAA /* SummonFactoryManager.cpp in Sources */,
@@ -1244,10 +1289,12 @@
 				4F71A8E11D369DD2004FD96B /* LaunchTrigger.cpp in Sources */,
 				4F70F3551D37D86A00603081 /* Summon.cpp in Sources */,
 				4F70F3511D37D4C500603081 /* King.cpp in Sources */,
+				DB5153581D39E67E005E73E7 /* AttackAction.cpp in Sources */,
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */,
 				4F19FAF41D39EB7600C93DAA /* SummonFactoryManager.cpp in Sources */,
 				4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */,
+				DB5153541D39E66F005E73E7 /* MoveAction.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				4F19FB011D39F10400C93DAA /* client.cpp in Sources */,
 				4F70F35B1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
