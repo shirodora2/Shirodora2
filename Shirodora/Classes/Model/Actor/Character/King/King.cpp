@@ -6,15 +6,7 @@
 //
 //
 
-#include "King.hpp"
-
-//=========================================================================
-// 追加のインクルードはここから
-//=========================================================================
-#include "Manager.hpp"
-#include "Body.hpp"
-#include "Move.hpp"
-#include "Animation.hpp"
+#include "Shirodora.hpp"
 
 //=========================================================================
 //
@@ -35,10 +27,7 @@ CKing::CKing(){
  *  @desc   destructor
  */
 CKing::~CKing(){
-    if(this->m_pCollisionBody != NULL){
-        delete this->m_pCollisionBody ;
-        this->m_pCollisionBody = NULL ;
-    }
+    
 }
 
 //=========================================================================

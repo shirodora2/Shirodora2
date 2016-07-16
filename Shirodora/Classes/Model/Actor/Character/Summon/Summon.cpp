@@ -6,16 +6,7 @@
 //
 //
 
-#include "Summon.hpp"
-
-//=========================================================================
-// 追加のインクルードはここから
-//=========================================================================
-#include "Character.hpp"
-#include "Move.hpp"
-#include "Animation.hpp"
-#include "Body.hpp"
-
+#include "Shirodora.hpp"
 
 //=========================================================================
 //
@@ -36,14 +27,7 @@ CSummon::CSummon(){
  *  @desc   destructor
  */
 CSummon::~CSummon(){
-    if(this->m_pCollisionBody != NULL){
-        delete this->m_pCollisionBody ;
-        this->m_pCollisionBody = NULL ;
-    }
-    if(this->m_pAttackBody != NULL){
-        delete this->m_pAttackBody ;
-        this->m_pAttackBody = NULL ;
-    }
+    
 }
 
 //=========================================================================

@@ -9,8 +9,6 @@
 #ifndef Character_hpp
 #define Character_hpp
 
-#include <stdio.h>
-
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
@@ -20,8 +18,10 @@
 // 前方宣言
 //=========================================================================
 class CMove ;
+class CStatusOfObject ;
 class CBody ;
 class CAnimation ;
+class CAction ;
 
 //=========================================================================
 //
@@ -48,12 +48,6 @@ public :
     // set
     //=========================================================================
     /**
-     *  @desc   プレイヤーNo設定
-     *  @param  プレイヤーNo
-     */
-    inline void setPlayerNo(int no){this->m_playerNo = no ;}
-    
-    /**
      *  @desc   位置データ設定
      *  @param  CMove*
      */
@@ -66,10 +60,34 @@ public :
     inline void setSprite(cocos2d::Sprite *pSprite){this->m_pSprite = pSprite ; this->addChild(this->m_pSprite) ;}
     
     /**
+     *  @desc   ステータス設定
+     *  @param  CStatusOfObject
+     */
+    inline void setStatus(CStatusOfObject *pStatus){this->m_pStatus = pStatus ;}
+    
+    /**
+     *  @desc   攻撃範囲データ設定
+     *  @param  CBody*
+     */
+    inline void setAttackBody(CBody *pBody){this->m_pAttackBody = pBody ;}
+    
+    /**
+     *  @desc   実体データ設定
+     *  @param  CBody*
+     */
+    inline void setCollisionBody(CBody *pBody){this->m_pCollisionBody = pBody ;}
+    
+    /**
      *  @desc   アニメーションデータ群設定
      *  @param  std::vector<CAnimation*>*
      */
     inline void setAnimations(std::vector<CAnimation*> *pAnimations){this->m_pAnimations = pAnimations ;}
+    
+    /**
+     *  @desc   アクションデーター群設定
+     *  @param  std::vector<CAction*>*
+     */
+    inline void setActions(std::vector<CAction*> *pActions){this->m_pActions = pActions ;}
     
     /**
      *  @desc   タグ設定
@@ -80,12 +98,6 @@ public :
     //=========================================================================
     // get
     //=========================================================================
-    /**
-     *  @desc   プレイヤーNo取得
-     *  @return プレイヤーNo
-     */
-    inline int getPlayerNo(){return this->m_playerNo ;}
-    
     /**
      *  @desc   位置データ取得
      *  @return CMove*
@@ -99,10 +111,34 @@ public :
     inline cocos2d::Sprite *getSprite(){return this->m_pSprite ;}
     
     /**
+     *  @desc   ステータス取得
+     *  @return CStatusOfObject
+     */
+    inline CStatusOfObject *getStatus(){return this->m_pStatus ;}
+    
+    /**
+     *  @desc   攻撃範囲データ取得
+     *  @param  CBody*
+     */
+    inline CBody *getAttackBody(){return this->m_pAttackBody ;}
+    
+    /**
+     *  @desc   実体データ取得
+     *  @param  CBody*
+     */
+    inline CBody *getCollisionBody(){return this->m_pCollisionBody ;}
+    
+    /**
      *  @desc   アニメーションデータ群取得
      *  @return std::vector<CAnimation*>*
      */
     inline std::vector<CAnimation*> *getAnimations(){return this->m_pAnimations ;}
+    
+    /**
+     *  @desc   アクションデーター群取得
+     *  @return std::vector<CAction*>*
+     */
+    inline std::vector<CAction*> *getActions(){return this->m_pActions ;}
     
     /**
      *  @desc   タグ設定
@@ -135,16 +171,20 @@ protected :
     //=========================================================================
     // メンバ変数
     //=========================================================================
-    // プレイヤーNo
-    int m_playerNo ;
     // 位置データ
     CMove *m_pMove {NULL} ;
     // 画像データ
     cocos2d::Sprite *m_pSprite {NULL} ;
+    // ステータス
+    CStatusOfObject *m_pStatus {NULL} ;
+    // 実体データ
+    CBody *m_pCollisionBody {NULL} ;
+    // 攻撃範囲データ
+    CBody *m_pAttackBody {NULL} ;
     // アニメーションデータ群
     std::vector<CAnimation*> *m_pAnimations {NULL} ;
-    // ステータス
-    // CStatus *m_pStatus {NULL} ;
+    // アクションデータ群
+    std::vector<CAction*> *m_pActions {NULL} ;
     // タグ
     int m_tag = 0 ;
     
