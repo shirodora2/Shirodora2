@@ -14,7 +14,10 @@
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "Battle_MainLayer.hpp"
+
+
+class CBattele_MainLayer ;
+class CUI_Layer ;
 
 //=========================================================================
 //
@@ -70,7 +73,7 @@ public :
     CBattele_MainLayer *m_pMainLayer {NULL} ;
     
     // UIレイヤー
-    
+    CUI_Layer *m_pUILayer {NULL} ;
 };
 
 #endif /* BattleScene_hpp */

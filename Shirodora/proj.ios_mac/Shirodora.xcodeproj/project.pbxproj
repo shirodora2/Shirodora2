@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17EC44281D39D67400DD4EAB /* CastleHpBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17EC44221D39D67400DD4EAB /* CastleHpBar.cpp */; };
+		17EC44291D39D67400DD4EAB /* CastleHpBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17EC44221D39D67400DD4EAB /* CastleHpBar.cpp */; };
+		17EC442A1D39D67400DD4EAB /* TimeLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17EC44241D39D67400DD4EAB /* TimeLabel.cpp */; };
+		17EC442B1D39D67400DD4EAB /* TimeLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17EC44241D39D67400DD4EAB /* TimeLabel.cpp */; };
+		17EC442C1D39D67400DD4EAB /* UI_Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17EC44261D39D67400DD4EAB /* UI_Layer.cpp */; };
+		17EC442D1D39D67400DD4EAB /* UI_Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17EC44261D39D67400DD4EAB /* UI_Layer.cpp */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -161,6 +167,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17EC44221D39D67400DD4EAB /* CastleHpBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CastleHpBar.cpp; sourceTree = "<group>"; };
+		17EC44231D39D67400DD4EAB /* CastleHpBar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CastleHpBar.hpp; sourceTree = "<group>"; };
+		17EC44241D39D67400DD4EAB /* TimeLabel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeLabel.cpp; sourceTree = "<group>"; };
+		17EC44251D39D67400DD4EAB /* TimeLabel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TimeLabel.hpp; sourceTree = "<group>"; };
+		17EC44261D39D67400DD4EAB /* UI_Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UI_Layer.cpp; sourceTree = "<group>"; };
+		17EC44271D39D67400DD4EAB /* UI_Layer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UI_Layer.hpp; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -338,6 +350,19 @@
 			);
 			name = ios;
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		17EC44211D39D67400DD4EAB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				17EC44221D39D67400DD4EAB /* CastleHpBar.cpp */,
+				17EC44231D39D67400DD4EAB /* CastleHpBar.hpp */,
+				17EC44241D39D67400DD4EAB /* TimeLabel.cpp */,
+				17EC44251D39D67400DD4EAB /* TimeLabel.hpp */,
+				17EC44261D39D67400DD4EAB /* UI_Layer.cpp */,
+				17EC44271D39D67400DD4EAB /* UI_Layer.hpp */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -751,8 +776,8 @@
 		4F9C5B891D30AEEE0070E0DC /* Battle */ = {
 			isa = PBXGroup;
 			children = (
+				17EC44211D39D67400DD4EAB /* UI */,
 				4F9C5B8A1D30AEEE0070E0DC /* MainLayer */,
-				4F9C5B8D1D30AEEE0070E0DC /* UILayer */,
 			);
 			path = Battle;
 			sourceTree = "<group>";
@@ -764,13 +789,6 @@
 				4F9C5B8C1D30AEEE0070E0DC /* Battle_MainLayer.hpp */,
 			);
 			path = MainLayer;
-			sourceTree = "<group>";
-		};
-		4F9C5B8D1D30AEEE0070E0DC /* UILayer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UILayer;
 			sourceTree = "<group>";
 		};
 		4F9C5B8E1D30AEEE0070E0DC /* Lib */ = {
@@ -1177,6 +1195,8 @@
 				4F9C5BD61D30BF750070E0DC /* CollisionData.cpp in Sources */,
 				4F9C5BBF1D30AEEE0070E0DC /* Character.cpp in Sources */,
 				4F9C5BC11D30AEEE0070E0DC /* Object.cpp in Sources */,
+				17EC442A1D39D67400DD4EAB /* TimeLabel.cpp in Sources */,
+				17EC44281D39D67400DD4EAB /* CastleHpBar.cpp in Sources */,
 				4F9C5BBD1D30AEEE0070E0DC /* Actor.cpp in Sources */,
 				4F71A8E01D369DD2004FD96B /* LaunchTrigger.cpp in Sources */,
 				DB5153461D39D6A1005E73E7 /* Status.cpp in Sources */,
@@ -1193,6 +1213,7 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				DB51534B1D39DDC3005E73E7 /* Action.cpp in Sources */,
 				4F9C5BCC1D30BF670070E0DC /* Animation.cpp in Sources */,
+				17EC442C1D39D67400DD4EAB /* UI_Layer.cpp in Sources */,
 				4F9C5BD41D30BF750070E0DC /* Body.cpp in Sources */,
 				4F9C5BE61D30BFC70070E0DC /* Simplex.cpp in Sources */,
 				4F70F35A1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
@@ -1205,6 +1226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F9C5BBE1D30AEEE0070E0DC /* Actor.cpp in Sources */,
+				17EC44291D39D67400DD4EAB /* CastleHpBar.cpp in Sources */,
 				4F9C5BE71D30BFC70070E0DC /* Simplex.cpp in Sources */,
 				4F9C5BB41D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
 				4F9C5BC21D30AEEE0070E0DC /* Object.cpp in Sources */,
@@ -1218,6 +1240,8 @@
 				4F9C5BE51D30BFC70070E0DC /* Line.cpp in Sources */,
 				4F9C5BD71D30BF750070E0DC /* CollisionData.cpp in Sources */,
 				4F9C5BB21D30AEEE0070E0DC /* InputAndMouseLayer.cpp in Sources */,
+				17EC442D1D39D67400DD4EAB /* UI_Layer.cpp in Sources */,
+				17EC442B1D39D67400DD4EAB /* TimeLabel.cpp in Sources */,
 				4F9C5BD51D30BF750070E0DC /* Body.cpp in Sources */,
 				4F9C5BCD1D30BF670070E0DC /* Animation.cpp in Sources */,
 				4F9C5BBC1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,

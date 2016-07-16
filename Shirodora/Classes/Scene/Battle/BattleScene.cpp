@@ -12,6 +12,8 @@
 // 追加のインクルードはここから
 //=========================================================================
 #include "Constants.hpp"
+#include "Battle_MainLayer.hpp"
+#include "UI_Layer.hpp"
 
 //=========================================================================
 //
@@ -45,6 +47,9 @@ bool CBattleScene::init(){
     // メインレイヤーの生成と取り付け
     this->m_pMainLayer = CCREATE_FUNC::create<CBattele_MainLayer>() ;
     this->addChild(this->m_pMainLayer) ;
+    
+    // UIレイヤー
+    //this->m_pUILayer =
     
     // スケジューラーに登録
     this->scheduleUpdate() ;
