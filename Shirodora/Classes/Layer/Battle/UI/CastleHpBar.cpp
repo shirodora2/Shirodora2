@@ -122,10 +122,11 @@ void CCastleHpEnemyBar::applyFunc(){
         if(m_Hp < 0){
             m_Hp = 0;
         }
+        
         m_Hp -= 1.f;
         float hp = m_Hp / m_MaxHp * 100;
-        
         m_pHpGage->setPercentage(hp);
+        
     }else{
         CCLOG("HPゲージNULL");
     }

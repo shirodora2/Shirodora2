@@ -12,13 +12,10 @@
 #include "cocos2d.h"
 
 class CCastleHpPlayerBar : public cocos2d::Sprite{
-private:
-    float m_MaxHp = 760;
-    float m_Hp = 760;
-    cocos2d::ProgressTimer* m_pHpGage = NULL;
 public:
     CCastleHpPlayerBar();
     ~CCastleHpPlayerBar();
+
     
     bool init() override;
     
@@ -32,14 +29,18 @@ public:
     //値の反映
     void applyFunc();
     
-    CREATE_FUNC(CCastleHpPlayerBar)
-};
+    CREATE_FUNC(CCastleHpPlayerBar);
+    
 
-class CCastleHpEnemyBar : public cocos2d::Sprite{
+
 private:
     float m_MaxHp = 760;
     float m_Hp = 760;
     cocos2d::ProgressTimer* m_pHpGage = NULL;
+
+};
+
+class CCastleHpEnemyBar : public cocos2d::Sprite{
 public:
     CCastleHpEnemyBar();
     ~CCastleHpEnemyBar();
@@ -56,8 +57,15 @@ public:
     //値の反映
     void applyFunc();
     
-    CREATE_FUNC(CCastleHpEnemyBar)
+    CREATE_FUNC(CCastleHpEnemyBar);
+    
+private:
+    float m_MaxHp = 760;
+    float m_Hp = 760;
+    cocos2d::ProgressTimer* m_pHpGage = NULL;
+
 };
+
 
 
 #endif /* CastleHpBar_hpp */

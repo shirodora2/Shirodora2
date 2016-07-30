@@ -10,6 +10,8 @@
 
 #include "TimeLabel.hpp"
 #include "CastleHpBar.hpp"
+#include "CharacterIconSprite.hpp"
+#include "CostSprite.hpp"
 
 
 USING_NS_CC;
@@ -39,10 +41,48 @@ bool CUI_Layer::init(){
     addChild(m_pCastleHpEnemyBar,(int)CZoderUI::Bar);
 
     
+    //キャラアイコン
+    for(int i = 0; i < 3 ; i++ ){
+        m_charaIconBox[i] = CAttackIcon::create();
+        addChild(m_charaIconBox[i]);
+    }
+    for(int i = 3; i < 6 ; i++ ){
+        m_charaIconBox[i] = CDefenceIcon::create();
+        addChild(m_charaIconBox[i]);
+    }
+    for(int i = 0; i < MAXICON ; i++){
+        m_charaIconBox[i]->setPosition(Director::getInstance()->getWinSize().width * 0.2f +
+                                       (m_charaIconBox[i]->getContentSize().width * i),
+                                       Director::getInstance()->getWinSize().height * 0.1f);
+    }
+    
+    //コストアイコン
+    for(int i = 0 ; i < MAXCOST ; i++){
+        m_costBox[i] = CCostSprite::create();
+        m_costBox[i]->setPosition(Director::getInstance()->getWinSize().width * 0.08f,
+                                  Director::getInstance()->getWinSize().height * 0.7f +
+                                  (-m_costBox[i]->getContentSize().height * i) );
+        addChild(m_costBox[i]);
+        
+    }
+    
     scheduleUpdate();
     return true;
 }
 
 void CUI_Layer::update(float _dt){
+    m_testcost++;
+    
+    if(m_testcost == 60){
+        m_testcost = 0;
+
+        for(int i = 0; i < MAXCOST ; i++){
+            if(m_costBox[i]->getCostFlag() == true){
+                m_costBox[i]->setCostFlag(false);
+                return;
+            }
+            
+        }
+    }
     
 }

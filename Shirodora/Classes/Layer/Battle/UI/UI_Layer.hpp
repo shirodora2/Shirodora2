@@ -14,6 +14,8 @@
 class CTimeLable;
 class CCastleHpPlayerBar;
 class CCastleHpEnemyBar;
+class CCharacterIcon;
+class CCostSprite;
 
 enum class CZoderUI : int{
     Time = 0,
@@ -23,21 +25,45 @@ enum class CZoderUI : int{
 };
 
 class CUI_Layer : public cocos2d::Layer{
-private:
-    //制限時間
-    CTimeLable* m_pTimeLabel = NULL;
-    //城の耐久値
-    CCastleHpPlayerBar* m_pCastleHpPlayerBar = NULL;
-    CCastleHpEnemyBar* m_pCastleHpEnemyBar = NULL;
 public:
-    CUI_Layer();
-    ~CUI_Layer();
+    //アイコン
+    static const int MAXICON = 6;
+    //コスト
+    static const int MAXCOST = 10;
+    
+    //時間
+    CTimeLable* getTimeLabel(){return m_pTimeLabel;}
+    //ゲージ
+    CCastleHpPlayerBar* getCastPlayerGage(){return m_pCastleHpPlayerBar;}
+    CCastleHpEnemyBar* getCastEnemyGage(){return m_pCastleHpEnemyBar;}
+    
     
     bool init() override;
     
     void update(float _dt)override;
     
     CREATE_FUNC(CUI_Layer);
+    
+public:
+    
+    CUI_Layer();
+    ~CUI_Layer();
+    
+    
+
+private:
+    int m_testcost = 0;
+    
+    //制限時間
+    CTimeLable* m_pTimeLabel = NULL;
+    //城の耐久値
+    CCastleHpPlayerBar* m_pCastleHpPlayerBar = NULL;
+    CCastleHpEnemyBar* m_pCastleHpEnemyBar = NULL;
+    //キャラアイコン
+    CCharacterIcon* m_charaIconBox[MAXICON];
+    //コスト画像
+    CCostSprite* m_costBox[MAXCOST];
+
 };
 
 #endif /* UI_Layer_hpp */
