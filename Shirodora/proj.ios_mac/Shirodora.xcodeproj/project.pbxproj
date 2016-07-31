@@ -46,6 +46,14 @@
 		46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7719C43A67006E1F66 /* CloseSelected.png */; };
 		46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
 		46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
+		4F0112801D4DC4DC0087E05F /* TimeNumber.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F01127E1D4DC4DC0087E05F /* TimeNumber.png */; };
+		4F0112811D4DC4DC0087E05F /* TimeNumber.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F01127E1D4DC4DC0087E05F /* TimeNumber.png */; };
+		4F0112821D4DC4DC0087E05F /* TimeNumberSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F01127F1D4DC4DC0087E05F /* TimeNumberSymbol.png */; };
+		4F0112831D4DC4DC0087E05F /* TimeNumberSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F01127F1D4DC4DC0087E05F /* TimeNumberSymbol.png */; };
+		4F0112881D4DC4F70087E05F /* CharacterIconSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112841D4DC4F70087E05F /* CharacterIconSprite.cpp */; };
+		4F0112891D4DC4F70087E05F /* CharacterIconSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112841D4DC4F70087E05F /* CharacterIconSprite.cpp */; };
+		4F01128A1D4DC4F70087E05F /* CostSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112861D4DC4F70087E05F /* CostSprite.cpp */; };
+		4F01128B1D4DC4F70087E05F /* CostSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112861D4DC4F70087E05F /* CostSprite.cpp */; };
 		4F5C011B1D3A162100DA968F /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C01131D3A162100DA968F /* Action.cpp */; };
 		4F5C011C1D3A162100DA968F /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C01131D3A162100DA968F /* Action.cpp */; };
 		4F5C011D1D3A162100DA968F /* AttackAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C01161D3A162100DA968F /* AttackAction.cpp */; };
@@ -219,6 +227,12 @@
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
+		4F01127E1D4DC4DC0087E05F /* TimeNumber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TimeNumber.png; path = UI_Image/TimeNumber.png; sourceTree = "<group>"; };
+		4F01127F1D4DC4DC0087E05F /* TimeNumberSymbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TimeNumberSymbol.png; path = UI_Image/TimeNumberSymbol.png; sourceTree = "<group>"; };
+		4F0112841D4DC4F70087E05F /* CharacterIconSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterIconSprite.cpp; sourceTree = "<group>"; };
+		4F0112851D4DC4F70087E05F /* CharacterIconSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterIconSprite.hpp; sourceTree = "<group>"; };
+		4F0112861D4DC4F70087E05F /* CostSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CostSprite.cpp; sourceTree = "<group>"; };
+		4F0112871D4DC4F70087E05F /* CostSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CostSprite.hpp; sourceTree = "<group>"; };
 		4F5C01131D3A162100DA968F /* Action.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Action.cpp; sourceTree = "<group>"; };
 		4F5C01141D3A162100DA968F /* Action.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Action.hpp; sourceTree = "<group>"; };
 		4F5C01161D3A162100DA968F /* AttackAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttackAction.cpp; sourceTree = "<group>"; };
@@ -406,6 +420,10 @@
 		17EC44211D39D67400DD4EAB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4F0112841D4DC4F70087E05F /* CharacterIconSprite.cpp */,
+				4F0112851D4DC4F70087E05F /* CharacterIconSprite.hpp */,
+				4F0112861D4DC4F70087E05F /* CostSprite.cpp */,
+				4F0112871D4DC4F70087E05F /* CostSprite.hpp */,
 				17EC44221D39D67400DD4EAB /* CastleHpBar.cpp */,
 				17EC44231D39D67400DD4EAB /* CastleHpBar.hpp */,
 				17EC44241D39D67400DD4EAB /* TimeLabel.cpp */,
@@ -419,6 +437,8 @@
 		17EC44481D39EC4100DD4EAB /* UI_Image */ = {
 			isa = PBXGroup;
 			children = (
+				4F01127E1D4DC4DC0087E05F /* TimeNumber.png */,
+				4F01127F1D4DC4DC0087E05F /* TimeNumberSymbol.png */,
 				17EC44491D39EC5B00DD4EAB /* CharacterFrame_Green.png */,
 				17EC444A1D39EC5B00DD4EAB /* CharacterFrame_Red.png */,
 				17EC444B1D39EC5B00DD4EAB /* EnemyLife_Frame.png */,
@@ -1255,6 +1275,7 @@
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				4F9C5B6A1D30AEC60070E0DC /* Bone.png in Resources */,
+				4F0112801D4DC4DC0087E05F /* TimeNumber.png in Resources */,
 				17EC44631D39EC5B00DD4EAB /* Summon_SmallFrame.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				17EC445B1D39EC5B00DD4EAB /* PlayerLife_Frame.png in Resources */,
@@ -1265,6 +1286,7 @@
 				17EC44551D39EC5B00DD4EAB /* CharacterFrame_Red.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				17EC44591D39EC5B00DD4EAB /* EnemyLife_Gage.png in Resources */,
+				4F0112821D4DC4DC0087E05F /* TimeNumberSymbol.png in Resources */,
 				17EC445D1D39EC5B00DD4EAB /* PlayerLife_Gage.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
@@ -1289,12 +1311,14 @@
 				4F9C5B691D30AEC60070E0DC /* gameMainBG.png in Resources */,
 				4F9C5B711D30AEC60070E0DC /* BoneGloss.png in Resources */,
 				17EC44601D39EC5B00DD4EAB /* Summon_Frame.png in Resources */,
+				4F0112831D4DC4DC0087E05F /* TimeNumberSymbol.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				17EC44641D39EC5B00DD4EAB /* Summon_SmallFrame.png in Resources */,
 				17EC44561D39EC5B00DD4EAB /* CharacterFrame_Red.png in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
 				17EC445E1D39EC5B00DD4EAB /* PlayerLife_Gage.png in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
+				4F0112811D4DC4DC0087E05F /* TimeNumber.png in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				4F9C5B6B1D30AEC60070E0DC /* Bone.png in Resources */,
@@ -1330,6 +1354,8 @@
 				DB5153461D39D6A1005E73E7 /* Status.cpp in Sources */,
 				4F5C011B1D3A162100DA968F /* Action.cpp in Sources */,
 				4F75D0C61D3A9282002744C9 /* LauncherTemplate.cpp in Sources */,
+				4F0112881D4DC4F70087E05F /* CharacterIconSprite.cpp in Sources */,
+				4F01128A1D4DC4F70087E05F /* CostSprite.cpp in Sources */,
 				4F75D0661D3A730A002744C9 /* King.cpp in Sources */,
 				4F9C5BB31D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
 				4F9C5BE41D30BFC70070E0DC /* Line.cpp in Sources */,
@@ -1361,6 +1387,7 @@
 				4F9C5BE71D30BFC70070E0DC /* Simplex.cpp in Sources */,
 				4F9C5BB41D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
 				4F75D0671D3A730A002744C9 /* King.cpp in Sources */,
+				4F0112891D4DC4F70087E05F /* CharacterIconSprite.cpp in Sources */,
 				4F9C5BB61D30AEEE0070E0DC /* MouseLayer.cpp in Sources */,
 				4F9C5BB81D30AEEE0070E0DC /* Battle_MainLayer.cpp in Sources */,
 				4F75D0691D3A730A002744C9 /* Summon.cpp in Sources */,
@@ -1389,6 +1416,7 @@
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				4F70F35B1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
 				4F75D0AA1D3A8B62002744C9 /* Summon_Test.cpp in Sources */,
+				4F01128B1D4DC4F70087E05F /* CostSprite.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
