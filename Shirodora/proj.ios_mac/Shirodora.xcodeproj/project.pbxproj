@@ -54,18 +54,42 @@
 		4F0112891D4DC4F70087E05F /* CharacterIconSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112841D4DC4F70087E05F /* CharacterIconSprite.cpp */; };
 		4F01128A1D4DC4F70087E05F /* CostSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112861D4DC4F70087E05F /* CostSprite.cpp */; };
 		4F01128B1D4DC4F70087E05F /* CostSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112861D4DC4F70087E05F /* CostSprite.cpp */; };
+		4F0112FF1D4DF43A0087E05F /* SummonAggregate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112ED1D4DF43A0087E05F /* SummonAggregate.cpp */; };
+		4F0113001D4DF43A0087E05F /* SummonAggregate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112ED1D4DF43A0087E05F /* SummonAggregate.cpp */; };
+		4F0113011D4DF43A0087E05F /* SummonAggregate_Player1Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112F01D4DF43A0087E05F /* SummonAggregate_Player1Tag.cpp */; };
+		4F0113021D4DF43A0087E05F /* SummonAggregate_Player1Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112F01D4DF43A0087E05F /* SummonAggregate_Player1Tag.cpp */; };
+		4F0113031D4DF43A0087E05F /* SummonAggregate_Player2Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112F31D4DF43A0087E05F /* SummonAggregate_Player2Tag.cpp */; };
+		4F0113041D4DF43A0087E05F /* SummonAggregate_Player2Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112F31D4DF43A0087E05F /* SummonAggregate_Player2Tag.cpp */; };
+		4F0113051D4DF43A0087E05F /* SummonIterator_Player1Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112F71D4DF43A0087E05F /* SummonIterator_Player1Tag.cpp */; };
+		4F0113061D4DF43A0087E05F /* SummonIterator_Player1Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112F71D4DF43A0087E05F /* SummonIterator_Player1Tag.cpp */; };
+		4F0113071D4DF43A0087E05F /* SummonIterator_Player2Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112FA1D4DF43A0087E05F /* SummonIterator_Player2Tag.cpp */; };
+		4F0113081D4DF43A0087E05F /* SummonIterator_Player2Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112FA1D4DF43A0087E05F /* SummonIterator_Player2Tag.cpp */; };
+		4F0113091D4DF43A0087E05F /* SummonManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112FD1D4DF43A0087E05F /* SummonManager.cpp */; };
+		4F01130A1D4DF43A0087E05F /* SummonManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0112FD1D4DF43A0087E05F /* SummonManager.cpp */; };
+		4F01132D1D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0113151D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp */; };
+		4F01132E1D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0113151D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp */; };
+		4F01132F1D4DF4CA0087E05F /* SummonLauncher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0113181D4DF4CA0087E05F /* SummonLauncher.cpp */; };
+		4F0113301D4DF4CA0087E05F /* SummonLauncher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0113181D4DF4CA0087E05F /* SummonLauncher.cpp */; };
+		4F0113311D4DF4CA0087E05F /* SummonTriggerAggregate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F01131C1D4DF4CA0087E05F /* SummonTriggerAggregate.cpp */; };
+		4F0113321D4DF4CA0087E05F /* SummonTriggerAggregate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F01131C1D4DF4CA0087E05F /* SummonTriggerAggregate.cpp */; };
+		4F0113331D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F01131F1D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.cpp */; };
+		4F0113341D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F01131F1D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.cpp */; };
+		4F0113351D4DF4CA0087E05F /* LaunchTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0113231D4DF4CA0087E05F /* LaunchTemplate.cpp */; };
+		4F0113361D4DF4CA0087E05F /* LaunchTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0113231D4DF4CA0087E05F /* LaunchTemplate.cpp */; };
+		4F0113371D4DF4CA0087E05F /* TriggerTemplateBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0113261D4DF4CA0087E05F /* TriggerTemplateBase.cpp */; };
+		4F0113381D4DF4CA0087E05F /* TriggerTemplateBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F0113261D4DF4CA0087E05F /* TriggerTemplateBase.cpp */; };
+		4F0113391D4DF4CA0087E05F /* Trigger_Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F01132A1D4DF4CA0087E05F /* Trigger_Timer.cpp */; };
+		4F01133A1D4DF4CA0087E05F /* Trigger_Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F01132A1D4DF4CA0087E05F /* Trigger_Timer.cpp */; };
+		4F01133F1D4DF5410087E05F /* CharacterAggregate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F01133D1D4DF5410087E05F /* CharacterAggregate.cpp */; };
+		4F0113401D4DF5410087E05F /* CharacterAggregate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F01133D1D4DF5410087E05F /* CharacterAggregate.cpp */; };
 		4F5C011B1D3A162100DA968F /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C01131D3A162100DA968F /* Action.cpp */; };
 		4F5C011C1D3A162100DA968F /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C01131D3A162100DA968F /* Action.cpp */; };
 		4F5C011D1D3A162100DA968F /* AttackAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C01161D3A162100DA968F /* AttackAction.cpp */; };
 		4F5C011E1D3A162100DA968F /* AttackAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C01161D3A162100DA968F /* AttackAction.cpp */; };
 		4F5C011F1D3A162100DA968F /* MoveAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C01191D3A162100DA968F /* MoveAction.cpp */; };
 		4F5C01201D3A162100DA968F /* MoveAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C01191D3A162100DA968F /* MoveAction.cpp */; };
-		4F70F35A1D37E28500603081 /* CharacterAggregate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F3581D37E28500603081 /* CharacterAggregate.cpp */; };
-		4F70F35B1D37E28500603081 /* CharacterAggregate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F70F3581D37E28500603081 /* CharacterAggregate.cpp */; };
 		4F71A8CF1D36961C004FD96B /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8CD1D36961C004FD96B /* BattleScene.cpp */; };
 		4F71A8D01D36961C004FD96B /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8CD1D36961C004FD96B /* BattleScene.cpp */; };
-		4F71A8F21D36A90A004FD96B /* LauncherManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8F01D36A90A004FD96B /* LauncherManager.cpp */; };
-		4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F71A8F01D36A90A004FD96B /* LauncherManager.cpp */; };
 		4F75D0641D3A730A002744C9 /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D0581D3A730A002744C9 /* Character.cpp */; };
 		4F75D0651D3A730A002744C9 /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D0581D3A730A002744C9 /* Character.cpp */; };
 		4F75D0661D3A730A002744C9 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D05B1D3A730A002744C9 /* King.cpp */; };
@@ -78,10 +102,6 @@
 		4F75D0A81D3A8B62002744C9 /* SummonFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D09E1D3A8B62002744C9 /* SummonFactoryManager.cpp */; };
 		4F75D0A91D3A8B62002744C9 /* Summon_Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D0A31D3A8B62002744C9 /* Summon_Test.cpp */; };
 		4F75D0AA1D3A8B62002744C9 /* Summon_Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D0A31D3A8B62002744C9 /* Summon_Test.cpp */; };
-		4F75D0C61D3A9282002744C9 /* LauncherTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D0C11D3A9282002744C9 /* LauncherTemplate.cpp */; };
-		4F75D0C71D3A9282002744C9 /* LauncherTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D0C11D3A9282002744C9 /* LauncherTemplate.cpp */; };
-		4F75D0C81D3A9282002744C9 /* SummonLauncher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D0C41D3A9282002744C9 /* SummonLauncher.cpp */; };
-		4F75D0C91D3A9282002744C9 /* SummonLauncher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D0C41D3A9282002744C9 /* SummonLauncher.cpp */; };
 		4F75D0CB1D3A92A5002744C9 /* TestMoveSprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F75D0CA1D3A92A5002744C9 /* TestMoveSprite.png */; };
 		4F75D0CC1D3A92A5002744C9 /* TestMoveSprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F75D0CA1D3A92A5002744C9 /* TestMoveSprite.png */; };
 		4F9C5B681D30AEC60070E0DC /* gameMainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C5B601D30AEC60070E0DC /* gameMainBG.png */; };
@@ -233,6 +253,39 @@
 		4F0112851D4DC4F70087E05F /* CharacterIconSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterIconSprite.hpp; sourceTree = "<group>"; };
 		4F0112861D4DC4F70087E05F /* CostSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CostSprite.cpp; sourceTree = "<group>"; };
 		4F0112871D4DC4F70087E05F /* CostSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CostSprite.hpp; sourceTree = "<group>"; };
+		4F0112E91D4DF43A0087E05F /* ModelManagers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ModelManagers.hpp; sourceTree = "<group>"; };
+		4F0112ED1D4DF43A0087E05F /* SummonAggregate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonAggregate.cpp; sourceTree = "<group>"; };
+		4F0112EE1D4DF43A0087E05F /* SummonAggregate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonAggregate.hpp; sourceTree = "<group>"; };
+		4F0112F01D4DF43A0087E05F /* SummonAggregate_Player1Tag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonAggregate_Player1Tag.cpp; sourceTree = "<group>"; };
+		4F0112F11D4DF43A0087E05F /* SummonAggregate_Player1Tag.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonAggregate_Player1Tag.hpp; sourceTree = "<group>"; };
+		4F0112F31D4DF43A0087E05F /* SummonAggregate_Player2Tag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonAggregate_Player2Tag.cpp; sourceTree = "<group>"; };
+		4F0112F41D4DF43A0087E05F /* SummonAggregate_Player2Tag.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonAggregate_Player2Tag.hpp; sourceTree = "<group>"; };
+		4F0112F71D4DF43A0087E05F /* SummonIterator_Player1Tag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonIterator_Player1Tag.cpp; sourceTree = "<group>"; };
+		4F0112F81D4DF43A0087E05F /* SummonIterator_Player1Tag.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonIterator_Player1Tag.hpp; sourceTree = "<group>"; };
+		4F0112FA1D4DF43A0087E05F /* SummonIterator_Player2Tag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonIterator_Player2Tag.cpp; sourceTree = "<group>"; };
+		4F0112FB1D4DF43A0087E05F /* SummonIterator_Player2Tag.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonIterator_Player2Tag.hpp; sourceTree = "<group>"; };
+		4F0112FD1D4DF43A0087E05F /* SummonManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonManager.cpp; sourceTree = "<group>"; };
+		4F0112FE1D4DF43A0087E05F /* SummonManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonManager.hpp; sourceTree = "<group>"; };
+		4F01130C1D4DF49E0087E05F /* AggregateTemplate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AggregateTemplate.hpp; sourceTree = "<group>"; };
+		4F01130F1D4DF4CA0087E05F /* LaunchDatas.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LaunchDatas.hpp; sourceTree = "<group>"; };
+		4F0113111D4DF4CA0087E05F /* Launchers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Launchers.hpp; sourceTree = "<group>"; };
+		4F0113151D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonTriggerIterator_ReadyAll.cpp; sourceTree = "<group>"; };
+		4F0113161D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTriggerIterator_ReadyAll.hpp; sourceTree = "<group>"; };
+		4F0113181D4DF4CA0087E05F /* SummonLauncher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonLauncher.cpp; sourceTree = "<group>"; };
+		4F0113191D4DF4CA0087E05F /* SummonLauncher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonLauncher.hpp; sourceTree = "<group>"; };
+		4F01131C1D4DF4CA0087E05F /* SummonTriggerAggregate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonTriggerAggregate.cpp; sourceTree = "<group>"; };
+		4F01131D1D4DF4CA0087E05F /* SummonTriggerAggregate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTriggerAggregate.hpp; sourceTree = "<group>"; };
+		4F01131F1D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonTriggerAggregate_ReadyAll.cpp; sourceTree = "<group>"; };
+		4F0113201D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTriggerAggregate_ReadyAll.hpp; sourceTree = "<group>"; };
+		4F0113231D4DF4CA0087E05F /* LaunchTemplate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LaunchTemplate.cpp; sourceTree = "<group>"; };
+		4F0113241D4DF4CA0087E05F /* LaunchTemplate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LaunchTemplate.hpp; sourceTree = "<group>"; };
+		4F0113261D4DF4CA0087E05F /* TriggerTemplateBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TriggerTemplateBase.cpp; sourceTree = "<group>"; };
+		4F0113271D4DF4CA0087E05F /* TriggerTemplateBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TriggerTemplateBase.hpp; sourceTree = "<group>"; };
+		4F01132A1D4DF4CA0087E05F /* Trigger_Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trigger_Timer.cpp; sourceTree = "<group>"; };
+		4F01132B1D4DF4CA0087E05F /* Trigger_Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trigger_Timer.hpp; sourceTree = "<group>"; };
+		4F01132C1D4DF4CA0087E05F /* TriggerTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TriggerTypes.hpp; sourceTree = "<group>"; };
+		4F01133D1D4DF5410087E05F /* CharacterAggregate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterAggregate.cpp; sourceTree = "<group>"; };
+		4F01133E1D4DF5410087E05F /* CharacterAggregate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterAggregate.hpp; sourceTree = "<group>"; };
 		4F5C01131D3A162100DA968F /* Action.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Action.cpp; sourceTree = "<group>"; };
 		4F5C01141D3A162100DA968F /* Action.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Action.hpp; sourceTree = "<group>"; };
 		4F5C01161D3A162100DA968F /* AttackAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttackAction.cpp; sourceTree = "<group>"; };
@@ -243,12 +296,8 @@
 		4F5C012E1D3A3CAA00DA968F /* Factory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Factory.hpp; sourceTree = "<group>"; };
 		4F5C012F1D3A3CB700DA968F /* Manager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Manager.hpp; sourceTree = "<group>"; };
 		4F5C01301D3A3CC200DA968F /* Scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
-		4F70F3581D37E28500603081 /* CharacterAggregate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterAggregate.cpp; sourceTree = "<group>"; };
-		4F70F3591D37E28500603081 /* CharacterAggregate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterAggregate.hpp; sourceTree = "<group>"; };
 		4F71A8CD1D36961C004FD96B /* BattleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattleScene.cpp; sourceTree = "<group>"; };
 		4F71A8CE1D36961C004FD96B /* BattleScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BattleScene.hpp; sourceTree = "<group>"; };
-		4F71A8F01D36A90A004FD96B /* LauncherManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LauncherManager.cpp; sourceTree = "<group>"; };
-		4F71A8F11D36A90A004FD96B /* LauncherManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LauncherManager.hpp; sourceTree = "<group>"; };
 		4F75D0561D3A730A002744C9 /* Actor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Actor.hpp; sourceTree = "<group>"; };
 		4F75D0581D3A730A002744C9 /* Character.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Character.cpp; sourceTree = "<group>"; };
 		4F75D0591D3A730A002744C9 /* Character.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Character.hpp; sourceTree = "<group>"; };
@@ -265,15 +314,6 @@
 		4F75D0A11D3A8B62002744C9 /* SummonTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTypes.hpp; sourceTree = "<group>"; };
 		4F75D0A31D3A8B62002744C9 /* Summon_Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Summon_Test.cpp; sourceTree = "<group>"; };
 		4F75D0A41D3A8B62002744C9 /* Summon_Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Summon_Test.hpp; sourceTree = "<group>"; };
-		4F75D0AF1D3A8CF0002744C9 /* LaunchDatas.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LaunchDatas.hpp; sourceTree = "<group>"; };
-		4F75D0B31D3A8D65002744C9 /* SummonTrigger_Normal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTrigger_Normal.hpp; sourceTree = "<group>"; };
-		4F75D0B41D3A8D65002744C9 /* SummonTriggers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonTriggers.hpp; sourceTree = "<group>"; };
-		4F75D0B51D3A8D65002744C9 /* TriggerTemplate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TriggerTemplate.hpp; sourceTree = "<group>"; };
-		4F75D0B81D3A8D65002744C9 /* TriggerTemplate_Normal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TriggerTemplate_Normal.hpp; sourceTree = "<group>"; };
-		4F75D0C11D3A9282002744C9 /* LauncherTemplate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LauncherTemplate.cpp; sourceTree = "<group>"; };
-		4F75D0C21D3A9282002744C9 /* LauncherTemplate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LauncherTemplate.hpp; sourceTree = "<group>"; };
-		4F75D0C41D3A9282002744C9 /* SummonLauncher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SummonLauncher.cpp; sourceTree = "<group>"; };
-		4F75D0C51D3A9282002744C9 /* SummonLauncher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SummonLauncher.hpp; sourceTree = "<group>"; };
 		4F75D0CA1D3A92A5002744C9 /* TestMoveSprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestMoveSprite.png; sourceTree = "<group>"; };
 		4F9C5B601D30AEC60070E0DC /* gameMainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameMainBG.png; sourceTree = "<group>"; };
 		4F9C5B631D30AEC60070E0DC /* Bone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bone.png; sourceTree = "<group>"; };
@@ -533,7 +573,8 @@
 				4F9C5B731D30AEEE0070E0DC /* Data */,
 				4F9C5B991D30AEEE0070E0DC /* Model */,
 				4F19FB161D3A093500C93DAA /* Factory */,
-				4F71A8E21D369DDC004FD96B /* Aggregate */,
+				4F0112E81D4DF43A0087E05F /* ModelManager */,
+				4F01133B1D4DF5410087E05F /* Aggregate */,
 				4F71A8D11D369DD2004FD96B /* Launcher */,
 				4F9C5BA61D30AEEE0070E0DC /* Scene */,
 				4F9C5B7E1D30AEEE0070E0DC /* Layer */,
@@ -542,6 +583,259 @@
 			);
 			name = Classes;
 			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		4F0112E81D4DF43A0087E05F /* ModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				4F0112E91D4DF43A0087E05F /* ModelManagers.hpp */,
+				4F0112EA1D4DF43A0087E05F /* Summon */,
+			);
+			path = ModelManager;
+			sourceTree = "<group>";
+		};
+		4F0112EA1D4DF43A0087E05F /* Summon */ = {
+			isa = PBXGroup;
+			children = (
+				4F0112EB1D4DF43A0087E05F /* Aggregate */,
+				4F0112F51D4DF43A0087E05F /* Iterator */,
+				4F0112FC1D4DF43A0087E05F /* Manager */,
+			);
+			path = Summon;
+			sourceTree = "<group>";
+		};
+		4F0112EB1D4DF43A0087E05F /* Aggregate */ = {
+			isa = PBXGroup;
+			children = (
+				4F0112EC1D4DF43A0087E05F /* All */,
+				4F0112EF1D4DF43A0087E05F /* Player1Tag */,
+				4F0112F21D4DF43A0087E05F /* Player2Tag */,
+			);
+			path = Aggregate;
+			sourceTree = "<group>";
+		};
+		4F0112EC1D4DF43A0087E05F /* All */ = {
+			isa = PBXGroup;
+			children = (
+				4F0112ED1D4DF43A0087E05F /* SummonAggregate.cpp */,
+				4F0112EE1D4DF43A0087E05F /* SummonAggregate.hpp */,
+			);
+			path = All;
+			sourceTree = "<group>";
+		};
+		4F0112EF1D4DF43A0087E05F /* Player1Tag */ = {
+			isa = PBXGroup;
+			children = (
+				4F0112F01D4DF43A0087E05F /* SummonAggregate_Player1Tag.cpp */,
+				4F0112F11D4DF43A0087E05F /* SummonAggregate_Player1Tag.hpp */,
+			);
+			path = Player1Tag;
+			sourceTree = "<group>";
+		};
+		4F0112F21D4DF43A0087E05F /* Player2Tag */ = {
+			isa = PBXGroup;
+			children = (
+				4F0112F31D4DF43A0087E05F /* SummonAggregate_Player2Tag.cpp */,
+				4F0112F41D4DF43A0087E05F /* SummonAggregate_Player2Tag.hpp */,
+			);
+			path = Player2Tag;
+			sourceTree = "<group>";
+		};
+		4F0112F51D4DF43A0087E05F /* Iterator */ = {
+			isa = PBXGroup;
+			children = (
+				4F0112F61D4DF43A0087E05F /* Player1Tag */,
+				4F0112F91D4DF43A0087E05F /* Player2Tag */,
+			);
+			path = Iterator;
+			sourceTree = "<group>";
+		};
+		4F0112F61D4DF43A0087E05F /* Player1Tag */ = {
+			isa = PBXGroup;
+			children = (
+				4F0112F71D4DF43A0087E05F /* SummonIterator_Player1Tag.cpp */,
+				4F0112F81D4DF43A0087E05F /* SummonIterator_Player1Tag.hpp */,
+			);
+			path = Player1Tag;
+			sourceTree = "<group>";
+		};
+		4F0112F91D4DF43A0087E05F /* Player2Tag */ = {
+			isa = PBXGroup;
+			children = (
+				4F0112FA1D4DF43A0087E05F /* SummonIterator_Player2Tag.cpp */,
+				4F0112FB1D4DF43A0087E05F /* SummonIterator_Player2Tag.hpp */,
+			);
+			path = Player2Tag;
+			sourceTree = "<group>";
+		};
+		4F0112FC1D4DF43A0087E05F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4F0112FD1D4DF43A0087E05F /* SummonManager.cpp */,
+				4F0112FE1D4DF43A0087E05F /* SummonManager.hpp */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4F01130B1D4DF49E0087E05F /* AggregateTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				4F01130C1D4DF49E0087E05F /* AggregateTemplate.hpp */,
+			);
+			path = AggregateTemplate;
+			sourceTree = "<group>";
+		};
+		4F01130D1D4DF4CA0087E05F /* Launcher */ = {
+			isa = PBXGroup;
+			children = (
+				4F01130E1D4DF4CA0087E05F /* LaunchData */,
+				4F0113101D4DF4CA0087E05F /* Launchers */,
+				4F0113211D4DF4CA0087E05F /* Trigger */,
+			);
+			name = Launcher;
+			sourceTree = "<group>";
+		};
+		4F01130E1D4DF4CA0087E05F /* LaunchData */ = {
+			isa = PBXGroup;
+			children = (
+				4F01130F1D4DF4CA0087E05F /* LaunchDatas.hpp */,
+			);
+			path = LaunchData;
+			sourceTree = "<group>";
+		};
+		4F0113101D4DF4CA0087E05F /* Launchers */ = {
+			isa = PBXGroup;
+			children = (
+				4F0113111D4DF4CA0087E05F /* Launchers.hpp */,
+				4F0113121D4DF4CA0087E05F /* Summon */,
+			);
+			path = Launchers;
+			sourceTree = "<group>";
+		};
+		4F0113121D4DF4CA0087E05F /* Summon */ = {
+			isa = PBXGroup;
+			children = (
+				4F0113131D4DF4CA0087E05F /* Iterator */,
+				4F0113171D4DF4CA0087E05F /* Launcher */,
+				4F01131A1D4DF4CA0087E05F /* TriggerAggregate */,
+			);
+			path = Summon;
+			sourceTree = "<group>";
+		};
+		4F0113131D4DF4CA0087E05F /* Iterator */ = {
+			isa = PBXGroup;
+			children = (
+				4F0113141D4DF4CA0087E05F /* RedyAll */,
+			);
+			path = Iterator;
+			sourceTree = "<group>";
+		};
+		4F0113141D4DF4CA0087E05F /* RedyAll */ = {
+			isa = PBXGroup;
+			children = (
+				4F0113151D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp */,
+				4F0113161D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.hpp */,
+			);
+			path = RedyAll;
+			sourceTree = "<group>";
+		};
+		4F0113171D4DF4CA0087E05F /* Launcher */ = {
+			isa = PBXGroup;
+			children = (
+				4F0113181D4DF4CA0087E05F /* SummonLauncher.cpp */,
+				4F0113191D4DF4CA0087E05F /* SummonLauncher.hpp */,
+			);
+			path = Launcher;
+			sourceTree = "<group>";
+		};
+		4F01131A1D4DF4CA0087E05F /* TriggerAggregate */ = {
+			isa = PBXGroup;
+			children = (
+				4F01131B1D4DF4CA0087E05F /* ALL */,
+				4F01131E1D4DF4CA0087E05F /* ReadyAll */,
+			);
+			path = TriggerAggregate;
+			sourceTree = "<group>";
+		};
+		4F01131B1D4DF4CA0087E05F /* ALL */ = {
+			isa = PBXGroup;
+			children = (
+				4F01131C1D4DF4CA0087E05F /* SummonTriggerAggregate.cpp */,
+				4F01131D1D4DF4CA0087E05F /* SummonTriggerAggregate.hpp */,
+			);
+			path = ALL;
+			sourceTree = "<group>";
+		};
+		4F01131E1D4DF4CA0087E05F /* ReadyAll */ = {
+			isa = PBXGroup;
+			children = (
+				4F01131F1D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.cpp */,
+				4F0113201D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.hpp */,
+			);
+			path = ReadyAll;
+			sourceTree = "<group>";
+		};
+		4F0113211D4DF4CA0087E05F /* Trigger */ = {
+			isa = PBXGroup;
+			children = (
+				4F0113221D4DF4CA0087E05F /* Launch */,
+				4F0113251D4DF4CA0087E05F /* TriggerTemplateBase */,
+				4F0113281D4DF4CA0087E05F /* Types */,
+			);
+			path = Trigger;
+			sourceTree = "<group>";
+		};
+		4F0113221D4DF4CA0087E05F /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				4F0113231D4DF4CA0087E05F /* LaunchTemplate.cpp */,
+				4F0113241D4DF4CA0087E05F /* LaunchTemplate.hpp */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		4F0113251D4DF4CA0087E05F /* TriggerTemplateBase */ = {
+			isa = PBXGroup;
+			children = (
+				4F0113261D4DF4CA0087E05F /* TriggerTemplateBase.cpp */,
+				4F0113271D4DF4CA0087E05F /* TriggerTemplateBase.hpp */,
+			);
+			path = TriggerTemplateBase;
+			sourceTree = "<group>";
+		};
+		4F0113281D4DF4CA0087E05F /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				4F0113291D4DF4CA0087E05F /* Timer */,
+				4F01132C1D4DF4CA0087E05F /* TriggerTypes.hpp */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		4F0113291D4DF4CA0087E05F /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				4F01132A1D4DF4CA0087E05F /* Trigger_Timer.cpp */,
+				4F01132B1D4DF4CA0087E05F /* Trigger_Timer.hpp */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		4F01133B1D4DF5410087E05F /* Aggregate */ = {
+			isa = PBXGroup;
+			children = (
+				4F01133C1D4DF5410087E05F /* Character */,
+			);
+			path = Aggregate;
+			sourceTree = "<group>";
+		};
+		4F01133C1D4DF5410087E05F /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				4F01133D1D4DF5410087E05F /* CharacterAggregate.cpp */,
+				4F01133E1D4DF5410087E05F /* CharacterAggregate.hpp */,
+			);
+			path = Character;
 			sourceTree = "<group>";
 		};
 		4F19FB161D3A093500C93DAA /* Factory */ = {
@@ -582,15 +876,6 @@
 			path = MoveAction;
 			sourceTree = "<group>";
 		};
-		4F70F3571D37E27800603081 /* Character */ = {
-			isa = PBXGroup;
-			children = (
-				4F70F3581D37E28500603081 /* CharacterAggregate.cpp */,
-				4F70F3591D37E28500603081 /* CharacterAggregate.hpp */,
-			);
-			path = Character;
-			sourceTree = "<group>";
-		};
 		4F71A8C41D3695FA004FD96B /* Battle */ = {
 			isa = PBXGroup;
 			children = (
@@ -603,29 +888,9 @@
 		4F71A8D11D369DD2004FD96B /* Launcher */ = {
 			isa = PBXGroup;
 			children = (
-				4F75D0AE1D3A8CF0002744C9 /* LaunchDatas */,
-				4F75D0C01D3A9282002744C9 /* Launcher */,
-				4F75D0B01D3A8D65002744C9 /* LaunchTrigger */,
-				4F71A8EF1D36A90A004FD96B /* LauncherManager */,
+				4F01130D1D4DF4CA0087E05F /* Launcher */,
 			);
 			path = Launcher;
-			sourceTree = "<group>";
-		};
-		4F71A8E21D369DDC004FD96B /* Aggregate */ = {
-			isa = PBXGroup;
-			children = (
-				4F70F3571D37E27800603081 /* Character */,
-			);
-			path = Aggregate;
-			sourceTree = "<group>";
-		};
-		4F71A8EF1D36A90A004FD96B /* LauncherManager */ = {
-			isa = PBXGroup;
-			children = (
-				4F71A8F01D36A90A004FD96B /* LauncherManager.cpp */,
-				4F71A8F11D36A90A004FD96B /* LauncherManager.hpp */,
-			);
-			path = LauncherManager;
 			sourceTree = "<group>";
 		};
 		4F75D0551D3A730A002744C9 /* Actor */ = {
@@ -726,76 +991,6 @@
 				4F75D0A41D3A8B62002744C9 /* Summon_Test.hpp */,
 			);
 			path = Test;
-			sourceTree = "<group>";
-		};
-		4F75D0AE1D3A8CF0002744C9 /* LaunchDatas */ = {
-			isa = PBXGroup;
-			children = (
-				4F75D0AF1D3A8CF0002744C9 /* LaunchDatas.hpp */,
-			);
-			path = LaunchDatas;
-			sourceTree = "<group>";
-		};
-		4F75D0B01D3A8D65002744C9 /* LaunchTrigger */ = {
-			isa = PBXGroup;
-			children = (
-				4F75D0B51D3A8D65002744C9 /* TriggerTemplate.hpp */,
-				4F75D0B11D3A8D65002744C9 /* Summon */,
-				4F75D0B61D3A8D65002744C9 /* TriggerTypes */,
-			);
-			path = LaunchTrigger;
-			sourceTree = "<group>";
-		};
-		4F75D0B11D3A8D65002744C9 /* Summon */ = {
-			isa = PBXGroup;
-			children = (
-				4F75D0B41D3A8D65002744C9 /* SummonTriggers.hpp */,
-				4F75D0B21D3A8D65002744C9 /* Normal */,
-			);
-			path = Summon;
-			sourceTree = "<group>";
-		};
-		4F75D0B21D3A8D65002744C9 /* Normal */ = {
-			isa = PBXGroup;
-			children = (
-				4F75D0B31D3A8D65002744C9 /* SummonTrigger_Normal.hpp */,
-			);
-			path = Normal;
-			sourceTree = "<group>";
-		};
-		4F75D0B61D3A8D65002744C9 /* TriggerTypes */ = {
-			isa = PBXGroup;
-			children = (
-				4F75D0B71D3A8D65002744C9 /* Normal */,
-			);
-			path = TriggerTypes;
-			sourceTree = "<group>";
-		};
-		4F75D0B71D3A8D65002744C9 /* Normal */ = {
-			isa = PBXGroup;
-			children = (
-				4F75D0B81D3A8D65002744C9 /* TriggerTemplate_Normal.hpp */,
-			);
-			path = Normal;
-			sourceTree = "<group>";
-		};
-		4F75D0C01D3A9282002744C9 /* Launcher */ = {
-			isa = PBXGroup;
-			children = (
-				4F75D0C11D3A9282002744C9 /* LauncherTemplate.cpp */,
-				4F75D0C21D3A9282002744C9 /* LauncherTemplate.hpp */,
-				4F75D0C31D3A9282002744C9 /* Summon */,
-			);
-			path = Launcher;
-			sourceTree = "<group>";
-		};
-		4F75D0C31D3A9282002744C9 /* Summon */ = {
-			isa = PBXGroup;
-			children = (
-				4F75D0C41D3A9282002744C9 /* SummonLauncher.cpp */,
-				4F75D0C51D3A9282002744C9 /* SummonLauncher.hpp */,
-			);
-			path = Summon;
 			sourceTree = "<group>";
 		};
 		4F9C5B5B1D30AEC60070E0DC /* Image */ = {
@@ -983,6 +1178,7 @@
 		4F9C5B8E1D30AEEE0070E0DC /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				4F01130B1D4DF49E0087E05F /* AggregateTemplate */,
 				4F9C5BDC1D30BFC70070E0DC /* Shape */,
 				4F9C5B8F1D30AEEE0070E0DC /* Manager */,
 				4F9C5B961D30AEEE0070E0DC /* SingletonTemplate */,
@@ -1341,19 +1537,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F9C5BAF1D30AEEE0070E0DC /* AppDelegate.cpp in Sources */,
-				4F71A8F21D36A90A004FD96B /* LauncherManager.cpp in Sources */,
+				4F0113071D4DF43A0087E05F /* SummonIterator_Player2Tag.cpp in Sources */,
+				4F0113391D4DF4CA0087E05F /* Trigger_Timer.cpp in Sources */,
 				4F9C5BB11D30AEEE0070E0DC /* InputAndMouseLayer.cpp in Sources */,
 				4F75D0641D3A730A002744C9 /* Character.cpp in Sources */,
 				4F9C5BB51D30AEEE0070E0DC /* MouseLayer.cpp in Sources */,
 				4F71A8CF1D36961C004FD96B /* BattleScene.cpp in Sources */,
 				4F75D0A91D3A8B62002744C9 /* Summon_Test.cpp in Sources */,
+				4F0113311D4DF4CA0087E05F /* SummonTriggerAggregate.cpp in Sources */,
 				4F9C5BD61D30BF750070E0DC /* CollisionData.cpp in Sources */,
+				4F0113051D4DF43A0087E05F /* SummonIterator_Player1Tag.cpp in Sources */,
 				17EC442A1D39D67400DD4EAB /* TimeLabel.cpp in Sources */,
 				17EC44281D39D67400DD4EAB /* CastleHpBar.cpp in Sources */,
 				4F5C011D1D3A162100DA968F /* AttackAction.cpp in Sources */,
+				4F01132F1D4DF4CA0087E05F /* SummonLauncher.cpp in Sources */,
 				DB5153461D39D6A1005E73E7 /* Status.cpp in Sources */,
+				4F0113091D4DF43A0087E05F /* SummonManager.cpp in Sources */,
 				4F5C011B1D3A162100DA968F /* Action.cpp in Sources */,
-				4F75D0C61D3A9282002744C9 /* LauncherTemplate.cpp in Sources */,
+				4F0113031D4DF43A0087E05F /* SummonAggregate_Player2Tag.cpp in Sources */,
 				4F0112881D4DC4F70087E05F /* CharacterIconSprite.cpp in Sources */,
 				4F01128A1D4DC4F70087E05F /* CostSprite.cpp in Sources */,
 				4F75D0661D3A730A002744C9 /* King.cpp in Sources */,
@@ -1362,20 +1563,25 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				4F9C5BB91D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				4F9C5BDA1D30BF7E0070E0DC /* Move.cpp in Sources */,
+				4F0113011D4DF43A0087E05F /* SummonAggregate_Player1Tag.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				4F01132D1D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp in Sources */,
 				4F9C5BB71D30AEEE0070E0DC /* Battle_MainLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				4F0113371D4DF4CA0087E05F /* TriggerTemplateBase.cpp in Sources */,
 				4F9C5BCC1D30BF670070E0DC /* Animation.cpp in Sources */,
 				17EC442C1D39D67400DD4EAB /* UI_Layer.cpp in Sources */,
 				4F75D0A51D3A8B62002744C9 /* SummonCreateFactory.cpp in Sources */,
-				4F75D0C81D3A9282002744C9 /* SummonLauncher.cpp in Sources */,
+				4F0113351D4DF4CA0087E05F /* LaunchTemplate.cpp in Sources */,
 				4F75D0681D3A730A002744C9 /* Summon.cpp in Sources */,
 				4F9C5BD41D30BF750070E0DC /* Body.cpp in Sources */,
 				4F75D0A71D3A8B62002744C9 /* SummonFactoryManager.cpp in Sources */,
 				4F5C011F1D3A162100DA968F /* MoveAction.cpp in Sources */,
 				4F9C5BE61D30BFC70070E0DC /* Simplex.cpp in Sources */,
-				4F70F35A1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
+				4F0112FF1D4DF43A0087E05F /* SummonAggregate.cpp in Sources */,
+				4F01133F1D4DF5410087E05F /* CharacterAggregate.cpp in Sources */,
 				4F9C5BBB1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
+				4F0113331D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1385,36 +1591,46 @@
 			files = (
 				17EC44291D39D67400DD4EAB /* CastleHpBar.cpp in Sources */,
 				4F9C5BE71D30BFC70070E0DC /* Simplex.cpp in Sources */,
+				4F0113021D4DF43A0087E05F /* SummonAggregate_Player1Tag.cpp in Sources */,
 				4F9C5BB41D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
 				4F75D0671D3A730A002744C9 /* King.cpp in Sources */,
 				4F0112891D4DC4F70087E05F /* CharacterIconSprite.cpp in Sources */,
 				4F9C5BB61D30AEEE0070E0DC /* MouseLayer.cpp in Sources */,
+				4F0113401D4DF5410087E05F /* CharacterAggregate.cpp in Sources */,
 				4F9C5BB81D30AEEE0070E0DC /* Battle_MainLayer.cpp in Sources */,
 				4F75D0691D3A730A002744C9 /* Summon.cpp in Sources */,
 				4F5C011E1D3A162100DA968F /* AttackAction.cpp in Sources */,
 				4F71A8D01D36961C004FD96B /* BattleScene.cpp in Sources */,
 				4F9C5BDB1D30BF7E0070E0DC /* Move.cpp in Sources */,
+				4F0113081D4DF43A0087E05F /* SummonIterator_Player2Tag.cpp in Sources */,
 				4F9C5BB01D30AEEE0070E0DC /* AppDelegate.cpp in Sources */,
 				4F9C5BE51D30BFC70070E0DC /* Line.cpp in Sources */,
+				4F0113381D4DF4CA0087E05F /* TriggerTemplateBase.cpp in Sources */,
 				4F9C5BD71D30BF750070E0DC /* CollisionData.cpp in Sources */,
+				4F01132E1D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp in Sources */,
+				4F0113321D4DF4CA0087E05F /* SummonTriggerAggregate.cpp in Sources */,
 				4F75D0A81D3A8B62002744C9 /* SummonFactoryManager.cpp in Sources */,
+				4F0113361D4DF4CA0087E05F /* LaunchTemplate.cpp in Sources */,
 				4F9C5BB21D30AEEE0070E0DC /* InputAndMouseLayer.cpp in Sources */,
+				4F0113041D4DF43A0087E05F /* SummonAggregate_Player2Tag.cpp in Sources */,
 				4F75D0A61D3A8B62002744C9 /* SummonCreateFactory.cpp in Sources */,
+				4F01130A1D4DF43A0087E05F /* SummonManager.cpp in Sources */,
 				17EC442D1D39D67400DD4EAB /* UI_Layer.cpp in Sources */,
-				4F75D0C71D3A9282002744C9 /* LauncherTemplate.cpp in Sources */,
 				17EC442B1D39D67400DD4EAB /* TimeLabel.cpp in Sources */,
 				4F9C5BD51D30BF750070E0DC /* Body.cpp in Sources */,
-				4F75D0C91D3A9282002744C9 /* SummonLauncher.cpp in Sources */,
 				4F9C5BCD1D30BF670070E0DC /* Animation.cpp in Sources */,
+				4F0113341D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.cpp in Sources */,
 				4F5C01201D3A162100DA968F /* MoveAction.cpp in Sources */,
 				4F9C5BBC1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
+				4F0113301D4DF4CA0087E05F /* SummonLauncher.cpp in Sources */,
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				4F5C011C1D3A162100DA968F /* Action.cpp in Sources */,
 				DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */,
-				4F71A8F31D36A90A004FD96B /* LauncherManager.cpp in Sources */,
 				4F75D0651D3A730A002744C9 /* Character.cpp in Sources */,
+				4F01133A1D4DF4CA0087E05F /* Trigger_Timer.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				4F70F35B1D37E28500603081 /* CharacterAggregate.cpp in Sources */,
+				4F0113001D4DF43A0087E05F /* SummonAggregate.cpp in Sources */,
+				4F0113061D4DF43A0087E05F /* SummonIterator_Player1Tag.cpp in Sources */,
 				4F75D0AA1D3A8B62002744C9 /* Summon_Test.cpp in Sources */,
 				4F01128B1D4DC4F70087E05F /* CostSprite.cpp in Sources */,
 			);

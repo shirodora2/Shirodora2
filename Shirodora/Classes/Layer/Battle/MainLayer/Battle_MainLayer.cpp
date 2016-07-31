@@ -25,10 +25,6 @@ CBattele_MainLayer::CBattele_MainLayer(){}
  *  @desc   destructor
  */
 CBattele_MainLayer::~CBattele_MainLayer(){
-    if(this->m_pCharacters != NULL){
-        delete this->m_pCharacters ;
-        this->m_pCharacters = NULL ;
-    }
     // 召喚キャラ発射台のクリア
     CSummonLauncher::getInstance()->clear() ;
     

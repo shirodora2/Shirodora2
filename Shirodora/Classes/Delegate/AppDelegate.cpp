@@ -9,7 +9,8 @@
 #include "Manager.hpp"
 #include "Factory.hpp"
 #include "CharacterAggregate.hpp"
-#include "LauncherManager.hpp"
+#include "ModelManagers.hpp"
+#include "Launchers.hpp"
 
 
 USING_NS_CC;
@@ -30,8 +31,11 @@ AppDelegate::~AppDelegate()
     //========================= Aggregate ==================================
     CCharacterAggregate::destroyInstance() ;
     
+    //=========================================================================
+    CSummonManager::destroyInstance() ;
+    
     //============================ LauncherManager ============================
-    CLauncherManager::destroyInstance() ;
+    CSummonLauncher::destroyInstance() ;
     
 }
 
