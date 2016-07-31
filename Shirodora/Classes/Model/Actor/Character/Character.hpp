@@ -99,7 +99,7 @@ public :
      *  @desc   タグ設定
      *  @param  タグ番号
      */
-    inline void setTag(int tag){this->m_tag = tag ;}
+    inline void setPlayerTag(int tag){this->m_tag = tag ;}
     
     //=========================================================================
     // get
@@ -156,7 +156,7 @@ public :
      *  @desc   タグ設定
      *  @param  タグ番号
      */
-    inline int getTag(){return this->m_tag ;}
+    inline int getPlayerTag(){return this->m_tag ;}
     
     //=========================================================================
     // メンバ関数
