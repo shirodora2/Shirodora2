@@ -1,82 +1,74 @@
 //
-//  GameMainLayer.hpp
+//  SummonTriggerAggregate.hpp
 //  Shirodora
 //
-//  Created by Ryoutarou Onimura on 2016/07/03.
+//  Created by Ryoutarou Onimura on 2016/07/31.
 //
 //
 
-#ifndef GameMainLayer_hpp
-#define GameMainLayer_hpp
-
-#include <stdio.h>
+#ifndef SummonTriggerAggregate_hpp
+#define SummonTriggerAggregate_hpp
 
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "InputAndMouseLayer.hpp"
+#include "AggregateTemplate.hpp"
+#include "TriggerTemplateBase.hpp"
 
 //=========================================================================
 // 前方宣言
 //=========================================================================
-class CCharacter ;
+class CSummon ;
 
 //=========================================================================
 //
-// Battele_MainLayer
+// 召喚キャラトリガー集合
 //
 //=========================================================================
-class CBattele_MainLayer : public CInputAndMouseLayer {
+class CSummonTriggerAggregate : public IAggregateTemplate<CTriggerTemplateBase<CSummon>*> {
 public :
     //=========================================================================
     // コンストラクタ/デストラクタ
     //=========================================================================
     /**
-     *  @desc   constructor
+     *  @desc   コンストラクタ
      */
-    CBattele_MainLayer() ;
+    CSummonTriggerAggregate(std::vector<CTriggerTemplateBase<CSummon>*> *pAggre) ;
     
     /**
-     *  @desc   destructor
+     *  @desc   デストラクタ
      */
-    virtual ~CBattele_MainLayer() ;
-    
-    //=========================================================================
-    // init
-    //=========================================================================
-    /**
-     *  @desc   init
-     */
-    virtual bool init() override ;
-    
-    //=========================================================================
-    // set
-    //=========================================================================
+    virtual ~CSummonTriggerAggregate() ;
     
     //=========================================================================
     // get
     //=========================================================================
+    /**
+     *  @desc   最大サイズの取得
+     */
+    inline int getSize() override {return this->m_pAggregate->size() ;}
+    
+    /**
+     *  @desc   要素の取得
+     *  @param  添字番号
+     */
+    inline CTriggerTemplateBase<CSummon> *getAt(int index) override {return (*this->m_pAggregate)[index] ;}
     
     //=========================================================================
     // メンバ関数
     //=========================================================================
     /**
-     *  @desc   update
-     *  @param  微小時間
+     *  @desc   開始イテレーターの取得
+     *  @return イテレーター
      */
-    virtual void update(float deltaTime) override ;
+    virtual std::shared_ptr<CIteratorTemplate<CTriggerTemplateBase<CSummon>*>> iterator() override ;
     
-    
+private :
     //=========================================================================
     // メンバ変数
     //=========================================================================
-    // !!!:テスト用マウスカーソルスプライト
-    cocos2d::Sprite *m_pCursor {NULL} ;
-    
-    // TODO:多分画面スクロール時にいる気がする
-    // カメラ座標
-    cocos2d::Vec2 m_cameraPosition ;
-    
+    // 集合体
+    std::vector<CTriggerTemplateBase<CSummon>*> *m_pAggregate {NULL} ;
 };
 
-#endif /* GameMainLayer_hpp */
+#endif /* SummonTriggerAggregate_hpp */

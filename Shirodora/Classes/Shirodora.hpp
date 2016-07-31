@@ -53,20 +53,23 @@
 #include "Pawn.hpp"
 
 
+//************** ModelManager *******************
+//- - - - - - - - - Summon - - - - - - - - - - -
+#include "ModelManagers.hpp"
+
 //*************** Aggregate *********************
 #include "CharacterAggregate.hpp"
 
 
 //*************** Launcher **********************
+//- - - - - - - LaunchDatas- - - - - - - - - - -
+#include "LaunchDatas.hpp"
+
 //- - - - - - - - - Trigger - - - - - - - - - - -
-#include "TriggerTemplate.hpp"
-#include "SummonTriggers.hpp"
+#include "TriggerTypes.hpp"
 
 //- - - - - - - - - Launcher - - - - - - - - - - -
-#include "LauncherTemplate.hpp"
-#include "SummonLauncher.hpp"
-
-#include "LauncherManager.hpp"
+#include "Launchers.hpp"
 
 
 //*************** Layer *************************

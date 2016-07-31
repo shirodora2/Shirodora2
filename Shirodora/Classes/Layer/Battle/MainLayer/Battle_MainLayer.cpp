@@ -29,8 +29,9 @@ CBattele_MainLayer::~CBattele_MainLayer(){
         delete this->m_pCharacters ;
         this->m_pCharacters = NULL ;
     }
-    // 発射台のクリア
-    CLauncherManager::getInstance()->clear() ;
+    // 召喚キャラ発射台のクリア
+    CSummonLauncher::getInstance()->clear() ;
+    
 }
 
 //=========================================================================
@@ -53,16 +54,15 @@ bool CBattele_MainLayer::init(){
     this->m_pCursor->setPosition(WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
     this->addChild(this->m_pCursor) ;
     
+    
+    CSummonLauncher::getInstance()->setLayer(this) ;
+    
+    CLaunchData<CSummon> *pSummonLaunchData = new CLaunchData<CSummon>(1000, SUMMON_TYPE::TEST, WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
+    CSummonLauncher::getInstance()->add(new CTrigger_Timer<CSummon>(pSummonLaunchData, 10)) ;
+    
     // キャラクター集合体を生成してキャラクター集合へ取り付け
-    this->m_pCharacters = new std::vector<CCharacter*>() ;
-    CCharacterAggregate::getInstance()->setAggregate(this->m_pCharacters) ;
-    
-    // 召喚発射台を設置
-    CLauncherManager::getInstance()->setLauncher(LAUNCHER_TYPE::SUMMON, this) ;
-    
-    // 発射トリガーを発射台にとりつけ
-    SSummonLaunchData launchData(1000, SUMMON_TYPE::TEST, WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
-    CLauncherManager::getInstance()->setTrigger(new CSummonTrigger_Normal(launchData)) ;
+    //this->m_pCharacters = new std::vector<CCharacter*>() ;
+    //CCharacterAggregate::getInstance()->setAggregate(this->m_pCharacters) ;
     
     
     // スケジューラーに登録
@@ -90,27 +90,9 @@ void CBattele_MainLayer::update(float deltaTime){
     // カーソルスプライトをマウスマネージャーを使って位置設定させる
     this->m_pCursor->setPosition(mouse.getCurrentCursorPosition()) ;
     
-    // 発射台更新
-    CLauncherManager::getInstance()->update() ;
+    // 召喚キャラ発射台の更新
+    CSummonLauncher::getInstance()->update() ;
     
-    // 死んだキャラクターの取り外し
-    this->checkAndRemove(this->m_pCharacters) ;
-}
-
-/**
- *  @desc
- *
- */
-template <typename Ty>
-void CBattele_MainLayer::checkAndRemove(std::vector<Ty*> *pVector){
-    typename std::vector<Ty*>::iterator itr = pVector->begin() ;
-    while(itr != pVector->end()){
-        if((*itr)->isActive() == false){
-            (*itr)->removeFromParent() ;
-            pVector->erase(itr) ;
-        }
-        else{
-            ++itr ;
-        }
-    }
+    // 召喚キャラマネージャーの更新
+    CSummonManager::getInstance()->update() ;
 }
