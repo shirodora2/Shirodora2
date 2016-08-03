@@ -66,6 +66,23 @@ public :
      */
     virtual void update(float deltaTime) override ;
     
+    /**
+     *  @desc   集合体からのスプライトの取り外し
+     *  @param  集合体
+     */
+    template <typename Ty>
+    void checkAndRemove(std::vector<Ty*> *pVector) ;
+    
+    
+    /**
+     *  @desc   レイヤーのスクロール
+     */
+    void scroll();
+    
+    /**
+     *  @desc   入力処理
+     */
+    void inputFunc();
     
     //=========================================================================
     // メンバ変数
@@ -76,6 +93,12 @@ public :
     // TODO:多分画面スクロール時にいる気がする
     // カメラ座標
     cocos2d::Vec2 m_cameraPosition ;
+    
+    // キャラクター集合体
+    std::vector<CCharacter*> *m_pCharacters {NULL} ;
+    
+    //ゲームモード
+    int m_gameMode = 0;
     
 };
 
