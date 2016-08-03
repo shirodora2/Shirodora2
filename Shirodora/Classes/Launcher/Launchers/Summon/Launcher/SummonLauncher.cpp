@@ -14,7 +14,7 @@
 #include "SummonTriggerAggregate.hpp"
 #include "SummonTriggerAggregate_ReadyAll.hpp"
 #include "Summon.hpp"
-#include "SummonManager.hpp"
+#include "CharacterManager.hpp"
 
 //=========================================================================
 //
@@ -146,7 +146,7 @@ void CSummonLauncher::launch(){
             break ;
         }
         this->m_pLayer->addChild(pChara) ;
-        CSummonManager::getInstance()->add(pChara) ;
+        CCharacterManager::getInstance()->add(pChara) ;
     }
 }
 

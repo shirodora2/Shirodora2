@@ -1,30 +1,30 @@
 //
-//  SummonAggregate_Player2Tag.hpp
+//  CharacterAggregate.hpp
 //  Shirodora
 //
 //  Created by Ryoutarou Onimura on 2016/07/31.
 //
 //
 
-#ifndef SummonAggregate_Player2Tag_hpp
-#define SummonAggregate_Player2Tag_hpp
+#ifndef CharacterAggregate_hpp
+#define CharacterAggregate_hpp
 
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "SummonAggregate.hpp"
+#include "AggregateTemplate.hpp"
 
 //=========================================================================
 // 前方宣言
 //=========================================================================
-class CSummon ;
+class CCharacter ;
 
 //=========================================================================
 //
-// 召喚キャラ集合_プレイヤー２
+// 召喚キャラ集合
 //
 //=========================================================================
-class CSummonAggregate_Player2Tag : public CSummonAggregate {
+class CCharacterAggregate : public IAggregateTemplate<CCharacter*> {
 public :
     //=========================================================================
     // コンストラクタ/デストラクタ
@@ -32,12 +32,26 @@ public :
     /**
      *  @desc   コンストラクタ
      */
-    CSummonAggregate_Player2Tag(std::vector<CSummon*> *pAggre) ;
+    CCharacterAggregate(std::vector<CCharacter*> *pAggre) ;
     
     /**
      *  @desc   デストラクタ
      */
-    ~CSummonAggregate_Player2Tag() ;
+    virtual ~CCharacterAggregate() ;
+    
+    //=========================================================================
+    // get
+    //=========================================================================
+    /**
+     *  @desc   最大サイズの取得
+     */
+    inline virtual int getSize() override {return this->m_pAggregate->size() ;}
+    
+    /**
+     *  @desc   要素の取得
+     *  @param  添字番号
+     */
+    inline virtual CCharacter *getAt(int index) override {return (*this->m_pAggregate)[index] ;}
     
     //=========================================================================
     // メンバ関数
@@ -46,8 +60,14 @@ public :
      *  @desc   開始イテレーターの取得
      *  @return イテレーター
      */
-    virtual std::shared_ptr<CIteratorTemplate<CSummon*>> iterator() override ;
+    virtual std::shared_ptr<CIteratorTemplate<CCharacter*>> iterator() override ;
     
+protected :
+    //=========================================================================
+    // メンバ変数
+    //=========================================================================
+    // 集合体
+    std::vector<CCharacter*> *m_pAggregate {NULL} ;
 };
 
-#endif /* SummonAggregate_Player2Tag_hpp */
+#endif /* CharacterAggregate_hpp */

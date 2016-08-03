@@ -1,21 +1,21 @@
 //
-//  SummonAggregate_Player2Tag.cpp
+//  CharacterAggregate_Player2King.cpp
 //  Shirodora
 //
-//  Created by Ryoutarou Onimura on 2016/07/31.
+//  Created by Ryoutarou Onimura on 2016/08/03.
 //
 //
 
-#include "SummonAggregate_Player2Tag.hpp"
+#include "CharacterAggregate_Player2King.hpp"
 
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "SummonIterator_Player2Tag.hpp"
+#include "CharacterIterator_Player2King.hpp"
 
 //=========================================================================
 //
-// 召喚キャラ集合_プレイヤー２
+// キャラ集合_プレイヤー２キング
 //
 //=========================================================================
 //=========================================================================
@@ -24,13 +24,13 @@
 /**
  *  @desc   コンストラクタ
  */
-CSummonAggregate_Player2Tag::CSummonAggregate_Player2Tag(std::vector<CSummon*> *pAggre) :
-CSummonAggregate(pAggre){}
+CCharacterAggregate_Player2King::CCharacterAggregate_Player2King(std::vector<CCharacter*> *pAggre) :
+CCharacterAggregate(pAggre){}
 
 /**
  *  @desc   デストラクタ
  */
-CSummonAggregate_Player2Tag::~CSummonAggregate_Player2Tag(){}
+CCharacterAggregate_Player2King::~CCharacterAggregate_Player2King(){}
 
 //=========================================================================
 // メンバ関数
@@ -39,6 +39,6 @@ CSummonAggregate_Player2Tag::~CSummonAggregate_Player2Tag(){}
  *  @desc   開始イテレーターの取得
  *  @return イテレーター
  */
-std::shared_ptr<CIteratorTemplate<CSummon*>> CSummonAggregate_Player2Tag::iterator(){
-    return std::shared_ptr<CIteratorTemplate<CSummon*>>(new CSummonIterator_Player2Tag(this)) ;
+std::shared_ptr<CIteratorTemplate<CCharacter*>> CCharacterAggregate_Player2King::iterator(){
+    return std::shared_ptr<CIteratorTemplate<CCharacter*>>(new CCharacterIterator_Player2King(this)) ;
 }

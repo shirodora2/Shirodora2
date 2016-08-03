@@ -1,59 +1,44 @@
 //
-//  SummonIterator_Player2Tag.cpp
+//  CharacterAggregate_Player2Tag.cpp
 //  Shirodora
 //
 //  Created by Ryoutarou Onimura on 2016/07/31.
 //
 //
 
-#include "SummonIterator_Player2Tag.hpp"
+#include "CharacterAggregate_Player2Tag.hpp"
 
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "Summon.hpp"
+#include "CharacterIterator_Player2Tag.hpp"
 
 //=========================================================================
 //
-// 召喚キャライテレーター_プレイヤー２タグ
+// 召喚キャラ集合_プレイヤー２
 //
 //=========================================================================
-
 //=========================================================================
 // コンストラクタ/デストラクタ
 //=========================================================================
 /**
  *  @desc   コンストラクタ
  */
-CSummonIterator_Player2Tag::CSummonIterator_Player2Tag(IAggregateTemplate<CSummon*> *pAggre) :
-CIteratorTemplate<CSummon *>(pAggre){}
+CCharacterAggregate_Player2Tag::CCharacterAggregate_Player2Tag(std::vector<CCharacter*> *pAggre) :
+CCharacterAggregate(pAggre){}
 
 /**
  *  @desc   デストラクタ
  */
-CSummonIterator_Player2Tag::~CSummonIterator_Player2Tag(){}
+CCharacterAggregate_Player2Tag::~CCharacterAggregate_Player2Tag(){}
 
 //=========================================================================
 // メンバ関数
 //=========================================================================
 /**
- *  @desc   次が存在するかどうかをチェック
- *  @return true...次がある false...次がない
+ *  @desc   開始イテレーターの取得
+ *  @return イテレーター
  */
-bool CSummonIterator_Player2Tag::hasNext(){
-    // 最大数を超えていたらfalse
-    if(m_pAggre->getSize() <= this->m_currentIndex) {
-        return false ;
-    }
-    
-    CSummon *pChara = this->m_pAggre->getAt(this->m_currentIndex) ;
-    
-    int tag = pChara->getPlayerTag() ;
-    
-    if(2000 <= tag && tag < 3000){
-        return true ;
-    }
-    
-    ++this->m_currentIndex ;
-    return this->hasNext() ;
+std::shared_ptr<CIteratorTemplate<CCharacter*>> CCharacterAggregate_Player2Tag::iterator(){
+    return std::shared_ptr<CIteratorTemplate<CCharacter*>>(new CCharacterIterator_Player2Tag(this)) ;
 }

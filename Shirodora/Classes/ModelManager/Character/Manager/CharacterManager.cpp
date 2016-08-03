@@ -1,20 +1,22 @@
 //
-//  SummonManager.cpp
+//  CharacterManager.cpp
 //  Shirodora
 //
 //  Created by Ryoutarou Onimura on 2016/07/31.
 //
 //
 
-#include "SummonManager.hpp"
+#include "CharacterManager.hpp"
 
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "Summon.hpp"
-#include "SummonAggregate.hpp"
-#include "SummonAggregate_Player1Tag.hpp"
-#include "SummonAggregate_Player2Tag.hpp"
+#include "Character.hpp"
+#include "CharacterAggregate.hpp"
+#include "CharacterAggregate_Player1Tag.hpp"
+#include "CharacterAggregate_Player2Tag.hpp"
+#include "CharacterAggregate_Player1King.hpp"
+#include "CharacterAggregate_Player2King.hpp"
 
 //=========================================================================
 //
@@ -29,7 +31,7 @@
  *  @param  欲しいiterator集合体の種類
  *  @return iterator
  */
-std::shared_ptr<CIteratorTemplate<CSummon*>> CSummonManager::iterator(SUMMON_AGGREGATE_TYPE type){
+std::shared_ptr<CIteratorTemplate<CCharacter*>> CCharacterManager::iterator(CHARACTER_AGGREGATE_TYPE type){
     if(this->m_pAggregates[(int)type] == NULL) this->setAggregate(type) ;
     return this->m_pAggregates[(int)type]->iterator() ;
 }
@@ -38,18 +40,18 @@ std::shared_ptr<CIteratorTemplate<CSummon*>> CSummonManager::iterator(SUMMON_AGG
 // メンバ関数
 //=========================================================================
 /**
- *  @desc   召喚キャラの追加
+ *  @desc   キャラの追加
  *  @param  CSummon*
  */
-void CSummonManager::add(CSummon *pChara){
+void CCharacterManager::add(CCharacter *pChara){
     this->m_pCharacters->push_back(pChara) ;
 }
 
 /**
  *  @desc   clear
  */
-void CSummonManager::clear(){
-    for(int i = 0 ; i < (int)SUMMON_AGGREGATE_TYPE::MAX ; ++i){
+void CCharacterManager::clear(){
+    for(int i = 0 ; i < (int)CHARACTER_AGGREGATE_TYPE::MAX ; ++i){
         if(this->m_pAggregates[i] != NULL){
             delete this->m_pAggregates[i] ;
             this->m_pAggregates[i] = NULL ;
@@ -61,8 +63,8 @@ void CSummonManager::clear(){
 /**
  *  @desc   update
  */
-void CSummonManager::update(){
-    std::vector<CSummon*>::iterator itr = this->m_pCharacters->begin() ;
+void CCharacterManager::update(){
+    std::vector<CCharacter*>::iterator itr = this->m_pCharacters->begin() ;
     while(itr != this->m_pCharacters->end()){
         if((*itr)->isActive() == false){
             (*itr)->removeFromParent() ;
@@ -80,20 +82,20 @@ void CSummonManager::update(){
 /**
  *  @desc   コンストラクタ
  */
-CSummonManager::CSummonManager(){
-    this->m_pCharacters = new std::vector<CSummon*>() ;
+CCharacterManager::CCharacterManager(){
+    this->m_pCharacters = new std::vector<CCharacter*>() ;
 }
 
 /**
  *  @desc   コピーコンストラクタ
  */
-CSummonManager::CSummonManager(const CSummonManager &mgr){}
+CCharacterManager::CCharacterManager(const CCharacterManager &mgr){}
 
 /**
  *  @desc   デストラクタ
  */
-CSummonManager::~CSummonManager(){
-    for(int i = 0 ; i < (int)SUMMON_AGGREGATE_TYPE::MAX ; ++i){
+CCharacterManager::~CCharacterManager(){
+    for(int i = 0 ; i < (int)CHARACTER_AGGREGATE_TYPE::MAX ; ++i){
         if(this->m_pAggregates[i] != NULL){
             delete this->m_pAggregates[i] ;
             this->m_pAggregates[i] = NULL ;
@@ -112,18 +114,26 @@ CSummonManager::~CSummonManager(){
  *  @desc   集合体設定
  *  @param  集合体の種類
  */
-void CSummonManager::setAggregate(SUMMON_AGGREGATE_TYPE type){
+void CCharacterManager::setAggregate(CHARACTER_AGGREGATE_TYPE type){
     switch(type){
-        case SUMMON_AGGREGATE_TYPE::ALL :
-            this->m_pAggregates[(int)type] = new CSummonAggregate(this->m_pCharacters) ;
+        case CHARACTER_AGGREGATE_TYPE::ALL :
+            this->m_pAggregates[(int)type] = new CCharacterAggregate(this->m_pCharacters) ;
             break ;
             
-        case SUMMON_AGGREGATE_TYPE::PLAYER_1 :
-            this->m_pAggregates[(int)type] = new CSummonAggregate_Player1Tag(this->m_pCharacters) ;
+        case CHARACTER_AGGREGATE_TYPE::PLAYER_1 :
+            this->m_pAggregates[(int)type] = new CCharacterAggregate_Player1Tag(this->m_pCharacters) ;
             break ;
             
-        case SUMMON_AGGREGATE_TYPE::PLAYER_2 :
-            this->m_pAggregates[(int)type] = new CSummonAggregate_Player2Tag(this->m_pCharacters) ;
+        case CHARACTER_AGGREGATE_TYPE::PLAYER_2 :
+            this->m_pAggregates[(int)type] = new CCharacterAggregate_Player2Tag(this->m_pCharacters) ;
+            break ;
+            
+        case CHARACTER_AGGREGATE_TYPE::PLAYER_1_KING :
+            this->m_pAggregates[(int)type] = new CCharacterAggregate_Player1King(this->m_pCharacters) ;
+            break ;
+            
+        case CHARACTER_AGGREGATE_TYPE::PLAYER_2_KING :
+            this->m_pAggregates[(int)type] = new CCharacterAggregate_Player2King(this->m_pCharacters) ;
             break ;
             
         default :

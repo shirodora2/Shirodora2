@@ -1,13 +1,13 @@
 //
-//  SummonManager.hpp
+//  CharacterManager.hpp
 //  Shirodora
 //
 //  Created by Ryoutarou Onimura on 2016/07/31.
 //
 //
 
-#ifndef SummonManager_hpp
-#define SummonManager_hpp
+#ifndef CharacterManager_hpp
+#define CharacterManager_hpp
 
 //=========================================================================
 // 追加のインクルードはここから
@@ -18,23 +18,25 @@
 //=========================================================================
 // 前方宣言
 //=========================================================================
-class CSummon ;
-class CSummonAggregate ;
+class CCharacter ;
+class CCharacterAggregate ;
 
-enum class SUMMON_AGGREGATE_TYPE {
+enum class CHARACTER_AGGREGATE_TYPE {
     NONE        = -1,
     ALL,
     PLAYER_1,
     PLAYER_2,
+    PLAYER_1_KING,
+    PLAYER_2_KING,
     MAX
 };
 
 //=========================================================================
 //
-// 召喚キャラ管理
+// キャラ管理
 //
 //=========================================================================
-class CSummonManager : public CSingletonTemplate<CSummonManager> {
+class CCharacterManager : public CSingletonTemplate<CCharacterManager> {
 public :
     //=========================================================================
     // get
@@ -44,16 +46,16 @@ public :
      *  @param  欲しいiterator集合体の種類
      *  @return iterator
      */
-    std::shared_ptr<CIteratorTemplate<CSummon*>> iterator(SUMMON_AGGREGATE_TYPE type) ;
+    std::shared_ptr<CIteratorTemplate<CCharacter*>> iterator(CHARACTER_AGGREGATE_TYPE type) ;
     
     //=========================================================================
     // メンバ関数
     //=========================================================================
     /**
-     *  @desc   召喚キャラの追加
-     *  @param  CSummon*
+     *  @desc   キャラの追加
+     *  @param  CCharacter*
      */
-    void add(CSummon *pChara) ;
+    void add(CCharacter *pChara) ;
     
     /**
      *  @desc   clear
@@ -70,21 +72,21 @@ private :
     //=========================================================================
     // コンストラクタ/デストラクタ
     //=========================================================================
-    friend class CSingletonTemplate<CSummonManager> ;
+    friend class CSingletonTemplate<CCharacterManager> ;
     /**
      *  @desc   コンストラクタ
      */
-    CSummonManager() ;
+    CCharacterManager() ;
     
     /**
      *  @desc   コピーコンストラクタ
      */
-    CSummonManager(const CSummonManager &mgr) ;
+    CCharacterManager(const CCharacterManager &mgr) ;
     
     /**
      *  @desc   デストラクタ
      */
-    ~CSummonManager() ;
+    ~CCharacterManager() ;
     
     //=========================================================================
     // set
@@ -93,15 +95,15 @@ private :
      *  @desc   集合体設定
      *  @param  集合体の種類
      */
-    void setAggregate(SUMMON_AGGREGATE_TYPE type) ;
+    void setAggregate(CHARACTER_AGGREGATE_TYPE type) ;
     
     //=========================================================================
     // メンバ変数
     //=========================================================================
     // 集合体群
-    CSummonAggregate *m_pAggregates[(int)SUMMON_AGGREGATE_TYPE::MAX] {NULL} ;
+    CCharacterAggregate *m_pAggregates[(int)CHARACTER_AGGREGATE_TYPE::MAX] {NULL} ;
     // キャラクター群
-    std::vector<CSummon*> *m_pCharacters {NULL} ;
+    std::vector<CCharacter*> *m_pCharacters {NULL} ;
 };
 
-#endif /* SummonManager_hpp */
+#endif /* CharacterManager_hpp */

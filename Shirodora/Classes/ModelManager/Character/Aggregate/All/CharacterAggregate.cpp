@@ -1,12 +1,12 @@
 //
-//  SummonAggregate.cpp
+//  CharacterAggregate.cpp
 //  Shirodora
 //
 //  Created by Ryoutarou Onimura on 2016/07/31.
 //
 //
 
-#include "SummonAggregate.hpp"
+#include "CharacterAggregate.hpp"
 
 //=========================================================================
 //
@@ -19,13 +19,13 @@
 /**
  *  @desc   コンストラクタ
  */
-CSummonAggregate::CSummonAggregate(std::vector<CSummon*> *pAggre) :
+CCharacterAggregate::CCharacterAggregate(std::vector<CCharacter*> *pAggre) :
 m_pAggregate(pAggre){}
 
 /**
  *  @desc   デストラクタ
  */
-CSummonAggregate::~CSummonAggregate(){}
+CCharacterAggregate::~CCharacterAggregate(){}
 
 //=========================================================================
 // メンバ関数
@@ -34,6 +34,6 @@ CSummonAggregate::~CSummonAggregate(){}
  *  @desc   開始イテレーターの取得
  *  @return
  */
-std::shared_ptr<CIteratorTemplate<CSummon*>> CSummonAggregate::iterator(){
-    return std::shared_ptr<CIteratorTemplate<CSummon*>>(new CIteratorTemplate<CSummon*>(this)) ;
+std::shared_ptr<CIteratorTemplate<CCharacter*>> CCharacterAggregate::iterator(){
+    return std::shared_ptr<CIteratorTemplate<CCharacter*>>(new CIteratorTemplate<CCharacter*>(this)) ;
 }

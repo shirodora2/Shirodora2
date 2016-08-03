@@ -28,11 +28,8 @@ AppDelegate::~AppDelegate()
     //============================ Factory ===================================
     CSummonFactoryManager::destroyInstance() ;
     
-    //========================= Aggregate ==================================
-    CCharacterAggregate::destroyInstance() ;
-    
     //=========================================================================
-    CSummonManager::destroyInstance() ;
+    CCharacterManager::destroyInstance() ;
     
     //============================ LauncherManager ============================
     CSummonLauncher::destroyInstance() ;

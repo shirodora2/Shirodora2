@@ -1,53 +1,53 @@
 //
-//  SummonIterator_Player2Tag.hpp
+//  CharacterAggregate_Player2King.hpp
 //  Shirodora
 //
-//  Created by Ryoutarou Onimura on 2016/07/31.
+//  Created by Ryoutarou Onimura on 2016/08/03.
 //
 //
 
-#ifndef SummonIterator_Player2Tag_hpp
-#define SummonIterator_Player2Tag_hpp
+#ifndef CharacterAggregate_Player2King_hpp
+#define CharacterAggregate_Player2King_hpp
 
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "AggregateTemplate.hpp"
+#include "CharacterAggregate.hpp"
 
 //=========================================================================
 // 前方宣言
 //=========================================================================
-class CSummon ;
+class CCharacter ;
 
 //=========================================================================
 //
-// 召喚キャライテレーター_プレイヤー２タグ
+// キャラ集合_プレイヤー２キング
 //
 //=========================================================================
-class CSummonIterator_Player2Tag : public CIteratorTemplate<CSummon*> {
-public :
+class CCharacterAggregate_Player2King : public CCharacterAggregate {
+    public :
     //=========================================================================
     // コンストラクタ/デストラクタ
     //=========================================================================
     /**
      *  @desc   コンストラクタ
      */
-    CSummonIterator_Player2Tag(IAggregateTemplate<CSummon*> *pAggre) ;
+    CCharacterAggregate_Player2King(std::vector<CCharacter*> *pAggre) ;
     
     /**
      *  @desc   デストラクタ
      */
-    ~CSummonIterator_Player2Tag() ;
+    ~CCharacterAggregate_Player2King() ;
     
     //=========================================================================
     // メンバ関数
     //=========================================================================
     /**
-     *  @desc   次が存在するかどうかをチェック
-     *  @return true...次がある false...次がない
+     *  @desc   開始イテレーターの取得
+     *  @return イテレーター
      */
-    bool hasNext() override ;
+    virtual std::shared_ptr<CIteratorTemplate<CCharacter*>> iterator() override ;
     
 };
 
-#endif /* SummonIterator_Player2Tag_hpp */
+#endif /* CharacterAggregate_Player2King_hpp */

@@ -1,30 +1,30 @@
 //
-//  SummonAggregate_Player1Tag.hpp
+//  CharacterIterator_Player1Tag.hpp
 //  Shirodora
 //
 //  Created by Ryoutarou Onimura on 2016/07/31.
 //
 //
 
-#ifndef SummonAggregate_Player1Tag_hpp
-#define SummonAggregate_Player1Tag_hpp
+#ifndef CharacterIterator_Player1Tag_hpp
+#define CharacterIterator_Player1Tag_hpp
 
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "SummonAggregate.hpp"
+#include "AggregateTemplate.hpp"
 
 //=========================================================================
 // 前方宣言
 //=========================================================================
-class CSummon ;
+class CCharacter ;
 
 //=========================================================================
 //
-// 召喚キャラ集合_プレイヤー１
+// 召喚キャライテレーター_プレイヤー１タグ
 //
 //=========================================================================
-class CSummonAggregate_Player1Tag : public CSummonAggregate {
+class CCharacterIterator_Player1Tag : public CIteratorTemplate<CCharacter*> {
 public :
     //=========================================================================
     // コンストラクタ/デストラクタ
@@ -32,22 +32,22 @@ public :
     /**
      *  @desc   コンストラクタ
      */
-    CSummonAggregate_Player1Tag(std::vector<CSummon*> *pAggre) ;
+    CCharacterIterator_Player1Tag(IAggregateTemplate<CCharacter*> *pAggre) ;
     
     /**
      *  @desc   デストラクタ
      */
-    ~CSummonAggregate_Player1Tag() ;
+    ~CCharacterIterator_Player1Tag() ;
     
     //=========================================================================
     // メンバ関数
     //=========================================================================
     /**
-     *  @desc   開始イテレーターの取得
-     *  @return イテレーター
+     *  @desc   次が存在するかどうかをチェック
+     *  @return true...次がある false...次がない
      */
-    virtual std::shared_ptr<CIteratorTemplate<CSummon*>> iterator() override ;
+    bool hasNext() override ;
     
 };
 
-#endif /* SummonAggregate_Player1Tag_hpp */
+#endif /* CharacterIterator_Player1Tag_hpp */

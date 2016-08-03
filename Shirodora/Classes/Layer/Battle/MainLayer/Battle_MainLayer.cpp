@@ -59,8 +59,8 @@ bool CBattele_MainLayer::init(){
     this->addChild(this->m_pCursor) ;
     
     // キャラクター集合体を生成してキャラクター集合へ取り付け
-    this->m_pCharacters = new std::vector<CCharacter*>() ;
-    CCharacterAggregate::getInstance()->setAggregate(this->m_pCharacters) ;
+    //this->m_pCharacters = new std::vector<CCharacter*>() ;
+    //CCharacterAggregate::getInstance()->setAggregate(this->m_pCharacters) ;
     
     // 召喚キャラ発射台を設定
     CSummonLauncher::getInstance()->setLayer(this) ;
@@ -106,7 +106,7 @@ void CBattele_MainLayer::update(float deltaTime){
     CSummonLauncher::getInstance()->update() ;
     
     // 召喚キャラマネージャーの更新
-    CSummonManager::getInstance()->update() ;
+    CCharacterManager::getInstance()->update() ;
     
     //スクロール処理
     this->scroll();
@@ -119,19 +119,17 @@ void CBattele_MainLayer::update(float deltaTime){
  *  @desc   レイヤーのスクロール
  */
 void CBattele_MainLayer::scroll(){
-    // !!!: PLAYER_TAG が不明と出るので、おそらく Constants.hppの更新漏れの可能性
-    // 応急処置したので、担当者よろ 記述者:鬼村
-    //if(CCharacterAggregate::getInstance()->getTag(PLAYER_TAG)==NULL)
-    if(CCharacterAggregate::getInstance()->getTag(1000)==NULL)
-        return;
+    CCharacter *pPlayerChara {NULL} ;
+    // プレイヤー１キングキャラクターの取得
+    std::shared_ptr<CIteratorTemplate<CCharacter*>> itr = CCharacterManager::getInstance()->iterator(CHARACTER_AGGREGATE_TYPE::PLAYER_1_KING) ;
+    while(itr->hasNext() == true){
+        pPlayerChara = itr->next() ;
+    }
+    // プレイヤー１キングキャラクターが生成されていないなら飛ばす
+    if(pPlayerChara == NULL) return ;
     
     //-----ゲームモードがノーマル時のとき-----
     if(CGameMode::GAME_MODE::NORMAL == CGameMode::getInstance()->getGameMode()){
-        // !!!: PLAYER_TAG が不明と出るので、おそらく Constants.hppの更新漏れの可能性
-        // 応急処置したので、担当者よろ 記述者:鬼村
-        //CCharacter *pPlayerChara = CCharacterAggregate::getInstance()->getTag(PLAYER_TAG);
-        CCharacter *pPlayerChara = CCharacterAggregate::getInstance()->getTag(1000);
-        
         //現在位置の取得
         cocos2d::Vec2 pt = this->getPosition();
         cocos2d::Vec2 playerPos = pPlayerChara->getMove()->getPosition();
