@@ -67,14 +67,6 @@ public :
     virtual void update(float deltaTime) override ;
     
     /**
-     *  @desc   集合体からのスプライトの取り外し
-     *  @param  集合体
-     */
-    template <typename Ty>
-    void checkAndRemove(std::vector<Ty*> *pVector) ;
-    
-    
-    /**
      *  @desc   レイヤーのスクロール
      */
     void scroll();

@@ -31,8 +31,8 @@ CBattele_MainLayer::~CBattele_MainLayer(){
         delete this->m_pCharacters ;
         this->m_pCharacters = NULL ;
     }
-    // 発射台のクリア
-    CLauncherManager::getInstance()->clear() ;
+    // 召喚キャラ発射台のクリア
+    CSummonLauncher::getInstance()->clear() ;
     
     //ゲームモードの破棄
     CGameMode::removeInstance();
@@ -62,14 +62,14 @@ bool CBattele_MainLayer::init(){
     this->m_pCharacters = new std::vector<CCharacter*>() ;
     CCharacterAggregate::getInstance()->setAggregate(this->m_pCharacters) ;
     
-    // 召喚発射台を設置
-    CLauncherManager::getInstance()->setLauncher(LAUNCHER_TYPE::SUMMON, this) ;
-    
-    // 発射トリガーを発射台にとりつけ
-    SSummonLaunchData launchData(1000, SUMMON_TYPE::TEST, WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
-    CLauncherManager::getInstance()->setTrigger(new CSummonTrigger_Normal(launchData)) ;
-    
-    
+    // 召喚キャラ発射台を設定
+    CSummonLauncher::getInstance()->setLayer(this) ;
+    // 召喚キャラ発射データを生成
+    CLaunchData<CSummon> *pSummonLaunchData = new CLaunchData<CSummon>(1000, SUMMON_TYPE::TEST, WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
+    // 召喚キャラ発射トリガーを生成
+    CTrigger_Timer<CSummon> *pTrigger = new CTrigger_Timer<CSummon>(pSummonLaunchData, 10) ;
+    // 発射トリガーを発射台に取り付け
+    CSummonLauncher::getInstance()->add(pTrigger) ;
     
     //ゲームモードの設定
     CGameMode::getInstance()->setGameMode(CGameMode::GAME_MODE::CHECK);
@@ -102,11 +102,11 @@ void CBattele_MainLayer::update(float deltaTime){
     // カーソルスプライトをマウスマネージャーを使って位置設定させる
     this->m_pCursor->setPosition(mouse.getCurrentCursorPosition()) ;
     
-    // 発射台更新
-    CLauncherManager::getInstance()->update() ;
+    // 召喚キャラ発射台の更新
+    CSummonLauncher::getInstance()->update() ;
     
-    // 死んだキャラクターの取り外し
-    this->checkAndRemove(this->m_pCharacters) ;
+    // 召喚キャラマネージャーの更新
+    CSummonManager::getInstance()->update() ;
     
     //スクロール処理
     this->scroll();
@@ -116,37 +116,21 @@ void CBattele_MainLayer::update(float deltaTime){
 }
 
 /**
- *  @desc
- *
- */
-template <typename Ty>
-void CBattele_MainLayer::checkAndRemove(std::vector<Ty*> *pVector){
-    typename std::vector<Ty*>::iterator itr = pVector->begin() ;
-    while(itr != pVector->end()){
-        if((*itr)->isActive() == false){
-            (*itr)->removeFromParent() ;
-            pVector->erase(itr) ;
-        }
-        else{
-            ++itr ;
-        }
-    }
-}
-
-
-/**
  *  @desc   レイヤーのスクロール
  */
 void CBattele_MainLayer::scroll(){
-    
-    if(CCharacterAggregate::getInstance()->getTag(PLAYER_TAG)==NULL)
+    // !!!: PLAYER_TAG が不明と出るので、おそらく Constants.hppの更新漏れの可能性
+    // 応急処置したので、担当者よろ 記述者:鬼村
+    //if(CCharacterAggregate::getInstance()->getTag(PLAYER_TAG)==NULL)
+    if(CCharacterAggregate::getInstance()->getTag(1000)==NULL)
         return;
     
     //-----ゲームモードがノーマル時のとき-----
     if(CGameMode::GAME_MODE::NORMAL == CGameMode::getInstance()->getGameMode()){
-        
-        CCharacter *pPlayerChara = CCharacterAggregate::getInstance()->getTag(PLAYER_TAG);
-        
+        // !!!: PLAYER_TAG が不明と出るので、おそらく Constants.hppの更新漏れの可能性
+        // 応急処置したので、担当者よろ 記述者:鬼村
+        //CCharacter *pPlayerChara = CCharacterAggregate::getInstance()->getTag(PLAYER_TAG);
+        CCharacter *pPlayerChara = CCharacterAggregate::getInstance()->getTag(1000);
         
         //現在位置の取得
         cocos2d::Vec2 pt = this->getPosition();

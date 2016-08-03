@@ -104,6 +104,10 @@
 		4F75D0AA1D3A8B62002744C9 /* Summon_Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F75D0A31D3A8B62002744C9 /* Summon_Test.cpp */; };
 		4F75D0CB1D3A92A5002744C9 /* TestMoveSprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F75D0CA1D3A92A5002744C9 /* TestMoveSprite.png */; };
 		4F75D0CC1D3A92A5002744C9 /* TestMoveSprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F75D0CA1D3A92A5002744C9 /* TestMoveSprite.png */; };
+		4F7725261D51EE9D0023FF38 /* GameMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7725241D51EE9D0023FF38 /* GameMode.cpp */; };
+		4F7725271D51EE9D0023FF38 /* GameMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7725241D51EE9D0023FF38 /* GameMode.cpp */; };
+		4F77252B1D51EEB50023FF38 /* Battle_MainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7725291D51EEB50023FF38 /* Battle_MainLayer.cpp */; };
+		4F77252C1D51EEB50023FF38 /* Battle_MainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7725291D51EEB50023FF38 /* Battle_MainLayer.cpp */; };
 		4F9C5B681D30AEC60070E0DC /* gameMainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C5B601D30AEC60070E0DC /* gameMainBG.png */; };
 		4F9C5B691D30AEC60070E0DC /* gameMainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C5B601D30AEC60070E0DC /* gameMainBG.png */; };
 		4F9C5B6A1D30AEC60070E0DC /* Bone.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C5B631D30AEC60070E0DC /* Bone.png */; };
@@ -122,8 +126,6 @@
 		4F9C5BB41D30AEEE0070E0DC /* InputLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5B841D30AEEE0070E0DC /* InputLayer.cpp */; };
 		4F9C5BB51D30AEEE0070E0DC /* MouseLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5B871D30AEEE0070E0DC /* MouseLayer.cpp */; };
 		4F9C5BB61D30AEEE0070E0DC /* MouseLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5B871D30AEEE0070E0DC /* MouseLayer.cpp */; };
-		4F9C5BB71D30AEEE0070E0DC /* Battle_MainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5B8B1D30AEEE0070E0DC /* Battle_MainLayer.cpp */; };
-		4F9C5BB81D30AEEE0070E0DC /* Battle_MainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5B8B1D30AEEE0070E0DC /* Battle_MainLayer.cpp */; };
 		4F9C5BB91D30AEEE0070E0DC /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5B911D30AEEE0070E0DC /* InputManager.cpp */; };
 		4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5B911D30AEEE0070E0DC /* InputManager.cpp */; };
 		4F9C5BBB1D30AEEE0070E0DC /* MouseManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5B941D30AEEE0070E0DC /* MouseManager.cpp */; };
@@ -315,6 +317,10 @@
 		4F75D0A31D3A8B62002744C9 /* Summon_Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Summon_Test.cpp; sourceTree = "<group>"; };
 		4F75D0A41D3A8B62002744C9 /* Summon_Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Summon_Test.hpp; sourceTree = "<group>"; };
 		4F75D0CA1D3A92A5002744C9 /* TestMoveSprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestMoveSprite.png; sourceTree = "<group>"; };
+		4F7725241D51EE9D0023FF38 /* GameMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMode.cpp; sourceTree = "<group>"; };
+		4F7725251D51EE9D0023FF38 /* GameMode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameMode.hpp; sourceTree = "<group>"; };
+		4F7725291D51EEB50023FF38 /* Battle_MainLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Battle_MainLayer.cpp; sourceTree = "<group>"; };
+		4F77252A1D51EEB50023FF38 /* Battle_MainLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Battle_MainLayer.hpp; sourceTree = "<group>"; };
 		4F9C5B601D30AEC60070E0DC /* gameMainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameMainBG.png; sourceTree = "<group>"; };
 		4F9C5B631D30AEC60070E0DC /* Bone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bone.png; sourceTree = "<group>"; };
 		4F9C5B641D30AEC60070E0DC /* BoneFramework1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoneFramework1.png; sourceTree = "<group>"; };
@@ -329,8 +335,6 @@
 		4F9C5B851D30AEEE0070E0DC /* InputLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = InputLayer.hpp; sourceTree = "<group>"; };
 		4F9C5B871D30AEEE0070E0DC /* MouseLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MouseLayer.cpp; sourceTree = "<group>"; };
 		4F9C5B881D30AEEE0070E0DC /* MouseLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MouseLayer.hpp; sourceTree = "<group>"; };
-		4F9C5B8B1D30AEEE0070E0DC /* Battle_MainLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Battle_MainLayer.cpp; sourceTree = "<group>"; };
-		4F9C5B8C1D30AEEE0070E0DC /* Battle_MainLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Battle_MainLayer.hpp; sourceTree = "<group>"; };
 		4F9C5B911D30AEEE0070E0DC /* InputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputManager.cpp; sourceTree = "<group>"; };
 		4F9C5B921D30AEEE0070E0DC /* InputManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = InputManager.hpp; sourceTree = "<group>"; };
 		4F9C5B941D30AEEE0070E0DC /* MouseManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MouseManager.cpp; sourceTree = "<group>"; };
@@ -993,6 +997,24 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		4F7725231D51EE9D0023FF38 /* GameMode */ = {
+			isa = PBXGroup;
+			children = (
+				4F7725241D51EE9D0023FF38 /* GameMode.cpp */,
+				4F7725251D51EE9D0023FF38 /* GameMode.hpp */,
+			);
+			path = GameMode;
+			sourceTree = "<group>";
+		};
+		4F7725281D51EEB50023FF38 /* MainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				4F7725291D51EEB50023FF38 /* Battle_MainLayer.cpp */,
+				4F77252A1D51EEB50023FF38 /* Battle_MainLayer.hpp */,
+			);
+			path = MainLayer;
+			sourceTree = "<group>";
+		};
 		4F9C5B5B1D30AEC60070E0DC /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -1066,6 +1088,7 @@
 		4F9C5B731D30AEEE0070E0DC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4F7725231D51EE9D0023FF38 /* GameMode */,
 				4F5C01121D3A162100DA968F /* Action */,
 				DB5153431D39D693005E73E7 /* Status */,
 				4F9C5B751D30AEEE0070E0DC /* Animation */,
@@ -1161,18 +1184,9 @@
 			isa = PBXGroup;
 			children = (
 				17EC44211D39D67400DD4EAB /* UI */,
-				4F9C5B8A1D30AEEE0070E0DC /* MainLayer */,
+				4F7725281D51EEB50023FF38 /* MainLayer */,
 			);
 			path = Battle;
-			sourceTree = "<group>";
-		};
-		4F9C5B8A1D30AEEE0070E0DC /* MainLayer */ = {
-			isa = PBXGroup;
-			children = (
-				4F9C5B8B1D30AEEE0070E0DC /* Battle_MainLayer.cpp */,
-				4F9C5B8C1D30AEEE0070E0DC /* Battle_MainLayer.hpp */,
-			);
-			path = MainLayer;
 			sourceTree = "<group>";
 		};
 		4F9C5B8E1D30AEEE0070E0DC /* Lib */ = {
@@ -1553,7 +1567,9 @@
 				4F01132F1D4DF4CA0087E05F /* SummonLauncher.cpp in Sources */,
 				DB5153461D39D6A1005E73E7 /* Status.cpp in Sources */,
 				4F0113091D4DF43A0087E05F /* SummonManager.cpp in Sources */,
+				4F77252B1D51EEB50023FF38 /* Battle_MainLayer.cpp in Sources */,
 				4F5C011B1D3A162100DA968F /* Action.cpp in Sources */,
+				4F7725261D51EE9D0023FF38 /* GameMode.cpp in Sources */,
 				4F0113031D4DF43A0087E05F /* SummonAggregate_Player2Tag.cpp in Sources */,
 				4F0112881D4DC4F70087E05F /* CharacterIconSprite.cpp in Sources */,
 				4F01128A1D4DC4F70087E05F /* CostSprite.cpp in Sources */,
@@ -1566,7 +1582,6 @@
 				4F0113011D4DF43A0087E05F /* SummonAggregate_Player1Tag.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				4F01132D1D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp in Sources */,
-				4F9C5BB71D30AEEE0070E0DC /* Battle_MainLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				4F0113371D4DF4CA0087E05F /* TriggerTemplateBase.cpp in Sources */,
 				4F9C5BCC1D30BF670070E0DC /* Animation.cpp in Sources */,
@@ -1597,7 +1612,6 @@
 				4F0112891D4DC4F70087E05F /* CharacterIconSprite.cpp in Sources */,
 				4F9C5BB61D30AEEE0070E0DC /* MouseLayer.cpp in Sources */,
 				4F0113401D4DF5410087E05F /* CharacterAggregate.cpp in Sources */,
-				4F9C5BB81D30AEEE0070E0DC /* Battle_MainLayer.cpp in Sources */,
 				4F75D0691D3A730A002744C9 /* Summon.cpp in Sources */,
 				4F5C011E1D3A162100DA968F /* AttackAction.cpp in Sources */,
 				4F71A8D01D36961C004FD96B /* BattleScene.cpp in Sources */,
@@ -1620,7 +1634,9 @@
 				4F9C5BD51D30BF750070E0DC /* Body.cpp in Sources */,
 				4F9C5BCD1D30BF670070E0DC /* Animation.cpp in Sources */,
 				4F0113341D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.cpp in Sources */,
+				4F7725271D51EE9D0023FF38 /* GameMode.cpp in Sources */,
 				4F5C01201D3A162100DA968F /* MoveAction.cpp in Sources */,
+				4F77252C1D51EEB50023FF38 /* Battle_MainLayer.cpp in Sources */,
 				4F9C5BBC1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
 				4F0113301D4DF4CA0087E05F /* SummonLauncher.cpp in Sources */,
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
