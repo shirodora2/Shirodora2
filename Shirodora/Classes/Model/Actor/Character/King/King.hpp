@@ -19,6 +19,8 @@
 enum class KING_STATE {
     NONE        = -1,
     IDLE,
+    ATTACK,           //敵が索敵範囲内に入った
+    INPUTING,         //入力状態 --> WALKアニメーション
     MAX
 };
 
@@ -125,6 +127,13 @@ public :
      *  @tips   何か外部から呼び出す必要のあるアクションとか
      */
     void eventCallBack() override ;
+    
+    
+    /**
+     *  @desc   入力による移動
+     */
+    void moveInput();
+
     
 protected :
     //=========================================================================
