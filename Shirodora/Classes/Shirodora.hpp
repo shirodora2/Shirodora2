@@ -43,6 +43,10 @@
 //---- Move ------------------
 #include "Move.hpp"
 
+//---- GameMode --------------
+#include "GameMode.hpp"
+
+
 
 //*************** Model *************************
 #include "Actor.hpp"
