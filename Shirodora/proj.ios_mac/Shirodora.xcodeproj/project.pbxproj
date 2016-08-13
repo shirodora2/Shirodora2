@@ -195,6 +195,12 @@
 		DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153441D39D6A1005E73E7 /* Status.cpp */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
+		FE220C4A1D5F682B00F1A297 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE220C481D5F682B00F1A297 /* TitleScene.cpp */; };
+		FE220C4B1D5F682B00F1A297 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE220C481D5F682B00F1A297 /* TitleScene.cpp */; };
+		FE220C531D5F684000F1A297 /* Title_MainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE220C4E1D5F684000F1A297 /* Title_MainLayer.cpp */; };
+		FE220C541D5F684000F1A297 /* Title_MainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE220C4E1D5F684000F1A297 /* Title_MainLayer.cpp */; };
+		FE220C551D5F684000F1A297 /* Title_UILayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE220C511D5F684000F1A297 /* Title_UILayer.cpp */; };
+		FE220C561D5F684000F1A297 /* Title_UILayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE220C511D5F684000F1A297 /* Title_UILayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -413,6 +419,12 @@
 		DB5153451D39D6A1005E73E7 /* Status.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Status.hpp; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		FE220C481D5F682B00F1A297 /* TitleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TitleScene.cpp; sourceTree = "<group>"; };
+		FE220C491D5F682B00F1A297 /* TitleScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TitleScene.hpp; sourceTree = "<group>"; };
+		FE220C4E1D5F684000F1A297 /* Title_MainLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Title_MainLayer.cpp; sourceTree = "<group>"; };
+		FE220C4F1D5F684000F1A297 /* Title_MainLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Title_MainLayer.hpp; sourceTree = "<group>"; };
+		FE220C511D5F684000F1A297 /* Title_UILayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Title_UILayer.cpp; sourceTree = "<group>"; };
+		FE220C521D5F684000F1A297 /* Title_UILayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Title_UILayer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1171,6 +1183,7 @@
 		4F9C5B7E1D30AEEE0070E0DC /* Layer */ = {
 			isa = PBXGroup;
 			children = (
+				FE220C4C1D5F684000F1A297 /* Title */,
 				4F9C5B891D30AEEE0070E0DC /* Battle */,
 				4F9C5B7F1D30AEEE0070E0DC /* BaseLayer */,
 			);
@@ -1301,6 +1314,8 @@
 		4F9C5BAB1D30AEEE0070E0DC /* Title */ = {
 			isa = PBXGroup;
 			children = (
+				FE220C481D5F682B00F1A297 /* TitleScene.cpp */,
+				FE220C491D5F682B00F1A297 /* TitleScene.hpp */,
 			);
 			path = Title;
 			sourceTree = "<group>";
@@ -1405,6 +1420,33 @@
 				DB5153451D39D6A1005E73E7 /* Status.hpp */,
 			);
 			path = Status;
+			sourceTree = "<group>";
+		};
+		FE220C4C1D5F684000F1A297 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				FE220C4D1D5F684000F1A297 /* MainLayer */,
+				FE220C501D5F684000F1A297 /* UI */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		FE220C4D1D5F684000F1A297 /* MainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FE220C4E1D5F684000F1A297 /* Title_MainLayer.cpp */,
+				FE220C4F1D5F684000F1A297 /* Title_MainLayer.hpp */,
+			);
+			path = MainLayer;
+			sourceTree = "<group>";
+		};
+		FE220C501D5F684000F1A297 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FE220C511D5F684000F1A297 /* Title_UILayer.cpp */,
+				FE220C521D5F684000F1A297 /* Title_UILayer.hpp */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1586,6 +1628,7 @@
 			files = (
 				4F7725C11D51FEB10023FF38 /* CharacterAggregate_Player2Tag.cpp in Sources */,
 				4F7725BB1D51FEB10023FF38 /* CharacterAggregate_Player1King.cpp in Sources */,
+				FE220C4A1D5F682B00F1A297 /* TitleScene.cpp in Sources */,
 				4F9C5BAF1D30AEEE0070E0DC /* AppDelegate.cpp in Sources */,
 				4F7725BF1D51FEB10023FF38 /* CharacterAggregate_Player2King.cpp in Sources */,
 				4F0113391D4DF4CA0087E05F /* Trigger_Timer.cpp in Sources */,
@@ -1614,6 +1657,7 @@
 				4F9C5BB91D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				4F9C5BDA1D30BF7E0070E0DC /* Move.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				FE220C531D5F684000F1A297 /* Title_MainLayer.cpp in Sources */,
 				4F01132D1D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				4F7725961D51FEA10023FF38 /* Battle_MainLayer.cpp in Sources */,
@@ -1628,6 +1672,7 @@
 				4F75D0681D3A730A002744C9 /* Summon.cpp in Sources */,
 				4F9C5BD41D30BF750070E0DC /* Body.cpp in Sources */,
 				4F75D0A71D3A8B62002744C9 /* SummonFactoryManager.cpp in Sources */,
+				FE220C551D5F684000F1A297 /* Title_UILayer.cpp in Sources */,
 				4F5C011F1D3A162100DA968F /* MoveAction.cpp in Sources */,
 				4F7725B91D51FEB10023FF38 /* CharacterAggregate.cpp in Sources */,
 				4F9C5BE61D30BFC70070E0DC /* Simplex.cpp in Sources */,
@@ -1654,6 +1699,7 @@
 				4F7725CC1D51FEB10023FF38 /* CharacterManager.cpp in Sources */,
 				4F75D0691D3A730A002744C9 /* Summon.cpp in Sources */,
 				4F5C011E1D3A162100DA968F /* AttackAction.cpp in Sources */,
+				FE220C541D5F684000F1A297 /* Title_MainLayer.cpp in Sources */,
 				4F7725C01D51FEB10023FF38 /* CharacterAggregate_Player2King.cpp in Sources */,
 				4F71A8D01D36961C004FD96B /* BattleScene.cpp in Sources */,
 				4F9C5BDB1D30BF7E0070E0DC /* Move.cpp in Sources */,
@@ -1682,8 +1728,10 @@
 				4F0113301D4DF4CA0087E05F /* SummonLauncher.cpp in Sources */,
 				4F7725C81D51FEB10023FF38 /* CharacterIterator_Player2King.cpp in Sources */,
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
+				FE220C4B1D5F682B00F1A297 /* TitleScene.cpp in Sources */,
 				4F5C011C1D3A162100DA968F /* Action.cpp in Sources */,
 				DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */,
+				FE220C561D5F684000F1A297 /* Title_UILayer.cpp in Sources */,
 				4F75D0651D3A730A002744C9 /* Character.cpp in Sources */,
 				4F01133A1D4DF4CA0087E05F /* Trigger_Timer.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
