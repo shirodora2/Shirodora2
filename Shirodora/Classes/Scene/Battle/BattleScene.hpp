@@ -74,6 +74,8 @@ public :
     
     // UIレイヤー
     CUI_Layer *m_pUILayer {NULL} ;
+    
+
 };
 
 #endif /* BattleScene_hpp */

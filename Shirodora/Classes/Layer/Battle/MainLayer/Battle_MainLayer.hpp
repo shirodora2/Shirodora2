@@ -15,11 +15,13 @@
 // 追加のインクルードはここから
 //=========================================================================
 #include "InputAndMouseLayer.hpp"
+#include "SummonFactoryManager.hpp"
 
 //=========================================================================
 // 前方宣言
 //=========================================================================
 class CCharacter ;
+class CUI_Layer ;
 
 //=========================================================================
 //
@@ -76,6 +78,36 @@ public :
      */
     void inputFunc();
     
+    
+    /**
+     *  @desc   クリック位置と矩形の判定
+     *  @param  クリック位置
+     *  @param  矩形
+     *  @return 矩形内をクリックしたのかどうか
+     *          true...矩形内だった、false...矩形外だった
+     */
+    bool checkCollisionMouseClickPoint(cocos2d::Vec2 clickPoint, cocos2d::Rect rect);
+     
+    /**
+     *  @desc   マウス入力処理
+     *  @param  UIレイヤー
+     *  @tips   シーンで呼び出す
+     */
+    void inputMauseUpdate(CUI_Layer* pUiLayer);
+    
+    /**
+     *  @desc   マウス入力による召喚キャラクターの選択
+     *  @param  UIレイヤー
+     *  @param  クリック位置
+     */
+    void choiceIcon(CUI_Layer* pUiLayer, cocos2d::Vec2 clickPoint);
+    
+    /**
+     *  @desc   マウス入力によるキャラクターの生成
+     *  @param  クリック位置
+     */
+    void createSummon(cocos2d::Vec2 clickPoint);
+    
     //=========================================================================
     // メンバ変数
     //=========================================================================
@@ -92,6 +124,10 @@ public :
     //ゲームモード
     int m_gameMode = 0;
     
+    //選択中のキャラクタータイプ
+    SUMMON_TYPE m_choiceSummonType { SUMMON_TYPE::NONE };
+
+    //
 };
 
 #endif /* GameMainLayer_hpp */

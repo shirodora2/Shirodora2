@@ -77,4 +77,6 @@ bool CBattleScene::init(){
  */
 void CBattleScene::update(float deltaTime){
     
+    this->m_pMainLayer->inputMauseUpdate(this->m_pUILayer);
+    
 }

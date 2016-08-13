@@ -8,6 +8,7 @@
 
 #include "Shirodora.hpp"
 #include "GameMode.hpp"
+#include "CharacterIconSprite.hpp"
 
 
 //=========================================================================
@@ -62,6 +63,8 @@ bool CBattele_MainLayer::init(){
     //this->m_pCharacters = new std::vector<CCharacter*>() ;
     //CCharacterAggregate::getInstance()->setAggregate(this->m_pCharacters) ;
     
+    
+    //-------------------------動作テスト用----------------------------------------
     // 召喚キャラ発射台を設定
     CSummonLauncher::getInstance()->setLayer(this) ;
     // 召喚キャラ発射データを生成
@@ -71,10 +74,11 @@ bool CBattele_MainLayer::init(){
     // 発射トリガーを発射台に取り付け
     CSummonLauncher::getInstance()->add(pTrigger) ;
     
+    
     //ゲームモードの設定
     CGameMode::getInstance()->setGameMode(CGameMode::GAME_MODE::CHECK);
     this->m_gameMode = (int)CGameMode::getInstance()->getGameMode();
-
+    
     
 
     // スケジューラーに登録
@@ -185,4 +189,125 @@ void CBattele_MainLayer::inputFunc(){
 }
 
 
+/**
+ *  @desc   クリック位置と矩形の判定
+ *  @param  クリック位置
+ *  @param  矩形
+ *  @return 矩形内をクリックしたのかどうか
+ *          true...矩形内だった、false...矩形外だった
+ */
+bool CBattele_MainLayer::checkCollisionMouseClickPoint(cocos2d::Vec2 clickPoint, cocos2d::Rect rect){
+    
+    
+    //CCLOG("rect %f : %f : %f : %f",rect.getMinX(),rect.getMaxX(),rect.getMinY(),rect.getMaxY());
+
+    if(clickPoint.x > rect.getMinX() && clickPoint.x < rect.getMaxX()){
+        if(clickPoint.y > rect.getMinY() && clickPoint.y < rect.getMaxY()){
+            return true;
+        }
+    }
+    
+    return false;
+}
+
+/**
+ *  @desc   マウス入力処理
+ *  @param  UIレイヤー
+ *  @tips   シーンで呼び出す
+ */
+void CBattele_MainLayer::inputMauseUpdate(CUI_Layer* pUiLayer){
+    
+    //クリックされたら
+    if(mouse.isClicked() == true){
+        
+        //クリック位置の取得
+        cocos2d::Vec2 clickPoint = mouse.getClickPosition();
+        
+        //クリック位置によって挙動を変える
+        if(clickPoint.y < 120 /*UI範囲なら*/){
+            
+            //アイコンの選択
+            this->choiceIcon(pUiLayer, clickPoint);
+            
+        }else if(clickPoint.y > 120 /*フィールド範囲なら*/){
+            
+            //キャラクターの召喚
+            this->createSummon(clickPoint);
+        }
+    }
+}
+
+/**
+ *  @desc   マウス入力による召喚キャラクターの選択
+ *  @param  UIレイヤー
+ *  @param  クリック位置
+ */
+void CBattele_MainLayer::choiceIcon(CUI_Layer* pUiLayer, cocos2d::Vec2 clickPoint){
+    
+    //選択キャラタイプの初期化
+    //this->m_choiceSummonType = SUMMON_TYPE::NONE;
+    
+    
+    //CCLOG("クリックされた %f : %f",clickPoint.x,clickPoint.y);
+    
+    //アイコンの数だけ回す
+    for(int i=0; i<CUI_Layer::MAXICON; ++i){
+        
+        if(pUiLayer->getCharaIconAt(i)==NULL)
+            continue;
+        
+        //アイコンを取得
+        CCharacterIcon* icon = pUiLayer->getCharaIconAt(i);
+        
+        //位置と矩形原点の取得
+        cocos2d::Vec2 iconPos = icon->getPosition();
+        float minX = iconPos.x - icon->getContentSize().width/2;
+        float minY = iconPos.y - icon->getContentSize().height/2;
+        
+        //矩形の設定
+        cocos2d::Rect iconPosRect;
+        iconPosRect.setRect(minX, minY, icon->getContentSize().width, icon->getContentSize().height);
+        
+        //クリック位置とアイコンとの衝突判定
+        if(this->checkCollisionMouseClickPoint(clickPoint, iconPosRect)){
+            
+            //召喚キャラタイプの設定
+            this->m_choiceSummonType = icon->getType();
+            CCLOG("アイコンをクリックした");
+            
+            /***********************************
+             アイコン選択時に変化をつけるならここに記述
+             **********************************/
+            
+        }
+    }
+}
+
+/**
+ *  @desc   マウス入力によるキャラクターの生成
+ *  @param  クリック位置
+ */
+void CBattele_MainLayer::createSummon(cocos2d::Vec2 clickPoint){
+    
+    CCharacter *pPlayerChara {NULL} ;
+    // プレイヤー１キングキャラクターの取得
+    std::shared_ptr<CIteratorTemplate<CCharacter*>> itr = CCharacterManager::getInstance()->iterator(CHARACTER_AGGREGATE_TYPE::PLAYER_1_KING) ;
+    while(itr->hasNext() == true){
+        pPlayerChara = itr->next() ;
+    }
+    // プレイヤー１キングキャラクターが生成されていないなら飛ばす
+    if(pPlayerChara == NULL) return ;
+
+    
+    //*******キングの召喚範囲内かどうかを確認********************
+    //*******キングの位置からレイヤースクロール距離をさっ引く*******
+    
+    //------ゲームの仕様次第では下の方が楽かな--------------
+    
+    //*******キングx座標は中央固定なので、scrollの影響のないy座標と画面中央x座標から召喚範囲を得る************
+    //*******召喚時はキング位置＋画面中央からの距離で算出*******
+
+    
+    
+}
 
