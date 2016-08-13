@@ -224,22 +224,24 @@ void CKing::moveInput(){
         return;
     
     //入力があれば状態(m_state)を入力状態(INPUTING)にする
-    if(inputflag.m_left.isInputing() == true){
+    if(inputflag.m_a.isInputing() == true){
         this->m_state = KING_STATE::INPUTING;
         this->m_pMove->addDirection(-1.0f * cocos2d::Vec2::UNIT_X) ;
         this->m_pMove->setAccele(0.7f) ;
     }
-    if(inputflag.m_right.isInputing() == true){
+    if(inputflag.m_d.isInputing() == true){
         this->m_state = KING_STATE::INPUTING;
         this->m_pMove->addDirection(1.0f * cocos2d::Vec2::UNIT_X) ;
         this->m_pMove->setAccele(0.7f) ;
     }
-    if(inputflag.m_up.isInputing() == true){
+    /*
+    if(inputflag.m_w.isInputing() == true){
         this->m_state = KING_STATE::INPUTING;
         this->m_pMove->addDirection(1.0f * cocos2d::Vec2::UNIT_Y) ;
         this->m_pMove->setAccele(0.7f) ;
     }
-    if(inputflag.m_down.isInputing() == true){
+     */
+    if(inputflag.m_s.isInputing() == true){
         this->m_state = KING_STATE::INPUTING;
         this->m_pMove->addDirection(-1.0f * cocos2d::Vec2::UNIT_Y) ;
         this->m_pMove->setAccele(0.7f) ;

@@ -158,10 +158,10 @@ void CBattele_MainLayer::scroll(){
         //レイヤーのみがスクロールする
     }else if(CGameMode::GAME_MODE::CHECK == CGameMode::getInstance()->getGameMode()){
         
-        if(inputflag.m_left.isInputing() == true){
+        if(inputflag.m_a.isInputing() == true){
             this->setPosition(this->getPosition().x+10,this->getPosition().y);
         }
-        if(inputflag.m_right.isInputing() == true){
+        if(inputflag.m_d.isInputing() == true){
             this->setPosition(this->getPosition().x-10,this->getPosition().y);
         }
         
