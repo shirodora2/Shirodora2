@@ -31,26 +31,26 @@ public:
     //コスト
     static const int MAXCOST = 10;
     
+public:
+    CUI_Layer();
+    ~CUI_Layer();
+
+public:
     //時間
     CTimeLable* getTimeLabel(){return m_pTimeLabel;}
+    
     //ゲージ
     CCastleHpPlayerBar* getCastPlayerGage(){return m_pCastleHpPlayerBar;}
     CCastleHpEnemyBar* getCastEnemyGage(){return m_pCastleHpEnemyBar;}
     
+    //キャラクターアイコンの取得
+    inline CCharacterIcon* getCharaIconAt(int index){return this->m_charaIconBox[index];}
     
     bool init() override;
-    
     void update(float _dt)override;
-    
     CREATE_FUNC(CUI_Layer);
     
-public:
     
-    CUI_Layer();
-    ~CUI_Layer();
-    
-    
-
 private:
     int m_testcost = 0;
     
