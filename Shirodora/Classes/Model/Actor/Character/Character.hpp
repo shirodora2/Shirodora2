@@ -31,6 +31,7 @@ enum class STATE {
     IDLE,
     MOVE,
     ATTACK,
+    DEAD,
     INPUTING,
     UNIQUE_1,
     UNIQUE_2,
