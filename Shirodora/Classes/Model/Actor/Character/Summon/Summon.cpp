@@ -40,7 +40,7 @@ bool CSummon::init(){
     if(CActor::init() == false) return false ;
     
     // 初期状態を待機にしておく
-    this->m_state = SUMMON_STATE::IDLE ;
+    this->m_state = STATE::IDLE ;
     
     return true ;
 }
@@ -81,7 +81,7 @@ void CSummon::move(){
  *  @desc   アニメーション処理
  */
 void CSummon::animation(){
-    (*this->m_pAnimations)[(int)SUMMON_STATE::IDLE]->update() ;
+    (*this->m_pAnimations)[(int)STATE::IDLE]->update() ;
 }
 
 /**
@@ -90,7 +90,7 @@ void CSummon::animation(){
 void CSummon::collision(){
     
     
-    if(this->m_state == SUMMON_STATE::ATTACK)
+    if(this->m_state == STATE::ATTACK)
         return;
     
     //自身のm_tagから衝突判定相手を決定する
@@ -114,7 +114,7 @@ void CSummon::collision(){
         
         //一匹でも攻撃範囲にいたら攻撃状態にする
         if(myCollisionData.collisionDecision(eneCollisionData)){
-            this->m_state = SUMMON_STATE::ATTACK;
+            this->m_state = STATE::ATTACK;
             return;
         }
     }
@@ -144,7 +144,7 @@ void CSummon::apply(){
     this->m_pSprite->cocos2d::Sprite::setPosition(this->m_pMove->getPosition()) ;
     
     // チップデータを反映
-    this->m_pSprite->setTextureRect((*this->m_pAnimations)[(int)SUMMON_STATE::IDLE]->getCurrentChip()) ;
+    this->m_pSprite->setTextureRect((*this->m_pAnimations)[(int)STATE::IDLE]->getCurrentChip()) ;
 }
 
 /**

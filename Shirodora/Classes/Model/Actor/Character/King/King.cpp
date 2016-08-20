@@ -40,7 +40,7 @@ bool CKing::init(){
     if(CActor::init() == false) return false ;
     
     // 初期状態を待機にしておく
-    this->m_state = KING_STATE::IDLE ;
+    this->m_state = STATE::IDLE ;
     
     return true ;
 }
@@ -67,7 +67,7 @@ void CKing::update(float deltaTime){
 void CKing::action(){
     
     //状態(m_state)がATTACKなら、攻撃アクションを行う
-    if(this->m_state == KING_STATE::ATTACK){
+    if(this->m_state == STATE::ATTACK){
         
         //(*this->m_pActions)[ 攻撃番号 ]->update(this);
     }
@@ -87,7 +87,7 @@ void CKing::move(){
  *  @desc   アニメーション処理
  */
 void CKing::animation(){
-    (*this->m_pAnimations)[(int)KING_STATE::IDLE]->update() ;
+    (*this->m_pAnimations)[(int)STATE::IDLE]->update() ;
 }
 
 /**
@@ -112,7 +112,7 @@ void CKing::collision(){
     //　ここから攻撃に関する判定
     //=====================================
     //入力状態だったら飛ばす
-    if(this->m_state == KING_STATE::INPUTING)
+    if(this->m_state == STATE::INPUTING)
         return;
     
     //攻撃範囲内に敵が入っていれば、状態(m_state)をATTACKに変更する　→　攻撃アクション開始
@@ -130,7 +130,7 @@ void CKing::collision(){
         
         //一匹でも攻撃範囲にいたら攻撃状態にする
         if(myCollisionData.collisionDecision(eneCollisionData)){
-            this->m_state = KING_STATE::ATTACK;
+            this->m_state = STATE::ATTACK;
             return;
         }
     }
@@ -217,7 +217,7 @@ void CKing::eventCallBack(){
 void CKing::moveInput(){
     
     //とりあえず IDLE状態 にしておく（デフォ）
-    this->m_state = KING_STATE::IDLE;
+    this->m_state = STATE::IDLE;
 
     //GAME_MODE が CHECKなら入力できない
     if(CGameMode::GAME_MODE::CHECK == CGameMode::getInstance()->getGameMode())
@@ -225,24 +225,24 @@ void CKing::moveInput(){
     
     //入力があれば状態(m_state)を入力状態(INPUTING)にする
     if(inputflag.m_a.isInputing() == true){
-        this->m_state = KING_STATE::INPUTING;
+        this->m_state = STATE::INPUTING;
         this->m_pMove->addDirection(-1.0f * cocos2d::Vec2::UNIT_X) ;
         this->m_pMove->setAccele(0.7f) ;
     }
     if(inputflag.m_d.isInputing() == true){
-        this->m_state = KING_STATE::INPUTING;
+        this->m_state = STATE::INPUTING;
         this->m_pMove->addDirection(1.0f * cocos2d::Vec2::UNIT_X) ;
         this->m_pMove->setAccele(0.7f) ;
     }
-    /*
+    
     if(inputflag.m_w.isInputing() == true){
-        this->m_state = KING_STATE::INPUTING;
+        this->m_state = STATE::INPUTING;
         this->m_pMove->addDirection(1.0f * cocos2d::Vec2::UNIT_Y) ;
         this->m_pMove->setAccele(0.7f) ;
     }
-     */
+    
     if(inputflag.m_s.isInputing() == true){
-        this->m_state = KING_STATE::INPUTING;
+        this->m_state = STATE::INPUTING;
         this->m_pMove->addDirection(-1.0f * cocos2d::Vec2::UNIT_Y) ;
         this->m_pMove->setAccele(0.7f) ;
     }
