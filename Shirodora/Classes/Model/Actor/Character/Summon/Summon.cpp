@@ -89,6 +89,36 @@ void CSummon::animation(){
  */
 void CSummon::collision(){
     
+    
+    if(this->m_state == SUMMON_STATE::ATTACK)
+        return;
+    
+    //自身のm_tagから衝突判定相手を決定する
+    CHARACTER_AGGREGATE_TYPE type = CHARACTER_AGGREGATE_TYPE::NONE;
+    (this->m_tag >= 1000 && this->m_tag < 2000)?
+        type = CHARACTER_AGGREGATE_TYPE::PLAYER_2 :
+        type = CHARACTER_AGGREGATE_TYPE::PLAYER_1 ;
+    
+    //攻撃範囲内に敵が入っていれば、状態(m_state)をATTACKに変更する　→　攻撃アクション開始
+    //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝わからん＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+    //自身のコリジョンデータの生成
+    CCollisionData myCollisionData(this->m_pMove,this->m_pAttackBody);
+    
+    //敵のキャラクターが攻撃範囲（m_pAttackBody）に入っていかの判定
+    std::shared_ptr<CIteratorTemplate<CCharacter*>> itr = CCharacterManager::getInstance()->iterator(type);
+    while(itr->hasNext() == true){
+        
+        //敵キャラのコリジョンを取得
+        CCharacter* pChara = itr->next();
+        CCollisionData eneCollisionData(pChara->getMove(),pChara->getCollisionBody());
+        
+        //一匹でも攻撃範囲にいたら攻撃状態にする
+        if(myCollisionData.collisionDecision(eneCollisionData)){
+            this->m_state = SUMMON_STATE::ATTACK;
+            return;
+        }
+    }
+    //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝わからん＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 }
 
 /**
@@ -96,6 +126,14 @@ void CSummon::collision(){
  */
 void CSummon::checkState(){
     
+    //画像の反転処理
+    if(this->m_pMove->getDirection() < 0){
+        this->m_pSprite->setScale( -1.0f, 1.0f );
+    }
+    if(this->m_pMove->getDirection() > 0){
+        this->m_pSprite->setScale( 1.0f, 1.0f );
+    }
+
 }
 
 /**
@@ -123,6 +161,8 @@ bool CSummon::collisionAt(CCharacter *pChara){
  */
 void CSummon::hit(CCharacter *pChara){
     
+    //攻撃（敵弾）に当たった時のダメージ処理
+    //this->m_pStatus->decreaseHp(pChara->getStatus()->getAttackPt(), pChara->getStatus()->getType());
 }
 
 /**

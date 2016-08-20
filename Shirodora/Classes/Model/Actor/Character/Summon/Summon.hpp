@@ -17,6 +17,7 @@
 enum class SUMMON_STATE {
     NONE        = -1,
     IDLE,
+    ATTACK,
     MAX
 };
 
