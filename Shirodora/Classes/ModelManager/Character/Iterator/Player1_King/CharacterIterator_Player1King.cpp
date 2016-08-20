@@ -26,7 +26,7 @@
  *  @desc   コンストラクタ
  */
 CCharacterIterator_Player1King::CCharacterIterator_Player1King(IAggregateTemplate<CCharacter*> *pAggre) :
-CIteratorTemplate<CCharacter *>(pAggre){}
+CIteratorTemplate<CCharacter*>(pAggre){}
 
 /**
  *  @desc   デストラクタ

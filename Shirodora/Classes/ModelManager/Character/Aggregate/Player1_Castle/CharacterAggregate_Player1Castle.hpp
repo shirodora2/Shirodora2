@@ -1,18 +1,18 @@
 //
-//  CharacterIterator_Player1King.hpp
+//  CharacterAggregate_Player1Castle.hpp
 //  Shirodora
 //
-//  Created by Ryoutarou Onimura on 2016/08/03.
+//  Created by Ryoutarou Onimura on 2016/08/20.
 //
 //
 
-#ifndef CharacterIterator_Player1King_hpp
-#define CharacterIterator_Player1King_hpp
+#ifndef CharacterAggregate_Player1Castle_hpp
+#define CharacterAggregate_Player1Castle_hpp
 
 //=========================================================================
 // 追加のインクルードはここから
 //=========================================================================
-#include "AggregateTemplate.hpp"
+#include "CharacterAggregate.hpp"
 
 //=========================================================================
 // 前方宣言
@@ -21,33 +21,33 @@ class CCharacter ;
 
 //=========================================================================
 //
-// 召喚キャライテレーター_プレイヤー1キング
+// キャラ集合_プレイヤー１城
 //
 //=========================================================================
-class CCharacterIterator_Player1King : public CIteratorTemplate<CCharacter*> {
-public :
+class CCharacterAggregate_Player1Castle : public CCharacterAggregate {
+    public :
     //=========================================================================
     // コンストラクタ/デストラクタ
     //=========================================================================
     /**
      *  @desc   コンストラクタ
      */
-    CCharacterIterator_Player1King(IAggregateTemplate<CCharacter*> *pAggre) ;
+    CCharacterAggregate_Player1Castle(std::vector<CCharacter*> *pAggre) ;
     
     /**
      *  @desc   デストラクタ
      */
-    ~CCharacterIterator_Player1King() ;
+    ~CCharacterAggregate_Player1Castle() ;
     
     //=========================================================================
     // メンバ関数
     //=========================================================================
     /**
-     *  @desc   次が存在するかどうかをチェック
-     *  @return true...次がある false...次がない
+     *  @desc   開始イテレーターの取得
+     *  @return イテレーター
      */
-    bool hasNext() override ;
+    virtual std::shared_ptr<CIteratorTemplate<CCharacter*>> iterator() override ;
     
 };
 
-#endif /* CharacterIterator_Player1King_hpp */
+#endif /* CharacterIterator_Player1Castle_hpp */

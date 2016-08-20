@@ -17,6 +17,8 @@
 #include "CharacterAggregate_Player2Tag.hpp"
 #include "CharacterAggregate_Player1King.hpp"
 #include "CharacterAggregate_Player2King.hpp"
+#include "CharacterAggregate_Player1Castle.hpp"
+#include "CharacterAggregate_Player2Castle.hpp"
 
 //=========================================================================
 //
@@ -134,6 +136,14 @@ void CCharacterManager::setAggregate(CHARACTER_AGGREGATE_TYPE type){
             
         case CHARACTER_AGGREGATE_TYPE::PLAYER_2_KING :
             this->m_pAggregates[(int)type] = new CCharacterAggregate_Player2King(this->m_pCharacters) ;
+            break ;
+            
+        case CHARACTER_AGGREGATE_TYPE::PLAYER_1_CASTLE :
+            this->m_pAggregates[(int)type] = new CCharacterAggregate_Player1Castle(this->m_pCharacters) ;
+            break ;
+            
+        case CHARACTER_AGGREGATE_TYPE::PLAYER_2_CASTLE :
+            this->m_pAggregates[(int)type] = new CCharacterAggregate_Player2Castle(this->m_pCharacters) ;
             break ;
             
         default :

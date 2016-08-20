@@ -10,7 +10,8 @@
 #include "GameMode.hpp"
 #include "CharacterIconSprite.hpp"
 #include "KingFactoryManager.hpp"
-
+#include "CastleFactoryManager.hpp"
+#include "Castle.hpp"
 
 //=========================================================================
 //
@@ -60,11 +61,6 @@ bool CBattele_MainLayer::init(){
     this->m_pCursor->setPosition(WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
     this->addChild(this->m_pCursor) ;
     
-    // キャラクター集合体を生成してキャラクター集合へ取り付け
-    //this->m_pCharacters = new std::vector<CCharacter*>() ;
-    //CCharacterAggregate::getInstance()->setAggregate(this->m_pCharacters) ;
-    
-    
     //-------------------------動作テスト用----------------------------------------
 
     // 召喚キャラ発射台を設定
@@ -76,6 +72,14 @@ bool CBattele_MainLayer::init(){
     // 発射トリガーを発射台に取り付け
     CSummonLauncher::getInstance()->add(pTrigger) ;
     
+    // 城の生成と取り付け(画像は毎度おなじみのあれ)
+    // 細かい位置とか画像は調整頼む
+    CCastle *pCastle_1 = CCastleFactoryManager::getInstance()->create(1999, 100.0f, 300.0f) ;
+    CCharacterManager::getInstance()->add(pCastle_1) ;
+    this->addChild(pCastle_1) ;
+    CCastle *pCastle_2 = CCastleFactoryManager::getInstance()->create(2999, 800.0f, 300.0f) ;
+    CCharacterManager::getInstance()->add(pCastle_2) ;
+    this->addChild(pCastle_2) ;
     
     CKing* pKing = CKingFactoryManager::getInstance()->create(1000, KING_TYPE::TEST, WINDOW_WIDTH * 0.7f, WINDOW_HEIGHT * 0.5f) ;
     
