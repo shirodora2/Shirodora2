@@ -18,7 +18,7 @@
 // 前方宣言
 //=========================================================================
 class CMove ;
-class CStatusOfObject ;
+class CStatusOfCharacter ;
 class CBody ;
 class CAnimation ;
 class CAction ;
@@ -63,7 +63,7 @@ public :
      *  @desc   ステータス設定
      *  @param  CStatusOfObject
      */
-    inline void setStatus(CStatusOfObject *pStatus){this->m_pStatus = pStatus ;}
+    inline void setStatus(CStatusOfCharacter *pStatus){this->m_pStatus = pStatus ;}
     
     /**
      *  @desc   攻撃範囲データ設定
@@ -120,7 +120,7 @@ public :
      *  @desc   ステータス取得
      *  @return CStatusOfObject
      */
-    inline CStatusOfObject *getStatus(){return this->m_pStatus ;}
+    inline CStatusOfCharacter *getStatus(){return this->m_pStatus ;}
     
     /**
      *  @desc   攻撃範囲データ取得
@@ -188,7 +188,7 @@ protected :
     // 画像データ
     cocos2d::Sprite *m_pSprite {NULL} ;
     // ステータス
-    CStatusOfObject *m_pStatus {NULL} ;
+    CStatusOfCharacter *m_pStatus {NULL} ;
     // 実体データ
     CBody *m_pCollisionBody {NULL} ;
     // 攻撃範囲データ

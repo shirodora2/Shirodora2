@@ -63,7 +63,7 @@ CSummon *CSummonCreateFactory::create(){
     // メンバ変数の生成
     pSummon->setMove(new CMove()) ;
     pSummon->setSprite(cocos2d::Sprite::create()) ;
-    pSummon->setStatus(new CStatusOfObject()) ;
+    pSummon->setStatus(new CStatusOfCharacter()) ;
     pSummon->setCollisionBody(new CBody()) ;
     pSummon->setAttackBody(new CBody()) ;
     pSummon->setAnimations(new std::vector<CAnimation*>()) ;
