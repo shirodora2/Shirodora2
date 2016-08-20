@@ -65,6 +65,7 @@ bool CBattele_MainLayer::init(){
     
     
     //-------------------------動作テスト用----------------------------------------
+
     // 召喚キャラ発射台を設定
     CSummonLauncher::getInstance()->setLayer(this) ;
     // 召喚キャラ発射データを生成
@@ -75,8 +76,13 @@ bool CBattele_MainLayer::init(){
     CSummonLauncher::getInstance()->add(pTrigger) ;
     
     
+    CKing* pKing = CKingFactoryManager::getInstance()->create(1000, KING_TYPE::TEST, WINDOW_WIDTH * 0.7f, WINDOW_HEIGHT * 0.5f) ;
+    
+    CCharacterManager::getInstance()->add(pKing);
+    this->addChild(pKing) ;
+    
     //ゲームモードの設定
-    CGameMode::getInstance()->setGameMode(CGameMode::GAME_MODE::CHECK);
+    CGameMode::getInstance()->setGameMode(CGameMode::GAME_MODE::NORMAL);
     this->m_gameMode = (int)CGameMode::getInstance()->getGameMode();
     
     
@@ -123,6 +129,7 @@ void CBattele_MainLayer::update(float deltaTime){
  *  @desc   レイヤーのスクロール
  */
 void CBattele_MainLayer::scroll(){
+    
     CCharacter *pPlayerChara {NULL} ;
     // プレイヤー１キングキャラクターの取得
     std::shared_ptr<CIteratorTemplate<CCharacter*>> itr = CCharacterManager::getInstance()->iterator(CHARACTER_AGGREGATE_TYPE::PLAYER_1_KING) ;
