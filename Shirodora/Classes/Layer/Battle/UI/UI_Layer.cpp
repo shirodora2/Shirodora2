@@ -12,6 +12,9 @@
 #include "CastleHpBar.hpp"
 #include "CharacterIconSprite.hpp"
 #include "CostSprite.hpp"
+#include "CharacterManager.hpp"
+#include "Character.hpp"
+#include "Status.hpp"
 
 
 USING_NS_CC;
@@ -66,23 +69,40 @@ bool CUI_Layer::init(){
         
     }
     
+    //キングコストの参照
+    std::shared_ptr<CIteratorTemplate<CCharacter*>> itr = CCharacterManager::getInstance()->iterator(CHARACTER_AGGREGATE_TYPE::PLAYER_1_KING) ;
+    while(itr->hasNext() == true){
+        CCharacter *pChara = itr->next() ;
+        m_cost = pChara->getStatus()->getCost();
+    }
+    
     scheduleUpdate();
     return true;
 }
 
 void CUI_Layer::update(float _dt){
-    m_testcost++;
     
-    if(m_testcost == 60){
-        m_testcost = 0;
+    //コストの演出処理
+    costFunc();
+}
 
-        for(int i = 0; i < MAXCOST ; i++){
-            if(m_costBox[i]->getCostFlag() == true){
-                m_costBox[i]->setCostFlag(false);
-                return;
-            }
-            
+//コストの演出メソッド
+void CUI_Layer::costFunc(){
+    //キングコストの参照
+    std::shared_ptr<CIteratorTemplate<CCharacter*>> itr = CCharacterManager::getInstance()->iterator(CHARACTER_AGGREGATE_TYPE::PLAYER_1_KING) ;
+    while(itr->hasNext() == true){
+        CCharacter *pChara = itr->next() ;
+        m_cost = pChara->getStatus()->getCost();
+    }
+
+    
+    for(int i = 0 ; i < MAXCOST ; i++){
+        if( i < m_cost ){
+            m_costBox[i]->setCostFlag(true);
+        }else{
+            m_costBox[i]->setCostFlag(false);
         }
     }
     
 }
+

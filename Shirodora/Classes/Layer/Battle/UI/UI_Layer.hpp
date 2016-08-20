@@ -50,9 +50,12 @@ public:
     void update(float _dt)override;
     CREATE_FUNC(CUI_Layer);
     
+    //コストの演出メソッド
+    void costFunc();
     
 private:
-    int m_testcost = 0;
+    //キングの所持コスト
+    int m_cost = 0;
     
     //制限時間
     CTimeLable* m_pTimeLabel = NULL;
