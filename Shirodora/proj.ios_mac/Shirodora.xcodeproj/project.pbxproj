@@ -148,6 +148,12 @@
 		4F9C5BE51D30BFC70070E0DC /* Line.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5BDE1D30BFC70070E0DC /* Line.cpp */; };
 		4F9C5BE61D30BFC70070E0DC /* Simplex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5BE21D30BFC70070E0DC /* Simplex.cpp */; };
 		4F9C5BE71D30BFC70070E0DC /* Simplex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5BE21D30BFC70070E0DC /* Simplex.cpp */; };
+		4FE5A3621D681D7900354C2C /* KingCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A35A1D681D7900354C2C /* KingCreateFactory.cpp */; };
+		4FE5A3631D681D7900354C2C /* KingCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A35A1D681D7900354C2C /* KingCreateFactory.cpp */; };
+		4FE5A3641D681D7900354C2C /* KingFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A35D1D681D7900354C2C /* KingFactoryManager.cpp */; };
+		4FE5A3651D681D7900354C2C /* KingFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A35D1D681D7900354C2C /* KingFactoryManager.cpp */; };
+		4FE5A36B1D681ECD00354C2C /* King_Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A3691D681ECD00354C2C /* King_Test.cpp */; };
+		4FE5A36C1D681ECD00354C2C /* King_Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A3691D681ECD00354C2C /* King_Test.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -377,6 +383,13 @@
 		4F9C5BE01D30BFC70070E0DC /* Shape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shape.hpp; sourceTree = "<group>"; };
 		4F9C5BE21D30BFC70070E0DC /* Simplex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Simplex.cpp; sourceTree = "<group>"; };
 		4F9C5BE31D30BFC70070E0DC /* Simplex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Simplex.hpp; sourceTree = "<group>"; };
+		4FE5A35A1D681D7900354C2C /* KingCreateFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KingCreateFactory.cpp; sourceTree = "<group>"; };
+		4FE5A35B1D681D7900354C2C /* KingCreateFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KingCreateFactory.hpp; sourceTree = "<group>"; };
+		4FE5A35D1D681D7900354C2C /* KingFactoryManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KingFactoryManager.cpp; sourceTree = "<group>"; };
+		4FE5A35E1D681D7900354C2C /* KingFactoryManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KingFactoryManager.hpp; sourceTree = "<group>"; };
+		4FE5A3611D681D7900354C2C /* KingTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KingTypes.hpp; sourceTree = "<group>"; };
+		4FE5A3691D681ECD00354C2C /* King_Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = King_Test.cpp; sourceTree = "<group>"; };
+		4FE5A36A1D681ECD00354C2C /* King_Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = King_Test.hpp; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -781,6 +794,7 @@
 			isa = PBXGroup;
 			children = (
 				4F5C012E1D3A3CAA00DA968F /* Factory.hpp */,
+				4FE5A3581D681D7900354C2C /* King */,
 				4F75D0991D3A8B62002744C9 /* Summon */,
 			);
 			path = Factory;
@@ -1380,6 +1394,52 @@
 			path = Simplex;
 			sourceTree = "<group>";
 		};
+		4FE5A3581D681D7900354C2C /* King */ = {
+			isa = PBXGroup;
+			children = (
+				4FE5A3591D681D7900354C2C /* CreateFactory */,
+				4FE5A35C1D681D7900354C2C /* FactoryManager */,
+				4FE5A35F1D681D7900354C2C /* Types */,
+			);
+			path = King;
+			sourceTree = "<group>";
+		};
+		4FE5A3591D681D7900354C2C /* CreateFactory */ = {
+			isa = PBXGroup;
+			children = (
+				4FE5A35A1D681D7900354C2C /* KingCreateFactory.cpp */,
+				4FE5A35B1D681D7900354C2C /* KingCreateFactory.hpp */,
+			);
+			path = CreateFactory;
+			sourceTree = "<group>";
+		};
+		4FE5A35C1D681D7900354C2C /* FactoryManager */ = {
+			isa = PBXGroup;
+			children = (
+				4FE5A35D1D681D7900354C2C /* KingFactoryManager.cpp */,
+				4FE5A35E1D681D7900354C2C /* KingFactoryManager.hpp */,
+			);
+			path = FactoryManager;
+			sourceTree = "<group>";
+		};
+		4FE5A35F1D681D7900354C2C /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				4FE5A3611D681D7900354C2C /* KingTypes.hpp */,
+				4FE5A3681D681ECD00354C2C /* Test */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		4FE5A3681D681ECD00354C2C /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				4FE5A3691D681ECD00354C2C /* King_Test.cpp */,
+				4FE5A36A1D681ECD00354C2C /* King_Test.hpp */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		503AE0F517EB97AB00D1A890 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -1684,6 +1744,7 @@
 				4F7725BF1D51FEB10023FF38 /* CharacterAggregate_Player2King.cpp in Sources */,
 				4F0113391D4DF4CA0087E05F /* Trigger_Timer.cpp in Sources */,
 				4F9C5BB11D30AEEE0070E0DC /* InputAndMouseLayer.cpp in Sources */,
+				4FE5A3621D681D7900354C2C /* KingCreateFactory.cpp in Sources */,
 				4F75D0641D3A730A002744C9 /* Character.cpp in Sources */,
 				4F9C5BB51D30AEEE0070E0DC /* MouseLayer.cpp in Sources */,
 				4F7725C31D51FEB10023FF38 /* CharacterIterator_Player1King.cpp in Sources */,
@@ -1704,6 +1765,7 @@
 				4F01128A1D4DC4F70087E05F /* CostSprite.cpp in Sources */,
 				4F75D0661D3A730A002744C9 /* King.cpp in Sources */,
 				4F9C5BB31D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
+				4FE5A36B1D681ECD00354C2C /* King_Test.cpp in Sources */,
 				4F9C5BE41D30BFC70070E0DC /* Line.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				4F9C5BB91D30AEEE0070E0DC /* InputManager.cpp in Sources */,
@@ -1724,6 +1786,7 @@
 				4F0113351D4DF4CA0087E05F /* LaunchTemplate.cpp in Sources */,
 				4F75D0681D3A730A002744C9 /* Summon.cpp in Sources */,
 				4F9C5BD41D30BF750070E0DC /* Body.cpp in Sources */,
+				4FE5A3641D681D7900354C2C /* KingFactoryManager.cpp in Sources */,
 				4F75D0A71D3A8B62002744C9 /* SummonFactoryManager.cpp in Sources */,
 				FE220C551D5F684000F1A297 /* Title_UILayer.cpp in Sources */,
 				4F5C011F1D3A162100DA968F /* MoveAction.cpp in Sources */,
@@ -1766,6 +1829,7 @@
 				4F01132E1D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp in Sources */,
 				4F0113321D4DF4CA0087E05F /* SummonTriggerAggregate.cpp in Sources */,
 				4F75D0A81D3A8B62002744C9 /* SummonFactoryManager.cpp in Sources */,
+				4FE5A3651D681D7900354C2C /* KingFactoryManager.cpp in Sources */,
 				4F0113361D4DF4CA0087E05F /* LaunchTemplate.cpp in Sources */,
 				4F9C5BB21D30AEEE0070E0DC /* InputAndMouseLayer.cpp in Sources */,
 				4F75D0A61D3A8B62002744C9 /* SummonCreateFactory.cpp in Sources */,
@@ -1774,11 +1838,13 @@
 				4F9C5BD51D30BF750070E0DC /* Body.cpp in Sources */,
 				4F9C5BCD1D30BF670070E0DC /* Animation.cpp in Sources */,
 				4F7725C21D51FEB10023FF38 /* CharacterAggregate_Player2Tag.cpp in Sources */,
+				4FE5A36C1D681ECD00354C2C /* King_Test.cpp in Sources */,
 				4F0113341D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.cpp in Sources */,
 				4F7725271D51EE9D0023FF38 /* GameMode.cpp in Sources */,
 				4F5C01201D3A162100DA968F /* MoveAction.cpp in Sources */,
 				4F9C5BBC1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
 				FE2FAE611D62CC3200E38BBC /* End_UILayer.cpp in Sources */,
+				4FE5A3631D681D7900354C2C /* KingCreateFactory.cpp in Sources */,
 				4F7725BE1D51FEB10023FF38 /* CharacterAggregate_Player1Tag.cpp in Sources */,
 				4F7725971D51FEA10023FF38 /* Battle_MainLayer.cpp in Sources */,
 				4F0113301D4DF4CA0087E05F /* SummonLauncher.cpp in Sources */,

@@ -108,5 +108,5 @@ void CSummon_Test::setAction(CSummon *pSummon){
  *  @param  タグNo
  */
 void CSummon_Test::setTag(CSummon *pSummon, int tag){
-    pSummon->setTag(tag) ;
+    pSummon->setPlayerTag(tag) ;
 }

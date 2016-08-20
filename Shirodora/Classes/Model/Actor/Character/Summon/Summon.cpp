@@ -126,13 +126,13 @@ void CSummon::collision(){
  */
 void CSummon::checkState(){
     
-    //画像の反転処理
-    if(this->m_pMove->getDirection() < 0){
-        this->m_pSprite->setScale( -1.0f, 1.0f );
-    }
-    if(this->m_pMove->getDirection() > 0){
-        this->m_pSprite->setScale( 1.0f, 1.0f );
-    }
+//    //画像の反転処理
+//    if(this->m_pMove->getDirection() < 0){
+//        this->m_pSprite->setScale( -1.0f, 1.0f );
+//    }
+//    if(this->m_pMove->getDirection() > 0){
+//        this->m_pSprite->setScale( 1.0f, 1.0f );
+//    }
 
 }
 

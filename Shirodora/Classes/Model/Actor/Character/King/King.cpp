@@ -143,32 +143,32 @@ void CKing::collision(){
  */
 void CKing::checkState(){
     
-    //*********************************************************************************
-    //*****キングが向いている方に攻撃範囲を向けたい--アクション側で向いてる方への攻撃ができないなら諦める
-    //*********************************************************************************
-    //逆向きに遠い方の座標返せるかな？
-    cocos2d::Vec2 pos = this->m_pAttackBody->
-                            getFarthestPointInDirection(this->m_pMove->getDirection() * -1/*反転*/);
-    
-    //遠い方の座標と自身との距離を算出
-    float distanceX = this->m_pMove->getPosition().x - pos.x;
-    
-    //近い方の座標Xがキャラクター位置座標Xと同値として設定していたら、、、
-    //-------------------------------------->違う時は近い方との距離を差し引く
-    if(distanceX != 0){
-        
-        pos.set(distanceX, pos.y);
-        this->m_pAttackBody->move(pos);
-    }
-    
-    
-    //画像の反転処理
-    if(this->m_pMove->getDirection() < 0){
-        this->m_pSprite->setScale( -1.0f, 1.0f );
-    }
-    if(this->m_pMove->getDirection() > 0){
-        this->m_pSprite->setScale( 1.0f, 1.0f );
-    }
+//    //*********************************************************************************
+//    //*****キングが向いている方に攻撃範囲を向けたい--アクション側で向いてる方への攻撃ができないなら諦める
+//    //*********************************************************************************
+//    //逆向きに遠い方の座標返せるかな？
+//    cocos2d::Vec2 pos = this->m_pAttackBody->
+//                            getFarthestPointInDirection(this->m_pMove->getDirection() * -1/*反転*/);
+//    
+//    //遠い方の座標と自身との距離を算出
+//    float distanceX = this->m_pMove->getPosition().x - pos.x;
+//    
+//    //近い方の座標Xがキャラクター位置座標Xと同値として設定していたら、、、
+//    //-------------------------------------->違う時は近い方との距離を差し引く
+//    if(distanceX != 0){
+//        
+//        pos.set(distanceX, pos.y);
+//        this->m_pAttackBody->move(pos);
+//    }
+//    
+//    
+//    //画像の反転処理
+//    if(this->m_pMove->getDirection() < 0){
+//        this->m_pSprite->setScale( -1.0f, 1.0f );
+//    }
+//    if(this->m_pMove->getDirection() > 0){
+//        this->m_pSprite->setScale( 1.0f, 1.0f );
+//    }
 }
 
 /**
@@ -179,7 +179,7 @@ void CKing::apply(){
     this->m_pSprite->cocos2d::Sprite::setPosition(this->m_pMove->getPosition()) ;
     
     // チップデータを反映
-    this->m_pSprite->setTextureRect((*this->m_pAnimations)[(int)this->m_state]->getCurrentChip()) ;
+    this->m_pSprite->setTextureRect((*this->m_pAnimations)[0]->getCurrentChip()) ;
 }
 
 /**

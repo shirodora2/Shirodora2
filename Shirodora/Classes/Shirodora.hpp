@@ -20,6 +20,10 @@
 
 
 //*************** Factory ***********************
+#include "KingCreateFactory.hpp"
+#include "KingFactoryManager.hpp"
+#include "KingTypes.hpp"
+
 #include "SummonCreateFactory.hpp"
 #include "SummonFactoryManager.hpp"
 #include "SummonTypes.hpp"

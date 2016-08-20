@@ -51,7 +51,7 @@ void CKing_Test::setSprite(CKing *pKing){
  *  @param  CKing*
  */
 void CKing_Test::setStatus(CKing *pKing){
-    pKing->getStatus()->setStatus(100, 100, TYPE::NONE, 10) ;
+    pKing->getStatus()->setStatus(100, 100, TYPE::NONE, 10, 10, 1, 30) ;
 }
 
 /**
