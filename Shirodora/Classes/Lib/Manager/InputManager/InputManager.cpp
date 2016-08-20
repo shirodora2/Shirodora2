@@ -151,6 +151,7 @@ void CInputFlag::clear(){
     this->m_a.clear() ;
     this->m_s.clear() ;
     this->m_d.clear() ;
+    this->m_w.clear() ;
 }
 
 /**
@@ -173,6 +174,7 @@ void CInputFlag::up(keyInputType keyType){
         case keyInputType::A : this->m_a.pressed() ; break ;
         case keyInputType::S : this->m_s.pressed() ; break ;
         case keyInputType::D : this->m_d.pressed() ; break ;
+        case keyInputType::W : this->m_w.pressed() ; break ;
             
         default: break ;
     }
@@ -198,6 +200,7 @@ void CInputFlag::down(keyInputType keyType){
         case keyInputType::A : this->m_a.released() ; break ;
         case keyInputType::S : this->m_s.released() ; break ;
         case keyInputType::D : this->m_d.released() ; break ;
+        case keyInputType::W : this->m_w.released() ; break ;
             
         default: break ;
     }
@@ -221,6 +224,7 @@ void CInputFlag::counterUpdata(){
     this->m_a.counterUpdate() ;
     this->m_s.counterUpdate() ;
     this->m_d.counterUpdate() ;
+    this->m_w.counterUpdate() ;
 }
 
 /**
@@ -246,6 +250,7 @@ bool CInputFlag::isKeyInputed(keyInputType keyType){
         case keyInputType::A : return this->m_a.isInputing() ; break ;
         case keyInputType::S : return this->m_s.isInputing() ; break ;
         case keyInputType::D : return this->m_d.isInputing() ; break ;
+        case keyInputType::W : return this->m_w.isInputing() ; break ;
             
         default: break ;
     }
@@ -276,6 +281,7 @@ bool CInputFlag::isKeyPressed(keyInputType keyType){
         case keyInputType::A : return this->m_a.isPressed() ; break ;
         case keyInputType::S : return this->m_s.isPressed() ; break ;
         case keyInputType::D : return this->m_d.isPressed() ; break ;
+        case keyInputType::W : return this->m_w.isPressed() ; break ;
             
         default: break ;
     }
@@ -306,6 +312,7 @@ bool CInputFlag::isKeyReleased(keyInputType keyType){
         case keyInputType::A : return this->m_a.isReleased() ; break ;
         case keyInputType::S : return this->m_s.isReleased() ; break ;
         case keyInputType::D : return this->m_d.isReleased() ; break ;
+        case keyInputType::W : return this->m_w.isReleased() ; break ;
             
         default: break ;
     }
@@ -456,6 +463,12 @@ keyInputType CInputManager::changeToInputTypeFromKeyCode(cocos2d::EventKeyboard:
     {
         // D キーを返す
         return keyInputType::D ;
+    }
+    // D キーかどうか判定
+    else if(cocos2d::EventKeyboard::KeyCode::KEY_W == keyCode)
+    {
+        // D キーを返す
+        return keyInputType::W ;
     }
     
     // エラー
