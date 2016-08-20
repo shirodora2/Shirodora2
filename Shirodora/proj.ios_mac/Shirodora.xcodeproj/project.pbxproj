@@ -104,8 +104,6 @@
 		4F7725C01D51FEB10023FF38 /* CharacterAggregate_Player2King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7725A41D51FEB10023FF38 /* CharacterAggregate_Player2King.cpp */; };
 		4F7725C11D51FEB10023FF38 /* CharacterAggregate_Player2Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7725A71D51FEB10023FF38 /* CharacterAggregate_Player2Tag.cpp */; };
 		4F7725C21D51FEB10023FF38 /* CharacterAggregate_Player2Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7725A71D51FEB10023FF38 /* CharacterAggregate_Player2Tag.cpp */; };
-		4F7725C31D51FEB10023FF38 /* CharacterIterator_Player1King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7725AA1D51FEB10023FF38 /* CharacterIterator_Player1King.cpp */; };
-		4F7725C41D51FEB10023FF38 /* CharacterIterator_Player1King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7725AA1D51FEB10023FF38 /* CharacterIterator_Player1King.cpp */; };
 		4F7725C51D51FEB10023FF38 /* CharacterIterator_Player1Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7725AE1D51FEB10023FF38 /* CharacterIterator_Player1Tag.cpp */; };
 		4F7725C61D51FEB10023FF38 /* CharacterIterator_Player1Tag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7725AE1D51FEB10023FF38 /* CharacterIterator_Player1Tag.cpp */; };
 		4F7725C71D51FEB10023FF38 /* CharacterIterator_Player2King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7725B11D51FEB10023FF38 /* CharacterIterator_Player2King.cpp */; };
@@ -148,6 +146,24 @@
 		4F9C5BE51D30BFC70070E0DC /* Line.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5BDE1D30BFC70070E0DC /* Line.cpp */; };
 		4F9C5BE61D30BFC70070E0DC /* Simplex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5BE21D30BFC70070E0DC /* Simplex.cpp */; };
 		4F9C5BE71D30BFC70070E0DC /* Simplex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C5BE21D30BFC70070E0DC /* Simplex.cpp */; };
+		4FE56A431D68544E00B4D8D2 /* Castle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A411D68544E00B4D8D2 /* Castle.cpp */; };
+		4FE56A441D68544E00B4D8D2 /* Castle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A411D68544E00B4D8D2 /* Castle.cpp */; };
+		4FE56A501D68545D00B4D8D2 /* CastleCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A471D68545D00B4D8D2 /* CastleCreateFactory.cpp */; };
+		4FE56A511D68545D00B4D8D2 /* CastleCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A471D68545D00B4D8D2 /* CastleCreateFactory.cpp */; };
+		4FE56A521D68545D00B4D8D2 /* CastleFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A4A1D68545D00B4D8D2 /* CastleFactoryManager.cpp */; };
+		4FE56A531D68545D00B4D8D2 /* CastleFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A4A1D68545D00B4D8D2 /* CastleFactoryManager.cpp */; };
+		4FE56A541D68545D00B4D8D2 /* Castle_Normal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A4E1D68545D00B4D8D2 /* Castle_Normal.cpp */; };
+		4FE56A551D68545D00B4D8D2 /* Castle_Normal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A4E1D68545D00B4D8D2 /* Castle_Normal.cpp */; };
+		4FE56A591D6854D400B4D8D2 /* CharacterIterator_Player2Castle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A571D6854D400B4D8D2 /* CharacterIterator_Player2Castle.cpp */; };
+		4FE56A5A1D6854D400B4D8D2 /* CharacterIterator_Player2Castle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A571D6854D400B4D8D2 /* CharacterIterator_Player2Castle.cpp */; };
+		4FE56A5E1D6854DC00B4D8D2 /* CharacterIterator_Player1Castle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A5C1D6854DC00B4D8D2 /* CharacterIterator_Player1Castle.cpp */; };
+		4FE56A5F1D6854DC00B4D8D2 /* CharacterIterator_Player1Castle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A5C1D6854DC00B4D8D2 /* CharacterIterator_Player1Castle.cpp */; };
+		4FE56A631D6854E900B4D8D2 /* CharacterAggregate_Player2Castle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A611D6854E900B4D8D2 /* CharacterAggregate_Player2Castle.cpp */; };
+		4FE56A641D6854E900B4D8D2 /* CharacterAggregate_Player2Castle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A611D6854E900B4D8D2 /* CharacterAggregate_Player2Castle.cpp */; };
+		4FE56A681D6854EF00B4D8D2 /* CharacterAggregate_Player1Castle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A661D6854EF00B4D8D2 /* CharacterAggregate_Player1Castle.cpp */; };
+		4FE56A691D6854EF00B4D8D2 /* CharacterAggregate_Player1Castle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A661D6854EF00B4D8D2 /* CharacterAggregate_Player1Castle.cpp */; };
+		4FE56A6C1D68550100B4D8D2 /* CharacterIterator_Player1King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A6A1D68550000B4D8D2 /* CharacterIterator_Player1King.cpp */; };
+		4FE56A6D1D68550100B4D8D2 /* CharacterIterator_Player1King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE56A6A1D68550000B4D8D2 /* CharacterIterator_Player1King.cpp */; };
 		4FE5A3621D681D7900354C2C /* KingCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A35A1D681D7900354C2C /* KingCreateFactory.cpp */; };
 		4FE5A3631D681D7900354C2C /* KingCreateFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A35A1D681D7900354C2C /* KingCreateFactory.cpp */; };
 		4FE5A3641D681D7900354C2C /* KingFactoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5A35D1D681D7900354C2C /* KingFactoryManager.cpp */; };
@@ -341,8 +357,6 @@
 		4F7725A51D51FEB10023FF38 /* CharacterAggregate_Player2King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterAggregate_Player2King.hpp; sourceTree = "<group>"; };
 		4F7725A71D51FEB10023FF38 /* CharacterAggregate_Player2Tag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterAggregate_Player2Tag.cpp; sourceTree = "<group>"; };
 		4F7725A81D51FEB10023FF38 /* CharacterAggregate_Player2Tag.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterAggregate_Player2Tag.hpp; sourceTree = "<group>"; };
-		4F7725AA1D51FEB10023FF38 /* CharacterIterator_Player1King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterIterator_Player1King.cpp; sourceTree = "<group>"; };
-		4F7725AB1D51FEB10023FF38 /* CharacterIterator_Player1King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterIterator_Player1King.hpp; sourceTree = "<group>"; };
 		4F7725AE1D51FEB10023FF38 /* CharacterIterator_Player1Tag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterIterator_Player1Tag.cpp; sourceTree = "<group>"; };
 		4F7725AF1D51FEB10023FF38 /* CharacterIterator_Player1Tag.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterIterator_Player1Tag.hpp; sourceTree = "<group>"; };
 		4F7725B11D51FEB10023FF38 /* CharacterIterator_Player2King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterIterator_Player2King.cpp; sourceTree = "<group>"; };
@@ -383,6 +397,24 @@
 		4F9C5BE01D30BFC70070E0DC /* Shape.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shape.hpp; sourceTree = "<group>"; };
 		4F9C5BE21D30BFC70070E0DC /* Simplex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Simplex.cpp; sourceTree = "<group>"; };
 		4F9C5BE31D30BFC70070E0DC /* Simplex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Simplex.hpp; sourceTree = "<group>"; };
+		4FE56A411D68544E00B4D8D2 /* Castle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Castle.cpp; sourceTree = "<group>"; };
+		4FE56A421D68544E00B4D8D2 /* Castle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Castle.hpp; sourceTree = "<group>"; };
+		4FE56A471D68545D00B4D8D2 /* CastleCreateFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CastleCreateFactory.cpp; sourceTree = "<group>"; };
+		4FE56A481D68545D00B4D8D2 /* CastleCreateFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CastleCreateFactory.hpp; sourceTree = "<group>"; };
+		4FE56A4A1D68545D00B4D8D2 /* CastleFactoryManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CastleFactoryManager.cpp; sourceTree = "<group>"; };
+		4FE56A4B1D68545D00B4D8D2 /* CastleFactoryManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CastleFactoryManager.hpp; sourceTree = "<group>"; };
+		4FE56A4E1D68545D00B4D8D2 /* Castle_Normal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Castle_Normal.cpp; sourceTree = "<group>"; };
+		4FE56A4F1D68545D00B4D8D2 /* Castle_Normal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Castle_Normal.hpp; sourceTree = "<group>"; };
+		4FE56A571D6854D400B4D8D2 /* CharacterIterator_Player2Castle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterIterator_Player2Castle.cpp; sourceTree = "<group>"; };
+		4FE56A581D6854D400B4D8D2 /* CharacterIterator_Player2Castle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterIterator_Player2Castle.hpp; sourceTree = "<group>"; };
+		4FE56A5C1D6854DC00B4D8D2 /* CharacterIterator_Player1Castle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterIterator_Player1Castle.cpp; sourceTree = "<group>"; };
+		4FE56A5D1D6854DC00B4D8D2 /* CharacterIterator_Player1Castle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterIterator_Player1Castle.hpp; sourceTree = "<group>"; };
+		4FE56A611D6854E900B4D8D2 /* CharacterAggregate_Player2Castle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterAggregate_Player2Castle.cpp; sourceTree = "<group>"; };
+		4FE56A621D6854E900B4D8D2 /* CharacterAggregate_Player2Castle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterAggregate_Player2Castle.hpp; sourceTree = "<group>"; };
+		4FE56A661D6854EF00B4D8D2 /* CharacterAggregate_Player1Castle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterAggregate_Player1Castle.cpp; sourceTree = "<group>"; };
+		4FE56A671D6854EF00B4D8D2 /* CharacterAggregate_Player1Castle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterAggregate_Player1Castle.hpp; sourceTree = "<group>"; };
+		4FE56A6A1D68550000B4D8D2 /* CharacterIterator_Player1King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharacterIterator_Player1King.cpp; sourceTree = "<group>"; };
+		4FE56A6B1D68550100B4D8D2 /* CharacterIterator_Player1King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CharacterIterator_Player1King.hpp; sourceTree = "<group>"; };
 		4FE5A35A1D681D7900354C2C /* KingCreateFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KingCreateFactory.cpp; sourceTree = "<group>"; };
 		4FE5A35B1D681D7900354C2C /* KingCreateFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KingCreateFactory.hpp; sourceTree = "<group>"; };
 		4FE5A35D1D681D7900354C2C /* KingFactoryManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KingFactoryManager.cpp; sourceTree = "<group>"; };
@@ -794,6 +826,7 @@
 			isa = PBXGroup;
 			children = (
 				4F5C012E1D3A3CAA00DA968F /* Factory.hpp */,
+				4FE56A451D68545D00B4D8D2 /* Castle */,
 				4FE5A3581D681D7900354C2C /* King */,
 				4F75D0991D3A8B62002744C9 /* Summon */,
 			);
@@ -860,6 +893,7 @@
 			children = (
 				4F75D0581D3A730A002744C9 /* Character.cpp */,
 				4F75D0591D3A730A002744C9 /* Character.hpp */,
+				4FE56A401D68544E00B4D8D2 /* Castle */,
 				4F75D05A1D3A730A002744C9 /* King */,
 				4F75D05D1D3A730A002744C9 /* Summon */,
 			);
@@ -977,6 +1011,8 @@
 		4F7725991D51FEB10023FF38 /* Aggregate */ = {
 			isa = PBXGroup;
 			children = (
+				4FE56A651D6854EF00B4D8D2 /* Player1_Castle */,
+				4FE56A601D6854E900B4D8D2 /* Player2_Castle */,
 				4F77259A1D51FEB10023FF38 /* All */,
 				4F77259D1D51FEB10023FF38 /* Player1_King */,
 				4F7725A01D51FEB10023FF38 /* Player1Tag */,
@@ -1034,8 +1070,8 @@
 		4F7725A91D51FEB10023FF38 /* Iterator */ = {
 			isa = PBXGroup;
 			children = (
-				4F7725AA1D51FEB10023FF38 /* CharacterIterator_Player1King.cpp */,
-				4F7725AB1D51FEB10023FF38 /* CharacterIterator_Player1King.hpp */,
+				4FE56A5B1D6854DC00B4D8D2 /* Player1_Castle */,
+				4FE56A561D6854D400B4D8D2 /* Player2_Castle */,
 				4F7725AC1D51FEB10023FF38 /* Player1_King */,
 				4F7725AD1D51FEB10023FF38 /* Player1Tag */,
 				4F7725B01D51FEB10023FF38 /* Player2_King */,
@@ -1047,6 +1083,8 @@
 		4F7725AC1D51FEB10023FF38 /* Player1_King */ = {
 			isa = PBXGroup;
 			children = (
+				4FE56A6A1D68550000B4D8D2 /* CharacterIterator_Player1King.cpp */,
+				4FE56A6B1D68550100B4D8D2 /* CharacterIterator_Player1King.hpp */,
 			);
 			path = Player1_King;
 			sourceTree = "<group>";
@@ -1394,6 +1432,96 @@
 			path = Simplex;
 			sourceTree = "<group>";
 		};
+		4FE56A401D68544E00B4D8D2 /* Castle */ = {
+			isa = PBXGroup;
+			children = (
+				4FE56A411D68544E00B4D8D2 /* Castle.cpp */,
+				4FE56A421D68544E00B4D8D2 /* Castle.hpp */,
+			);
+			path = Castle;
+			sourceTree = "<group>";
+		};
+		4FE56A451D68545D00B4D8D2 /* Castle */ = {
+			isa = PBXGroup;
+			children = (
+				4FE56A461D68545D00B4D8D2 /* CreateFactory */,
+				4FE56A491D68545D00B4D8D2 /* FactoryManager */,
+				4FE56A4C1D68545D00B4D8D2 /* Types */,
+			);
+			path = Castle;
+			sourceTree = "<group>";
+		};
+		4FE56A461D68545D00B4D8D2 /* CreateFactory */ = {
+			isa = PBXGroup;
+			children = (
+				4FE56A471D68545D00B4D8D2 /* CastleCreateFactory.cpp */,
+				4FE56A481D68545D00B4D8D2 /* CastleCreateFactory.hpp */,
+			);
+			path = CreateFactory;
+			sourceTree = "<group>";
+		};
+		4FE56A491D68545D00B4D8D2 /* FactoryManager */ = {
+			isa = PBXGroup;
+			children = (
+				4FE56A4A1D68545D00B4D8D2 /* CastleFactoryManager.cpp */,
+				4FE56A4B1D68545D00B4D8D2 /* CastleFactoryManager.hpp */,
+			);
+			path = FactoryManager;
+			sourceTree = "<group>";
+		};
+		4FE56A4C1D68545D00B4D8D2 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				4FE56A4D1D68545D00B4D8D2 /* Normal */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		4FE56A4D1D68545D00B4D8D2 /* Normal */ = {
+			isa = PBXGroup;
+			children = (
+				4FE56A4E1D68545D00B4D8D2 /* Castle_Normal.cpp */,
+				4FE56A4F1D68545D00B4D8D2 /* Castle_Normal.hpp */,
+			);
+			path = Normal;
+			sourceTree = "<group>";
+		};
+		4FE56A561D6854D400B4D8D2 /* Player2_Castle */ = {
+			isa = PBXGroup;
+			children = (
+				4FE56A571D6854D400B4D8D2 /* CharacterIterator_Player2Castle.cpp */,
+				4FE56A581D6854D400B4D8D2 /* CharacterIterator_Player2Castle.hpp */,
+			);
+			path = Player2_Castle;
+			sourceTree = "<group>";
+		};
+		4FE56A5B1D6854DC00B4D8D2 /* Player1_Castle */ = {
+			isa = PBXGroup;
+			children = (
+				4FE56A5C1D6854DC00B4D8D2 /* CharacterIterator_Player1Castle.cpp */,
+				4FE56A5D1D6854DC00B4D8D2 /* CharacterIterator_Player1Castle.hpp */,
+			);
+			path = Player1_Castle;
+			sourceTree = "<group>";
+		};
+		4FE56A601D6854E900B4D8D2 /* Player2_Castle */ = {
+			isa = PBXGroup;
+			children = (
+				4FE56A611D6854E900B4D8D2 /* CharacterAggregate_Player2Castle.cpp */,
+				4FE56A621D6854E900B4D8D2 /* CharacterAggregate_Player2Castle.hpp */,
+			);
+			path = Player2_Castle;
+			sourceTree = "<group>";
+		};
+		4FE56A651D6854EF00B4D8D2 /* Player1_Castle */ = {
+			isa = PBXGroup;
+			children = (
+				4FE56A661D6854EF00B4D8D2 /* CharacterAggregate_Player1Castle.cpp */,
+				4FE56A671D6854EF00B4D8D2 /* CharacterAggregate_Player1Castle.hpp */,
+			);
+			path = Player1_Castle;
+			sourceTree = "<group>";
+		};
 		4FE5A3581D681D7900354C2C /* King */ = {
 			isa = PBXGroup;
 			children = (
@@ -1736,6 +1864,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE56A541D68545D00B4D8D2 /* Castle_Normal.cpp in Sources */,
 				4F7725C11D51FEB10023FF38 /* CharacterAggregate_Player2Tag.cpp in Sources */,
 				4F7725BB1D51FEB10023FF38 /* CharacterAggregate_Player1King.cpp in Sources */,
 				FE2FAE5E1D62CC3200E38BBC /* End_MainLayer.cpp in Sources */,
@@ -1747,10 +1876,11 @@
 				4FE5A3621D681D7900354C2C /* KingCreateFactory.cpp in Sources */,
 				4F75D0641D3A730A002744C9 /* Character.cpp in Sources */,
 				4F9C5BB51D30AEEE0070E0DC /* MouseLayer.cpp in Sources */,
-				4F7725C31D51FEB10023FF38 /* CharacterIterator_Player1King.cpp in Sources */,
+				4FE56A521D68545D00B4D8D2 /* CastleFactoryManager.cpp in Sources */,
 				4F71A8CF1D36961C004FD96B /* BattleScene.cpp in Sources */,
 				4F7725C71D51FEB10023FF38 /* CharacterIterator_Player2King.cpp in Sources */,
 				4F75D0A91D3A8B62002744C9 /* Summon_Test.cpp in Sources */,
+				4FE56A6C1D68550100B4D8D2 /* CharacterIterator_Player1King.cpp in Sources */,
 				4F0113311D4DF4CA0087E05F /* SummonTriggerAggregate.cpp in Sources */,
 				4F9C5BD61D30BF750070E0DC /* CollisionData.cpp in Sources */,
 				17EC442A1D39D67400DD4EAB /* TimeLabel.cpp in Sources */,
@@ -1762,13 +1892,17 @@
 				4F5C011B1D3A162100DA968F /* Action.cpp in Sources */,
 				4F7725261D51EE9D0023FF38 /* GameMode.cpp in Sources */,
 				4F0112881D4DC4F70087E05F /* CharacterIconSprite.cpp in Sources */,
+				4FE56A591D6854D400B4D8D2 /* CharacterIterator_Player2Castle.cpp in Sources */,
 				4F01128A1D4DC4F70087E05F /* CostSprite.cpp in Sources */,
+				4FE56A431D68544E00B4D8D2 /* Castle.cpp in Sources */,
 				4F75D0661D3A730A002744C9 /* King.cpp in Sources */,
 				4F9C5BB31D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
+				4FE56A681D6854EF00B4D8D2 /* CharacterAggregate_Player1Castle.cpp in Sources */,
 				4FE5A36B1D681ECD00354C2C /* King_Test.cpp in Sources */,
 				4F9C5BE41D30BFC70070E0DC /* Line.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				4F9C5BB91D30AEEE0070E0DC /* InputManager.cpp in Sources */,
+				4FE56A5E1D6854DC00B4D8D2 /* CharacterIterator_Player1Castle.cpp in Sources */,
 				4F9C5BDA1D30BF7E0070E0DC /* Move.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				FE220C531D5F684000F1A297 /* Title_MainLayer.cpp in Sources */,
@@ -1781,6 +1915,7 @@
 				4F7725C51D51FEB10023FF38 /* CharacterIterator_Player1Tag.cpp in Sources */,
 				FE2FAE601D62CC3200E38BBC /* End_UILayer.cpp in Sources */,
 				17EC442C1D39D67400DD4EAB /* UI_Layer.cpp in Sources */,
+				4FE56A631D6854E900B4D8D2 /* CharacterAggregate_Player2Castle.cpp in Sources */,
 				4F75D0A51D3A8B62002744C9 /* SummonCreateFactory.cpp in Sources */,
 				4F7725BD1D51FEB10023FF38 /* CharacterAggregate_Player1Tag.cpp in Sources */,
 				4F0113351D4DF4CA0087E05F /* LaunchTemplate.cpp in Sources */,
@@ -1794,6 +1929,7 @@
 				4F9C5BE61D30BFC70070E0DC /* Simplex.cpp in Sources */,
 				4F9C5BBB1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
 				4F7725C91D51FEB10023FF38 /* CharacterIterator_Player2Tag.cpp in Sources */,
+				4FE56A501D68545D00B4D8D2 /* CastleCreateFactory.cpp in Sources */,
 				4F0113331D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1807,11 +1943,12 @@
 				4F9C5BE71D30BFC70070E0DC /* Simplex.cpp in Sources */,
 				4F9C5BB41D30AEEE0070E0DC /* InputLayer.cpp in Sources */,
 				4F7725BC1D51FEB10023FF38 /* CharacterAggregate_Player1King.cpp in Sources */,
+				4FE56A5A1D6854D400B4D8D2 /* CharacterIterator_Player2Castle.cpp in Sources */,
 				4F7725CA1D51FEB10023FF38 /* CharacterIterator_Player2Tag.cpp in Sources */,
 				4F7725BA1D51FEB10023FF38 /* CharacterAggregate.cpp in Sources */,
 				4F75D0671D3A730A002744C9 /* King.cpp in Sources */,
 				4F0112891D4DC4F70087E05F /* CharacterIconSprite.cpp in Sources */,
-				4F7725C41D51FEB10023FF38 /* CharacterIterator_Player1King.cpp in Sources */,
+				4FE56A551D68545D00B4D8D2 /* Castle_Normal.cpp in Sources */,
 				4F9C5BB61D30AEEE0070E0DC /* MouseLayer.cpp in Sources */,
 				4F7725CC1D51FEB10023FF38 /* CharacterManager.cpp in Sources */,
 				4F75D0691D3A730A002744C9 /* Summon.cpp in Sources */,
@@ -1829,17 +1966,22 @@
 				4F01132E1D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp in Sources */,
 				4F0113321D4DF4CA0087E05F /* SummonTriggerAggregate.cpp in Sources */,
 				4F75D0A81D3A8B62002744C9 /* SummonFactoryManager.cpp in Sources */,
+				4FE56A441D68544E00B4D8D2 /* Castle.cpp in Sources */,
 				4FE5A3651D681D7900354C2C /* KingFactoryManager.cpp in Sources */,
 				4F0113361D4DF4CA0087E05F /* LaunchTemplate.cpp in Sources */,
 				4F9C5BB21D30AEEE0070E0DC /* InputAndMouseLayer.cpp in Sources */,
 				4F75D0A61D3A8B62002744C9 /* SummonCreateFactory.cpp in Sources */,
 				17EC442D1D39D67400DD4EAB /* UI_Layer.cpp in Sources */,
+				4FE56A691D6854EF00B4D8D2 /* CharacterAggregate_Player1Castle.cpp in Sources */,
 				17EC442B1D39D67400DD4EAB /* TimeLabel.cpp in Sources */,
 				4F9C5BD51D30BF750070E0DC /* Body.cpp in Sources */,
+				4FE56A511D68545D00B4D8D2 /* CastleCreateFactory.cpp in Sources */,
 				4F9C5BCD1D30BF670070E0DC /* Animation.cpp in Sources */,
 				4F7725C21D51FEB10023FF38 /* CharacterAggregate_Player2Tag.cpp in Sources */,
 				4FE5A36C1D681ECD00354C2C /* King_Test.cpp in Sources */,
+				4FE56A641D6854E900B4D8D2 /* CharacterAggregate_Player2Castle.cpp in Sources */,
 				4F0113341D4DF4CA0087E05F /* SummonTriggerAggregate_ReadyAll.cpp in Sources */,
+				4FE56A531D68545D00B4D8D2 /* CastleFactoryManager.cpp in Sources */,
 				4F7725271D51EE9D0023FF38 /* GameMode.cpp in Sources */,
 				4F5C01201D3A162100DA968F /* MoveAction.cpp in Sources */,
 				4F9C5BBC1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
@@ -1848,10 +1990,12 @@
 				4F7725BE1D51FEB10023FF38 /* CharacterAggregate_Player1Tag.cpp in Sources */,
 				4F7725971D51FEA10023FF38 /* Battle_MainLayer.cpp in Sources */,
 				4F0113301D4DF4CA0087E05F /* SummonLauncher.cpp in Sources */,
+				4FE56A6D1D68550100B4D8D2 /* CharacterIterator_Player1King.cpp in Sources */,
 				4F7725C81D51FEB10023FF38 /* CharacterIterator_Player2King.cpp in Sources */,
 				4F9C5BBA1D30AEEE0070E0DC /* InputManager.cpp in Sources */,
 				FE220C4B1D5F682B00F1A297 /* TitleScene.cpp in Sources */,
 				4F5C011C1D3A162100DA968F /* Action.cpp in Sources */,
+				4FE56A5F1D6854DC00B4D8D2 /* CharacterIterator_Player1Castle.cpp in Sources */,
 				DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */,
 				FE220C561D5F684000F1A297 /* Title_UILayer.cpp in Sources */,
 				4F75D0651D3A730A002744C9 /* Character.cpp in Sources */,
