@@ -29,9 +29,9 @@ class CAction ;
 enum class STATE {
     NONE    = -1,
     IDLE,
+    DEAD,
     MOVE,
     ATTACK,
-    DEAD,
     INPUTING,
     UNIQUE_1,
     UNIQUE_2,
@@ -63,6 +63,12 @@ public :
     //=========================================================================
     // set
     //=========================================================================
+    /**
+     *  @desc   状態設定
+     *  @param  状態
+     */
+    inline void setState(STATE state){this->m_state = state ;}
+    
     /**
      *  @desc   位置データ設定
      *  @param  CMove*
@@ -120,6 +126,12 @@ public :
     //=========================================================================
     // get
     //=========================================================================
+    /**
+     *  @desc   状態設定
+     *  @return 状態
+     */
+    inline STATE getState(){return this->m_state ;}
+    
     /**
      *  @desc   位置データ取得
      *  @return CMove*
