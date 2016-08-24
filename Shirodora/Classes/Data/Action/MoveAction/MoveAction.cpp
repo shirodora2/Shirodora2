@@ -32,6 +32,11 @@ void CMoveAction::start(){
  */
 void CMoveAction::update(CCharacter* pChara){
     
+    //キャラの状態がATTACKだったら移動を行わない
+    if(pChara->getState() == STATE::ATTACK)
+        return;
+    
+    
     if(this->m_isStartAction == true){
         //進行方向の設定
         pChara->getMove()->setDirection(this->getDirection()) ;
