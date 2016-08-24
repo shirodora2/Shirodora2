@@ -76,6 +76,7 @@ void CKing_Test::setCollisionBody(CKing *pKing){
 void CKing_Test::setAttackBody(CKing *pKing){
     pKing->setAttackPosition(cocos2d::Vec2(64.0f, 0.0f)) ;
     
+    /*
     cocos2d::Vec2 apexs[4] = {
         cocos2d::Vec2(32.0f, 32.0f),
         cocos2d::Vec2(-32.0f, 32.0f),
@@ -84,6 +85,21 @@ void CKing_Test::setAttackBody(CKing *pKing){
     };
     
     pKing->getCollisionBody()->setApexs(4, apexs) ;
+    */
+    
+    //頂点座標
+    cocos2d::Vec2 apexs[4] = {
+        cocos2d::Vec2(0.0f, 64.0f),  //左上
+        cocos2d::Vec2(0.0f, -64.0f), //左下
+        cocos2d::Vec2(64.0f, 64.0f), //右上
+        cocos2d::Vec2(64.0f, -64.0f) //右下
+    };
+    
+    //中心座標
+    pKing->getAttackBody()->setCenterPosition(cocos2d::Vec2(32.0f, 0.0f));
+    
+    //攻撃範囲
+    pKing->getAttackBody()->setApexs(4, apexs) ;
 }
 
 /**
