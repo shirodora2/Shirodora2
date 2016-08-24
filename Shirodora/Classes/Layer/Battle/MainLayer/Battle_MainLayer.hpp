@@ -127,7 +127,6 @@ public :
     //選択中のキャラクタータイプ
     SUMMON_TYPE m_choiceSummonType { SUMMON_TYPE::NONE };
 
-    //
 };
 
 #endif /* GameMainLayer_hpp */

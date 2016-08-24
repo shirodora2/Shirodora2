@@ -72,6 +72,7 @@ bool CBattele_MainLayer::init(){
     // 発射トリガーを発射台に取り付け
     CSummonLauncher::getInstance()->add(pTrigger) ;
     
+    
     // 城の生成と取り付け(画像は毎度おなじみのあれ)
     // 細かい位置とか画像は調整頼む
     CCastle *pCastle_1 = CCastleFactoryManager::getInstance()->create(1999, 100.0f, 300.0f) ;
@@ -81,10 +82,12 @@ bool CBattele_MainLayer::init(){
     CCharacterManager::getInstance()->add(pCastle_2) ;
     this->addChild(pCastle_2) ;
     
-    CKing* pKing = CKingFactoryManager::getInstance()->create(1000, KING_TYPE::TEST, WINDOW_WIDTH * 0.7f, WINDOW_HEIGHT * 0.5f) ;
     
+    //KINGの生成
+    CKing* pKing = CKingFactoryManager::getInstance()->create(1000, KING_TYPE::TEST, WINDOW_WIDTH * 0.7f, WINDOW_HEIGHT * 0.5f) ;
     CCharacterManager::getInstance()->add(pKing);
     this->addChild(pKing) ;
+    
     
     //ゲームモードの設定
     CGameMode::getInstance()->setGameMode(CGameMode::GAME_MODE::NORMAL);
@@ -311,15 +314,41 @@ void CBattele_MainLayer::createSummon(cocos2d::Vec2 clickPoint){
     if(pPlayerChara == NULL) return ;
 
     
-    //*******キングの召喚範囲内かどうかを確認********************
-    //*******キングの位置からレイヤースクロール距離をさっ引く*******
     
-    //------ゲームの仕様次第では下の方が楽かな--------------
-    
-    //*******キングx座標は中央固定なので、scrollの影響のないy座標と画面中央x座標から召喚範囲を得る************
-    //*******召喚時はキング位置＋画面中央からの距離で算出*******
+    //マウスのクリック位置は画面に対しての座標のためスクロールの影響はない
+    //y座標はプレイヤーの位置、x座標は中心から円状の距離で計算しとく
+    float posY = clickPoint.y - pPlayerChara->getMove()->getPosition().y;
+    float posX = WINDOW_WIDTH/2 - clickPoint.x;
+    float r = sqrtf(posX*posX + posY*posY);
 
-    
+    //（仮）キングとの距離が１００以内なら召喚
+    if( r <= 100 ){
+        
+        int cost = pPlayerChara->getStatus()->getCost() /* - costType[this−>m_choiceSummonType]*/;
+        
+        if(cost < 0){
+            CCLOG("コスト不足");
+        }else{
+            //召喚位置Xの算出
+            float createPosX = clickPoint.x - this->getPosition().x;
+            
+            
+            //***********************
+            //***********************
+            //デバッグ用
+            this->m_choiceSummonType = SUMMON_TYPE::TEST;
+            //***********************
+            //***********************
+            
+            CLaunchData<CSummon> *pSummonLaunchData = new CLaunchData<CSummon>(1050, this->m_choiceSummonType, createPosX, clickPoint.y) ;
+            
+            CTrigger_Timer<CSummon> *pTrigger = new CTrigger_Timer<CSummon>(pSummonLaunchData, 10) ;
+            CSummonLauncher::getInstance()->add(pTrigger) ;
+            
+            //キングの所持コストを減少させる
+            //pPlayerChara->getStatus()->decreaseCost(/* - costType[this−>m_choiceSummonType]*/);
+        }
+    }
     
 }
 
