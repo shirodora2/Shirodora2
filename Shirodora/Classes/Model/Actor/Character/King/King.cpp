@@ -130,7 +130,9 @@ void CKing::collision(){
         
         //一匹でも攻撃範囲にいたら攻撃状態にする
         if(myCollisionData.collisionDecision(eneCollisionData)){
-            this->m_state = STATE::ATTACK;
+            
+            //攻撃アクションを開始する
+            //(*this->m_pActions)[1]->start();
             return;
         }
     }
