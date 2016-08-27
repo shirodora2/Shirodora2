@@ -50,7 +50,7 @@ void CSummon_Test::setSprite(CSummon *pSummon){
  *  @param  CSummon*
  */
 void CSummon_Test::setStatus(CSummon *pSummon){
-    pSummon->getStatus()->setStatus(100, 100, TYPE::NONE, 10, 10, 1, 30) ;
+    pSummon->getStatus()->setStatus(100, 100, TYPE::NONE, 0, 0, 1, 30) ;
 }
 
 /**

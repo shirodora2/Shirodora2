@@ -66,7 +66,7 @@ bool CBattele_MainLayer::init(){
     // 召喚キャラ発射台を設定
     CSummonLauncher::getInstance()->setLayer(this) ;
     // 召喚キャラ発射データを生成
-    CLaunchData<CSummon> *pSummonLaunchData = new CLaunchData<CSummon>(1050, SUMMON_TYPE::TEST, WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
+    CLaunchData<CSummon> *pSummonLaunchData = new CLaunchData<CSummon>(2050, SUMMON_TYPE::TEST, WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
     // 召喚キャラ発射トリガーを生成
     CTrigger_Timer<CSummon> *pTrigger = new CTrigger_Timer<CSummon>(pSummonLaunchData, 10) ;
     // 発射トリガーを発射台に取り付け
