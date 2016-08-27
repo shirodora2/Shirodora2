@@ -67,10 +67,10 @@ void CKing::update(float deltaTime){
 void CKing::action(){
     
     //状態(m_state)がATTACKなら、攻撃アクションを行う
-    if(this->m_state == STATE::ATTACK){
+    //if(this->m_state == STATE::ATTACK){
         
-        //(*this->m_pActions)[ 攻撃番号 ]->update(this);
-    }
+        (*this->m_pActions)[0]->update(this);
+    // }
 }
 
 /**
@@ -130,9 +130,10 @@ void CKing::collision(){
         
         //一匹でも攻撃範囲にいたら攻撃状態にする
         if(myCollisionData.collisionDecision(eneCollisionData)){
+           
             
             //攻撃アクションを開始する
-            //(*this->m_pActions)[1]->start();
+            (*this->m_pActions)[0]->start();
             return;
         }
     }

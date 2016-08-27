@@ -9,6 +9,8 @@
 #include "Shirodora.hpp"
 #include "King_Test.hpp"
 
+#include "AttackAction.hpp"
+
 //=========================================================================
 //
 // KingCreateFactory
@@ -117,7 +119,7 @@ void CKing_Test::setAnimation(CKing *pKing){
  *  @param  CKing*
  */
 void CKing_Test::setAction(CKing *pKing){
-    
+    pKing->getActions()->push_back(new CSimpleAttackAction(60, CHARACTER_AGGREGATE_TYPE::PLAYER_2)) ;
 }
 
 /**

@@ -65,9 +65,16 @@ void CSimpleAttackAction::update(CCharacter* pChara){
                 
                 //範囲内の敵にダメージ
                 if(myCollisionData.collisionDecision(eneCollisionData)){
+                    
                     pEneChara->getStatus()->decreaseHp(pChara->getStatus()->getAttackPt(),
                                                        pChara->getStatus()->getType());
+                    
+                    if(pEneChara->getStatus()->getHp() <= 0)
+                        pEneChara->setActive(false);
                 
+                    
+                    CCLOG("cccccc%d",pEneChara->getStatus()->getHp());
+
                 }
             }
             
