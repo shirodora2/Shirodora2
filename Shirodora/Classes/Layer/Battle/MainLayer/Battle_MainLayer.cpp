@@ -246,6 +246,9 @@ void CBattele_MainLayer::inputMauseUpdate(CUI_Layer* pUiLayer){
             
         }else if(clickPoint.y > 120 /*フィールド範囲なら*/){
             
+            if(this->m_choiceSummonType == SUMMON_TYPE::NONE)
+                return;
+            
             //キャラクターの召喚
             this->createSummon(clickPoint);
         }
@@ -324,7 +327,7 @@ void CBattele_MainLayer::createSummon(cocos2d::Vec2 clickPoint){
     //（仮）キングとの距離が１００以内なら召喚
     if( r <= 100 ){
         
-        int cost = pPlayerChara->getStatus()->getCost() /* - costType[this−>m_choiceSummonType]*/;
+        int cost = pPlayerChara->getStatus()->getCost() - SUMMON_COST[(int)this->m_choiceSummonType];
         
         if(cost < 0){
             CCLOG("コスト不足");
@@ -332,23 +335,14 @@ void CBattele_MainLayer::createSummon(cocos2d::Vec2 clickPoint){
             //召喚位置Xの算出
             float createPosX = clickPoint.x - this->getPosition().x;
             
-            
-            //***********************
-            //***********************
-            //デバッグ用
-            this->m_choiceSummonType = SUMMON_TYPE::TEST;
-            //***********************
-            //***********************
-            
             CLaunchData<CSummon> *pSummonLaunchData = new CLaunchData<CSummon>(1050, this->m_choiceSummonType, createPosX, clickPoint.y) ;
             
-            CTrigger_Timer<CSummon> *pTrigger = new CTrigger_Timer<CSummon>(pSummonLaunchData, 10) ;
+            CTrigger_Timer<CSummon> *pTrigger = new CTrigger_Timer<CSummon>(pSummonLaunchData, 0) ;
             CSummonLauncher::getInstance()->add(pTrigger) ;
             
             //キングの所持コストを減少させる
-            //pPlayerChara->getStatus()->decreaseCost(/* - costType[this−>m_choiceSummonType]*/);
+            pPlayerChara->getStatus()->decreaseCost(SUMMON_COST[(int)this->m_choiceSummonType]);
         }
     }
-    
 }
 
