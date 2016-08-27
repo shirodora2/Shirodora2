@@ -73,7 +73,13 @@ public:
      * @param 相手のタイプ
      */
     void decreaseHp(float attackPt, TYPE type){
-        this->m_hp +=   ( this->m_defensePt- attackPt * damagePt(type)) ;
+        
+        if((this->m_defensePt - attackPt) >= 0){
+            this->m_hp -= 1 ;
+            
+        }else{
+            this->m_hp +=   ( this->m_defensePt- attackPt * damagePt(type)) ;
+        }
     }
     
     /**
