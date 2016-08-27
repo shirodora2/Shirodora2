@@ -17,11 +17,19 @@ class CCastleHpEnemyBar;
 class CCharacterIcon;
 class CCostSprite;
 
-enum class CZoderUI : int{
+enum class CZoderUI{
     Time = 0,
     Bar = 1,
     Cost = 2,
     Icons = 3,
+};
+    
+enum class SYSTEM_MODE{
+    NONE = -1,
+    START ,     // 0
+    PLAY ,      // 1
+    END ,       // 2
+    MAX ,
 };
 
 class CUI_Layer : public cocos2d::Layer{
@@ -50,10 +58,20 @@ public:
     void update(float _dt)override;
     CREATE_FUNC(CUI_Layer);
     
+    //演出メソッド
+    void StartProductionFunc(float _dt);
+    void WinProductionFunc(float _dt);
+    void LoseProductionFunc(float _dt);
+    void DrowProductionFunc(float _dt);
+    
+    
     //コストの演出メソッド
     void costFunc();
     
 private:
+    //ゲームの状態
+    SYSTEM_MODE m_systemMode;
+    
     //キングの所持コスト
     int m_cost = 0;
     

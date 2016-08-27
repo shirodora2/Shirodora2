@@ -26,6 +26,9 @@ CUI_Layer::~CUI_Layer(){
 
 bool CUI_Layer::init(){
     if(!Layer::init())return false;
+    //ゲームモード
+    m_systemMode = SYSTEM_MODE::NONE;
+    
     //制限時間ラベル
     m_pTimeLabel = CTimeLable::create();
     m_pTimeLabel->setPosition(Director::getInstance()->getWinSize().width * 0.5f,
@@ -75,16 +78,139 @@ bool CUI_Layer::init(){
         CCharacter *pChara = itr->next() ;
         m_cost = pChara->getStatus()->getCost();
     }
+
+
     
     scheduleUpdate();
     return true;
 }
 
 void CUI_Layer::update(float _dt){
+    //ゲームの状態
+    switch (m_systemMode) {
+        case SYSTEM_MODE::NONE:
+            m_systemMode = SYSTEM_MODE::START;
+            break;
+        case SYSTEM_MODE::START:
+             scheduleOnce(schedule_selector(CUI_Layer::StartProductionFunc), 0.f);
+            m_systemMode = SYSTEM_MODE::PLAY;
+            break;
+        case SYSTEM_MODE::PLAY:
+            
+            //コストの演出処理
+            costFunc();
+            
+            //プレイヤー WIN
+            if(m_pCastleHpPlayerBar->getCastleHp() <= 0 && m_pCastleHpEnemyBar->getCastleHp() > 0){
+                scheduleOnce(schedule_selector(CUI_Layer::WinProductionFunc), 0.f);
+                m_systemMode = SYSTEM_MODE::END;
+
+
+            //プレイヤー LOSE
+            }else if(m_pCastleHpPlayerBar > 0 && m_pCastleHpEnemyBar->getCastleHp() <= 0){
+                scheduleOnce(schedule_selector(CUI_Layer::LoseProductionFunc), 0.f);
+                m_systemMode = SYSTEM_MODE::END;
+
+            // Time Up
+            }else if(m_pTimeLabel->getTime() <= 0){
+                //プレイヤー WIN
+                if(m_pCastleHpPlayerBar->getCastleHp() > m_pCastleHpEnemyBar->getCastleHp()){
+                    scheduleOnce(schedule_selector(CUI_Layer::WinProductionFunc), 0.f);
+                    m_systemMode = SYSTEM_MODE::END;
+
+
+                //プレイヤー LOSE
+                }else if(m_pCastleHpPlayerBar->getCastleHp() < m_pCastleHpEnemyBar->getCastleHp()){
+                    scheduleOnce(schedule_selector(CUI_Layer::StartProductionFunc), 0.f);
+                    m_systemMode = SYSTEM_MODE::END;
+
+                // DROW
+                }else{
+                    scheduleOnce(schedule_selector(CUI_Layer::DrowProductionFunc), 0.f);
+                    m_systemMode = SYSTEM_MODE::END;
+
+
+                }
+                
+
+            }
+
+            break;
+        case SYSTEM_MODE::END:
+            
+            break;
+        default:
+            break;
+    }
     
-    //コストの演出処理
-    costFunc();
 }
+
+
+void CUI_Layer::StartProductionFunc(float _dt){
+    auto start = Sprite::create("GameStart.png");
+    start->setPosition(Point(Director::getInstance()->getWinSize() * 0.5f));
+    addChild(start);
+    
+    auto move = MoveTo::create(3.f, Point(Director::getInstance()->getWinSize() * 0.2f));
+    auto wait = DelayTime::create(3.f);
+    auto remove = RemoveSelf::create();
+    auto sequence = Sequence::create(move,
+                                     wait,
+                                     remove,
+                                     NULL);
+    start->runAction(sequence);
+}
+void CUI_Layer::WinProductionFunc(float _dt){
+    auto start = Sprite::create("Win.png");
+    start->setPosition(Point(Director::getInstance()->getWinSize() * 0.5f));
+    addChild(start);
+    
+    auto move = MoveTo::create(3.f, Point(Director::getInstance()->getWinSize() * 0.2f));
+    auto wait = DelayTime::create(3.f);
+    auto remove = RemoveSelf::create();
+    auto sequence = Sequence::create(move,
+                                     wait,
+                                     remove,
+                                     NULL);
+    start->runAction(sequence);
+
+    
+}
+void CUI_Layer::LoseProductionFunc(float _dt){
+    auto start = Sprite::create("Lose.png");
+    start->setPosition(Point(Director::getInstance()->getWinSize() * 0.5f));
+    addChild(start);
+    
+    auto move = MoveTo::create(3.f, Point(Director::getInstance()->getWinSize() * 0.2f));
+    auto wait = DelayTime::create(3.f);
+    auto remove = RemoveSelf::create();
+    auto sequence = Sequence::create(move,
+                                     wait,
+                                     remove,
+                                     NULL);
+    start->runAction(sequence);
+    
+
+}
+void CUI_Layer::DrowProductionFunc(float _dt){
+    auto start = Sprite::create("Draw.png");
+    start->setPosition(Point(Director::getInstance()->getWinSize() * 0.5f));
+    addChild(start);
+    
+    auto move = MoveTo::create(3.f, Point(Director::getInstance()->getWinSize() * 0.2f));
+    auto wait = DelayTime::create(3.f);
+    auto remove = RemoveSelf::create();
+    auto sequence = Sequence::create(move,
+                                     wait,
+                                     remove,
+                                     NULL);
+    start->runAction(sequence);
+    
+
+}
+
+
+
 
 //コストの演出メソッド
 void CUI_Layer::costFunc(){
