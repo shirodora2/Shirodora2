@@ -60,7 +60,7 @@ void CCastle_Normal::setSprite(CCastle *pCastle){
  *  @param  CCastle*
  */
 void CCastle_Normal::setStatus(CCastle *pCastle){
-    pCastle->getStatus()->setStatus(100, 100, TYPE::NONE, 10, 10, 1, 30) ;
+    pCastle->getStatus()->setStatus(100, 100, TYPE::NONE, 0, 0, 1, 30) ;
 }
 
 /**

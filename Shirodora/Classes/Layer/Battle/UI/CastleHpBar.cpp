@@ -7,6 +7,12 @@
 //
 
 #include "CastleHpBar.hpp"
+#include "CharacterManager.hpp"
+#include "Character.hpp"
+#include "Status.hpp"
+
+
+
 USING_NS_CC;
 CCastleHpPlayerBar::CCastleHpPlayerBar(){
 }
@@ -16,6 +22,16 @@ CCastleHpPlayerBar::~CCastleHpPlayerBar(){
 bool CCastleHpPlayerBar::init(){
     if(!Sprite::init())return false;
     setTexture("PlayerLife_Frame.png");
+    
+    //Player_1 城のHP参照
+    std::shared_ptr<CIteratorTemplate<CCharacter*>> itr = CCharacterManager::getInstance()->iterator(CHARACTER_AGGREGATE_TYPE::PLAYER_1_CASTLE) ;
+    while(itr->hasNext() == true){
+        CCharacter *pChara = itr->next() ;
+        m_MaxHp = pChara->getStatus()->getMaxHp();
+        m_Hp = pChara->getStatus()->getHp();
+    }
+
+    
     progresTimerCreate();
     scheduleUpdate();
     
@@ -55,6 +71,14 @@ void CCastleHpPlayerBar::progresTimerCreate(){
 
 
 void CCastleHpPlayerBar::applyFunc(){
+    //毎回HPを参照し続ける
+    std::shared_ptr<CIteratorTemplate<CCharacter*>> itr = CCharacterManager::getInstance()->iterator(CHARACTER_AGGREGATE_TYPE::PLAYER_1_CASTLE) ;
+    while(itr->hasNext() == true){
+        CCharacter *pChara = itr->next() ;
+        m_Hp = pChara->getStatus()->getHp();
+    }
+
+    
     if(m_pHpGage != NULL){
         if(m_Hp < 0){
             m_Hp = 0;
@@ -79,6 +103,16 @@ CCastleHpEnemyBar::~CCastleHpEnemyBar(){
 bool CCastleHpEnemyBar::init(){
     if(!Sprite::init())return false;
     setTexture("EnemyLife_Frame.png");
+    
+    //Player_2 城のHP参照
+    std::shared_ptr<CIteratorTemplate<CCharacter*>> itr = CCharacterManager::getInstance()->iterator(CHARACTER_AGGREGATE_TYPE::PLAYER_2_CASTLE) ;
+    while(itr->hasNext() == true){
+        CCharacter *pChara = itr->next() ;
+        m_MaxHp = pChara->getStatus()->getMaxHp();
+        m_Hp = pChara->getStatus()->getHp();
+    }
+
+    
     progresTimerCreate();
     scheduleUpdate();
     
@@ -118,6 +152,15 @@ void CCastleHpEnemyBar::progresTimerCreate(){
 
 
 void CCastleHpEnemyBar::applyFunc(){
+    
+    //毎回HPを参照し続ける
+    std::shared_ptr<CIteratorTemplate<CCharacter*>> itr = CCharacterManager::getInstance()->iterator(CHARACTER_AGGREGATE_TYPE::PLAYER_2_CASTLE) ;
+    while(itr->hasNext() == true){
+        CCharacter *pChara = itr->next() ;
+        m_Hp = pChara->getStatus()->getHp();
+    }
+
+    
     if(m_pHpGage != NULL){
         if(m_Hp < 0){
             m_Hp = 0;

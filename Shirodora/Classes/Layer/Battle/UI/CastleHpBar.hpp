@@ -34,8 +34,8 @@ public:
 
 
 private:
-    float m_MaxHp = 760;
-    float m_Hp = 760;
+    float m_MaxHp = 0;
+    float m_Hp = 0;
     cocos2d::ProgressTimer* m_pHpGage = NULL;
 
 };
@@ -60,8 +60,8 @@ public:
     CREATE_FUNC(CCastleHpEnemyBar);
     
 private:
-    float m_MaxHp = 760;
-    float m_Hp = 760;
+    float m_MaxHp = 0;
+    float m_Hp = 0;
     cocos2d::ProgressTimer* m_pHpGage = NULL;
 
 };
