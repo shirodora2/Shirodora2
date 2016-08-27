@@ -12,6 +12,7 @@
 #include "KingFactoryManager.hpp"
 #include "CastleFactoryManager.hpp"
 #include "Castle.hpp"
+#include "EnemySpawner.hpp"
 
 //=========================================================================
 //
@@ -36,6 +37,12 @@ CBattele_MainLayer::~CBattele_MainLayer(){
     }
     // 召喚キャラ発射台のクリア
     CSummonLauncher::getInstance()->clear() ;
+    
+    // 敵キャラ生成機の破棄
+    if(this->m_pSpawner != NULL){
+        delete this->m_pSpawner ;
+        this->m_pSpawner = NULL ;
+    }
     
     //ゲームモードの破棄
     CGameMode::removeInstance();
@@ -72,13 +79,9 @@ bool CBattele_MainLayer::init(){
 
     // 召喚キャラ発射台を設定
     CSummonLauncher::getInstance()->setLayer(this) ;
-    // 召喚キャラ発射データを生成
-    CLaunchData<CSummon> *pSummonLaunchData = new CLaunchData<CSummon>(2050, SUMMON_TYPE::TEST, WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
-    // 召喚キャラ発射トリガーを生成
-    CTrigger_Timer<CSummon> *pTrigger = new CTrigger_Timer<CSummon>(pSummonLaunchData, 10) ;
-    // 発射トリガーを発射台に取り付け
-    CSummonLauncher::getInstance()->add(pTrigger) ;
     
+    // 敵生成機の生成
+    this->m_pSpawner = new CEnemySpawner(AI_LEVEL::EASY) ;
     
     // 城の生成と取り付け(画像は毎度おなじみのあれ)
     // 細かい位置とか画像は調整頼む
@@ -127,6 +130,9 @@ bool CBattele_MainLayer::init(){
 void CBattele_MainLayer::update(float deltaTime){
     // カーソルスプライトをマウスマネージャーを使って位置設定させる
     this->m_pCursor->setPosition(mouse.getCurrentCursorPosition()) ;
+    
+    // 敵生成機の更新処理
+    this->m_pSpawner->update() ;
     
     // 召喚キャラ発射台の更新
     CSummonLauncher::getInstance()->update() ;

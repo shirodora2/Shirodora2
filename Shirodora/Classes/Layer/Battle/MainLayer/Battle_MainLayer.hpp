@@ -22,6 +22,7 @@
 //=========================================================================
 class CCharacter ;
 class CUI_Layer ;
+class CEnemySpawner ;
 
 //=========================================================================
 //
@@ -120,6 +121,9 @@ public :
     
     // キャラクター集合体
     std::vector<CCharacter*> *m_pCharacters {NULL} ;
+    
+    // 敵生成機
+    CEnemySpawner *m_pSpawner {NULL} ;
     
     //ゲームモード
     int m_gameMode = 0;
