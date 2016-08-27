@@ -52,7 +52,7 @@ void CCastle_Normal::setMove(CCastle *pCastle){
  *  @param  CCastle*
  */
 void CCastle_Normal::setSprite(CCastle *pCastle){
-    pCastle->getSprite()->setTexture("TestMoveSprite.png") ;
+    pCastle->getSprite()->setTexture("Castle.png") ;
 }
 
 /**
@@ -69,10 +69,10 @@ void CCastle_Normal::setStatus(CCastle *pCastle){
  */
 void CCastle_Normal::setCollisionBody(CCastle *pCastle){
     cocos2d::Vec2 apexs[4] = {
-        cocos2d::Vec2(32.0f, 32.0f),
-        cocos2d::Vec2(-32.0f, 32.0f),
-        cocos2d::Vec2(-32.0f, -32.0f),
-        cocos2d::Vec2(32.0f, -32.0f)
+        cocos2d::Vec2(150.0f, 300.0f),
+        cocos2d::Vec2(-150.0f, 300.0f),
+        cocos2d::Vec2(-150.0f, -300.0f),
+        cocos2d::Vec2(150.0f, -300.0f)
     };
     
     pCastle->getCollisionBody()->setApexs(4, apexs) ;
@@ -92,7 +92,7 @@ void CCastle_Normal::setAttackBody(CCastle *pCastle){
  */
 void CCastle_Normal::setAnimation(CCastle *pCastle){
     CChipNotAnimation *pAnime = new CChipNotAnimation() ;
-    pAnime->addChipData(new CChip(0.0f, 0.0f, 64.0f, 64.0f)) ;
+    pAnime->addChipData(new CChip(0.0f, 0.0f, 500.0f, 600.0f)) ;
     pCastle->getAnimations()->push_back(pAnime) ;
 }
 

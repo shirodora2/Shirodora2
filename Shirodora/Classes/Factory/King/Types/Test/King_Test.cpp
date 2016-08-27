@@ -45,7 +45,7 @@ void CKing_Test::setMove(CKing *pKing , const cocos2d::Vec2 &position){
  *  @param  CKing*
  */
 void CKing_Test::setSprite(CKing *pKing){
-    pKing->getSprite()->setTexture("TestMoveSprite.png") ;
+    pKing->getSprite()->setTexture("King.png") ;
 }
 
 /**

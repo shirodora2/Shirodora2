@@ -50,10 +50,17 @@ CBattele_MainLayer::~CBattele_MainLayer(){
 bool CBattele_MainLayer::init(){
     if(CInputAndMouseLayer::init() == false) return false ;
     
-    // !!!:テスト用背景
-    cocos2d::Sprite *pBackGround = cocos2d::Sprite::create("gameMainBG.png") ;
-    pBackGround->setPosition(WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
-    this->addChild(pBackGround) ;
+    
+    //背景の設定（左半分）
+    cocos2d::Sprite *pBackGroundLeft = cocos2d::Sprite::create("BackGround_Left.png") ;
+    pBackGroundLeft->setPosition(500.0f, WINDOW_HEIGHT * 0.5f) ;
+    this->addChild(pBackGroundLeft) ;
+    
+    //背景の設定（右半分）
+    cocos2d::Sprite *pBackGroundRight = cocos2d::Sprite::create("BackGround_Right.png") ;
+    pBackGroundRight->setPosition(1500.0f, WINDOW_HEIGHT * 0.5f) ;
+    this->addChild(pBackGroundRight) ;
+
     
     // !!!:テスト用カーソルスプライト
     this->m_pCursor = cocos2d::Sprite::create("Bone.png") ;
@@ -78,7 +85,8 @@ bool CBattele_MainLayer::init(){
     CCastle *pCastle_1 = CCastleFactoryManager::getInstance()->create(1999, 100.0f, 300.0f) ;
     CCharacterManager::getInstance()->add(pCastle_1) ;
     this->addChild(pCastle_1) ;
-    CCastle *pCastle_2 = CCastleFactoryManager::getInstance()->create(2999, 800.0f, 300.0f) ;
+    
+    CCastle *pCastle_2 = CCastleFactoryManager::getInstance()->create(2999, 1800.0, 300.0f) ;
     CCharacterManager::getInstance()->add(pCastle_2) ;
     this->addChild(pCastle_2) ;
     

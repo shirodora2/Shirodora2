@@ -42,7 +42,7 @@ void CSummon_Test::setMove(CSummon *pSummon , const cocos2d::Vec2 &position){
  *  @param  CSummon*
  */
 void CSummon_Test::setSprite(CSummon *pSummon){
-    pSummon->getSprite()->setTexture("TestMoveSprite.png") ;
+    pSummon->getSprite()->setTexture("Goblin.png") ;
 }
 
 /**
@@ -105,6 +105,8 @@ void CSummon_Test::setAnimation(CSummon *pSummon){
  */
 void CSummon_Test::setAction(CSummon *pSummon){
     pSummon->getActions()->push_back(new CSimpleAttackAction(60, CHARACTER_AGGREGATE_TYPE::PLAYER_1)) ;
+    pSummon->getActions()->push_back(new CMoveAction(cocos2d::Vec2(-1.0f,0.0f), 1)) ;
+
 }
 
 /**

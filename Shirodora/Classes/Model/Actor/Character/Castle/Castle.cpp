@@ -86,7 +86,7 @@ void CCastle::move(){
  *  @desc   アニメーション処理
  */
 void CCastle::animation(){
-    (*this->m_pAnimations)[(int)m_state]->update() ;
+    (*this->m_pAnimations)[0]->update() ;
 }
 
 /**
@@ -110,7 +110,7 @@ void CCastle::checkState(){
  */
 void CCastle::apply(){
     // チップデータを反映
-    this->m_pSprite->setTextureRect((*this->m_pAnimations)[(int)m_state]->getCurrentChip()) ;
+    this->m_pSprite->setTextureRect((*this->m_pAnimations)[0]->getCurrentChip()) ;
 }
 
 /**

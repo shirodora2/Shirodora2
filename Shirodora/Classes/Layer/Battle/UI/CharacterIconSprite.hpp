@@ -48,7 +48,7 @@ private:
     //召喚可能数
     int m_count = 0;
     //キャラクタータイプ
-    SUMMON_TYPE m_summonType = SUMMON_TYPE::NONE;
+    SUMMON_TYPE m_summonType = SUMMON_TYPE::TEST2;
 };
 
 //===================

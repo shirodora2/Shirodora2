@@ -42,7 +42,7 @@ void CPlayerSummon_Test::setMove(CSummon *pSummon , const cocos2d::Vec2 &positio
  *  @param  CSummon*
  */
 void CPlayerSummon_Test::setSprite(CSummon *pSummon){
-    pSummon->getSprite()->setTexture("TestMoveSprite.png") ;
+    pSummon->getSprite()->setTexture("Soldier.png") ;
 }
 
 /**
@@ -50,7 +50,7 @@ void CPlayerSummon_Test::setSprite(CSummon *pSummon){
  *  @param  CSummon*
  */
 void CPlayerSummon_Test::setStatus(CSummon *pSummon){
-    pSummon->getStatus()->setStatus(100, 100, TYPE::NONE, 0, 10, 1, 30) ;
+    pSummon->getStatus()->setStatus(100, 100, TYPE::NONE, 0, 5, 1, 30) ;
 }
 
 /**
@@ -105,6 +105,8 @@ void CPlayerSummon_Test::setAnimation(CSummon *pSummon){
  */
 void CPlayerSummon_Test::setAction(CSummon *pSummon){
     pSummon->getActions()->push_back(new CSimpleAttackAction(60, CHARACTER_AGGREGATE_TYPE::PLAYER_2)) ;
+    pSummon->getActions()->push_back(new CMoveAction(cocos2d::Vec2(1.0f,0.0f), 1)) ;
+
 }
 
 /**
