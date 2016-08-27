@@ -12,6 +12,9 @@
 #include <stdio.h>
 
 #include <stdio.h>
+
+class CCharacter ;
+
 enum class TYPE : int{
     NONE = 0,
     FIRE = 1,
@@ -27,6 +30,9 @@ static float typeArray[4][4] = {	{1.0f, 		1.0f, 		1.0f, 		1.0f},		//NONE
                                     {1.0f, 		0.5f, 		1.0f, 		1.5f},		//WATER
                                     {1.0f, 		1.5f, 		0.5f, 		1.0f}} ;	//PLANT
 
+//======================================================
+//物体（動かない）のステータス
+//======================================================
 
 class CStatusOfObject{
 protected:
@@ -99,8 +105,10 @@ public:
     }
 } ;
 
-
-class	 CStatusOfCharacter : public CStatusOfObject{
+//======================================================
+//キャラクターのステータス
+//======================================================
+class CStatusOfCharacter : public CStatusOfObject{
 private:
     //攻撃力
     float m_attackPt = 0.0f ;
@@ -144,12 +152,30 @@ public:
     }
     
     /**
+     * @descコストの設定
+     */
+    void setCost(int cost){
+        this->setCost(cost) ;
+    }
+    
+    /**
      * @desc 攻撃間隔を取得する関数
      */
     int getInterval(){
         return this->m_interval ;
     }
     
+    /**
+     * @desc コスト現象
+     * @param 使用するコスト
+     */
+    void decreaseCost(int useCost){
+        this->m_cost -= useCost ;
+    }
+    
+    void increaseCost(){
+        this->m_cost++ ;
+    }
+    
 } ;
-
 #endif /* Status_hpp */
