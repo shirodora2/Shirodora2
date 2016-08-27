@@ -229,6 +229,8 @@
 		FE2FAE611D62CC3200E38BBC /* End_UILayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE2FAE5C1D62CC3200E38BBC /* End_UILayer.cpp */; };
 		FE2FAE6C1D62CDFE00E38BBC /* EndScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE2FAE6A1D62CDFE00E38BBC /* EndScene.cpp */; };
 		FE2FAE6D1D62CDFE00E38BBC /* EndScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE2FAE6A1D62CDFE00E38BBC /* EndScene.cpp */; };
+		FE732F9B1D7161B4006808DD /* PlayerSummon_Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE732F991D7161B4006808DD /* PlayerSummon_Test.cpp */; };
+		FE732F9C1D7161B4006808DD /* PlayerSummon_Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE732F991D7161B4006808DD /* PlayerSummon_Test.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -482,6 +484,8 @@
 		FE2FAE5D1D62CC3200E38BBC /* End_UILayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = End_UILayer.hpp; sourceTree = "<group>"; };
 		FE2FAE6A1D62CDFE00E38BBC /* EndScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EndScene.cpp; sourceTree = "<group>"; };
 		FE2FAE6B1D62CDFE00E38BBC /* EndScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EndScene.hpp; sourceTree = "<group>"; };
+		FE732F991D7161B4006808DD /* PlayerSummon_Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerSummon_Test.cpp; sourceTree = "<group>"; };
+		FE732F9A1D7161B4006808DD /* PlayerSummon_Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PlayerSummon_Test.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -974,6 +978,8 @@
 		4F75D0A21D3A8B62002744C9 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				FE732F991D7161B4006808DD /* PlayerSummon_Test.cpp */,
+				FE732F9A1D7161B4006808DD /* PlayerSummon_Test.hpp */,
 				4F75D0A31D3A8B62002744C9 /* Summon_Test.cpp */,
 				4F75D0A41D3A8B62002744C9 /* Summon_Test.hpp */,
 			);
@@ -1905,6 +1911,7 @@
 				4FE56A5E1D6854DC00B4D8D2 /* CharacterIterator_Player1Castle.cpp in Sources */,
 				4F9C5BDA1D30BF7E0070E0DC /* Move.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				FE732F9B1D7161B4006808DD /* PlayerSummon_Test.cpp in Sources */,
 				FE220C531D5F684000F1A297 /* Title_MainLayer.cpp in Sources */,
 				4F01132D1D4DF4CA0087E05F /* SummonTriggerIterator_ReadyAll.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
@@ -1999,6 +2006,7 @@
 				DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */,
 				FE220C561D5F684000F1A297 /* Title_UILayer.cpp in Sources */,
 				4F75D0651D3A730A002744C9 /* Character.cpp in Sources */,
+				FE732F9C1D7161B4006808DD /* PlayerSummon_Test.cpp in Sources */,
 				4F01133A1D4DF4CA0087E05F /* Trigger_Timer.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				4F75D0AA1D3A8B62002744C9 /* Summon_Test.cpp in Sources */,
