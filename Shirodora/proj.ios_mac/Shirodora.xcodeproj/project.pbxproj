@@ -231,6 +231,32 @@
 		FE2FAE6D1D62CDFE00E38BBC /* EndScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE2FAE6A1D62CDFE00E38BBC /* EndScene.cpp */; };
 		FE732F9B1D7161B4006808DD /* PlayerSummon_Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE732F991D7161B4006808DD /* PlayerSummon_Test.cpp */; };
 		FE732F9C1D7161B4006808DD /* PlayerSummon_Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE732F991D7161B4006808DD /* PlayerSummon_Test.cpp */; };
+		FE732FA41D7165A2006808DD /* Draw.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732F9F1D7165A2006808DD /* Draw.png */; };
+		FE732FA51D7165A2006808DD /* Draw.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732F9F1D7165A2006808DD /* Draw.png */; };
+		FE732FA61D7165A2006808DD /* GameStart.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FA01D7165A2006808DD /* GameStart.png */; };
+		FE732FA71D7165A2006808DD /* GameStart.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FA01D7165A2006808DD /* GameStart.png */; };
+		FE732FA81D7165A2006808DD /* Lose.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FA11D7165A2006808DD /* Lose.png */; };
+		FE732FA91D7165A2006808DD /* Lose.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FA11D7165A2006808DD /* Lose.png */; };
+		FE732FAA1D7165A2006808DD /* TimeUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FA21D7165A2006808DD /* TimeUp.png */; };
+		FE732FAB1D7165A2006808DD /* TimeUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FA21D7165A2006808DD /* TimeUp.png */; };
+		FE732FAC1D7165A2006808DD /* Win.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FA31D7165A2006808DD /* Win.png */; };
+		FE732FAD1D7165A2006808DD /* Win.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FA31D7165A2006808DD /* Win.png */; };
+		FE732FBA1D7165BD006808DD /* BackGround_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FAF1D7165BD006808DD /* BackGround_Left.png */; };
+		FE732FBB1D7165BD006808DD /* BackGround_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FAF1D7165BD006808DD /* BackGround_Left.png */; };
+		FE732FBC1D7165BD006808DD /* BackGround_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB01D7165BD006808DD /* BackGround_Right.png */; };
+		FE732FBD1D7165BD006808DD /* BackGround_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB01D7165BD006808DD /* BackGround_Right.png */; };
+		FE732FBE1D7165BD006808DD /* Castle.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB21D7165BD006808DD /* Castle.png */; };
+		FE732FBF1D7165BD006808DD /* Castle.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB21D7165BD006808DD /* Castle.png */; };
+		FE732FC01D7165BD006808DD /* Goblin.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB41D7165BD006808DD /* Goblin.png */; };
+		FE732FC11D7165BD006808DD /* Goblin.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB41D7165BD006808DD /* Goblin.png */; };
+		FE732FC21D7165BD006808DD /* King.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB51D7165BD006808DD /* King.png */; };
+		FE732FC31D7165BD006808DD /* King.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB51D7165BD006808DD /* King.png */; };
+		FE732FC41D7165BD006808DD /* Soldier.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB61D7165BD006808DD /* Soldier.png */; };
+		FE732FC51D7165BD006808DD /* Soldier.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB61D7165BD006808DD /* Soldier.png */; };
+		FE732FC61D7165BD006808DD /* Title_Icon_End.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB81D7165BD006808DD /* Title_Icon_End.png */; };
+		FE732FC71D7165BD006808DD /* Title_Icon_End.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB81D7165BD006808DD /* Title_Icon_End.png */; };
+		FE732FC81D7165BD006808DD /* Title_Icon_Start.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB91D7165BD006808DD /* Title_Icon_Start.png */; };
+		FE732FC91D7165BD006808DD /* Title_Icon_Start.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB91D7165BD006808DD /* Title_Icon_Start.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -486,6 +512,19 @@
 		FE2FAE6B1D62CDFE00E38BBC /* EndScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EndScene.hpp; sourceTree = "<group>"; };
 		FE732F991D7161B4006808DD /* PlayerSummon_Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerSummon_Test.cpp; sourceTree = "<group>"; };
 		FE732F9A1D7161B4006808DD /* PlayerSummon_Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PlayerSummon_Test.hpp; sourceTree = "<group>"; };
+		FE732F9F1D7165A2006808DD /* Draw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Draw.png; path = UI_Image/Draw.png; sourceTree = "<group>"; };
+		FE732FA01D7165A2006808DD /* GameStart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameStart.png; path = UI_Image/GameStart.png; sourceTree = "<group>"; };
+		FE732FA11D7165A2006808DD /* Lose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lose.png; path = UI_Image/Lose.png; sourceTree = "<group>"; };
+		FE732FA21D7165A2006808DD /* TimeUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TimeUp.png; path = UI_Image/TimeUp.png; sourceTree = "<group>"; };
+		FE732FA31D7165A2006808DD /* Win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Win.png; path = UI_Image/Win.png; sourceTree = "<group>"; };
+		FE732FAF1D7165BD006808DD /* BackGround_Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackGround_Left.png; sourceTree = "<group>"; };
+		FE732FB01D7165BD006808DD /* BackGround_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackGround_Right.png; sourceTree = "<group>"; };
+		FE732FB21D7165BD006808DD /* Castle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Castle.png; sourceTree = "<group>"; };
+		FE732FB41D7165BD006808DD /* Goblin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Goblin.png; sourceTree = "<group>"; };
+		FE732FB51D7165BD006808DD /* King.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = King.png; sourceTree = "<group>"; };
+		FE732FB61D7165BD006808DD /* Soldier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Soldier.png; sourceTree = "<group>"; };
+		FE732FB81D7165BD006808DD /* Title_Icon_End.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Title_Icon_End.png; sourceTree = "<group>"; };
+		FE732FB91D7165BD006808DD /* Title_Icon_Start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Title_Icon_Start.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -566,6 +605,11 @@
 		17EC44481D39EC4100DD4EAB /* UI_Image */ = {
 			isa = PBXGroup;
 			children = (
+				FE732F9F1D7165A2006808DD /* Draw.png */,
+				FE732FA01D7165A2006808DD /* GameStart.png */,
+				FE732FA11D7165A2006808DD /* Lose.png */,
+				FE732FA21D7165A2006808DD /* TimeUp.png */,
+				FE732FA31D7165A2006808DD /* Win.png */,
 				4F01127E1D4DC4DC0087E05F /* TimeNumber.png */,
 				4F01127F1D4DC4DC0087E05F /* TimeNumberSymbol.png */,
 				17EC44491D39EC5B00DD4EAB /* CharacterFrame_Green.png */,
@@ -1134,27 +1178,14 @@
 		4F9C5B5B1D30AEC60070E0DC /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				FE732FAE1D7165BD006808DD /* BackGround */,
+				FE732FB11D7165BD006808DD /* Castle */,
+				FE732FB31D7165BD006808DD /* Character */,
+				FE732FB71D7165BD006808DD /* Title */,
 				17EC44481D39EC4100DD4EAB /* UI_Image */,
-				4F9C5B5C1D30AEC60070E0DC /* BackGround */,
-				4F9C5B5D1D30AEC60070E0DC /* Character */,
 				4F9C5B5E1D30AEC60070E0DC /* TestImage */,
-				4F9C5B671D30AEC60070E0DC /* UI */,
 			);
 			path = Image;
-			sourceTree = "<group>";
-		};
-		4F9C5B5C1D30AEC60070E0DC /* BackGround */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BackGround;
-			sourceTree = "<group>";
-		};
-		4F9C5B5D1D30AEC60070E0DC /* Character */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Character;
 			sourceTree = "<group>";
 		};
 		4F9C5B5E1D30AEC60070E0DC /* TestImage */ = {
@@ -1192,13 +1223,6 @@
 				4F9C5B661D30AEC60070E0DC /* BoneGloss.png */,
 			);
 			path = Bone;
-			sourceTree = "<group>";
-		};
-		4F9C5B671D30AEC60070E0DC /* UI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		4F9C5B731D30AEEE0070E0DC /* Data */ = {
@@ -1693,6 +1717,42 @@
 			path = " End";
 			sourceTree = "<group>";
 		};
+		FE732FAE1D7165BD006808DD /* BackGround */ = {
+			isa = PBXGroup;
+			children = (
+				FE732FAF1D7165BD006808DD /* BackGround_Left.png */,
+				FE732FB01D7165BD006808DD /* BackGround_Right.png */,
+			);
+			path = BackGround;
+			sourceTree = "<group>";
+		};
+		FE732FB11D7165BD006808DD /* Castle */ = {
+			isa = PBXGroup;
+			children = (
+				FE732FB21D7165BD006808DD /* Castle.png */,
+			);
+			path = Castle;
+			sourceTree = "<group>";
+		};
+		FE732FB31D7165BD006808DD /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				FE732FB41D7165BD006808DD /* Goblin.png */,
+				FE732FB51D7165BD006808DD /* King.png */,
+				FE732FB61D7165BD006808DD /* Soldier.png */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		FE732FB71D7165BD006808DD /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				FE732FB81D7165BD006808DD /* Title_Icon_End.png */,
+				FE732FB91D7165BD006808DD /* Title_Icon_Start.png */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1790,25 +1850,37 @@
 			files = (
 				4F9C5B6C1D30AEC60070E0DC /* BoneFramework1.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				FE732FC61D7165BD006808DD /* Title_Icon_End.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
+				FE732FA81D7165A2006808DD /* Lose.png in Resources */,
+				FE732FAA1D7165A2006808DD /* TimeUp.png in Resources */,
+				FE732FC41D7165BD006808DD /* Soldier.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
+				FE732FA61D7165A2006808DD /* GameStart.png in Resources */,
 				4F9C5B6E1D30AEC60070E0DC /* BoneFramework2.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				FE732FC21D7165BD006808DD /* King.png in Resources */,
 				17EC44611D39EC5B00DD4EAB /* Summon_Icon.png in Resources */,
+				FE732FC81D7165BD006808DD /* Title_Icon_Start.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				FE732FBA1D7165BD006808DD /* BackGround_Left.png in Resources */,
 				4F9C5B681D30AEC60070E0DC /* gameMainBG.png in Resources */,
 				17EC44651D39EC5B00DD4EAB /* Summon_SmallIcon.png in Resources */,
+				FE732FC01D7165BD006808DD /* Goblin.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
+				FE732FAC1D7165A2006808DD /* Win.png in Resources */,
+				FE732FBC1D7165BD006808DD /* BackGround_Right.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				4F9C5B6A1D30AEC60070E0DC /* Bone.png in Resources */,
 				4F0112801D4DC4DC0087E05F /* TimeNumber.png in Resources */,
 				17EC44631D39EC5B00DD4EAB /* Summon_SmallFrame.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				17EC445B1D39EC5B00DD4EAB /* PlayerLife_Frame.png in Resources */,
+				FE732FA41D7165A2006808DD /* Draw.png in Resources */,
 				4F9C5B701D30AEC60070E0DC /* BoneGloss.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				17EC44571D39EC5B00DD4EAB /* EnemyLife_Frame.png in Resources */,
@@ -1829,6 +1901,7 @@
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				4F75D0CB1D3A92A5002744C9 /* TestMoveSprite.png in Resources */,
 				17EC445F1D39EC5B00DD4EAB /* Summon_Frame.png in Resources */,
+				FE732FBE1D7165BD006808DD /* Castle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1836,24 +1909,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE732FA91D7165A2006808DD /* Lose.png in Resources */,
 				17EC44581D39EC5B00DD4EAB /* EnemyLife_Frame.png in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
+				FE732FC11D7165BD006808DD /* Goblin.png in Resources */,
 				4F9C5B691D30AEC60070E0DC /* gameMainBG.png in Resources */,
 				4F9C5B711D30AEC60070E0DC /* BoneGloss.png in Resources */,
+				FE732FAB1D7165A2006808DD /* TimeUp.png in Resources */,
 				17EC44601D39EC5B00DD4EAB /* Summon_Frame.png in Resources */,
 				4F0112831D4DC4DC0087E05F /* TimeNumberSymbol.png in Resources */,
+				FE732FC71D7165BD006808DD /* Title_Icon_End.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
+				FE732FC51D7165BD006808DD /* Soldier.png in Resources */,
 				17EC44641D39EC5B00DD4EAB /* Summon_SmallFrame.png in Resources */,
 				17EC44561D39EC5B00DD4EAB /* CharacterFrame_Red.png in Resources */,
+				FE732FC31D7165BD006808DD /* King.png in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
+				FE732FBB1D7165BD006808DD /* BackGround_Left.png in Resources */,
 				17EC445E1D39EC5B00DD4EAB /* PlayerLife_Gage.png in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
+				FE732FA51D7165A2006808DD /* Draw.png in Resources */,
 				4F0112811D4DC4DC0087E05F /* TimeNumber.png in Resources */,
+				FE732FA71D7165A2006808DD /* GameStart.png in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				4F9C5B6B1D30AEC60070E0DC /* Bone.png in Resources */,
 				4F9C5B6D1D30AEC60070E0DC /* BoneFramework1.png in Resources */,
+				FE732FAD1D7165A2006808DD /* Win.png in Resources */,
+				FE732FC91D7165BD006808DD /* Title_Icon_Start.png in Resources */,
+				FE732FBD1D7165BD006808DD /* BackGround_Right.png in Resources */,
 				17EC44621D39EC5B00DD4EAB /* Summon_Icon.png in Resources */,
+				FE732FBF1D7165BD006808DD /* Castle.png in Resources */,
 				4F9C5B6F1D30AEC60070E0DC /* BoneFramework2.png in Resources */,
 				4F75D0CC1D3A92A5002744C9 /* TestMoveSprite.png in Resources */,
 				17EC445A1D39EC5B00DD4EAB /* EnemyLife_Gage.png in Resources */,
