@@ -90,9 +90,6 @@ void CSummon::animation(){
 void CSummon::collision(){
     
     
-    if(this->m_state == STATE::ATTACK)
-        return;
-    
     //自身のm_tagから衝突判定相手を決定する
     CHARACTER_AGGREGATE_TYPE type = CHARACTER_AGGREGATE_TYPE::NONE;
     (this->m_tag >= 1000 && this->m_tag < 2000)?
@@ -114,8 +111,11 @@ void CSummon::collision(){
         
         //一匹でも攻撃範囲にいたら攻撃状態にする
         if(myCollisionData.collisionDecision(eneCollisionData)){
-            this->m_state = STATE::ATTACK;
+           
+            //攻撃アクションを開始する
+            (*this->m_pActions)[0]->start();
             return;
+
         }
     }
     //＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝わからん＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
@@ -127,10 +127,10 @@ void CSummon::collision(){
 void CSummon::checkState(){
     
 //    //画像の反転処理
-//    if(this->m_pMove->getDirection() < 0){
+//    if(this->m_pMove->getDirection().x < 0){
 //        this->m_pSprite->setScale( -1.0f, 1.0f );
 //    }
-//    if(this->m_pMove->getDirection() > 0){
+//    if(this->m_pMove->getDirection().x > 0){
 //        this->m_pSprite->setScale( 1.0f, 1.0f );
 //    }
 

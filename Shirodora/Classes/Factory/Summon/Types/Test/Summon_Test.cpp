@@ -50,7 +50,7 @@ void CSummon_Test::setSprite(CSummon *pSummon){
  *  @param  CSummon*
  */
 void CSummon_Test::setStatus(CSummon *pSummon){
-    pSummon->getStatus()->setStatus(100, 100, TYPE::NONE, 0, 0, 1, 30) ;
+    pSummon->getStatus()->setStatus(100, 100, TYPE::NONE, 0, 10, 1, 30) ;
 }
 
 /**
@@ -75,14 +75,18 @@ void CSummon_Test::setCollisionBody(CSummon *pSummon){
 void CSummon_Test::setAttackBody(CSummon *pSummon){
     pSummon->setAttackPosition(cocos2d::Vec2(64.0f, 0.0f)) ;
     
+    //頂点座標
     cocos2d::Vec2 apexs[4] = {
-        cocos2d::Vec2(32.0f, 32.0f),
-        cocos2d::Vec2(-32.0f, 32.0f),
-        cocos2d::Vec2(-32.0f, -32.0f),
-        cocos2d::Vec2(32.0f, -32.0f)
+        cocos2d::Vec2(0.0f, 64.0f),  //左上
+        cocos2d::Vec2(0.0f, -64.0f), //左下
+        cocos2d::Vec2(-64.0f, 64.0f), //右上
+        cocos2d::Vec2(-64.0f, -64.0f) //右下
     };
     
-    pSummon->getCollisionBody()->setApexs(4, apexs) ;
+    //中心座標
+    pSummon->getAttackBody()->setCenterPosition(cocos2d::Vec2(32.0f, 0.0f));
+    
+    pSummon->getAttackBody()->setApexs(4, apexs) ;
 }
 
 /**
@@ -100,7 +104,7 @@ void CSummon_Test::setAnimation(CSummon *pSummon){
  *  @param  CSummon*
  */
 void CSummon_Test::setAction(CSummon *pSummon){
-    
+    pSummon->getActions()->push_back(new CSimpleAttackAction(60, CHARACTER_AGGREGATE_TYPE::PLAYER_1)) ;
 }
 
 /**
