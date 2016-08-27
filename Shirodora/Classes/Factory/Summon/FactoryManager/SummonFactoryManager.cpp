@@ -89,6 +89,10 @@ void CSummonFactoryManager::setFactory(SUMMON_TYPE type){
             pFactory = new CSummon_Test() ;
             break;
             
+        case SUMMON_TYPE::TEST2 :
+            pFactory = new CPlayerSummon_Test() ;
+            break;
+            
         default:
             break;
     }

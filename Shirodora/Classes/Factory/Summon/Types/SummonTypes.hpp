@@ -13,5 +13,6 @@
 // 召喚種類まとめヘッダー
 //=========================================================================
 #include "Summon_Test.hpp"
+#include "PlayerSummon_Test.hpp"
 
 #endif /* SummonTypes_hpp */

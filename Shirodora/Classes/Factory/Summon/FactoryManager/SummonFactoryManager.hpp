@@ -26,6 +26,7 @@ class CSummonCreateFactory ;
 enum class SUMMON_TYPE {
     NONE        = -1,
     TEST,
+    TEST2,
     MAX
 };
 
