@@ -25,8 +25,8 @@ class CSummonCreateFactory ;
 //=========================================================================
 enum class SUMMON_TYPE {
     NONE        = -1,
-    TEST,
-    TEST2,
+    TEST        =  0,   //敵ノーマル
+    TEST2       =  1,   //味方ノーマル
     MAX
 };
 
@@ -35,7 +35,8 @@ enum class SUMMON_TYPE {
 //      サモンタイプ と コスト
 //=========================================================================
 static int SUMMON_COST[(int)SUMMON_TYPE::MAX] = {
-    1,
+    1,  //SUMMON_TYPE::TEST
+    1,  //SUMMON_TYPE::TEST2
 };
 
 //=========================================================================

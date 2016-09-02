@@ -42,6 +42,9 @@ bool CKing::init(){
     // 初期状態を待機にしておく
     this->m_state = STATE::IDLE ;
     
+    //回復間隔を10秒に設定
+    this->m_costRecoverInterval = 600;
+    
     return true ;
 }
 
@@ -59,6 +62,7 @@ void CKing::update(float deltaTime){
     this->checkState() ;
     this->apply() ;
     this->animation() ;
+    this->recoverCost() ;
 }
 
 /**
@@ -249,3 +253,19 @@ void CKing::moveInput(){
     }
 
 }
+
+/*
+ *  @desc   コストの回復
+ *  @tips   一定時間ごとにコストを回復する
+ */
+void CKing::recoverCost(){
+    
+    if(this->m_costRecoverCounter <= 0){
+        
+        this->m_pStatus->increaseCost();
+        this->m_costRecoverCounter = this->m_costRecoverInterval;
+    }
+    
+    this->m_costRecoverCounter--;
+}
+

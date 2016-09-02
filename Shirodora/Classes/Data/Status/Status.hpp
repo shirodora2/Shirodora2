@@ -120,6 +120,8 @@ private:
     float m_attackPt = 0.0f ;
     //コスト
     int m_cost = 0 ;
+    //コスト最大値
+    int m_maxCost = 0 ;
     //攻撃間隔
     int m_interval = 0 ;
 public:
@@ -134,13 +136,14 @@ public:
      * @param コスト
      * @param 攻撃間隔
      */
-    void setStatus(int hp, int maxMp, TYPE type, float defensePt, float attackPt, int cost, int interval){
+    void setStatus(int hp, int maxHp, TYPE type, float defensePt, float attackPt, int cost, int interval){
         this->m_hp = hp ;
-        this->m_maxHp = hp ;
+        this->m_maxHp = maxHp ;
         this->m_type = type ;
         this->m_defensePt = defensePt ;
         this->m_attackPt = attackPt ;
         this->m_cost = cost ;
+        this->m_maxCost  = cost;
         this->m_interval = interval ;
     }
     /**
@@ -172,15 +175,23 @@ public:
     }
     
     /**
-     * @desc コスト現象
-     * @param 使用するコスト
+     * @desc    コスト減少
+     * @param   使用するコスト
      */
     void decreaseCost(int useCost){
         this->m_cost -= useCost ;
     }
     
+    /**
+     * @desc    コストの回復
+     * @param   使用するコスト
+     */
     void increaseCost(){
+        
         this->m_cost++ ;
+        
+        if(this->m_cost > this->m_maxCost)
+            this->m_cost = this->m_maxCost;
     }
     
 } ;
