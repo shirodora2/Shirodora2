@@ -66,14 +66,44 @@ void CSimpleAttackAction::update(CCharacter* pChara){
                 //範囲内の敵にダメージ
                 if(myCollisionData.collisionDecision(eneCollisionData)){
                     
-                    pEneChara->getStatus()->decreaseHp(pChara->getStatus()->getAttackPt(),
+                    int damage = pEneChara->getStatus()->decreaseHp(pChara->getStatus()->getAttackPt(),
                                                        pChara->getStatus()->getType());
                     
                     if(pEneChara->getStatus()->getHp() <= 0)
                         pEneChara->setActive(false);
                 
+                    //***************************************************
+                    // ダメージラベル
+                    //***************************************************
+                    //CCLOG("cccccc%d",pEneChara->getStatus()->getHp());
                     
-                    CCLOG("cccccc%d",pEneChara->getStatus()->getHp());
+                    std::string str = std::to_string(damage);
+                    
+                    cocos2d::Label* pDamage = cocos2d::Label::createWithSystemFont(str, "Alial", 15);
+                    
+                    int posX = RANDOM_FUNC::random(-10, 10);
+                    
+                    pDamage->setPosition(pEneChara->getSprite()->getContentSize().width/2 + posX,pEneChara->getSprite()->getContentSize().height + posX/2);
+                    
+                    pDamage->setColor(cocos2d::Color3B::RED);
+                    
+                    auto move = cocos2d::MoveBy::create(1.0f, cocos2d::Vec2(0.0f,10.0f));
+                    auto wait = cocos2d::DelayTime::create(0.5f);
+                    auto fade = cocos2d::FadeOut::create(0.5f);
+                    auto remove = cocos2d::RemoveSelf::create();
+                    auto sequence = cocos2d::Sequence::create(wait, fade, remove, NULL);
+                    auto spawn = cocos2d::Spawn::create(sequence, move, NULL);
+                    
+                    pDamage->runAction(spawn);
+                    
+                    if(pEneChara->getSprite()->getScaleX() < 0)
+                        pDamage->setScale(-1.0f,1.0f);
+                    
+                    CCLOG("%f",pEneChara->getSprite()->getScaleX());
+                    
+                    pEneChara->getSprite()->addChild(pDamage);
+                    //***************************************************
+                    //***************************************************
 
                 }
             }

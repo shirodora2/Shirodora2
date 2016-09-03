@@ -45,6 +45,7 @@ bool CKing::init(){
     //回復間隔を10秒に設定
     this->m_costRecoverInterval = 600;
     
+    
     return true ;
 }
 
@@ -63,6 +64,10 @@ void CKing::update(float deltaTime){
     this->apply() ;
     this->animation() ;
     this->recoverCost() ;
+    
+    //CCLOG("%f:%f",this->getContentSize().height,this->getContentSize().width);
+    //CCLOG("%f:%f",this->getPosition().x,this->getPosition().y);
+
 }
 
 /**

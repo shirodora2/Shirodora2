@@ -96,8 +96,16 @@ bool CBattele_MainLayer::init(){
     
     //KINGの生成
     CKing* pKing = CKingFactoryManager::getInstance()->create(1000, KING_TYPE::TEST, WINDOW_WIDTH * 0.7f, WINDOW_HEIGHT * 0.5f) ;
+
     CCharacterManager::getInstance()->add(pKing);
     this->addChild(pKing) ;
+    
+    this->m_pCreateArea = CCREATE_FUNC::create<CCreateArea>();
+    this->m_pCreateArea->setPosition(pKing->getSprite()->getContentSize().width/2,pKing->getSprite()->getContentSize().height/2);
+    this->m_pCreateArea->setScale( 2.0f );
+    
+    pKing->getSprite()->addChild(this->m_pCreateArea);
+    
     
     
     //ゲームモードの設定
