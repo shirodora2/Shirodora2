@@ -31,7 +31,7 @@
 // コンストラクタ/デストラクタ
 //=========================================================================
 
-CEnemySpawnAlgorithm_Easy::CEnemySpawnAlgorithm_Easy() : CEnemySpawnAlgorithm_Base(300){}
+CEnemySpawnAlgorithm_Easy::CEnemySpawnAlgorithm_Easy() : CEnemySpawnAlgorithm_Base(600){}
 
 /**
  *  @desc   デストラクタ
