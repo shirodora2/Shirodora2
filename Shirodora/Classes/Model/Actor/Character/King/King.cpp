@@ -42,8 +42,8 @@ bool CKing::init(){
     // 初期状態を待機にしておく
     this->m_state = STATE::IDLE ;
     
-    //回復間隔を10秒に設定
-    this->m_costRecoverInterval = 600;
+    //回復間隔を5秒に設定
+    this->m_costRecoverInterval = 60 * 5;
     
     
     return true ;
@@ -57,8 +57,8 @@ bool CKing::init(){
  *  @param  微小時間
  */
 void CKing::update(float deltaTime){
-    this->action() ;
     this->move() ;
+    this->action() ;
     this->collision() ;
     this->checkState() ;
     this->apply() ;
@@ -96,7 +96,10 @@ void CKing::move(){
  *  @desc   アニメーション処理
  */
 void CKing::animation(){
-    (*this->m_pAnimations)[(int)STATE::IDLE]->update() ;
+    
+    for(CAnimation* pAnim : (*this->m_pAnimations)){
+        pAnim->update() ;
+    }
 }
 
 /**
@@ -189,7 +192,9 @@ void CKing::apply(){
     this->m_pSprite->cocos2d::Sprite::setPosition(this->m_pMove->getPosition()) ;
     
     // チップデータを反映
-    this->m_pSprite->setTextureRect((*this->m_pAnimations)[0]->getCurrentChip()) ;
+    this->m_pSprite->setTextureRect((*this->m_pAnimations)[(int)this->m_state]->getCurrentChip()) ;
+    //this->m_pSprite->setTextureRect((*this->m_pAnimations)[1]->getCurrentChip()) ;
+
 }
 
 /**

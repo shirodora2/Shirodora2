@@ -53,8 +53,8 @@ bool CSummon::init(){
  *  @param  微小時間
  */
 void CSummon::update(float deltaTime){
-    this->action() ;
     this->move() ;
+    this->action() ;
     this->collision() ;
     this->checkState() ;
     this->apply() ;
@@ -81,7 +81,9 @@ void CSummon::move(){
  *  @desc   アニメーション処理
  */
 void CSummon::animation(){
-    (*this->m_pAnimations)[(int)STATE::IDLE]->update() ;
+    for(CAnimation* pAnim : (*this->m_pAnimations)){
+        pAnim->update() ;
+    }
 }
 
 /**
@@ -144,7 +146,8 @@ void CSummon::apply(){
     this->m_pSprite->cocos2d::Sprite::setPosition(this->m_pMove->getPosition()) ;
     
     // チップデータを反映
-    this->m_pSprite->setTextureRect((*this->m_pAnimations)[(int)STATE::IDLE]->getCurrentChip()) ;
+    this->m_pSprite->setTextureRect((*this->m_pAnimations)[(int)this->m_state]->getCurrentChip()) ;
+    //this->m_pSprite->setTextureRect((*this->m_pAnimations)[(int)STATE::IDLE]->getCurrentChip()) ;
 }
 
 /**

@@ -94,9 +94,17 @@ void CPlayerSummon_Test::setAttackBody(CSummon *pSummon){
  *  @param  CSummon*
  */
 void CPlayerSummon_Test::setAnimation(CSummon *pSummon){
-    CChipNotAnimation *pAnime = new CChipNotAnimation() ;
+    CChipAnimation *pAnime = new CChipAnimation(20,4,true) ;
     pAnime->addChipData(new CChip(0.0f, 0.0f, 64.0f, 64.0f)) ;
     pSummon->getAnimations()->push_back(pAnime) ;
+    
+    CChipAnimation *pAnime2 = new CChipAnimation(20, 4, true) ;
+    pAnime2->addChipData(new CChip(0.0f, 128.0f, 64.0f, 64.0f)) ;
+    pSummon->getAnimations()->push_back(pAnime2) ;
+    
+    CChipAnimation *pAnime3 = new CChipAnimation(20,4,true) ;
+    pAnime3->addChipData(new CChip(0.0f, 0.0f, 64.0f, 64.0f)) ;
+    pSummon->getAnimations()->push_back(pAnime3) ;
 }
 
 /**
