@@ -23,6 +23,7 @@
 class CCharacter ;
 class CUI_Layer ;
 class CEnemySpawner ;
+class CCreateArea ;
 
 //=========================================================================
 //
@@ -124,6 +125,9 @@ public :
     
     // 敵生成機
     CEnemySpawner *m_pSpawner {NULL} ;
+    
+    //召喚エリア
+    CCreateArea *m_pCreateArea {NULL} ;
     
     //ゲームモード
     int m_gameMode = 0;
