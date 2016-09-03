@@ -59,6 +59,7 @@
 #include "Summon.hpp"
 #include "Object.hpp"
 #include "Pawn.hpp"
+#include "CreatArea.hpp"
 
 
 //************** ModelManager *******************

@@ -223,6 +223,10 @@
 		DB5153471D39D6A1005E73E7 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB5153441D39D6A1005E73E7 /* Status.cpp */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
+		FE082BDE1D7A88D000CE6E69 /* createArea.png in Resources */ = {isa = PBXBuildFile; fileRef = FE082BDD1D7A88D000CE6E69 /* createArea.png */; };
+		FE082BDF1D7A88D000CE6E69 /* createArea.png in Resources */ = {isa = PBXBuildFile; fileRef = FE082BDD1D7A88D000CE6E69 /* createArea.png */; };
+		FE082BE21D7A890000CE6E69 /* CreatArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE082BE01D7A890000CE6E69 /* CreatArea.cpp */; };
+		FE082BE31D7A890000CE6E69 /* CreatArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE082BE01D7A890000CE6E69 /* CreatArea.cpp */; };
 		FE220C4A1D5F682B00F1A297 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE220C481D5F682B00F1A297 /* TitleScene.cpp */; };
 		FE220C4B1D5F682B00F1A297 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE220C481D5F682B00F1A297 /* TitleScene.cpp */; };
 		FE220C531D5F684000F1A297 /* Title_MainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE220C4E1D5F684000F1A297 /* Title_MainLayer.cpp */; };
@@ -510,6 +514,9 @@
 		DB5153451D39D6A1005E73E7 /* Status.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Status.hpp; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		FE082BDD1D7A88D000CE6E69 /* createArea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = createArea.png; sourceTree = "<group>"; };
+		FE082BE01D7A890000CE6E69 /* CreatArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CreatArea.cpp; sourceTree = "<group>"; };
+		FE082BE11D7A890000CE6E69 /* CreatArea.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CreatArea.hpp; sourceTree = "<group>"; };
 		FE220C481D5F682B00F1A297 /* TitleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TitleScene.cpp; sourceTree = "<group>"; };
 		FE220C491D5F682B00F1A297 /* TitleScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TitleScene.hpp; sourceTree = "<group>"; };
 		FE220C4E1D5F684000F1A297 /* Title_MainLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Title_MainLayer.cpp; sourceTree = "<group>"; };
@@ -848,6 +855,8 @@
 		4F75D0601D3A730A002744C9 /* Object */ = {
 			isa = PBXGroup;
 			children = (
+				FE082BE01D7A890000CE6E69 /* CreatArea.cpp */,
+				FE082BE11D7A890000CE6E69 /* CreatArea.hpp */,
 				4F75D0611D3A730A002744C9 /* Object.hpp */,
 			);
 			path = Object;
@@ -1787,6 +1796,7 @@
 		FE732FB31D7165BD006808DD /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				FE082BDD1D7A88D000CE6E69 /* createArea.png */,
 				FE732FB41D7165BD006808DD /* Goblin.png */,
 				FE732FB51D7165BD006808DD /* King.png */,
 				FE732FB61D7165BD006808DD /* Soldier.png */,
@@ -1941,6 +1951,7 @@
 				4F0112821D4DC4DC0087E05F /* TimeNumberSymbol.png in Resources */,
 				17EC445D1D39EC5B00DD4EAB /* PlayerLife_Gage.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				FE082BDE1D7A88D000CE6E69 /* createArea.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
@@ -1961,6 +1972,7 @@
 			files = (
 				FE732FA91D7165A2006808DD /* Lose.png in Resources */,
 				17EC44581D39EC5B00DD4EAB /* EnemyLife_Frame.png in Resources */,
+				FE082BDF1D7A88D000CE6E69 /* createArea.png in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				FE732FC11D7165BD006808DD /* Goblin.png in Resources */,
 				4F9C5B691D30AEC60070E0DC /* gameMainBG.png in Resources */,
@@ -2076,6 +2088,7 @@
 				4F9C5BE61D30BFC70070E0DC /* Simplex.cpp in Sources */,
 				4F9C5BBB1D30AEEE0070E0DC /* MouseManager.cpp in Sources */,
 				4F7725C91D51FEB10023FF38 /* CharacterIterator_Player2Tag.cpp in Sources */,
+				FE082BE21D7A890000CE6E69 /* CreatArea.cpp in Sources */,
 				4FE56A501D68545D00B4D8D2 /* CastleCreateFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2094,6 +2107,7 @@
 				4F7725CA1D51FEB10023FF38 /* CharacterIterator_Player2Tag.cpp in Sources */,
 				4F7725BA1D51FEB10023FF38 /* CharacterAggregate.cpp in Sources */,
 				4F75D0671D3A730A002744C9 /* King.cpp in Sources */,
+				FE082BE31D7A890000CE6E69 /* CreatArea.cpp in Sources */,
 				4F0112891D4DC4F70087E05F /* CharacterIconSprite.cpp in Sources */,
 				4FE56A551D68545D00B4D8D2 /* Castle_Normal.cpp in Sources */,
 				4F9C5BB61D30AEEE0070E0DC /* MouseLayer.cpp in Sources */,
