@@ -38,7 +38,10 @@ CTitle_MainLayer::~CTitle_MainLayer(){}
 bool CTitle_MainLayer::init(){
     if(CInputLayer::init() == false) return false ;
     
-    
+    // タイトル背景
+    cocos2d::Sprite *pBackGround = cocos2d::Sprite::create("BackGround_Left.png");
+    pBackGround->setPosition(500.0f,300.0f);
+    this->addChild(pBackGround);
     
     // スケジューラーに登録
     this->scheduleUpdate() ;

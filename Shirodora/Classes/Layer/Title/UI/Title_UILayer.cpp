@@ -38,13 +38,13 @@ bool CTitle_UILayer::init(){
      * @param 押された時に呼び出されるメンバ関数の設定
      */
     cocos2d::MenuItemImage* pStartBtnItem = cocos2d::MenuItemImage::create(
-                                                         "TestMoveSprite.png",
-                                                         "TestMoveSprite.png",
+                                                         "Title_Icon_Start.png",
+                                                         "Title_Icon_Start.png",
                                                          CC_CALLBACK_1(CTitle_UILayer::callbackChangeGameMain, this)
                                                          );
     
     //位置に設定
-    pStartBtnItem->setPosition(WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.4f) ;
+    pStartBtnItem->setPosition(WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
     
     /*
      * @desc メニューアイテムの生成　終了ボタン
@@ -53,8 +53,8 @@ bool CTitle_UILayer::init(){
      * @param 押された時に呼び出されるメンバ関数の設定
      */
     cocos2d::MenuItemImage* pEndBtnItem = cocos2d::MenuItemImage::create(
-                                                       "TestMoveSprite.png",
-                                                       "TestMoveSprite.png",
+                                                       "Title_Icon_End.png",
+                                                       "Title_Icon_End.png",
                                                        CC_CALLBACK_1(CTitle_UILayer::callbackEndGame, this)
                                                        );
     
