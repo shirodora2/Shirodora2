@@ -100,33 +100,36 @@ void CUI_Layer::update(float _dt){
             //コストの演出処理
             costFunc();
             
+            
             //プレイヤー WIN
-            if(m_pCastleHpPlayerBar->getCastleHp() <= 0 && m_pCastleHpEnemyBar->getCastleHp() > 0){
+            if(m_pCastleHpPlayerBar->getCastleHp() >= 0 && m_pCastleHpEnemyBar->getCastleHp() < 0){
                 scheduleOnce(schedule_selector(CUI_Layer::WinProductionFunc), 0.f);
                 m_systemMode = SYSTEM_MODE::END;
 
 
             //プレイヤー LOSE
-            }else if(m_pCastleHpPlayerBar > 0 && m_pCastleHpEnemyBar->getCastleHp() <= 0){
+            }else if(m_pCastleHpPlayerBar->getCastleHp() < 0 && m_pCastleHpEnemyBar->getCastleHp() > 0){
                 scheduleOnce(schedule_selector(CUI_Layer::LoseProductionFunc), 0.f);
                 m_systemMode = SYSTEM_MODE::END;
 
             // Time Up
             }else if(m_pTimeLabel->getTime() <= 0){
+                scheduleOnce(schedule_selector(CUI_Layer::TimeUpProductionFunc), 0.f);
+
                 //プレイヤー WIN
                 if(m_pCastleHpPlayerBar->getCastleHp() > m_pCastleHpEnemyBar->getCastleHp()){
-                    scheduleOnce(schedule_selector(CUI_Layer::WinProductionFunc), 0.f);
+                    scheduleOnce(schedule_selector(CUI_Layer::WinProductionFunc), 2.f);
                     m_systemMode = SYSTEM_MODE::END;
 
 
                 //プレイヤー LOSE
                 }else if(m_pCastleHpPlayerBar->getCastleHp() < m_pCastleHpEnemyBar->getCastleHp()){
-                    scheduleOnce(schedule_selector(CUI_Layer::StartProductionFunc), 0.f);
+                    scheduleOnce(schedule_selector(CUI_Layer::StartProductionFunc), 2.f);
                     m_systemMode = SYSTEM_MODE::END;
 
                 // DROW
                 }else{
-                    scheduleOnce(schedule_selector(CUI_Layer::DrowProductionFunc), 0.f);
+                    scheduleOnce(schedule_selector(CUI_Layer::DrowProductionFunc), 2.f);
                     m_systemMode = SYSTEM_MODE::END;
 
 
@@ -148,10 +151,12 @@ void CUI_Layer::update(float _dt){
 
 void CUI_Layer::StartProductionFunc(float _dt){
     auto start = Sprite::create("GameStart.png");
-    start->setPosition(Point(Director::getInstance()->getWinSize() * 0.5f));
+    start->setPosition(Director::getInstance()->getWinSize().width * 0.5f,
+                       Director::getInstance()->getWinSize().height * 0.7f);
     addChild(start);
     
-    auto move = MoveTo::create(3.f, Point(Director::getInstance()->getWinSize() * 0.2f));
+    auto move = MoveTo::create(0.4f, Point(this->getPosition().x + getContentSize().width / 2,
+                                          this->getPosition().y + getContentSize().height / 2));
     auto wait = DelayTime::create(3.f);
     auto remove = RemoveSelf::create();
     auto sequence = Sequence::create(move,
@@ -181,11 +186,14 @@ void CUI_Layer::LoseProductionFunc(float _dt){
     start->setPosition(Point(Director::getInstance()->getWinSize() * 0.5f));
     addChild(start);
     
-    auto move = MoveTo::create(3.f, Point(Director::getInstance()->getWinSize() * 0.2f));
-    auto wait = DelayTime::create(3.f);
+    auto rotate = RotateTo::create(2.f, 30.f, 10.f);
+    auto move = MoveTo::create(3.f, Point(start->getPosition().x,
+                                          start->getPosition().y -200));
+    auto wait = DelayTime::create(2.f);
     auto remove = RemoveSelf::create();
-    auto sequence = Sequence::create(move,
+    auto sequence = Sequence::create(rotate,
                                      wait,
+                                     move,
                                      remove,
                                      NULL);
     start->runAction(sequence);
@@ -209,6 +217,20 @@ void CUI_Layer::DrowProductionFunc(float _dt){
 
 }
 
+void CUI_Layer::TimeUpProductionFunc(float _dt){
+    auto timeUp = Sprite::create("TimeUp.png");
+    timeUp->setPosition(Point(Director::getInstance()->getWinSize() * 0.5f));
+    addChild(timeUp);
+    
+    auto wait = DelayTime::create(2.f);
+    auto remove = RemoveSelf::create();
+    auto sequence = Sequence::create(wait,
+                                     remove,
+                                     NULL);
+    timeUp->runAction(sequence);
+    
+
+}
 
 
 

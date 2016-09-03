@@ -63,6 +63,7 @@ public:
     void WinProductionFunc(float _dt);
     void LoseProductionFunc(float _dt);
     void DrowProductionFunc(float _dt);
+    void TimeUpProductionFunc(float _dt);
     
     
     //コストの演出メソッド
