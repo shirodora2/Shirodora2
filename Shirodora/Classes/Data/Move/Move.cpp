@@ -83,15 +83,7 @@ void CMove::moveBy(){
         this->m_velocity = -this->m_maxSpeed ;
     }
     
-    // 速度が 0なら進行方向を 原点にする
-    if(this->m_velocity == 0.0f){
-        this->m_direction = cocos2d::Vec2::ZERO ;
-    }
-    
-    // 進行方向と速度をかけて移動距離を算出し、位置に加算する
-    else{
-        this->m_position += (this->m_direction.getNormalized() * this->m_velocity) ;
-    }
+    this->m_position += (this->m_direction.getNormalized() * this->m_velocity) ;
     
     // 回転速度を計算する
     if(this->m_rotateVel != 0.0f){
