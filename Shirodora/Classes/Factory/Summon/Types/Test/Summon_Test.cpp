@@ -42,7 +42,7 @@ void CSummon_Test::setMove(CSummon *pSummon , const cocos2d::Vec2 &position){
  *  @param  CSummon*
  */
 void CSummon_Test::setSprite(CSummon *pSummon){
-    pSummon->getSprite()->setTexture("Goblin.png") ;
+    pSummon->getSprite()->setTexture("Soldier.png") ;
 }
 
 /**
@@ -73,18 +73,18 @@ void CSummon_Test::setCollisionBody(CSummon *pSummon){
  *  @param  CSummon*
  */
 void CSummon_Test::setAttackBody(CSummon *pSummon){
-    pSummon->setAttackPosition(cocos2d::Vec2(64.0f, 0.0f)) ;
+    pSummon->setAttackPosition(cocos2d::Vec2(32.0f, 0.0f)) ;
     
     //頂点座標
     cocos2d::Vec2 apexs[4] = {
-        cocos2d::Vec2(0.0f, 64.0f),  //左上
-        cocos2d::Vec2(0.0f, -64.0f), //左下
-        cocos2d::Vec2(-64.0f, 64.0f), //右上
-        cocos2d::Vec2(-64.0f, -64.0f) //右下
+        cocos2d::Vec2(0.0f, 32.0f),  //左上
+        cocos2d::Vec2(0.0f, -32.0f), //左下
+        cocos2d::Vec2(-32.0f, 32.0f), //右上
+        cocos2d::Vec2(-32.0f, -32.0f) //右下
     };
     
     //中心座標
-    pSummon->getAttackBody()->setCenterPosition(cocos2d::Vec2(32.0f, 0.0f));
+    pSummon->getAttackBody()->setCenterPosition(cocos2d::Vec2(16.0f, 0.0f));
     
     pSummon->getAttackBody()->setApexs(4, apexs) ;
 }
@@ -95,7 +95,7 @@ void CSummon_Test::setAttackBody(CSummon *pSummon){
  */
 void CSummon_Test::setAnimation(CSummon *pSummon){
     CChipAnimation *pAnime = new CChipAnimation(20,4,true) ;
-    pAnime->addChipData(new CChip(0.0f, 0.0f, 64.0f, 64.0f)) ;
+    pAnime->addChipData(new CChip(0.0f, 64.0f, 64.0f, 64.0f)) ;
     pSummon->getAnimations()->push_back(pAnime) ;
     
     CChipAnimation *pAnime2 = new CChipAnimation(20, 4, true) ;
@@ -103,7 +103,7 @@ void CSummon_Test::setAnimation(CSummon *pSummon){
     pSummon->getAnimations()->push_back(pAnime2) ;
     
     CChipAnimation *pAnime3 = new CChipAnimation(20,4,true) ;
-    pAnime3->addChipData(new CChip(0.0f, 0.0f, 64.0f, 64.0f)) ;
+    pAnime3->addChipData(new CChip(0.0f, 64.0f, 64.0f, 64.0f)) ;
     pSummon->getAnimations()->push_back(pAnime3) ;
 }
 
@@ -112,7 +112,7 @@ void CSummon_Test::setAnimation(CSummon *pSummon){
  *  @param  CSummon*
  */
 void CSummon_Test::setAction(CSummon *pSummon){
-    pSummon->getActions()->push_back(new CSimpleAttackAction(60, CHARACTER_AGGREGATE_TYPE::PLAYER_1)) ;
+    pSummon->getActions()->push_back(new CSimpleAttackAction(80, CHARACTER_AGGREGATE_TYPE::PLAYER_1)) ;
     pSummon->getActions()->push_back(new CMoveAction(cocos2d::Vec2(-1.0f,0.0f), 1)) ;
 
 }

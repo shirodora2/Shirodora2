@@ -58,7 +58,7 @@ bool CUI_Layer::init(){
     }
     for(int i = 0; i < MAXICON ; i++){
         m_charaIconBox[i]->setPosition(Director::getInstance()->getWinSize().width * 0.2f +
-                                       (m_charaIconBox[i]->getContentSize().width * i),
+                                       (m_charaIconBox[i]->getContentSize().width  * i),
                                        Director::getInstance()->getWinSize().height * 0.1f);
     }
     

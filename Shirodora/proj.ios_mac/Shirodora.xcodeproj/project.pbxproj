@@ -267,6 +267,8 @@
 		FE732FC71D7165BD006808DD /* Title_Icon_End.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB81D7165BD006808DD /* Title_Icon_End.png */; };
 		FE732FC81D7165BD006808DD /* Title_Icon_Start.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB91D7165BD006808DD /* Title_Icon_Start.png */; };
 		FE732FC91D7165BD006808DD /* Title_Icon_Start.png in Resources */ = {isa = PBXBuildFile; fileRef = FE732FB91D7165BD006808DD /* Title_Icon_Start.png */; };
+		FEE122911D83AF490006F29D /* CharacterIcon_Soldier.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE122901D83AF490006F29D /* CharacterIcon_Soldier.png */; };
+		FEE122921D83AF490006F29D /* CharacterIcon_Soldier.png in Resources */ = {isa = PBXBuildFile; fileRef = FEE122901D83AF490006F29D /* CharacterIcon_Soldier.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -544,6 +546,7 @@
 		FE732FB61D7165BD006808DD /* Soldier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Soldier.png; sourceTree = "<group>"; };
 		FE732FB81D7165BD006808DD /* Title_Icon_End.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Title_Icon_End.png; sourceTree = "<group>"; };
 		FE732FB91D7165BD006808DD /* Title_Icon_Start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Title_Icon_Start.png; sourceTree = "<group>"; };
+		FEE122901D83AF490006F29D /* CharacterIcon_Soldier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CharacterIcon_Soldier.png; path = UI_Image/CharacterIcon_Soldier.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -624,6 +627,7 @@
 		17EC44481D39EC4100DD4EAB /* UI_Image */ = {
 			isa = PBXGroup;
 			children = (
+				FEE122901D83AF490006F29D /* CharacterIcon_Soldier.png */,
 				FE732F9F1D7165A2006808DD /* Draw.png */,
 				FE732FA01D7165A2006808DD /* GameStart.png */,
 				FE732FA11D7165A2006808DD /* Lose.png */,
@@ -1959,6 +1963,7 @@
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
+				FEE122911D83AF490006F29D /* CharacterIcon_Soldier.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				4F75D0CB1D3A92A5002744C9 /* TestMoveSprite.png in Resources */,
 				17EC445F1D39EC5B00DD4EAB /* Summon_Frame.png in Resources */,
@@ -2005,6 +2010,7 @@
 				4F9C5B6F1D30AEC60070E0DC /* BoneFramework2.png in Resources */,
 				4F75D0CC1D3A92A5002744C9 /* TestMoveSprite.png in Resources */,
 				17EC445A1D39EC5B00DD4EAB /* EnemyLife_Gage.png in Resources */,
+				FEE122921D83AF490006F29D /* CharacterIcon_Soldier.png in Resources */,
 				17EC44661D39EC5B00DD4EAB /* Summon_SmallIcon.png in Resources */,
 				17EC445C1D39EC5B00DD4EAB /* PlayerLife_Frame.png in Resources */,
 				17EC44541D39EC5B00DD4EAB /* CharacterFrame_Green.png in Resources */,

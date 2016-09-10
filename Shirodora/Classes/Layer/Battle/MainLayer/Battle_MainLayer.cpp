@@ -67,13 +67,6 @@ bool CBattele_MainLayer::init(){
     cocos2d::Sprite *pBackGroundRight = cocos2d::Sprite::create("BackGround_Right.png") ;
     pBackGroundRight->setPosition(1500.0f, WINDOW_HEIGHT * 0.5f) ;
     this->addChild(pBackGroundRight) ;
-
-    
-    // !!!:テスト用カーソルスプライト
-    this->m_pCursor = cocos2d::Sprite::create("Bone.png") ;
-    this->m_pCursor->setColor(cocos2d::Color3B::MAGENTA) ;
-    this->m_pCursor->setPosition(WINDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f) ;
-    this->addChild(this->m_pCursor) ;
     
     //-------------------------動作テスト用----------------------------------------
 
@@ -137,7 +130,7 @@ bool CBattele_MainLayer::init(){
  */
 void CBattele_MainLayer::update(float deltaTime){
     // カーソルスプライトをマウスマネージャーを使って位置設定させる
-    this->m_pCursor->setPosition(mouse.getCurrentCursorPosition()) ;
+    //this->m_pCursor->setPosition(mouse.getCurrentCursorPosition()) ;
     
     //敵生成機の更新処理
     this->m_pSpawner->update() ;

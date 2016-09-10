@@ -34,7 +34,7 @@ void CCharacterIcon::update(float _dt){
 
 bool CAttackIcon::init(){
     if(!CCharacterIcon::init())return false;
-    setTexture("CharacterFrame_Red.png");
+    setTexture("CharacterIcon_Soldier.png");
     return true;
 }
 
